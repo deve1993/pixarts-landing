@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Colors */
+    --bg-primary: #0A0A0B;
+    --bg-surface: #141415;
+    --bg-elevated: #1C1C1E;
+    --border: #2A2A2D;
+    --text-primary: #FFFFFF;
+    --text-secondary: #A1A1A6;
+    --text-muted: #6B6B70;
+    --accent-orange: #FF6B2C;
+    --accent-amber: #FFB347;
+
+    /* Spacing */
+    --spacing-section: 5rem;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 4px 24px rgba(0, 0, 0, 0.2);
+    --shadow-glow: 0 0 24px rgba(255, 107, 44, 0.3);
+
+    /* Glow */
+    --glow-cta: rgba(255, 107, 44, 0.3);
+    --glow-accent: rgba(255, 107, 44, 0.2);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-bg-primary text-text-primary;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent-orange to-accent-amber bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-md bg-bg-surface/70 border border-white/10;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 py-20 md:py-32;
+  }
+
+  /* Note: Button styles are now in components/ui/button.tsx
+   * These legacy classes are kept for backwards compatibility
+   * but should be avoided in new code - use Button component instead
+   */
+
+  .card {
+    @apply bg-bg-surface border border-border rounded-xl p-6;
+    @apply hover:border-accent-orange/50 hover:-translate-y-1;
+    @apply transition-all duration-300;
+  }
+
+  /* Glass effect for cards - unified background system */
+  .card-glass {
+    @apply bg-bg-surface/60 backdrop-blur-sm border border-border/50 rounded-xl;
+  }
+
+  .card-glass-hover {
+    @apply hover:border-accent-orange/30 hover:bg-bg-surface/80;
+    @apply transition-all duration-300;
+  }
+
+  /* Transparent section for unified background */
+  .section-transparent {
+    @apply bg-transparent;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-orange);
+}
+
+/* Selection */
+::selection {
+  background: rgba(255, 107, 44, 0.3);
+  color: var(--text-primary);
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid var(--accent-orange);
+  outline-offset: 2px;
+}

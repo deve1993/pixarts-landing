@@ -1,0 +1,5 @@
+export { HeroParallax } from './HeroParallax'
+export { HeroHeader } from './HeroHeader'
+export { ParallaxColumn } from './ParallaxColumn'
+export { ProjectCard } from './ProjectCard'
+export { PortfolioCTA } from './PortfolioCTA'

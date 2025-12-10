@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B2C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFB347;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#141415;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+
+  <!-- Decorative blobs -->
+  <ellipse cx="200" cy="150" rx="300" ry="200" fill="#FF6B2C" opacity="0.1" filter="url(#glow)"/>
+  <ellipse cx="1000" cy="500" rx="250" ry="180" fill="#FFB347" opacity="0.1" filter="url(#glow)"/>
+
+  <!-- Logo: Pixarts -->
+  <text x="600" y="260" font-family="system-ui, sans-serif" font-size="120" font-weight="300" text-anchor="middle" letter-spacing="8">
+    <tspan fill="#FFFFFF">Pi</tspan><tspan fill="url(#orangeGradient)">x</tspan><tspan fill="#FFFFFF">arts</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="600" y="350" font-family="system-ui, sans-serif" font-size="36" font-weight="500" text-anchor="middle" fill="#A1A1A6">
+    Siti Web Professionali in 10 Giorni
+  </text>
+
+  <!-- Features -->
+  <text x="600" y="450" font-family="system-ui, sans-serif" font-size="24" text-anchor="middle" fill="#6B6B70">
+    Design Moderno  •  SEO Incluso  •  Garanzia Soddisfazione
+  </text>
+
+  <!-- CTA style badge -->
+  <rect x="450" y="500" width="300" height="60" rx="30" fill="url(#orangeGradient)"/>
+  <text x="600" y="540" font-family="system-ui, sans-serif" font-size="22" font-weight="600" text-anchor="middle" fill="#FFFFFF">
+    Da €1.200
+  </text>
+
+  <!-- URL -->
+  <text x="600" y="610" font-family="system-ui, sans-serif" font-size="18" text-anchor="middle" fill="#6B6B70">
+    pixarts.eu
+  </text>
+</svg>
