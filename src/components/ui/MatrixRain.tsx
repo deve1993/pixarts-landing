@@ -75,18 +75,32 @@ export function MatrixRain({ className = '' }: MatrixRainProps) {
       drops.push({
         x: i * columnWidth + columnWidth / 2,
         y: Math.random() * rect.height * 0.5 - rect.height * 0.5,
-        speed: 0.6 + Math.random() * 0.8,
+        // iOS: faster drops (1.5-3.0) to compensate for lower frame rate feel
+        speed: iOS ? (1.5 + Math.random() * 1.5) : (0.6 + Math.random() * 0.8),
         length,
         chars,
-        // Higher opacity on mobile for better visibility
-        opacity: isMobile ? 0.18 * (0.7 + Math.random() * 0.6) : 0.12 * (0.7 + Math.random() * 0.6),
+        // Higher opacity on mobile/iOS for better visibility
+        opacity: (iOS || isMobile) ? 0.2 * (0.7 + Math.random() * 0.6) : 0.12 * (0.7 + Math.random() * 0.6),
       })
     }
 
     dropsRef.current = drops
 
+    // Frame counter for iOS throttling
+    let frameCount = 0
+
     // Animation function
     const animate = () => {
+      // iOS: skip every other frame to reduce GPU load (30fps instead of 60fps)
+      // but with faster drops it still looks smooth
+      if (iOS) {
+        frameCount++
+        if (frameCount % 2 !== 0) {
+          animationFrameRef.current = requestAnimationFrame(animate)
+          return
+        }
+      }
+
       ctx.clearRect(0, 0, canvas.width, canvas.height)
       ctx.save()
       ctx.scale(dpr, dpr)

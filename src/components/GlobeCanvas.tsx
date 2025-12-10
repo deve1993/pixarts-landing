@@ -48,7 +48,9 @@ export function GlobeCanvas({ className = '' }: GlobeCanvasProps) {
       // iOS: DPR 1 sempre per performance, mobile: 1, desktop: 2
       const dpr = (iOS || isMobile) ? 1 : 2
       // iOS: meno samples ma comunque visibile, mobile: 12k, desktop: 24k
-      const samples = iOS ? 10000 : (isMobile ? 12000 : 24000)
+      const samples = iOS ? 8000 : (isMobile ? 12000 : 24000)
+      // iOS: faster rotation to feel responsive despite lower frame rate
+      const rotationSpeed = iOS ? 0.008 : 0.003
 
       globe = createGlobe(canvasRef.current, {
         devicePixelRatio: dpr,
@@ -57,16 +59,16 @@ export function GlobeCanvas({ className = '' }: GlobeCanvasProps) {
         phi: 0,
         theta: 0.3,
         dark: 1,
-        diffuse: 1.5,
+        diffuse: iOS ? 1.2 : 1.5, // Slightly less diffuse on iOS for performance
         mapSamples: samples,
-        mapBrightness: 20, // Molto più luminoso per continenti ben visibili
+        mapBrightness: iOS ? 15 : 20, // Slightly less bright on iOS
         baseColor: [0.05, 0.05, 0.05],
         markerColor: [1, 0.5, 0.2],
         glowColor: [0.6, 0.25, 0.1], // Glow più chiaro e saturo
         markers: [], // Nessun marker
         onRender: (state) => {
-          // Solo rotazione automatica continua
-          phiRef.current += 0.003
+          // Rotazione più veloce su iOS per compensare frame rate più basso
+          phiRef.current += rotationSpeed
           state.phi = phiRef.current
           state.theta = 0.3
           state.width = widthRef.current * dpr

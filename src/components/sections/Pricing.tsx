@@ -43,6 +43,7 @@ function useCardMatrixRain(
   const animationFrameRef = useRef<number | undefined>(undefined)
 
   const initDrops = useCallback((width: number, height: number) => {
+    const iOS = isIOS()
     const columns = Math.floor(width / MATRIX_COLUMN_WIDTH)
     const drops: MatrixDrop[] = []
 
@@ -58,10 +59,12 @@ function useCardMatrixRain(
       drops.push({
         x: i * MATRIX_COLUMN_WIDTH + MATRIX_COLUMN_WIDTH / 2,
         y: Math.random() * height * 0.5 - height * 0.5,
-        speed: 0.6 + Math.random() * 0.8,
+        // iOS: faster drops (1.5-3.0) to feel responsive
+        speed: iOS ? (1.5 + Math.random() * 1.5) : (0.6 + Math.random() * 0.8),
         length,
         chars,
-        opacity: 0.12 * (0.7 + Math.random() * 0.6),
+        // iOS: higher opacity for visibility
+        opacity: iOS ? 0.18 * (0.7 + Math.random() * 0.6) : 0.12 * (0.7 + Math.random() * 0.6),
       })
     }
     dropsRef.current = drops
