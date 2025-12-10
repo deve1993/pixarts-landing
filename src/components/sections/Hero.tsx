@@ -44,7 +44,7 @@ export function Hero() {
   const tStats = useTranslations('stats')
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-32">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-24 pb-20 md:pb-32">
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <motion.div
@@ -124,7 +124,7 @@ export function Hero() {
           {/* Stats Cards with Floating Animation */}
           <motion.div
             variants={itemVariants}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto"
+            className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 max-w-3xl mx-auto"
           >
             {STATS_DATA.map((stat, index) => {
               const Icon = statIcons[index]
@@ -148,20 +148,20 @@ export function Hero() {
                   {/* Glow effect on hover */}
                   <div className="absolute inset-0 bg-gradient-to-br from-accent-orange/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                  <div className="relative bg-bg-surface/60 backdrop-blur-sm border border-border/50 rounded-2xl p-6 hover:border-accent-orange/30 transition-colors">
-                    <div className="flex items-center justify-center gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent-orange/20 to-accent-amber/10 flex items-center justify-center">
-                        <Icon className="w-5 h-5 text-accent-orange" />
+                  <div className="relative bg-bg-surface/60 backdrop-blur-sm border border-border/50 rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 hover:border-accent-orange/30 transition-colors">
+                    <div className="flex items-center justify-center gap-3 mb-2 sm:mb-3">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br from-accent-orange/20 to-accent-amber/10 flex items-center justify-center">
+                        <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-accent-orange" />
                       </div>
                     </div>
-                    <div className="text-3xl md:text-4xl font-heading font-bold bg-gradient-to-r from-accent-orange to-accent-amber bg-clip-text text-transparent mb-1">
+                    <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-bold bg-gradient-to-r from-accent-orange to-accent-amber bg-clip-text text-transparent mb-0.5 sm:mb-1">
                       <AnimatedCounter
                         end={stat.value}
                         suffix={stat.suffix}
                         duration={2000}
                       />
                     </div>
-                    <p className="text-sm text-text-muted font-medium">{tStats(stat.labelKey)}</p>
+                    <p className="text-[10px] sm:text-xs md:text-sm text-text-muted font-medium">{tStats(stat.labelKey)}</p>
                   </div>
                 </motion.div>
               )

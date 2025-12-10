@@ -15,7 +15,7 @@ export function Section({ id, className, children, ...props }: SectionProps) {
   return (
     <section
       id={id}
-      className={cn('py-20 md:py-32 px-6', 'max-w-7xl mx-auto', className)}
+      className={cn('py-12 md:py-20 lg:py-32 px-6', 'max-w-7xl mx-auto', className)}
       {...props}
     >
       {children}

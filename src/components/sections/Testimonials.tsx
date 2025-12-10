@@ -97,12 +97,22 @@ export function Testimonials() {
               animate="center"
               exit="exit"
               transition={{ duration: 0.4, ease: 'easeInOut' }}
-              className="w-full"
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.2}
+              onDragEnd={(_, info) => {
+                if (info.offset.x > 50) {
+                  goToPrevious()
+                } else if (info.offset.x < -50) {
+                  goToNext()
+                }
+              }}
+              className="w-full cursor-grab active:cursor-grabbing"
               role="group"
               aria-roledescription="slide"
               aria-label={`${currentIndex + 1} / ${TESTIMONIAL_KEYS.length}`}
             >
-              <div className="bg-bg-surface/60 backdrop-blur-sm border border-border/50 rounded-2xl p-8 md:p-12">
+              <div className="bg-bg-surface/60 backdrop-blur-sm border border-border/50 rounded-2xl p-5 sm:p-8 md:p-12">
                 {/* Stars + Verified Badge */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex gap-1" aria-label={t('rating')}>
@@ -121,7 +131,7 @@ export function Testimonials() {
                 </div>
 
                 {/* Quote */}
-                <blockquote className="text-xl md:text-2xl text-text-primary font-heading leading-relaxed mb-8">
+                <blockquote className="text-lg sm:text-xl md:text-2xl text-text-primary font-heading leading-relaxed mb-6 sm:mb-8">
                   <p>&ldquo;{t(`${currentKey}.text`)}&rdquo;</p>
                 </blockquote>
 
@@ -153,10 +163,10 @@ export function Testimonials() {
         </div>
 
         {/* Navigation */}
-        <div className="flex items-center justify-center gap-4 mt-8" role="group" aria-label={t('controls')}>
+        <div className="flex items-center justify-center gap-3 sm:gap-4 mt-8" role="group" aria-label={t('controls')}>
           <button
             onClick={goToPrevious}
-            className="w-10 h-10 rounded-full border border-border/50 bg-bg-surface/60 backdrop-blur-sm flex items-center justify-center text-text-muted hover:text-accent-orange hover:border-accent-orange transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange"
+            className="w-12 h-12 rounded-full border border-border/50 bg-bg-surface/60 backdrop-blur-sm flex items-center justify-center text-text-muted hover:text-accent-orange hover:border-accent-orange transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange"
             aria-label={t('prev')}
           >
             <ChevronLeft className="w-5 h-5" aria-hidden="true" />
@@ -165,7 +175,7 @@ export function Testimonials() {
           {/* Play/Pause Button */}
           <button
             onClick={togglePlay}
-            className="w-10 h-10 rounded-full border border-border/50 bg-bg-surface/60 backdrop-blur-sm flex items-center justify-center text-text-muted hover:text-accent-orange hover:border-accent-orange transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange"
+            className="w-12 h-12 rounded-full border border-border/50 bg-bg-surface/60 backdrop-blur-sm flex items-center justify-center text-text-muted hover:text-accent-orange hover:border-accent-orange transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange"
             aria-label={isPlaying ? t('pause') : t('play')}
             aria-pressed={!isPlaying}
           >
@@ -197,7 +207,7 @@ export function Testimonials() {
 
           <button
             onClick={goToNext}
-            className="w-10 h-10 rounded-full border border-border/50 bg-bg-surface/60 backdrop-blur-sm flex items-center justify-center text-text-muted hover:text-accent-orange hover:border-accent-orange transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange"
+            className="w-12 h-12 rounded-full border border-border/50 bg-bg-surface/60 backdrop-blur-sm flex items-center justify-center text-text-muted hover:text-accent-orange hover:border-accent-orange transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange"
             aria-label={t('next')}
           >
             <ChevronRight className="w-5 h-5" aria-hidden="true" />

@@ -161,7 +161,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             ref={menuButtonRef}
-            className="md:hidden relative z-50 p-2 text-text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange rounded-md"
+            className="md:hidden relative z-50 p-2.5 -mr-2.5 text-text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange rounded-md"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={isMobileMenuOpen ? 'Chiudi menu' : 'Apri menu'}
             aria-expanded={isMobileMenuOpen}

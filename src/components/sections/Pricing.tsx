@@ -189,7 +189,7 @@ function PricingCard({ plan, t }: PricingCardProps) {
       whileHover={{ y: -4 }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className={`relative group rounded-2xl border p-8 transition-all duration-300 backdrop-blur-sm overflow-hidden h-full ${
+      className={`relative group rounded-2xl border p-5 md:p-8 transition-all duration-300 backdrop-blur-sm overflow-hidden h-full ${
         isHovered
           ? 'border-accent-orange bg-gradient-to-b from-accent-orange/10 to-bg-surface/80 shadow-lg shadow-accent-orange/10'
           : 'border-border/50 bg-bg-surface/60'

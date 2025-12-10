@@ -35,15 +35,20 @@ export function GlobeCanvas({ className = '' }: GlobeCanvasProps) {
     const initGlobe = () => {
       if (!canvasRef.current || widthRef.current === 0) return
 
+      // Ottimizzazioni per mobile: riduce carico GPU del 50%
+      const isMobile = window.innerWidth < 768
+      const dpr = isMobile ? 1 : 2
+      const samples = isMobile ? 12000 : 24000
+
       globe = createGlobe(canvasRef.current, {
-        devicePixelRatio: 2,
-        width: widthRef.current * 2,
-        height: widthRef.current * 2,
+        devicePixelRatio: dpr,
+        width: widthRef.current * dpr,
+        height: widthRef.current * dpr,
         phi: 0,
         theta: 0.3,
         dark: 1,
         diffuse: 1.5,
-        mapSamples: 24000,
+        mapSamples: samples,
         mapBrightness: 20, // Molto più luminoso per continenti ben visibili
         baseColor: [0.05, 0.05, 0.05],
         markerColor: [1, 0.5, 0.2],
@@ -54,8 +59,8 @@ export function GlobeCanvas({ className = '' }: GlobeCanvasProps) {
           phiRef.current += 0.003
           state.phi = phiRef.current
           state.theta = 0.3
-          state.width = widthRef.current * 2
-          state.height = widthRef.current * 2
+          state.width = widthRef.current * dpr
+          state.height = widthRef.current * dpr
         },
       })
     }
