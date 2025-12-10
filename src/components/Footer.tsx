@@ -146,12 +146,14 @@ export function Footer() {
           <p className="text-text-muted text-sm">
             © {currentYear} Pixarts. {t('copyright')}
           </p>
-          <p className="text-text-muted text-sm flex items-center gap-1">
+          <p className="text-text-muted text-sm flex items-center gap-1.5">
             {t('madeWith')}{' '}
-            <span className="text-error" aria-label="love">
+            <span
+              className="text-xl bg-gradient-to-r from-accent-orange to-accent-red bg-clip-text text-transparent"
+              aria-label="love"
+            >
               ♥
-            </span>{' '}
-            {t('inItaly')}
+            </span>
           </p>
         </div>
       </div>

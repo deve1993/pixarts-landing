@@ -8,7 +8,8 @@ interface MatrixRainProps {
 
 const MATRIX_CHARS = ['0', '1']
 const MATRIX_CHAR_SIZE = 12
-const MATRIX_COLUMN_WIDTH = 20
+const MATRIX_COLUMN_WIDTH_DESKTOP = 20
+const MATRIX_COLUMN_WIDTH_MOBILE = 14
 
 interface MatrixDrop {
   x: number
@@ -40,13 +41,18 @@ export function MatrixRain({ className = '' }: MatrixRainProps) {
     canvas.style.width = `${rect.width}px`
     canvas.style.height = `${rect.height}px`
 
-    // Initialize drops (columns)
-    const columns = Math.floor(rect.width / MATRIX_COLUMN_WIDTH)
+    // Initialize drops (columns) - more density on mobile
+    const isMobile = rect.width < 768
+    const columnWidth = isMobile ? MATRIX_COLUMN_WIDTH_MOBILE : MATRIX_COLUMN_WIDTH_DESKTOP
+    const columns = Math.floor(rect.width / columnWidth)
     const drops: MatrixDrop[] = []
+
+    // Higher density on mobile (80% of columns) vs desktop (50%)
+    const dropProbability = isMobile ? 0.8 : 0.5
 
     for (let i = 0; i < columns; i++) {
       // Not all columns have drops
-      if (Math.random() > 0.5) continue
+      if (Math.random() > dropProbability) continue
 
       const length = 3 + Math.floor(Math.random() * 6)
       const chars: string[] = []
@@ -56,12 +62,13 @@ export function MatrixRain({ className = '' }: MatrixRainProps) {
       }
 
       drops.push({
-        x: i * MATRIX_COLUMN_WIDTH + MATRIX_COLUMN_WIDTH / 2,
+        x: i * columnWidth + columnWidth / 2,
         y: Math.random() * rect.height * 0.5 - rect.height * 0.5,
         speed: 0.6 + Math.random() * 0.8,
         length,
         chars,
-        opacity: 0.12 * (0.7 + Math.random() * 0.6),
+        // Higher opacity on mobile for better visibility
+        opacity: isMobile ? 0.18 * (0.7 + Math.random() * 0.6) : 0.12 * (0.7 + Math.random() * 0.6),
       })
     }
 
