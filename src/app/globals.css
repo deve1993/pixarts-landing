@@ -117,3 +117,22 @@
   outline: 2px solid var(--accent-orange);
   outline-offset: 2px;
 }
+
+/* iOS Safari performance fixes */
+@supports (-webkit-touch-callout: none) {
+  /* Force GPU acceleration for animated elements on iOS */
+  .backdrop-blur-sm,
+  .backdrop-blur-md,
+  .backdrop-blur {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  /* Optimize canvas rendering on iOS */
+  canvas {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}

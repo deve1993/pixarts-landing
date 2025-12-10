@@ -7,6 +7,13 @@ interface GlobeCanvasProps {
   className?: string
 }
 
+// Detect iOS for performance optimizations
+const isIOS = () => {
+  if (typeof window === 'undefined') return false
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+}
+
 export function GlobeCanvas({ className = '' }: GlobeCanvasProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -35,10 +42,13 @@ export function GlobeCanvas({ className = '' }: GlobeCanvasProps) {
     const initGlobe = () => {
       if (!canvasRef.current || widthRef.current === 0) return
 
-      // Ottimizzazioni per mobile: riduce carico GPU del 50%
+      // Ottimizzazioni per mobile e iOS: riduce carico GPU
+      const iOS = isIOS()
       const isMobile = window.innerWidth < 768
-      const dpr = isMobile ? 1 : 2
-      const samples = isMobile ? 12000 : 24000
+      // iOS: DPR 1 sempre per performance, mobile: 1, desktop: 2
+      const dpr = (iOS || isMobile) ? 1 : 2
+      // iOS: meno samples ma comunque visibile, mobile: 12k, desktop: 24k
+      const samples = iOS ? 10000 : (isMobile ? 12000 : 24000)
 
       globe = createGlobe(canvasRef.current, {
         devicePixelRatio: dpr,
@@ -96,6 +106,9 @@ export function GlobeCanvas({ className = '' }: GlobeCanvasProps) {
           contain: 'layout paint size',
           opacity: isReady ? 1 : 0,
           transition: 'opacity 0.5s ease',
+          // Force GPU acceleration on iOS
+          transform: 'translateZ(0)',
+          willChange: 'transform',
         }}
       />
     </div>

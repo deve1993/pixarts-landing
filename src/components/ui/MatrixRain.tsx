@@ -20,6 +20,13 @@ interface MatrixDrop {
   opacity: number
 }
 
+// Detect iOS for performance optimizations
+const isIOS = () => {
+  if (typeof window === 'undefined') return false
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+}
+
 export function MatrixRain({ className = '' }: MatrixRainProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const dropsRef = useRef<MatrixDrop[]>([])
@@ -29,10 +36,12 @@ export function MatrixRain({ className = '' }: MatrixRainProps) {
     const canvas = canvasRef.current
     if (!canvas) return
 
-    const ctx = canvas.getContext('2d')
+    const ctx = canvas.getContext('2d', { alpha: true })
     if (!ctx) return
 
-    const dpr = window.devicePixelRatio || 1
+    const iOS = isIOS()
+    // iOS: use lower DPR to reduce GPU load
+    const dpr = iOS ? 1 : (window.devicePixelRatio || 1)
     const rect = canvas.getBoundingClientRect()
 
     // Set canvas size with device pixel ratio
@@ -41,14 +50,16 @@ export function MatrixRain({ className = '' }: MatrixRainProps) {
     canvas.style.width = `${rect.width}px`
     canvas.style.height = `${rect.height}px`
 
-    // Initialize drops (columns) - more density on mobile
+    // Initialize drops (columns) - more density on mobile, less on iOS
     const isMobile = rect.width < 768
-    const columnWidth = isMobile ? MATRIX_COLUMN_WIDTH_MOBILE : MATRIX_COLUMN_WIDTH_DESKTOP
+    const columnWidth = iOS
+      ? MATRIX_COLUMN_WIDTH_DESKTOP  // iOS: wider columns = fewer drops
+      : (isMobile ? MATRIX_COLUMN_WIDTH_MOBILE : MATRIX_COLUMN_WIDTH_DESKTOP)
     const columns = Math.floor(rect.width / columnWidth)
     const drops: MatrixDrop[] = []
 
-    // Higher density on mobile (80% of columns) vs desktop (50%)
-    const dropProbability = isMobile ? 0.8 : 0.5
+    // Higher density on mobile (80% of columns) vs desktop (50%), lower on iOS
+    const dropProbability = iOS ? 0.4 : (isMobile ? 0.8 : 0.5)
 
     for (let i = 0; i < columns; i++) {
       // Not all columns have drops
@@ -95,14 +106,18 @@ export function MatrixRain({ className = '' }: MatrixRainProps) {
           const fadeFactor = 1 - fadePosition * 0.7
           const charOpacity = drop.opacity * fadeFactor
 
-          // First character glows
+          // First character glows (skip shadowBlur on iOS - very expensive)
           if (i === 0) {
             ctx.fillStyle = `rgba(255, 255, 255, ${charOpacity * 1.5})`
-            ctx.shadowBlur = 6
-            ctx.shadowColor = 'rgba(255, 255, 255, 0.3)'
+            if (!iOS) {
+              ctx.shadowBlur = 6
+              ctx.shadowColor = 'rgba(255, 255, 255, 0.3)'
+            }
           } else {
             ctx.fillStyle = `rgba(255, 255, 255, ${charOpacity})`
-            ctx.shadowBlur = 0
+            if (!iOS) {
+              ctx.shadowBlur = 0
+            }
           }
 
           ctx.fillText(char, drop.x, charY)
@@ -145,7 +160,13 @@ export function MatrixRain({ className = '' }: MatrixRainProps) {
     <canvas
       ref={canvasRef}
       className={`pointer-events-none absolute inset-0 ${className}`}
-      style={{ width: '100%', height: '100%' }}
+      style={{
+        width: '100%',
+        height: '100%',
+        // Force GPU acceleration on iOS
+        transform: 'translateZ(0)',
+        willChange: 'contents',
+      }}
     />
   )
 }

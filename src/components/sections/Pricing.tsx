@@ -15,6 +15,13 @@ const PLAN_KEYS = ['plan1', 'plan2', 'plan3'] as const
 // MATRIX RAIN MINI - Effetto Matrix per le card
 // ============================================================================
 
+// Detect iOS for performance optimizations
+const isIOS = () => {
+  if (typeof window === 'undefined') return false
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+}
+
 const MATRIX_CHARS = ['0', '1']
 const MATRIX_CHAR_SIZE = 12
 const MATRIX_COLUMN_WIDTH = 20
@@ -79,6 +86,7 @@ function useCardMatrixRain(
   }, [])
 
   const draw = useCallback((ctx: CanvasRenderingContext2D, width: number, height: number, dpr: number) => {
+    const iOS = isIOS()
     ctx.clearRect(0, 0, width * dpr, height * dpr)
     ctx.save()
     ctx.scale(dpr, dpr)
@@ -96,13 +104,18 @@ function useCardMatrixRain(
         const fadeFactor = 1 - fadePosition * 0.7
         const charOpacity = drop.opacity * fadeFactor
 
+        // Skip shadowBlur on iOS - very expensive
         if (i === 0) {
           ctx.fillStyle = `rgba(255, 255, 255, ${charOpacity * 1.5})`
-          ctx.shadowBlur = 6
-          ctx.shadowColor = 'rgba(255, 255, 255, 0.3)'
+          if (!iOS) {
+            ctx.shadowBlur = 6
+            ctx.shadowColor = 'rgba(255, 255, 255, 0.3)'
+          }
         } else {
           ctx.fillStyle = `rgba(255, 255, 255, ${charOpacity})`
-          ctx.shadowBlur = 0
+          if (!iOS) {
+            ctx.shadowBlur = 0
+          }
         }
 
         ctx.fillText(char, drop.x, charY)
