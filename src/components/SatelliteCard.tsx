@@ -3,12 +3,13 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
 import { useMediaQuery } from '@/lib/hooks/useMediaQuery'
-import type { PortfolioProject } from '@/lib/constants'
 
 interface SatelliteCardProps {
-  project: PortfolioProject
+  projectKey: 'flowmatics' | 'quickfy' | 'benetti'
+  projectName: string
   position: 'top-left' | 'top-right' | 'bottom-right' | 'bottom-center'
   className?: string
 }
@@ -40,12 +41,14 @@ const metricVariants = {
 }
 
 export function SatelliteCard({
-  project,
+  projectKey,
+  projectName,
   position,
   className,
 }: SatelliteCardProps) {
   const [isExpanded, setIsExpanded] = useState(false)
   const isMobile = useMediaQuery('(max-width: 1023px)')
+  const t = useTranslations('socialProof')
 
   const handleInteraction = () => {
     if (isMobile) {
@@ -109,10 +112,10 @@ export function SatelliteCard({
       <div className="flex items-start justify-between gap-2">
         <div className="min-w-0 flex-1">
           <h3 className="text-lg font-heading font-bold text-text-primary truncate">
-            {project.name}
+            {projectName}
           </h3>
           <p className="text-xs text-text-muted mt-0.5 truncate">
-            {project.type}
+            {t(`projects.${projectKey}.type`)}
           </p>
         </div>
 
@@ -143,13 +146,13 @@ export function SatelliteCard({
               variants={metricsVariants}
               className="grid grid-cols-3 gap-2 py-3 mt-3 border-y border-border/30"
             >
-              {project.results.map((result, i) => (
+              {[1, 2, 3].map((i) => (
                 <motion.div key={i} variants={metricVariants} className="text-center">
                   <div className="text-sm lg:text-base font-heading font-bold gradient-text">
-                    {result.value}
+                    {t(`projects.${projectKey}.result${i}.value`)}
                   </div>
                   <p className="text-[10px] lg:text-xs text-text-muted mt-0.5 leading-tight">
-                    {result.label}
+                    {t(`projects.${projectKey}.result${i}.label`)}
                   </p>
                 </motion.div>
               ))}
@@ -163,10 +166,10 @@ export function SatelliteCard({
               className="mt-3"
             >
               <h4 className="text-[10px] font-semibold text-accent-orange uppercase tracking-wide mb-1">
-                La sfida
+                {t('challenge')}
               </h4>
               <p className="text-xs text-text-secondary leading-relaxed">
-                {project.challenge}
+                {t(`projects.${projectKey}.challenge`)}
               </p>
             </motion.div>
 
@@ -178,16 +181,16 @@ export function SatelliteCard({
               className="mt-3"
             >
               <h4 className="text-[10px] font-semibold text-accent-orange uppercase tracking-wide mb-1">
-                Soluzioni
+                {t('solutions')}
               </h4>
               <ul className="space-y-1">
-                {project.solutions.slice(0, 2).map((solution, i) => (
+                {[1, 2].map((i) => (
                   <li
                     key={i}
                     className="flex items-start gap-1.5 text-xs text-text-secondary"
                   >
                     <div className="w-1 h-1 rounded-full bg-accent-orange mt-1.5 flex-shrink-0" />
-                    <span className="leading-relaxed">{solution}</span>
+                    <span className="leading-relaxed">{t(`projects.${projectKey}.solution${i}`)}</span>
                   </li>
                 ))}
               </ul>

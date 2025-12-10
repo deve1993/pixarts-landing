@@ -85,7 +85,7 @@ export function Testimonials() {
 
         {/* Testimonial Card */}
         <div
-          className="relative overflow-hidden min-h-[350px]"
+          className="relative overflow-hidden"
           aria-live={isPlaying ? 'off' : 'polite'}
         >
           <AnimatePresence initial={false} custom={direction} mode="wait">
@@ -97,7 +97,7 @@ export function Testimonials() {
               animate="center"
               exit="exit"
               transition={{ duration: 0.4, ease: 'easeInOut' }}
-              className="absolute inset-0"
+              className="w-full"
               role="group"
               aria-roledescription="slide"
               aria-label={`${currentIndex + 1} / ${TESTIMONIAL_KEYS.length}`}

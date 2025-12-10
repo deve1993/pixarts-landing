@@ -33,7 +33,38 @@
   },
   "socialProof": {
     "title": "Vybrali si Pixarts",
-    "description": "Skutečné projekty, které proměnily skutečné podniky"
+    "description": "Skutečné projekty, které proměnily skutečné podniky",
+    "challenge": "Výzva",
+    "solutions": "Řešení",
+    "projects": {
+      "flowmatics": {
+        "type": "B2B Marketingová Automatizace",
+        "challenge": "Složitá platforma k jednoduché komunikaci",
+        "solution1": "Čistý a profesionální design",
+        "solution2": "Optimalizovaný konverzní trychtýř",
+        "result1": { "value": "+180%", "label": "žádostí o kontakt" },
+        "result2": { "value": "+40%", "label": "viditelnost Google" },
+        "result3": { "value": "Top 3", "label": "strategická klíčová slova" }
+      },
+      "quickfy": {
+        "type": "SaaS Analytická Platforma",
+        "challenge": "Složitý dashboard pro prezentaci B2B cílové skupině",
+        "solution1": "Moderní design s interaktivními animacemi",
+        "solution2": "Interaktivní demo na homepage",
+        "result1": { "value": "3-5", "label": "kvalifikovaných leadů/týden" },
+        "result2": { "value": "8.5%", "label": "konverzní poměr" },
+        "result3": { "value": "-37%", "label": "bounce rate" }
+      },
+      "benetti": {
+        "type": "Řemeslné Portfolio",
+        "challenge": "Ukázat řemeslnou kvalitu a získat kvalifikované kontakty",
+        "solution1": "Profesionální fotografické portfolio",
+        "solution2": "Optimalizovaný kontaktní formulář pro nabídky",
+        "result1": { "value": "+300%", "label": "žádostí o nabídku" },
+        "result2": { "value": "Top 5", "label": "lokální Google" },
+        "result3": { "value": "10 dní", "label": "dodání projektu" }
+      }
+    }
   },
   "problems": {
     "title": "Tři problémy, které zná každý podnikatel",
@@ -109,6 +140,17 @@
         "cta": "Výzva k akci",
         "implementation": "Implementace"
       }
+    },
+    "cta": {
+      "badge": "Začněte dnes",
+      "title": "Připraveni vytvořit",
+      "titleHighlight": "výjimečný projekt?",
+      "description": "Proměníme vaše nápady v digitální realitu. Kontaktujte nás pro bezplatnou konzultaci a zjistěte, jak vám můžeme pomoci.",
+      "ctaPrimary": "Získat bezplatnou nabídku",
+      "ctaSecondary": "Zjistit více o procesu",
+      "trust1": "Odpověď do 24h",
+      "trust2": "Podrobná nabídka",
+      "trust3": "Bez závazků"
     }
   },
   "process": {

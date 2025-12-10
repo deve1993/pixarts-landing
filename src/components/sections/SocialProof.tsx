@@ -2,10 +2,13 @@
 
 import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
+import { useTranslations } from 'next-intl'
 import { Section, SectionHeader } from '@/components/ui/section'
 import { SatelliteCard } from '@/components/SatelliteCard'
-import { PORTFOLIO_PROJECTS } from '@/lib/constants'
 import { fadeInUp, staggerContainer, staggerItem, scaleIn } from '@/lib/motion-variants'
+
+const PROJECT_KEYS = ['flowmatics', 'quickfy', 'benetti'] as const
+const PROJECT_NAMES = ['FlowMatics', 'Quickfy', 'Falegnameria Benetti'] as const
 
 // Dynamic import del globo con ssr: false per evitare problemi con canvas
 const GlobeCanvas = dynamic(
@@ -14,6 +17,8 @@ const GlobeCanvas = dynamic(
 )
 
 export function SocialProof() {
+  const t = useTranslations('socialProof')
+
   return (
     <Section id="social-proof" className="py-16 md:py-24">
       {/* Header */}
@@ -24,8 +29,8 @@ export function SocialProof() {
         variants={fadeInUp}
       >
         <SectionHeader
-          title="Hanno Scelto Noi"
-          description="Progetti reali, risultati misurabili. Dai un'occhiata ai nostri casi di successo."
+          title={t('title')}
+          description={t('description')}
         />
       </motion.div>
 
@@ -40,7 +45,8 @@ export function SocialProof() {
         {/* Satellite Card 1: Left (Desktop only) - FlowMatics */}
         <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 left-0 xl:left-[2%] 2xl:left-[5%] z-10">
           <SatelliteCard
-            project={PORTFOLIO_PROJECTS[0]}
+            projectKey="flowmatics"
+            projectName="FlowMatics"
             position="top-left"
           />
         </div>
@@ -59,7 +65,8 @@ export function SocialProof() {
         {/* Satellite Card 2: Right (Desktop only) - Quickfy */}
         <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 right-0 xl:right-[2%] 2xl:right-[5%] z-10">
           <SatelliteCard
-            project={PORTFOLIO_PROJECTS[1]}
+            projectKey="quickfy"
+            projectName="Quickfy"
             position="top-right"
           />
         </div>
@@ -67,7 +74,8 @@ export function SocialProof() {
         {/* Satellite Card 3: Bottom-Center (Desktop only) - Falegnameria Benetti */}
         <div className="hidden lg:block absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
           <SatelliteCard
-            project={PORTFOLIO_PROJECTS[2]}
+            projectKey="benetti"
+            projectName="Falegnameria Benetti"
             position="bottom-center"
           />
         </div>
@@ -81,10 +89,11 @@ export function SocialProof() {
         variants={staggerContainer}
         className="lg:hidden mt-8 space-y-4 max-w-md mx-auto"
       >
-        {PORTFOLIO_PROJECTS.map((project, index) => (
-          <motion.div key={project.name} variants={staggerItem}>
+        {PROJECT_KEYS.map((key, index) => (
+          <motion.div key={key} variants={staggerItem}>
             <SatelliteCard
-              project={project}
+              projectKey={key}
+              projectName={PROJECT_NAMES[index]}
               position={index === 0 ? 'top-left' : 'bottom-right'}
             />
           </motion.div>

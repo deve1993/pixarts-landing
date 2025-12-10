@@ -33,7 +33,38 @@
   },
   "socialProof": {
     "title": "They chose Pixarts",
-    "description": "Real projects that transformed real businesses"
+    "description": "Real projects that transformed real businesses",
+    "challenge": "The challenge",
+    "solutions": "Solutions",
+    "projects": {
+      "flowmatics": {
+        "type": "B2B Marketing Automation",
+        "challenge": "Complex platform to communicate simply",
+        "solution1": "Clean and professional design",
+        "solution2": "Optimized conversion funnel",
+        "result1": { "value": "+180%", "label": "contact requests" },
+        "result2": { "value": "+40%", "label": "Google visibility" },
+        "result3": { "value": "Top 3", "label": "strategic keywords" }
+      },
+      "quickfy": {
+        "type": "SaaS Analytics Platform",
+        "challenge": "Complex dashboard to present to B2B target",
+        "solution1": "Modern design with interactive animations",
+        "solution2": "Interactive demo on homepage",
+        "result1": { "value": "3-5", "label": "qualified leads/week" },
+        "result2": { "value": "8.5%", "label": "conversion rate" },
+        "result3": { "value": "-37%", "label": "bounce rate" }
+      },
+      "benetti": {
+        "type": "Artisan Portfolio",
+        "challenge": "Show artisan quality and generate qualified contacts",
+        "solution1": "Professional photo portfolio",
+        "solution2": "Optimized contact form for quotes",
+        "result1": { "value": "+300%", "label": "quote requests" },
+        "result2": { "value": "Top 5", "label": "local Google" },
+        "result3": { "value": "10 days", "label": "project delivery" }
+      }
+    }
   },
   "problems": {
     "title": "Three problems every entrepreneur knows",

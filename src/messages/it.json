@@ -33,7 +33,38 @@
   },
   "socialProof": {
     "title": "Hanno scelto Pixarts",
-    "description": "Progetti realizzati che hanno trasformato business reali"
+    "description": "Progetti realizzati che hanno trasformato business reali",
+    "challenge": "La sfida",
+    "solutions": "Soluzioni",
+    "projects": {
+      "flowmatics": {
+        "type": "Automazione Marketing B2B",
+        "challenge": "Piattaforma complessa da comunicare in modo semplice",
+        "solution1": "Design pulito e professionale",
+        "solution2": "Funnel di conversione ottimizzato",
+        "result1": { "value": "+180%", "label": "richieste contatto" },
+        "result2": { "value": "+40%", "label": "visibilità Google" },
+        "result3": { "value": "Top 3", "label": "keyword strategiche" }
+      },
+      "quickfy": {
+        "type": "SaaS Analytics Platform",
+        "challenge": "Dashboard complessa da presentare al target B2B",
+        "solution1": "Design moderno con animazioni interattive",
+        "solution2": "Demo interattiva in homepage",
+        "result1": { "value": "3-5", "label": "lead qualificati/settimana" },
+        "result2": { "value": "8.5%", "label": "tasso conversione" },
+        "result3": { "value": "-37%", "label": "bounce rate" }
+      },
+      "benetti": {
+        "type": "Portfolio Artigianale",
+        "challenge": "Mostrare la qualità artigianale e generare contatti qualificati",
+        "solution1": "Portfolio fotografico professionale",
+        "solution2": "Form contatto ottimizzato per preventivi",
+        "result1": { "value": "+300%", "label": "richieste preventivo" },
+        "result2": { "value": "Top 5", "label": "Google locale" },
+        "result3": { "value": "10gg", "label": "consegna progetto" }
+      }
+    }
   },
   "problems": {
     "title": "Tre problemi che ogni imprenditore conosce",
