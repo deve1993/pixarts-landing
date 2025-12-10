@@ -10,8 +10,8 @@
     --bg-elevated: #1C1C1E;
     --border: #2A2A2D;
     --text-primary: #FFFFFF;
-    --text-secondary: #A1A1A6;
-    --text-muted: #6B6B70;
+    --text-secondary: #B0B0B5; /* Increased from #A1A1A6 for WCAG AA contrast 4.5:1 */
+    --text-muted: #8A8A8F; /* Increased from #6B6B70 for WCAG AA contrast 4.5:1 */
     --accent-orange: #FF6B2C;
     --accent-amber: #FFB347;
 
@@ -37,8 +37,11 @@
     @apply bg-bg-primary text-text-primary;
   }
 
-  html {
-    scroll-behavior: smooth;
+  /* Respect user's motion preferences */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
 }
 

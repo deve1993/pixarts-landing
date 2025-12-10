@@ -105,7 +105,7 @@ export function CookieConsent() {
             {/* Main Banner */}
             <div className="p-6">
               <div className="flex items-start gap-4">
-                <div className="hidden sm:flex w-12 h-12 rounded-xl bg-gradient-to-br from-accent-orange to-accent-amber items-center justify-center flex-shrink-0">
+                <div className="hidden sm:flex w-12 h-12 rounded-xl bg-gradient-to-br from-accent-orange to-accent-amber items-center justify-center flex-shrink-0" aria-hidden="true">
                   <Cookie className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1 min-w-0">
@@ -121,10 +121,10 @@ export function CookieConsent() {
                 </div>
                 <button
                   onClick={rejectAll}
-                  className="hidden md:flex p-2 rounded-lg hover:bg-bg-elevated transition-colors"
-                  aria-label="Close"
+                  className="hidden md:flex p-3 rounded-lg hover:bg-bg-elevated transition-colors"
+                  aria-label="Chiudi e rifiuta cookie opzionali"
                 >
-                  <X className="w-5 h-5 text-text-muted" />
+                  <X className="w-5 h-5 text-text-muted" aria-hidden="true" />
                 </button>
               </div>
 
@@ -153,19 +153,27 @@ export function CookieConsent() {
                       {/* Analytics Cookies */}
                       <div className="flex items-center justify-between p-4 bg-bg-elevated/50 rounded-lg">
                         <div className="flex-1 min-w-0 pr-4">
-                          <p className="font-semibold text-text-primary text-sm">{t('analytics')}</p>
-                          <p className="text-text-muted text-xs mt-1">{t('analyticsDesc')}</p>
+                          <p id="analytics-label" className="font-semibold text-text-primary text-sm">{t('analytics')}</p>
+                          <p id="analytics-desc" className="text-text-muted text-xs mt-1">{t('analyticsDesc')}</p>
                         </div>
                         <button
                           onClick={() => toggleCategory('analytics')}
+                          role="switch"
+                          aria-checked={preferences.analytics}
+                          aria-labelledby="analytics-label"
+                          aria-describedby="analytics-desc"
                           className={`relative w-12 h-6 rounded-full transition-colors ${
                             preferences.analytics ? 'bg-accent-orange' : 'bg-bg-elevated'
                           }`}
                         >
+                          <span className="sr-only">
+                            {preferences.analytics ? 'Disabilita' : 'Abilita'} cookie analytics
+                          </span>
                           <div
                             className={`absolute top-1 w-4 h-4 bg-white rounded-full transition-all ${
                               preferences.analytics ? 'left-7' : 'left-1'
                             }`}
+                            aria-hidden="true"
                           />
                         </button>
                       </div>
@@ -173,19 +181,27 @@ export function CookieConsent() {
                       {/* Marketing Cookies */}
                       <div className="flex items-center justify-between p-4 bg-bg-elevated/50 rounded-lg">
                         <div className="flex-1 min-w-0 pr-4">
-                          <p className="font-semibold text-text-primary text-sm">{t('marketing')}</p>
-                          <p className="text-text-muted text-xs mt-1">{t('marketingDesc')}</p>
+                          <p id="marketing-label" className="font-semibold text-text-primary text-sm">{t('marketing')}</p>
+                          <p id="marketing-desc" className="text-text-muted text-xs mt-1">{t('marketingDesc')}</p>
                         </div>
                         <button
                           onClick={() => toggleCategory('marketing')}
+                          role="switch"
+                          aria-checked={preferences.marketing}
+                          aria-labelledby="marketing-label"
+                          aria-describedby="marketing-desc"
                           className={`relative w-12 h-6 rounded-full transition-colors ${
                             preferences.marketing ? 'bg-accent-orange' : 'bg-bg-elevated'
                           }`}
                         >
+                          <span className="sr-only">
+                            {preferences.marketing ? 'Disabilita' : 'Abilita'} cookie marketing
+                          </span>
                           <div
                             className={`absolute top-1 w-4 h-4 bg-white rounded-full transition-all ${
                               preferences.marketing ? 'left-7' : 'left-1'
                             }`}
+                            aria-hidden="true"
                           />
                         </button>
                       </div>
@@ -202,12 +218,12 @@ export function CookieConsent() {
                 >
                   {isExpanded ? (
                     <>
-                      <ChevronUp className="w-4 h-4" />
+                      <ChevronUp className="w-4 h-4" aria-hidden="true" />
                       {t('hideSettings')}
                     </>
                   ) : (
                     <>
-                      <ChevronDown className="w-4 h-4" />
+                      <ChevronDown className="w-4 h-4" aria-hidden="true" />
                       {t('customize')}
                     </>
                   )}

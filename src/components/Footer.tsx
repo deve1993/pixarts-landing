@@ -34,21 +34,21 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-lg bg-bg-elevated border border-border flex items-center justify-center text-text-muted hover:text-accent-orange hover:border-accent-orange transition-all duration-200"
-                  aria-label={social.name}
+                  aria-label={`${social.name} (apre in una nuova finestra)`}
                 >
                   {social.name === 'LinkedIn' ? (
-                    <Linkedin size={18} />
+                    <Linkedin size={18} aria-hidden="true" />
                   ) : (
-                    <Instagram size={18} />
+                    <Instagram size={18} aria-hidden="true" />
                   )}
                 </a>
               ))}
               <a
                 href="mailto:info@pixarts.eu"
                 className="w-10 h-10 rounded-lg bg-bg-elevated border border-border flex items-center justify-center text-text-muted hover:text-accent-orange hover:border-accent-orange transition-all duration-200"
-                aria-label="Email"
+                aria-label="Invia email a info@pixarts.eu"
               >
-                <Mail size={18} />
+                <Mail size={18} aria-hidden="true" />
               </a>
             </div>
           </div>
