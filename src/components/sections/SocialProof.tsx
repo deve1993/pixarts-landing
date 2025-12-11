@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
 import { useTranslations } from 'next-intl'
+import { useEffect, useState, useRef } from 'react'
 import { Section, SectionHeader } from '@/components/ui/section'
 import { SatelliteCard } from '@/components/SatelliteCard'
 import { fadeInUp, staggerContainer, staggerItem, scaleIn } from '@/lib/motion-variants'
@@ -13,11 +14,47 @@ const PROJECT_NAMES = ['FlowMatics', 'Quickfy', 'Falegnameria Benetti'] as const
 // Dynamic import del globo con ssr: false per evitare problemi con canvas
 const GlobeCanvas = dynamic(
   () => import('@/components/GlobeCanvas').then((mod) => mod.GlobeCanvas),
-  { ssr: false }
+  { ssr: false, loading: () => <GlobePlaceholder /> }
 )
+
+// Placeholder mentre il Globe si carica
+function GlobePlaceholder() {
+  return (
+    <div
+      className="w-full h-full rounded-full bg-gradient-to-br from-accent-orange/10 to-accent-amber/5 animate-pulse"
+      style={{ aspectRatio: '1' }}
+    />
+  )
+}
+
+// Hook per Intersection Observer - carica Globe solo quando visibile
+function useInView(options?: IntersectionObserverInit) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [isInView, setIsInView] = useState(false)
+
+  useEffect(() => {
+    const element = ref.current
+    if (!element) return
+
+    const observer = new IntersectionObserver(([entry]) => {
+      // Una volta visibile, rimane true (lazy load una volta sola)
+      if (entry.isIntersecting) {
+        setIsInView(true)
+        observer.disconnect()
+      }
+    }, { rootMargin: '200px', ...options })
+
+    observer.observe(element)
+    return () => observer.disconnect()
+  }, [options])
+
+  return { ref, isInView }
+}
 
 export function SocialProof() {
   const t = useTranslations('socialProof')
+  // Lazy load Globe only when section comes into view
+  const { ref: globeContainerRef, isInView: shouldLoadGlobe } = useInView()
 
   return (
     <Section id="social-proof" className="py-16 md:py-24">
@@ -51,14 +88,18 @@ export function SocialProof() {
           />
         </div>
 
-        {/* Globo Centrale */}
-        <div className="relative">
+        {/* Globo Centrale - Lazy loaded */}
+        <div ref={globeContainerRef} className="relative">
           {/* Glow arancione attorno al globo - più chiaro */}
           <div className="absolute inset-0 bg-accent-amber/30 blur-3xl rounded-full scale-75" />
 
-          {/* Globo - ingrandito */}
+          {/* Globo - ingrandito, caricato solo quando visibile */}
           <div className="relative w-[380px] h-[380px] md:w-[550px] md:h-[550px] lg:w-[650px] lg:h-[650px]">
-            <GlobeCanvas className="w-full h-full" />
+            {shouldLoadGlobe ? (
+              <GlobeCanvas className="w-full h-full" />
+            ) : (
+              <GlobePlaceholder />
+            )}
           </div>
         </div>
 

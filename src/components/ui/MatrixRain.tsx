@@ -1,9 +1,11 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 interface MatrixRainProps {
   className?: string
+  /** Delay before starting the animation (ms) - helps with initial page load performance */
+  startDelay?: number
 }
 
 const MATRIX_CHARS = ['0', '1']
@@ -27,12 +29,25 @@ const isIOS = () => {
     (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
 }
 
-export function MatrixRain({ className = '' }: MatrixRainProps) {
+export function MatrixRain({ className = '', startDelay = 0 }: MatrixRainProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const dropsRef = useRef<MatrixDrop[]>([])
   const animationFrameRef = useRef<number | undefined>(undefined)
+  const [isReady, setIsReady] = useState(false)
+
+  // Delay start for performance optimization on initial page load
+  useEffect(() => {
+    if (startDelay === 0) {
+      setIsReady(true)
+      return
+    }
+    const timer = setTimeout(() => setIsReady(true), startDelay)
+    return () => clearTimeout(timer)
+  }, [startDelay])
 
   useEffect(() => {
+    if (!isReady) return
+
     const canvas = canvasRef.current
     if (!canvas) return
 
@@ -168,7 +183,7 @@ export function MatrixRain({ className = '' }: MatrixRainProps) {
         cancelAnimationFrame(animationFrameRef.current)
       }
     }
-  }, [])
+  }, [isReady])
 
   return (
     <canvas

@@ -252,6 +252,9 @@ function GradientBlob({ config, prefersReducedMotion }: GradientBlobProps) {
     opacity: 0.2,
     transform: 'translate(-50%, -50%)',
     borderRadius: '50%',
+    // Performance optimizations - reduce repaint cost
+    contain: 'layout style paint',
+    willChange: 'transform',
   }
 
   if (prefersReducedMotion) {
@@ -311,17 +314,24 @@ function GrainTexture() {
 // MAIN COMPONENT
 // ============================================================================
 
+// Delay before starting Matrix Rain animation (ms) - helps with initial page load performance
+const MATRIX_RAIN_START_DELAY = 1500
+
 export function HybridPremiumBackground() {
   const matrixCanvasRef = useRef<HTMLCanvasElement>(null)
   const prefersReducedMotion = usePrefersReducedMotion()
   const [mounted, setMounted] = useState(false)
+  const [matrixReady, setMatrixReady] = useState(false)
 
   useEffect(() => {
     setMounted(true)
+    // Delay Matrix Rain start by 1.5 seconds for better initial load performance
+    const timer = setTimeout(() => setMatrixReady(true), MATRIX_RAIN_START_DELAY)
+    return () => clearTimeout(timer)
   }, [])
 
-  // Initialize Matrix Rain effect - passa mounted per controllare quando iniziare
-  useMatrixRain(matrixCanvasRef, prefersReducedMotion, mounted)
+  // Initialize Matrix Rain effect - starts only after delay
+  useMatrixRain(matrixCanvasRef, prefersReducedMotion, matrixReady)
 
   if (!mounted) {
     return (
