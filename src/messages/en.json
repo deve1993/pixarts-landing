@@ -63,6 +63,15 @@
         "result1": { "value": "+300%", "label": "quote requests" },
         "result2": { "value": "Top 5", "label": "local Google" },
         "result3": { "value": "10 days", "label": "project delivery" }
+      },
+      "fl1": {
+        "type": "Corporate Website + AI",
+        "challenge": "Integrate AI chatbot for automated customer support",
+        "solution1": "OpenAI-powered chatbot",
+        "solution2": "HubSpot CRM for lead management",
+        "result1": { "value": "+220%", "label": "leads generated" },
+        "result2": { "value": "45sec", "label": "response time" },
+        "result3": { "value": "98%", "label": "satisfaction" }
       }
     }
   },

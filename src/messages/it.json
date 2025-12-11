@@ -63,6 +63,15 @@
         "result1": { "value": "+300%", "label": "richieste preventivo" },
         "result2": { "value": "Top 5", "label": "Google locale" },
         "result3": { "value": "10gg", "label": "consegna progetto" }
+      },
+      "fl1": {
+        "type": "Sito Aziendale + AI",
+        "challenge": "Integrare chatbot AI per supporto clienti automatizzato",
+        "solution1": "Chatbot con OpenAI integrato",
+        "solution2": "CRM HubSpot per gestione lead",
+        "result1": { "value": "+220%", "label": "lead generati" },
+        "result2": { "value": "45sec", "label": "tempo risposta" },
+        "result3": { "value": "98%", "label": "soddisfazione" }
       }
     }
   },

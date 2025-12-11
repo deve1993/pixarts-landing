@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils'
 import { useMediaQuery } from '@/lib/hooks/useMediaQuery'
 
 interface SatelliteCardProps {
-  projectKey: 'flowmatics' | 'quickfy' | 'benetti'
+  projectKey: 'flowmatics' | 'quickfy' | 'benetti' | 'fl1'
   projectName: string
   position: 'top-left' | 'top-right' | 'bottom-right' | 'bottom-center'
   className?: string
