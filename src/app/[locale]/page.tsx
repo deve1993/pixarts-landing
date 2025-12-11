@@ -10,7 +10,7 @@ const Problems = dynamic(() => import('@/components/sections/Problems').then(m =
 const Solution = dynamic(() => import('@/components/sections/Solution').then(m => m.Solution))
 const PortfolioGallery = dynamic(() => import('@/components/portfolio-v2').then(m => m.PortfolioGallery))
 const Process = dynamic(() => import('@/components/sections/Process').then(m => m.Process))
-const Benefits = dynamic(() => import('@/components/sections/Benefits').then(m => m.Benefits))
+const Capabilities = dynamic(() => import('@/components/sections/Capabilities').then(m => m.Capabilities))
 const Guarantee = dynamic(() => import('@/components/sections/Guarantee').then(m => m.Guarantee))
 const Pricing = dynamic(() => import('@/components/sections/Pricing').then(m => m.Pricing))
 const Testimonials = dynamic(() => import('@/components/sections/Testimonials').then(m => m.Testimonials))
@@ -38,7 +38,7 @@ export default async function Home({ params }: Props) {
         <Solution />
         <PortfolioGallery />
         <Process />
-        <Benefits />
+        <Capabilities />
         <Guarantee />
         <Pricing />
         <Testimonials />

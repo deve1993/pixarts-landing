@@ -121,7 +121,7 @@ export function PortfolioGallery() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 1.02 }}
               transition={{ duration: 0.4, ease: [0.43, 0.13, 0.23, 0.96] }}
-              className="relative aspect-video w-full"
+              className="relative aspect-[4/3] w-full"
             >
               <Image
                 src={activeProject.images[imageIndex]}
@@ -130,6 +130,7 @@ export function PortfolioGallery() {
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
                 priority={activeIndex === 0}
+                quality={100}
               />
 
               {/* Gradient overlay */}

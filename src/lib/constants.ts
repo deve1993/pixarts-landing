@@ -151,7 +151,7 @@ export const PORTFOLIO_PROJECTS_V2: PortfolioProjectV2[] = [
     name: 'FL1',
     client: 'FL1 Srl',
     subtitle: 'Sito Aziendale con AI Integration',
-    images: ['/portfolio/FL1 1.webp', '/portfolio/fl1 2.webp'],
+    images: ['/portfolio/FL1 1.webp', '/portfolio/FL1 2.webp'],
     services: [
       { name: 'Web Design', detail: 'Design corporate moderno e professionale' },
       { name: 'Backend', detail: 'API REST e integrazioni server-side' },
@@ -552,49 +552,56 @@ export const PROCESS_STEPS: ProcessStep[] = [
   },
 ]
 
-// Benefits
-export interface Benefit {
+// Capabilities - "Cosa Possiamo Fare"
+export interface Capability {
   icon: LucideIcon
   title: string
   description: string
+  integrations: string[] // logo file names without extension
 }
 
-export const BENEFITS: Benefit[] = [
+export const CAPABILITIES: Capability[] = [
   {
-    icon: Palette,
-    title: 'Design moderno e professionale',
+    icon: Code,
+    title: 'Siti Web & Landing',
     description:
-      'Interfacce pulite che ispirano fiducia. Il primo impatto conta, e noi lo sappiamo bene.',
+      'Design moderno che converte, ottimizzato SEO e performance. Dal concept al lancio in tempi record.',
+    integrations: ['nextjs', 'vercel', 'tailwind'],
   },
   {
     icon: TrendingUp,
-    title: 'Ottimizzazione conversioni',
+    title: 'E-commerce & Pagamenti',
     description:
-      'CTA strategici, percorsi utente studiati, form efficaci. Ogni dettaglio punta alla conversione.',
+      'Checkout fluido, pagamenti sicuri, gestione ordini automatizzata. Vendi online senza pensieri.',
+    integrations: ['stripe', 'shopify'],
+  },
+  {
+    icon: Users,
+    title: 'CRM & Lead Generation',
+    description:
+      'Pipeline vendita automatizzate, lead scoring, follow-up intelligenti. Converti più contatti in clienti.',
+    integrations: ['hubspot'],
   },
   {
     icon: Search,
-    title: 'SEO incluso',
+    title: 'Analytics & Insights',
     description:
-      'Indicizzazione Google, velocità ottimizzata, struttura mobile-first. Visibilità organica dal giorno uno.',
+      'Dashboard personalizzate, tracking avanzato, decisioni data-driven. Misura ciò che conta.',
+    integrations: ['google-analytics', 'hotjar'],
   },
   {
-    icon: Headphones,
-    title: 'Supporto continuo',
+    icon: Sparkles,
+    title: 'Automazioni & AI',
     description:
-      'Training, documentazione, 30 giorni assistenza gratuita. Non sei mai solo.',
+      'Chatbot intelligenti, workflow automatici, integrazioni su misura. Risparmia tempo, scala il business.',
+    integrations: ['openai', 'zapier', 'make'],
   },
   {
-    icon: Smartphone,
-    title: 'Mobile-first responsive',
+    icon: MessageSquare,
+    title: 'Email & Comunicazione',
     description:
-      'Il 70% degli utenti naviga da smartphone. Il tuo sito sarà perfetto su ogni dispositivo.',
-  },
-  {
-    icon: Lock,
-    title: 'Sicurezza e performance',
-    description:
-      'HTTPS, backup automatici, CDN globale. Velocità e sicurezza garantite.',
+      'Campagne automatiche, notifiche multi-canale, newsletter che convertono. Resta connesso coi clienti.',
+    integrations: ['mailchimp', 'sendgrid', 'twilio'],
   },
 ]
 

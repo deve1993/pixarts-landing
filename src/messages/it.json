@@ -179,6 +179,10 @@
       "description": "Deploy, training completo e consegna credenziali. Sei online e autonomo."
     }
   },
+  "capabilities": {
+    "titlePrefix": "Cosa possiamo fare con",
+    "description": "Soluzioni complete per far crescere il tuo business online"
+  },
   "benefits": {
     "title": "Perché scegliere Pixarts",
     "titlePrefix": "Perché scegliere",

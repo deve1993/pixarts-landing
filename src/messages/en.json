@@ -179,6 +179,10 @@
       "description": "Deploy, complete training, and credential handover. You're online and autonomous."
     }
   },
+  "capabilities": {
+    "titlePrefix": "What we can do with",
+    "description": "Complete solutions to grow your business online"
+  },
   "benefits": {
     "title": "Why choose Pixarts",
     "titlePrefix": "Why choose",
