@@ -8,7 +8,7 @@ import { Hero, TrustBadges, SocialProof } from '@/components/sections'
 // Below-fold components - lazy loaded for better initial performance
 const Problems = dynamic(() => import('@/components/sections/Problems').then(m => m.Problems))
 const Solution = dynamic(() => import('@/components/sections/Solution').then(m => m.Solution))
-const HeroParallax = dynamic(() => import('@/components/hero-parallax').then(m => m.HeroParallax))
+const PortfolioGallery = dynamic(() => import('@/components/portfolio-v2').then(m => m.PortfolioGallery))
 const Process = dynamic(() => import('@/components/sections/Process').then(m => m.Process))
 const Benefits = dynamic(() => import('@/components/sections/Benefits').then(m => m.Benefits))
 const Guarantee = dynamic(() => import('@/components/sections/Guarantee').then(m => m.Guarantee))
@@ -36,7 +36,7 @@ export default async function Home({ params }: Props) {
         <SocialProof />
         <Problems />
         <Solution />
-        <HeroParallax />
+        <PortfolioGallery />
         <Process />
         <Benefits />
         <Guarantee />

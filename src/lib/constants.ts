@@ -102,7 +102,7 @@ export const VALUE_PROPS: ValueProp[] = [
   },
 ]
 
-// Portfolio Projects
+// Portfolio Projects (Legacy - kept for backwards compatibility)
 export interface PortfolioProject {
   name: string
   url: string
@@ -119,6 +119,116 @@ export interface PortfolioProject {
   section?: string
   order?: number
 }
+
+// Portfolio V2 - New structure with services, integrations, and technologies
+export interface PortfolioService {
+  name: string
+  detail: string
+}
+
+export interface PortfolioResult {
+  value: string
+  label: string
+  suffix?: string
+}
+
+export interface PortfolioProjectV2 {
+  id: string
+  name: string
+  client: string
+  subtitle: string
+  images: string[]
+  services: PortfolioService[]
+  integrations: string[]
+  results: PortfolioResult[]
+  technologies: string[]
+  description: string
+}
+
+export const PORTFOLIO_PROJECTS_V2: PortfolioProjectV2[] = [
+  {
+    id: 'fl1',
+    name: 'FL1',
+    client: 'FL1 Srl',
+    subtitle: 'Sito Aziendale con AI Integration',
+    images: ['/portfolio/FL1 1.webp', '/portfolio/fl1 2.webp'],
+    services: [
+      { name: 'Web Design', detail: 'Design corporate moderno e professionale' },
+      { name: 'Backend', detail: 'API REST e integrazioni server-side' },
+      { name: 'SEO', detail: 'Ottimizzazione on-page e tecnica' },
+      { name: 'AI Integration', detail: 'Chatbot e automazioni LLM' },
+    ],
+    integrations: ['HubSpot CRM', 'Google Analytics', 'Stripe', 'Mailchimp', 'OpenAI API'],
+    results: [
+      { value: '+220', label: 'lead generati', suffix: '%' },
+      { value: '45', label: 'tempo risposta chat', suffix: 'sec' },
+      { value: '98', label: 'soddisfazione clienti', suffix: '%' },
+    ],
+    technologies: ['React', 'Next.js', 'Node.js', 'PostgreSQL', 'Tailwind', 'OpenAI'],
+    description: 'Sito aziendale completo con sistema di lead generation automatizzato, chatbot AI per supporto clienti e integrazione CRM per gestione commerciale.',
+  },
+  {
+    id: 'flowmatics',
+    name: 'FlowMatics',
+    client: 'FlowMatics',
+    subtitle: 'Piattaforma Automazione Marketing',
+    images: ['/portfolio/flowmatic 1.webp', '/portfolio/flowmatic 2.webp'],
+    services: [
+      { name: 'Web Design', detail: 'Landing page ad alta conversione' },
+      { name: 'SEO', detail: 'SEO tecnico e contenuti ottimizzati' },
+      { name: 'CRO', detail: 'Ottimizzazione tasso conversione' },
+    ],
+    integrations: ['Google Analytics 4', 'Google Search Console', 'HubSpot', 'Hotjar'],
+    results: [
+      { value: '+180', label: 'richieste contatto', suffix: '%' },
+      { value: '+40', label: 'visibilità Google', suffix: '%' },
+      { value: 'Top 3', label: 'keyword target' },
+    ],
+    technologies: ['Next.js', 'Tailwind', 'Framer Motion', 'Vercel'],
+    description: 'Landing page B2B progettata per convertire visitatori in lead qualificati. Funnel ottimizzato con A/B testing e analytics avanzati.',
+  },
+  {
+    id: 'quickfy-web',
+    name: 'Quickfy',
+    client: 'Quickfy',
+    subtitle: 'SaaS Marketing Website',
+    images: ['/portfolio/quickfy 1.webp', '/portfolio/quickfy 2.webp'],
+    services: [
+      { name: 'Web Design', detail: 'Design SaaS moderno con demo interattiva' },
+      { name: 'SEO', detail: 'SEO per SaaS e content strategy' },
+      { name: 'CRO', detail: 'Funnel di conversione ottimizzato' },
+    ],
+    integrations: ['Google Analytics 4', 'HubSpot', 'Intercom', 'Stripe'],
+    results: [
+      { value: '3-5', label: 'lead qualificati/settimana' },
+      { value: '8.5', label: 'tasso conversione', suffix: '%' },
+      { value: '-37', label: 'bounce rate', suffix: '%' },
+    ],
+    technologies: ['Next.js', 'Tailwind', 'Framer Motion', 'TypeScript', 'Vercel'],
+    description: 'Sito marketing per piattaforma SaaS con demo interattiva integrata, pricing dinamico e sistema di lead nurturing automatizzato.',
+  },
+  {
+    id: 'quickfy-app',
+    name: 'Quickfy App',
+    client: 'Quickfy',
+    subtitle: 'Dashboard Analytics & Automazioni',
+    images: ['/portfolio/quickfy APP1.webp', '/portfolio/quickfy APP2.webp'],
+    services: [
+      { name: 'Frontend', detail: 'Dashboard React con UI/UX avanzata' },
+      { name: 'Backend', detail: 'API scalabili e microservizi' },
+      { name: 'AI & Automazioni', detail: 'Server MCP, chatbot AI, workflow automatici' },
+      { name: 'DevOps', detail: 'CI/CD, monitoring e scaling' },
+    ],
+    integrations: ['OpenAI API', 'Anthropic Claude', 'Stripe Billing', 'SendGrid', 'Twilio', 'Slack', 'Zapier', 'Make'],
+    results: [
+      { value: '500+', label: 'utenti attivi' },
+      { value: '15', label: 'ore risparmiate/settimana', suffix: 'h' },
+      { value: '99.9', label: 'uptime garantito', suffix: '%' },
+    ],
+    technologies: ['React', 'Next.js', 'Node.js', 'PostgreSQL', 'Redis', 'Docker', 'AWS', 'OpenAI', 'Tailwind'],
+    description: 'Piattaforma SaaS completa con dashboard analytics, server MCP per automazioni AI, chatbot marketing intelligente, gestione campagne automatizzate e integrazioni multi-canale.',
+  },
+]
 
 export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   {

@@ -26,6 +26,7 @@ export function Section({ id, className, children, ...props }: SectionProps) {
 interface SectionHeaderProps {
   title: string
   description?: string
+  badge?: string
   centered?: boolean
   className?: string
   animate?: boolean
@@ -34,12 +35,18 @@ interface SectionHeaderProps {
 export function SectionHeader({
   title,
   description,
+  badge,
   centered = true,
   className,
   animate = true,
 }: SectionHeaderProps) {
   const content = (
     <div className={cn('mb-16', centered && 'text-center', className)}>
+      {badge && (
+        <span className="inline-block px-4 py-1.5 mb-4 text-sm font-medium text-accent-orange bg-accent-orange/10 border border-accent-orange/20 rounded-full">
+          {badge}
+        </span>
+      )}
       <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-balance">
         {title}
       </h2>
