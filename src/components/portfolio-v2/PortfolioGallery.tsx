@@ -4,19 +4,58 @@ import { useState, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { Section, SectionHeader } from '@/components/ui/section'
-import { PORTFOLIO_PROJECTS_V2 } from '@/lib/constants'
 import { ServiceCard } from './ServiceCard'
 import { MetricCard } from './MetricCard'
 import { TechLogo } from './TechLogo'
 
+// Project IDs and static data (images, technologies, integrations don't need translation)
+const PROJECT_KEYS = ['fl1', 'flowmatics', 'quickfy-web', 'quickfy-app'] as const
+
+const PROJECT_STATIC_DATA = {
+  'fl1': {
+    name: 'FL1',
+    images: ['/portfolio/FL1 1.webp', '/portfolio/FL1 2.webp'],
+    technologies: ['React', 'Next.js', 'Node.js', 'PostgreSQL', 'Tailwind', 'OpenAI'],
+    integrations: ['HubSpot CRM', 'Google Analytics', 'Stripe', 'Mailchimp', 'OpenAI API'],
+    serviceKeys: ['webDesign', 'backend', 'seo', 'ai'],
+    resultKeys: ['leads', 'response', 'satisfaction'],
+  },
+  'flowmatics': {
+    name: 'FlowMatics',
+    images: ['/portfolio/flowmatic 1.webp', '/portfolio/flowmatic 2.webp'],
+    technologies: ['Next.js', 'Tailwind', 'Framer Motion', 'Vercel'],
+    integrations: ['Google Analytics 4', 'Google Search Console', 'HubSpot', 'Hotjar'],
+    serviceKeys: ['webDesign', 'seo', 'cro'],
+    resultKeys: ['contacts', 'visibility', 'keywords'],
+  },
+  'quickfy-web': {
+    name: 'Quickfy',
+    images: ['/portfolio/quickfy 1.webp', '/portfolio/quickfy 2.webp'],
+    technologies: ['Next.js', 'Tailwind', 'Framer Motion', 'TypeScript', 'Vercel'],
+    integrations: ['Google Analytics 4', 'HubSpot', 'Intercom', 'Stripe'],
+    serviceKeys: ['webDesign', 'seo', 'cro'],
+    resultKeys: ['leads', 'conversion', 'bounce'],
+  },
+  'quickfy-app': {
+    name: 'Quickfy App',
+    images: ['/portfolio/quickfy APP1.webp', '/portfolio/quickfy APP2.webp'],
+    technologies: ['React', 'Next.js', 'Node.js', 'PostgreSQL', 'Redis', 'Docker', 'AWS', 'OpenAI', 'Tailwind'],
+    integrations: ['OpenAI API', 'Anthropic Claude', 'Stripe Billing', 'SendGrid', 'Twilio', 'Slack', 'Zapier', 'Make'],
+    serviceKeys: ['frontend', 'backend', 'ai', 'devops'],
+    resultKeys: ['users', 'time', 'uptime'],
+  },
+} as const
+
 export function PortfolioGallery() {
+  const t = useTranslations('portfolio.gallery')
   const [activeIndex, setActiveIndex] = useState(0)
   const [direction, setDirection] = useState(0)
   const [imageIndex, setImageIndex] = useState(0)
 
-  const projects = PORTFOLIO_PROJECTS_V2
-  const activeProject = projects[activeIndex]
+  const activeProjectKey = PROJECT_KEYS[activeIndex]
+  const activeProjectStatic = PROJECT_STATIC_DATA[activeProjectKey]
 
   const handleSelect = useCallback(
     (index: number) => {
@@ -36,12 +75,12 @@ export function PortfolioGallery() {
   }, [activeIndex])
 
   const handleNext = useCallback(() => {
-    if (activeIndex < projects.length - 1) {
+    if (activeIndex < PROJECT_KEYS.length - 1) {
       setDirection(1)
       setActiveIndex(activeIndex + 1)
       setImageIndex(0)
     }
-  }, [activeIndex, projects.length])
+  }, [activeIndex])
 
   const handleImagePrev = useCallback(() => {
     if (imageIndex > 0) {
@@ -50,17 +89,40 @@ export function PortfolioGallery() {
   }, [imageIndex])
 
   const handleImageNext = useCallback(() => {
-    if (imageIndex < activeProject.images.length - 1) {
+    if (imageIndex < activeProjectStatic.images.length - 1) {
       setImageIndex(imageIndex + 1)
     }
-  }, [imageIndex, activeProject.images.length])
+  }, [imageIndex, activeProjectStatic.images.length])
+
+  // Get translated data for active project
+  const getProjectTranslations = (projectKey: typeof PROJECT_KEYS[number]) => {
+    const staticData = PROJECT_STATIC_DATA[projectKey]
+    return {
+      client: t(`projects.${projectKey}.client`),
+      subtitle: t(`projects.${projectKey}.subtitle`),
+      description: t(`projects.${projectKey}.description`),
+      services: staticData.serviceKeys.map((key) => ({
+        name: t(`projects.${projectKey}.services.${key}.name`),
+        detail: t(`projects.${projectKey}.services.${key}.detail`),
+      })),
+      results: staticData.resultKeys.map((key) => ({
+        value: t(`projects.${projectKey}.results.${key}.value`),
+        label: t(`projects.${projectKey}.results.${key}.label`),
+        suffix: t.has(`projects.${projectKey}.results.${key}.suffix`)
+          ? t(`projects.${projectKey}.results.${key}.suffix`)
+          : undefined,
+      })),
+    }
+  }
+
+  const activeProject = getProjectTranslations(activeProjectKey)
 
   return (
     <Section id="portfolio" className="overflow-hidden">
       <SectionHeader
-        badge="Portfolio"
-        title="I nostri progetti"
-        description="Scopri come abbiamo aiutato i nostri clienti a crescere online"
+        badge={t('badge')}
+        title={t('title')}
+        description={t('description')}
       />
 
       {/* Main Container */}
@@ -74,13 +136,13 @@ export function PortfolioGallery() {
           >
             <ChevronLeft className="w-5 h-5 text-text-primary group-hover:text-accent-orange transition-colors" />
             <span className="text-sm text-text-secondary group-hover:text-text-primary transition-colors hidden sm:inline">
-              Precedente
+              {t('previous')}
             </span>
           </button>
 
           <AnimatePresence mode="wait">
             <motion.div
-              key={activeProject.id}
+              key={activeProjectKey}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
@@ -94,7 +156,7 @@ export function PortfolioGallery() {
                 </span>
               </div>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary font-heading">
-                {activeProject.name}
+                {activeProjectStatic.name}
               </h2>
               <p className="text-text-secondary mt-1">{activeProject.subtitle}</p>
             </motion.div>
@@ -102,44 +164,44 @@ export function PortfolioGallery() {
 
           <button
             onClick={handleNext}
-            disabled={activeIndex === projects.length - 1}
+            disabled={activeIndex === PROJECT_KEYS.length - 1}
             className="flex items-center gap-2 px-4 py-2 bg-bg-surface/60 backdrop-blur-sm border border-border/50 rounded-full disabled:opacity-30 disabled:cursor-not-allowed hover:bg-bg-surface hover:border-accent-orange/30 transition-all group"
           >
             <span className="text-sm text-text-secondary group-hover:text-text-primary transition-colors hidden sm:inline">
-              Successivo
+              {t('next')}
             </span>
             <ChevronRight className="w-5 h-5 text-text-primary group-hover:text-accent-orange transition-colors" />
           </button>
         </div>
 
         {/* Full-Width Image Viewport */}
-        <div className="relative rounded-2xl overflow-hidden border border-border/50 bg-bg-surface/30 backdrop-blur-sm mb-8">
+        <div className="relative rounded-2xl overflow-hidden border border-border/50 bg-bg-elevated/50 backdrop-blur-sm mb-8">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
-              key={`${activeProject.id}-${imageIndex}`}
+              key={`${activeProjectKey}-${imageIndex}`}
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 1.02 }}
               transition={{ duration: 0.4, ease: [0.43, 0.13, 0.23, 0.96] }}
-              className="relative aspect-[4/3] w-full"
+              className="relative aspect-[16/10] w-full"
             >
               <Image
-                src={activeProject.images[imageIndex]}
-                alt={`${activeProject.name} screenshot ${imageIndex + 1}`}
+                src={activeProjectStatic.images[imageIndex]}
+                alt={`${activeProjectStatic.name} screenshot ${imageIndex + 1}`}
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
                 priority={activeIndex === 0}
-                quality={100}
+                quality={90}
               />
 
               {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/40 via-transparent to-transparent pointer-events-none" />
             </motion.div>
           </AnimatePresence>
 
           {/* Image Navigation (if multiple images) */}
-          {activeProject.images.length > 1 && (
+          {activeProjectStatic.images.length > 1 && (
             <>
               <button
                 onClick={handleImagePrev}
@@ -150,7 +212,7 @@ export function PortfolioGallery() {
               </button>
               <button
                 onClick={handleImageNext}
-                disabled={imageIndex === activeProject.images.length - 1}
+                disabled={imageIndex === activeProjectStatic.images.length - 1}
                 className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-bg-surface/80 backdrop-blur-sm border border-border/50 rounded-full disabled:opacity-30 disabled:cursor-not-allowed hover:bg-bg-surface hover:border-accent-orange/30 transition-all z-10"
               >
                 <ChevronRight className="w-5 h-5 text-text-primary" />
@@ -158,7 +220,7 @@ export function PortfolioGallery() {
 
               {/* Image dots */}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10">
-                {activeProject.images.map((_, idx) => (
+                {activeProjectStatic.images.map((_, idx) => (
                   <button
                     key={idx}
                     onClick={() => setImageIndex(idx)}
@@ -177,7 +239,7 @@ export function PortfolioGallery() {
         {/* Details Grid - 3 Columns */}
         <AnimatePresence mode="wait">
           <motion.div
-            key={activeProject.id}
+            key={activeProjectKey}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -188,7 +250,7 @@ export function PortfolioGallery() {
             <div className="p-6 rounded-2xl bg-bg-surface/30 backdrop-blur-sm border border-border/50">
               <h3 className="text-sm uppercase tracking-wider text-text-muted mb-4 flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-accent-orange" />
-                Servizi
+                {t('services')}
               </h3>
               <div className="space-y-3">
                 {activeProject.services.map((service, index) => (
@@ -206,7 +268,7 @@ export function PortfolioGallery() {
             <div className="p-6 rounded-2xl bg-bg-surface/30 backdrop-blur-sm border border-border/50">
               <h3 className="text-sm uppercase tracking-wider text-text-muted mb-4 flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-accent-orange" />
-                Risultati
+                {t('results')}
               </h3>
               <div className="space-y-3">
                 {activeProject.results.map((result, index) => (
@@ -232,20 +294,20 @@ export function PortfolioGallery() {
             <div className="p-6 rounded-2xl bg-bg-surface/30 backdrop-blur-sm border border-border/50">
               <h3 className="text-sm uppercase tracking-wider text-text-muted mb-4 flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-accent-orange" />
-                Tecnologie
+                {t('technologies')}
               </h3>
               <div className="flex flex-wrap gap-2 mb-6">
-                {activeProject.technologies.map((tech) => (
+                {activeProjectStatic.technologies.map((tech) => (
                   <TechLogo key={tech} name={tech} />
                 ))}
               </div>
 
               <h3 className="text-sm uppercase tracking-wider text-text-muted mb-4 flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-accent-orange" />
-                Integrazioni
+                {t('integrations')}
               </h3>
               <div className="flex flex-wrap gap-2">
-                {activeProject.integrations.map((integration) => (
+                {activeProjectStatic.integrations.map((integration) => (
                   <span
                     key={integration}
                     className="px-3 py-1.5 bg-bg-surface/60 border border-border/50 rounded-lg text-xs text-text-secondary hover:border-accent-orange/30 hover:text-text-primary transition-colors"
@@ -260,9 +322,9 @@ export function PortfolioGallery() {
 
         {/* Project Dots Navigation */}
         <div className="flex items-center justify-center gap-3 mt-8">
-          {projects.map((project, index) => (
+          {PROJECT_KEYS.map((projectKey, index) => (
             <button
-              key={project.id}
+              key={projectKey}
               onClick={() => handleSelect(index)}
               className={`group relative transition-all ${
                 index === activeIndex ? 'scale-110' : ''
@@ -277,7 +339,7 @@ export function PortfolioGallery() {
               />
               {/* Tooltip */}
               <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-bg-surface border border-border/50 rounded text-xs text-text-secondary whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                {project.name}
+                {PROJECT_STATIC_DATA[projectKey].name}
               </span>
             </button>
           ))}

@@ -1,15 +1,21 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Check, ArrowRight, Clock } from 'lucide-react'
+import { Check, ArrowRight, Clock, Zap, Plug } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { Section, SectionHeader } from '@/components/ui/section'
 import { Button } from '@/components/ui/button'
 import { scrollToElement } from '@/lib/utils'
 import { staggerContainer, staggerItem } from '@/lib/motion-variants'
 import { useEffect, useRef, useState, useCallback } from 'react'
+import { ADDONS } from '@/lib/constants'
 
 const PLAN_KEYS = ['plan1', 'plan2', 'plan3'] as const
+const PLAN_INTEGRATIONS = {
+  plan1: ['Google Analytics 4', 'Meta Pixel', 'Google Search Console', 'Cookie Consent GDPR'],
+  plan2: ['Google Analytics 4 (eventi)', 'Meta Pixel', 'Google Search Console', 'Cookie Consent GDPR', 'Google Maps', 'Mailchimp/Brevo base'],
+  plan3: ['Google Analytics 4 (e-commerce)', 'Meta Pixel + Conversions API', 'Google Search Console', 'Cookie Consent GDPR', 'Google Maps', 'Mailchimp/Brevo base', 'Stripe Checkout', 'Calendly/Cal.com (booking)'],
+}
 
 // ============================================================================
 // MATRIX RAIN MINI - Effetto Matrix per le card
@@ -189,6 +195,7 @@ interface PricingCardProps {
     duration: string
     idealFor: string
     features: string[]
+    integrations: string[]
   }
   t: ReturnType<typeof useTranslations>
 }
@@ -255,7 +262,7 @@ function PricingCard({ plan, t }: PricingCardProps) {
         </p>
 
         {/* Features */}
-        <ul className="space-y-3 mb-8 flex-grow">
+        <ul className="space-y-3 mb-6">
           {plan.features.map((feature, index) => (
             <li key={index} className="flex items-start gap-3 text-sm">
               <Check className="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
@@ -263,6 +270,24 @@ function PricingCard({ plan, t }: PricingCardProps) {
             </li>
           ))}
         </ul>
+
+        {/* Integrations */}
+        <div className="mb-8 flex-grow">
+          <div className="flex items-center gap-2 mb-3">
+            <Plug className="w-4 h-4 text-accent-orange" />
+            <span className="text-sm font-medium text-text-primary">{t('integrationsIncluded')}</span>
+          </div>
+          <div className="flex flex-wrap gap-1.5">
+            {plan.integrations.map((integration, index) => (
+              <span
+                key={index}
+                className="px-2 py-0.5 text-[10px] rounded-full bg-bg-elevated/80 text-text-muted border border-border/30"
+              >
+                {integration}
+              </span>
+            ))}
+          </div>
+        </div>
 
         {/* CTA */}
         <Button
@@ -274,6 +299,158 @@ function PricingCard({ plan, t }: PricingCardProps) {
           <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
         </Button>
       </div>
+    </motion.div>
+  )
+}
+
+// ============================================================================
+// ADD-ONS SECTION - BENTO GRID 2+3
+// ============================================================================
+
+// Componente singola card Add-on con effetto Matrix
+interface AddonCardProps {
+  addon: typeof ADDONS[0]
+  t: ReturnType<typeof useTranslations>
+  size: 'large' | 'medium'
+  featured?: boolean
+}
+
+function AddonCard({ addon, t, size, featured }: AddonCardProps) {
+  const [isHovered, setIsHovered] = useState(false)
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+  const Icon = addon.icon
+
+  useCardMatrixRain(canvasRef, isHovered)
+
+  if (size === 'large') {
+    return (
+      <motion.div
+        whileHover={{ scale: 1.02 }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className={`p-6 md:p-8 rounded-2xl border backdrop-blur-sm group relative overflow-hidden ${
+          featured
+            ? 'border-accent-orange/30 bg-gradient-to-br from-accent-orange/10 via-bg-surface/80 to-bg-surface/60'
+            : 'border-border/50 bg-bg-surface/60 hover:border-accent-orange/30 transition-all'
+        }`}
+      >
+        {/* Canvas per effetto Matrix */}
+        <canvas
+          ref={canvasRef}
+          className="absolute inset-0 w-full h-full pointer-events-none z-0"
+          style={{ opacity: isHovered ? 1 : 0, transition: 'opacity 0.3s' }}
+        />
+        {/* Gradient blob decorativo */}
+        {featured ? (
+          <div className="absolute -top-20 -right-20 w-40 h-40 bg-accent-orange/20 rounded-full blur-3xl group-hover:bg-accent-orange/30 transition-all" />
+        ) : (
+          <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-accent-orange/10 rounded-full blur-3xl group-hover:bg-accent-orange/20 transition-all" />
+        )}
+
+        <div className="relative z-10 h-full flex flex-col min-h-[180px]">
+          <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-colors ${
+            featured
+              ? 'bg-accent-orange/20 group-hover:bg-accent-orange/30'
+              : 'bg-accent-orange/10 group-hover:bg-accent-orange/20'
+          }`}>
+            <Icon className="w-6 h-6 text-accent-orange" />
+          </div>
+          <h4 className="text-xl md:text-2xl font-heading font-bold text-text-primary mb-3">
+            {t(`${addon.id}.name`)}
+          </h4>
+          <p className="text-sm text-text-secondary">
+            {t(`${addon.id}.description`)}
+          </p>
+        </div>
+      </motion.div>
+    )
+  }
+
+  // Card media
+  return (
+    <motion.div
+      whileHover={{ scale: 1.02, y: -4 }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="p-5 rounded-2xl border border-border/50 bg-bg-surface/60 backdrop-blur-sm group hover:border-accent-orange/30 transition-all relative overflow-hidden"
+    >
+      {/* Canvas per effetto Matrix */}
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full pointer-events-none z-0"
+        style={{ opacity: isHovered ? 1 : 0, transition: 'opacity 0.3s' }}
+      />
+
+      <div className="relative z-10 h-full flex flex-col">
+        <div className="w-10 h-10 rounded-lg bg-accent-orange/10 flex items-center justify-center mb-3 group-hover:bg-accent-orange/20 transition-colors">
+          <Icon className="w-5 h-5 text-accent-orange" />
+        </div>
+        <h4 className="font-semibold text-text-primary mb-2">
+          {t(`${addon.id}.name`)}
+        </h4>
+        <p className="text-xs text-text-muted">
+          {t(`${addon.id}.description`)}
+        </p>
+      </div>
+    </motion.div>
+  )
+}
+
+function AddonsSection() {
+  const t = useTranslations('addons')
+  const coreAddons = ADDONS.filter(a => a.tier === 'core')
+
+  // Layout 2+3: Prima riga 2 card grandi, seconda riga 3 card medie
+  const addon1 = coreAddons[0] // Chatbot AI
+  const addon2 = coreAddons[1] // CRM Avanzato
+  const addon3 = coreAddons[2] // Automazioni Zapier/Make
+  const addon4 = coreAddons[3] // WhatsApp Business
+  const addon5 = coreAddons[4] // Email Marketing
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="mt-20"
+    >
+      <div className="text-center mb-10">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-orange/10 text-accent-orange text-sm mb-4">
+          <Zap className="w-4 h-4" />
+          {t('tiers.core')}
+        </div>
+        <h3 className="text-2xl md:text-3xl font-heading font-bold text-text-primary mb-3">
+          {t('title')}
+        </h3>
+        <p className="text-text-secondary max-w-2xl mx-auto">
+          {t('description')}
+        </p>
+      </div>
+
+      {/* Riga 1: 2 Card Grandi */}
+      <div className="grid md:grid-cols-2 gap-4 mb-4">
+        {addon1 && <AddonCard addon={addon1} t={t} size="large" featured />}
+        {addon2 && <AddonCard addon={addon2} t={t} size="large" />}
+      </div>
+
+      {/* Riga 2: 3 Card Medie */}
+      <div className="grid md:grid-cols-3 gap-4">
+        {addon3 && <AddonCard addon={addon3} t={t} size="medium" />}
+        {addon4 && <AddonCard addon={addon4} t={t} size="medium" />}
+        {addon5 && <AddonCard addon={addon5} t={t} size="medium" />}
+      </div>
+
+      {/* Footer */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="mt-8 text-center"
+      >
+        <p className="text-text-muted text-sm">
+          {t('advancedNote')}
+        </p>
+      </motion.div>
     </motion.div>
   )
 }
@@ -293,6 +470,7 @@ export function Pricing() {
     duration: t(`${planKey}.duration`),
     idealFor: t(`${planKey}.idealFor`),
     features: t.raw(`${planKey}.features`) as string[],
+    integrations: PLAN_INTEGRATIONS[planKey],
   }))
 
   return (
@@ -302,6 +480,7 @@ export function Pricing() {
         description={t('description')}
       />
 
+      {/* Main Pricing Plans */}
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -314,26 +493,8 @@ export function Pricing() {
         ))}
       </motion.div>
 
-      {/* Maintenance Note */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.4 }}
-        className="mt-12 text-center"
-      >
-        <div className="inline-flex flex-col sm:flex-row items-center gap-4 px-6 py-4 rounded-xl bg-bg-surface/60 backdrop-blur-sm border border-border/50">
-          <div className="text-left">
-            <span className="text-text-primary font-semibold">
-              {t('maintenance')}
-            </span>
-            <span className="text-text-secondary ml-2">{t('maintenancePrice')}</span>
-          </div>
-          <span className="text-text-muted text-sm">
-            {t('maintenanceDesc')}
-          </span>
-        </div>
-      </motion.div>
+      {/* Add-ons Section */}
+      <AddonsSection />
     </Section>
   )
 }

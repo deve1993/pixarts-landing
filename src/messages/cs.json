@@ -63,6 +63,15 @@
         "result1": { "value": "+300%", "label": "žádostí o nabídku" },
         "result2": { "value": "Top 5", "label": "lokální Google" },
         "result3": { "value": "10 dní", "label": "dodání projektu" }
+      },
+      "fl1": {
+        "type": "Firemní Web + AI",
+        "challenge": "Integrace AI chatbota pro automatizovanou zákaznickou podporu",
+        "solution1": "Chatbot s integrací OpenAI",
+        "solution2": "HubSpot CRM pro správu leadů",
+        "result1": { "value": "+220%", "label": "generovaných leadů" },
+        "result2": { "value": "45s", "label": "doba odpovědi" },
+        "result3": { "value": "98%", "label": "spokojenost" }
       }
     }
   },
@@ -112,6 +121,81 @@
     "challenge": "Výzva",
     "solution": "Řešení",
     "visit": "Navštívit",
+    "gallery": {
+      "badge": "Portfolio",
+      "title": "Naše projekty",
+      "description": "Zjistěte, jak jsme pomohli našim klientům růst online",
+      "previous": "Předchozí",
+      "next": "Další",
+      "services": "Služby",
+      "results": "Výsledky",
+      "technologies": "Technologie",
+      "integrations": "Integrace",
+      "projects": {
+        "fl1": {
+          "client": "FL1 Srl",
+          "subtitle": "Firemní web s integrací AI",
+          "services": {
+            "webDesign": { "name": "Web Design", "detail": "Moderní a profesionální firemní design" },
+            "backend": { "name": "Backend", "detail": "REST API a serverové integrace" },
+            "seo": { "name": "SEO", "detail": "On-page a technická optimalizace" },
+            "ai": { "name": "AI integrace", "detail": "Chatbot a LLM automatizace" }
+          },
+          "results": {
+            "leads": { "value": "+220", "label": "získaných leadů", "suffix": "%" },
+            "response": { "value": "45", "label": "doba odpovědi chatu", "suffix": "sec" },
+            "satisfaction": { "value": "98", "label": "spokojenost klientů", "suffix": "%" }
+          },
+          "description": "Kompletní firemní web s automatizovaným systémem generování leadů, AI chatbotem pro zákaznickou podporu a integrací CRM pro řízení obchodu."
+        },
+        "flowmatics": {
+          "client": "FlowMatics",
+          "subtitle": "Platforma pro marketingovou automatizaci",
+          "services": {
+            "webDesign": { "name": "Web Design", "detail": "Landing page s vysokou konverzí" },
+            "seo": { "name": "SEO", "detail": "Technické SEO a optimalizovaný obsah" },
+            "cro": { "name": "CRO", "detail": "Optimalizace konverzního poměru" }
+          },
+          "results": {
+            "contacts": { "value": "+180", "label": "kontaktních požadavků", "suffix": "%" },
+            "visibility": { "value": "+40", "label": "viditelnost na Google", "suffix": "%" },
+            "keywords": { "value": "Top 3", "label": "cílová klíčová slova" }
+          },
+          "description": "B2B landing page navržená pro konverzi návštěvníků na kvalifikované leady. Optimalizovaný funnel s A/B testováním a pokročilou analytikou."
+        },
+        "quickfy-web": {
+          "client": "Quickfy",
+          "subtitle": "SaaS marketingový web",
+          "services": {
+            "webDesign": { "name": "Web Design", "detail": "Moderní SaaS design s interaktivním demem" },
+            "seo": { "name": "SEO", "detail": "SEO pro SaaS a obsahová strategie" },
+            "cro": { "name": "CRO", "detail": "Optimalizovaný konverzní funnel" }
+          },
+          "results": {
+            "leads": { "value": "3-5", "label": "kvalifikovaných leadů/týden" },
+            "conversion": { "value": "8.5", "label": "konverzní poměr", "suffix": "%" },
+            "bounce": { "value": "-37", "label": "bounce rate", "suffix": "%" }
+          },
+          "description": "Marketingový web pro SaaS platformu s integrovaným interaktivním demem, dynamickými cenami a automatizovaným systémem lead nurturing."
+        },
+        "quickfy-app": {
+          "client": "Quickfy",
+          "subtitle": "Analytický dashboard a automatizace",
+          "services": {
+            "frontend": { "name": "Frontend", "detail": "React dashboard s pokročilým UI/UX" },
+            "backend": { "name": "Backend", "detail": "Škálovatelná API a mikroslužby" },
+            "ai": { "name": "AI a automatizace", "detail": "MCP server, AI chatbot, automatizované workflow" },
+            "devops": { "name": "DevOps", "detail": "CI/CD, monitoring a škálování" }
+          },
+          "results": {
+            "users": { "value": "500+", "label": "aktivních uživatelů" },
+            "time": { "value": "15", "label": "ušetřených hodin/týden", "suffix": "h" },
+            "uptime": { "value": "99.9", "label": "garantovaná dostupnost", "suffix": "%" }
+          },
+          "description": "Kompletní SaaS platforma s analytickým dashboardem, MCP serverem pro AI automatizace, chytrým marketingovým chatbotem, automatizovanou správou kampaní a vícekanálovými integracemi."
+        }
+      }
+    },
     "hero": {
       "badge": "Portfolio ukázka",
       "title": "Naše",
@@ -178,6 +262,10 @@
       "duration": "1 den",
       "description": "Nasazení, kompletní školení a předání přístupů. Jste online a samostatní."
     }
+  },
+  "capabilities": {
+    "titlePrefix": "Co dokážeme s",
+    "description": "Kompletní řešení pro růst vašeho podnikání online"
   },
   "benefits": {
     "title": "Proč zvolit Pixarts",
@@ -283,6 +371,137 @@
         "2 kola revizí",
         "Pokročilé školení + 30d podpora"
       ]
+    },
+    "integrationsIncluded": "Integrace v ceně"
+  },
+  "addons": {
+    "title": "Vylepšete svůj web",
+    "description": "Přidejte pokročilé funkce pro rychlejší růst",
+    "setupPrice": "Nastavení",
+    "monthlyPrice": "Měsíčně",
+    "learnMore": "Zjistit více",
+    "advancedNote": "Pokročilé integrace dostupné na vyžádání",
+    "tiers": {
+      "core": "Nejžádanější",
+      "expansion": "Rozšíření",
+      "enterprise": "Enterprise"
+    },
+    "chatbot-ai": {
+      "name": "AI Chatbot",
+      "description": "Zákaznická podpora 24/7, automatická kvalifikace leadů, inteligentní odpovědi s OpenAI/Claude."
+    },
+    "crm-avanzato": {
+      "name": "Pokročilé CRM",
+      "description": "Prodejní pipeline, lead scoring, automatické follow-upy. HubSpot nebo Pipedrive integrován."
+    },
+    "automazioni-zapier": {
+      "name": "Zapier/Make Automatizace",
+      "description": "3-5 vlastních workflow pro propojení vašich nástrojů a automatizaci procesů."
+    },
+    "whatsapp-business": {
+      "name": "WhatsApp Business API",
+      "description": "Notifikace objednávek, připomínky schůzek, přímý chat se zákazníky."
+    },
+    "email-marketing": {
+      "name": "Pokročilý Email Marketing",
+      "description": "Automatické sekvence, pokročilá segmentace, A/B testování, detailní analytika."
+    },
+    "multi-lingua": {
+      "name": "Vícejazyčnost",
+      "description": "Kompletní překlad webu + automatické přepínání jazyka na základě geolokace."
+    },
+    "seo-continuativo": {
+      "name": "Průběžné SEO",
+      "description": "Měsíční optimalizace, reporty pozic, sledování klíčových slov, budování odkazů."
+    },
+    "blog-content": {
+      "name": "Blog & Content System",
+      "description": "Pokročilý CMS pro blog, kategorie, štítky, SEO článků, automatické sdílení na sociální sítě."
+    },
+    "prenotazioni-avanzate": {
+      "name": "Pokročilé Rezervace",
+      "description": "Multi-služby, správa personálu, platba předem, automatické připomínky."
+    },
+    "area-riservata": {
+      "name": "Členská Sekce / Přihlášení",
+      "description": "Přístup pro klienty, osobní dashboard, soukromé dokumenty, historie objednávek."
+    },
+    "ecommerce-avanzato": {
+      "name": "Pokročilý E-shop",
+      "description": "Multi-variantní produkty, opakující se předplatné, B2B ceníky, automatické slevy."
+    },
+    "integrazioni-custom": {
+      "name": "Vlastní Integrace",
+      "description": "Vlastní API, propojení s účetními systémy, ERP, proprietární software."
+    },
+    "analytics-avanzato": {
+      "name": "Pokročilá Analytika",
+      "description": "Vlastní dashboardy, Hotjar, heatmapy, nahrávání session, analýza funnelů."
+    },
+    "security-pro": {
+      "name": "Backup & Security Pro",
+      "description": "Denní zálohy, pokročilý firewall, monitoring 24/7, prémiový SSL certifikát."
+    }
+  },
+  "bundles": {
+    "title": "Doporučené balíčky",
+    "description": "Kompletní řešení připravená ke spuštění s věrnostní slevou",
+    "includes": "Zahrnuje",
+    "price": "Cena balíčku",
+    "originalPrice": "Hodnota",
+    "savings": "Ušetříte",
+    "idealFor": "Ideální pro",
+    "cta": "Vybrat tento balíček",
+    "lead-generation-pro": {
+      "name": "Lead Generation Pro",
+      "description": "Kompletní systém pro získávání zákazníků online s chatbotem a automatizovaným email marketingem."
+    },
+    "ecommerce-growth": {
+      "name": "E-commerce Growth",
+      "description": "Prodávejte více s WhatsApp notifikacemi, obnovou opuštěného košíku a automatickými emaily."
+    },
+    "automation-suite": {
+      "name": "Automation Suite",
+      "description": "Šetřete čas automatizací CRM, follow-upů a opakujících se procesů."
+    }
+  },
+  "maintenance": {
+    "title": "Měsíční údržba",
+    "description": "Vyberte si úroveň podpory, která nejlépe vyhovuje vašim potřebám",
+    "perMonth": "/měsíc",
+    "cta": "Přidat do nabídky",
+    "base": {
+      "name": "Základní",
+      "description": "Základní údržba pro udržení webu bezpečného a aktuálního.",
+      "features": [
+        "Bezpečnostní aktualizace",
+        "Týdenní zálohy",
+        "Email podpora (48h odpověď)",
+        "Monitoring dostupnosti"
+      ]
+    },
+    "standard": {
+      "name": "Standardní",
+      "description": "Prioritní podpora s drobnými změnami a měsíčními reporty.",
+      "features": [
+        "Vše ze základního plánu",
+        "Drobné změny (2h/měsíc)",
+        "Prioritní podpora (24h)",
+        "Měsíční Analytics report",
+        "Denní zálohy"
+      ]
+    },
+    "premium": {
+      "name": "Premium",
+      "description": "Kompletní správa s dedikovanou podporou a průběžnou optimalizací.",
+      "features": [
+        "Vše ze standardního plánu",
+        "Změny (4h/měsíc)",
+        "Správa integrací",
+        "Telefonická podpora",
+        "Optimalizace výkonu",
+        "Měsíční SEO report"
+      ]
     }
   },
   "testimonials": {
@@ -312,7 +531,8 @@
       "role": "Majitel",
       "company": "Restaurace Da Luca",
       "text": "Rezervační systém, který funguje skvěle. Termíny dodrženy do písmene a podpora vždy k dispozici. Doporučuji na 100%."
-    }
+    },
+    "hoverHint": "Najedte mysi pro pozastaveni"
   },
   "faq": {
     "title": "Často kladené otázky",
@@ -323,11 +543,11 @@
     },
     "q2": {
       "question": "Co se stane, když se mi výsledek nelíbí?",
-      "answer": "Máte 2 kola revizí v ceně. Pokud stále nejste spokojeni, plná 100% refundace do 7 dnů od spuštění. Nulové riziko."
+      "answer": "Neboj se, pracujeme společně krok za krokem. Zapojujeme tě do každého rozhodnutí: výběr barev, rozložení, obsah. Máš 2 kola revizí v ceně a každou fázi schvalujeme, než pokračujeme. Takže výsledek bude přesně takový, jaký sis představoval."
     },
     "q3": {
       "question": "Mohu si web sám aktualizovat?",
-      "answer": "Rozhodně ano. Používáme intuitivní CMS (WordPress, Webflow nebo vlastní admin). Poskytujeme také kompletní školení a podrobnou dokumentaci."
+      "answer": "Rozhodně ano. Web obsahuje intuitivní administrační panel pro úpravy textů, obrázků a obsahu. Poskytujeme kompletní školení a dokumentaci, abys byl soběstačný."
     },
     "q4": {
       "question": "Je v ceně hosting a doména?",
@@ -339,7 +559,15 @@
     },
     "q6": {
       "question": "Nabízíte údržbu po spuštění?",
-      "answer": "Ano, prvních 30 dní bezplatné podpory v ceně. Poté balíčky údržby od €200-400/měsíc: aktualizace, zálohy, technická podpora, drobné změny."
+      "answer": "Ano, prvních 30 dní bezplatné podpory v ceně. Poté balíčky údržby od €150-400/měsíc: aktualizace, zálohy, technická podpora, drobné změny."
+    },
+    "q7": {
+      "question": "Jaké integrace jsou v ceně?",
+      "answer": "Každý plán zahrnuje základní integrace: Google Analytics, Meta Pixel, kontaktní formuláře a GDPR cookie consent. Vyšší plány zahrnují také Google Maps, Mailchimp/Brevo a (pro E-shop) Stripe Checkout. Pro pokročilé integrace jako AI chatbot, Zapier automatizace nebo WhatsApp Business nabízíme dedikované doplňky."
+    },
+    "q8": {
+      "question": "Mohu přidat funkce po spuštění?",
+      "answer": "Rozhodně ano. Můžete přidat AI chatbot, automatizace, CRM integrace, členskou sekci nebo další funkce kdykoliv. Poskytneme vám dedikovanou nabídku a vše implementujeme bez přerušení vašeho webu."
     }
   },
   "cta": {

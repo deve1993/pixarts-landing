@@ -121,6 +121,81 @@
     "challenge": "The challenge",
     "solution": "The solution",
     "visit": "Visit",
+    "gallery": {
+      "badge": "Portfolio",
+      "title": "Our projects",
+      "description": "Discover how we helped our clients grow online",
+      "previous": "Previous",
+      "next": "Next",
+      "services": "Services",
+      "results": "Results",
+      "technologies": "Technologies",
+      "integrations": "Integrations",
+      "projects": {
+        "fl1": {
+          "client": "FL1 Srl",
+          "subtitle": "Corporate Website with AI Integration",
+          "services": {
+            "webDesign": { "name": "Web Design", "detail": "Modern and professional corporate design" },
+            "backend": { "name": "Backend", "detail": "REST APIs and server-side integrations" },
+            "seo": { "name": "SEO", "detail": "On-page and technical optimization" },
+            "ai": { "name": "AI Integration", "detail": "Chatbot and LLM automations" }
+          },
+          "results": {
+            "leads": { "value": "+220", "label": "leads generated", "suffix": "%" },
+            "response": { "value": "45", "label": "chat response time", "suffix": "sec" },
+            "satisfaction": { "value": "98", "label": "client satisfaction", "suffix": "%" }
+          },
+          "description": "Complete corporate website with automated lead generation system, AI chatbot for customer support, and CRM integration for sales management."
+        },
+        "flowmatics": {
+          "client": "FlowMatics",
+          "subtitle": "Marketing Automation Platform",
+          "services": {
+            "webDesign": { "name": "Web Design", "detail": "High-conversion landing page" },
+            "seo": { "name": "SEO", "detail": "Technical SEO and optimized content" },
+            "cro": { "name": "CRO", "detail": "Conversion rate optimization" }
+          },
+          "results": {
+            "contacts": { "value": "+180", "label": "contact requests", "suffix": "%" },
+            "visibility": { "value": "+40", "label": "Google visibility", "suffix": "%" },
+            "keywords": { "value": "Top 3", "label": "target keywords" }
+          },
+          "description": "B2B landing page designed to convert visitors into qualified leads. Optimized funnel with A/B testing and advanced analytics."
+        },
+        "quickfy-web": {
+          "client": "Quickfy",
+          "subtitle": "SaaS Marketing Website",
+          "services": {
+            "webDesign": { "name": "Web Design", "detail": "Modern SaaS design with interactive demo" },
+            "seo": { "name": "SEO", "detail": "SaaS SEO and content strategy" },
+            "cro": { "name": "CRO", "detail": "Optimized conversion funnel" }
+          },
+          "results": {
+            "leads": { "value": "3-5", "label": "qualified leads/week" },
+            "conversion": { "value": "8.5", "label": "conversion rate", "suffix": "%" },
+            "bounce": { "value": "-37", "label": "bounce rate", "suffix": "%" }
+          },
+          "description": "Marketing website for SaaS platform with integrated interactive demo, dynamic pricing, and automated lead nurturing system."
+        },
+        "quickfy-app": {
+          "client": "Quickfy",
+          "subtitle": "Analytics Dashboard & Automations",
+          "services": {
+            "frontend": { "name": "Frontend", "detail": "React dashboard with advanced UI/UX" },
+            "backend": { "name": "Backend", "detail": "Scalable APIs and microservices" },
+            "ai": { "name": "AI & Automations", "detail": "MCP server, AI chatbot, automated workflows" },
+            "devops": { "name": "DevOps", "detail": "CI/CD, monitoring, and scaling" }
+          },
+          "results": {
+            "users": { "value": "500+", "label": "active users" },
+            "time": { "value": "15", "label": "hours saved/week", "suffix": "h" },
+            "uptime": { "value": "99.9", "label": "guaranteed uptime", "suffix": "%" }
+          },
+          "description": "Complete SaaS platform with analytics dashboard, MCP server for AI automations, smart marketing chatbot, automated campaign management, and multi-channel integrations."
+        }
+      }
+    },
     "hero": {
       "badge": "Portfolio Showcase",
       "title": "Our",
@@ -296,6 +371,137 @@
         "2 rounds of revisions",
         "Advanced training + 30d support"
       ]
+    },
+    "integrationsIncluded": "Integrations included"
+  },
+  "addons": {
+    "title": "Power up your website",
+    "description": "Add advanced features to grow faster",
+    "setupPrice": "Setup",
+    "monthlyPrice": "Monthly",
+    "learnMore": "Learn more",
+    "advancedNote": "Advanced integrations available on request",
+    "tiers": {
+      "core": "Most requested",
+      "expansion": "Expansion",
+      "enterprise": "Enterprise"
+    },
+    "chatbot-ai": {
+      "name": "AI Chatbot",
+      "description": "24/7 customer support, automatic lead qualification, intelligent responses with OpenAI/Claude."
+    },
+    "crm-avanzato": {
+      "name": "Advanced CRM",
+      "description": "Sales pipeline, lead scoring, automated follow-ups. HubSpot or Pipedrive integrated."
+    },
+    "automazioni-zapier": {
+      "name": "Zapier/Make Automations",
+      "description": "3-5 custom workflows to connect your tools and automate processes."
+    },
+    "whatsapp-business": {
+      "name": "WhatsApp Business API",
+      "description": "Order notifications, appointment reminders, direct chat with customers."
+    },
+    "email-marketing": {
+      "name": "Advanced Email Marketing",
+      "description": "Automated sequences, advanced segmentation, A/B testing, detailed analytics."
+    },
+    "multi-lingua": {
+      "name": "Multi-language",
+      "description": "Complete website translation + automatic language switch based on geolocation."
+    },
+    "seo-continuativo": {
+      "name": "Ongoing SEO",
+      "description": "Monthly optimization, ranking reports, keyword tracking, link building."
+    },
+    "blog-content": {
+      "name": "Blog & Content System",
+      "description": "Advanced blog CMS, categories, tags, article SEO, automatic social sharing."
+    },
+    "prenotazioni-avanzate": {
+      "name": "Advanced Bookings",
+      "description": "Multi-service, staff management, advance payment, automatic reminders."
+    },
+    "area-riservata": {
+      "name": "Members Area / Login",
+      "description": "Client access, personal dashboard, private documents, order history."
+    },
+    "ecommerce-avanzato": {
+      "name": "Advanced E-commerce",
+      "description": "Multi-variant products, recurring subscriptions, B2B pricing, automatic discounts."
+    },
+    "integrazioni-custom": {
+      "name": "Custom Integrations",
+      "description": "Custom APIs, connection to management systems, ERP, proprietary software."
+    },
+    "analytics-avanzato": {
+      "name": "Advanced Analytics",
+      "description": "Custom dashboards, Hotjar, heatmaps, session recording, funnel analysis."
+    },
+    "security-pro": {
+      "name": "Backup & Security Pro",
+      "description": "Daily backups, advanced firewall, 24/7 monitoring, premium SSL certificate."
+    }
+  },
+  "bundles": {
+    "title": "Recommended packages",
+    "description": "Complete solutions, ready to launch with a dedicated discount",
+    "includes": "Includes",
+    "price": "Package price",
+    "originalPrice": "Value",
+    "savings": "You save",
+    "idealFor": "Perfect for",
+    "cta": "Choose this package",
+    "lead-generation-pro": {
+      "name": "Lead Generation Pro",
+      "description": "Complete system to acquire customers online with chatbot and automated email marketing."
+    },
+    "ecommerce-growth": {
+      "name": "E-commerce Growth",
+      "description": "Sell more with WhatsApp notifications, abandoned cart recovery, and automated emails."
+    },
+    "automation-suite": {
+      "name": "Automation Suite",
+      "description": "Save time by automating CRM, follow-ups, and repetitive processes."
+    }
+  },
+  "maintenance": {
+    "title": "Monthly maintenance",
+    "description": "Choose the support level that best fits your needs",
+    "perMonth": "/month",
+    "cta": "Add to quote",
+    "base": {
+      "name": "Base",
+      "description": "Essential maintenance to keep your site secure and updated.",
+      "features": [
+        "Security updates",
+        "Weekly backups",
+        "Email support (48h response)",
+        "Uptime monitoring"
+      ]
+    },
+    "standard": {
+      "name": "Standard",
+      "description": "Priority support with included changes and monthly reports.",
+      "features": [
+        "Everything in Base plan",
+        "Minor changes (2h/month)",
+        "Priority support (24h)",
+        "Monthly Analytics report",
+        "Daily backups"
+      ]
+    },
+    "premium": {
+      "name": "Premium",
+      "description": "Complete management with dedicated support and continuous optimization.",
+      "features": [
+        "Everything in Standard plan",
+        "Changes (4h/month)",
+        "Integration management",
+        "Phone support",
+        "Performance optimization",
+        "Monthly SEO report"
+      ]
     }
   },
   "testimonials": {
@@ -325,7 +531,8 @@
       "role": "Owner",
       "company": "Restaurant Da Luca",
       "text": "Booking system that works great. Timelines respected to the letter and support always available. 100% recommended."
-    }
+    },
+    "hoverHint": "Hover to pause"
   },
   "faq": {
     "title": "Frequently asked questions",
@@ -336,11 +543,11 @@
     },
     "q2": {
       "question": "What happens if I don't like the result?",
-      "answer": "You have 2 rounds of revisions included in the price. If you're still not satisfied, full 100% refund within 7 days of launch. Zero risks."
+      "answer": "Don't worry, we work together step by step. We involve you in every decision: color choices, layout, content. You have 2 rounds of revisions included and we approve each phase before moving forward. So the final result will be exactly what you had in mind."
     },
     "q3": {
       "question": "Can I update the site myself afterward?",
-      "answer": "Absolutely yes. We use intuitive CMSs (WordPress, Webflow, or custom admin). We also provide complete training and step-by-step documentation."
+      "answer": "Absolutely yes. The site includes an intuitive management panel to edit texts, images, and content independently. We provide complete training and documentation to make you self-sufficient."
     },
     "q4": {
       "question": "Does the price include hosting and domain?",
@@ -352,7 +559,15 @@
     },
     "q6": {
       "question": "Do you offer maintenance after launch?",
-      "answer": "Yes, first 30 days of free support included. Then maintenance packages from €200-400/month: updates, backups, technical support, minor changes."
+      "answer": "Yes, first 30 days of free support included. Then maintenance packages from €150-400/month: updates, backups, technical support, minor changes."
+    },
+    "q7": {
+      "question": "What integrations are included?",
+      "answer": "Every plan includes essential integrations: Google Analytics, Meta Pixel, contact forms, and GDPR cookie consent. Higher plans also include Google Maps, Mailchimp/Brevo, and (for E-commerce) Stripe Checkout. For advanced integrations like AI chatbot, Zapier automations, or WhatsApp Business, we offer dedicated add-ons."
+    },
+    "q8": {
+      "question": "Can I add features after launch?",
+      "answer": "Absolutely yes. You can add AI chatbot, automations, CRM integrations, members area, or other features at any time. We'll provide a dedicated quote and implement everything without interrupting your site."
     }
   },
   "cta": {

@@ -1,219 +1,359 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Star, ChevronLeft, ChevronRight, Quote, Pause, Play, BadgeCheck } from 'lucide-react'
+import { useRef, useState, useEffect, useCallback } from 'react'
+import { motion } from 'framer-motion'
+import { Star, Quote, BadgeCheck } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { Section, SectionHeader } from '@/components/ui/section'
 
 const TESTIMONIAL_KEYS = ['testimonial1', 'testimonial2', 'testimonial3'] as const
 
-export function Testimonials() {
-  const t = useTranslations('testimonials')
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [direction, setDirection] = useState(0)
-  const [isPlaying, setIsPlaying] = useState(true)
+// ============================================================================
+// MATRIX RAIN MINI - Stesso effetto usato in Pricing.tsx
+// ============================================================================
 
-  // Auto-play with pause support
+const isIOS = () => {
+  if (typeof window === 'undefined') return false
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+}
+
+const MATRIX_CHARS = ['0', '1']
+const MATRIX_CHAR_SIZE = 12
+const MATRIX_COLUMN_WIDTH = 20
+
+interface MatrixDrop {
+  x: number
+  y: number
+  speed: number
+  length: number
+  chars: string[]
+  opacity: number
+}
+
+function useCardMatrixRain(
+  canvasRef: React.RefObject<HTMLCanvasElement | null>,
+  isHovered: boolean
+) {
+  const dropsRef = useRef<MatrixDrop[]>([])
+  const animationFrameRef = useRef<number | undefined>(undefined)
+
+  const initDrops = useCallback((width: number, height: number) => {
+    const iOS = isIOS()
+    const columns = Math.floor(width / MATRIX_COLUMN_WIDTH)
+    const drops: MatrixDrop[] = []
+
+    for (let i = 0; i < columns; i++) {
+      if (Math.random() > 0.5) continue
+
+      const length = 3 + Math.floor(Math.random() * 6)
+      const chars: string[] = []
+      for (let j = 0; j < length; j++) {
+        chars.push(MATRIX_CHARS[Math.floor(Math.random() * MATRIX_CHARS.length)])
+      }
+
+      drops.push({
+        x: i * MATRIX_COLUMN_WIDTH + MATRIX_COLUMN_WIDTH / 2,
+        y: Math.random() * height * 0.5 - height * 0.5,
+        speed: iOS ? (1.5 + Math.random() * 1.5) : (0.6 + Math.random() * 0.8),
+        length,
+        chars,
+        opacity: iOS ? 0.18 * (0.7 + Math.random() * 0.6) : 0.12 * (0.7 + Math.random() * 0.6),
+      })
+    }
+    dropsRef.current = drops
+  }, [])
+
+  const updateDrops = useCallback((height: number) => {
+    dropsRef.current.forEach((drop) => {
+      drop.y += drop.speed
+
+      if (drop.y - drop.length * MATRIX_CHAR_SIZE > height) {
+        drop.y = -drop.length * MATRIX_CHAR_SIZE
+        for (let j = 0; j < drop.chars.length; j++) {
+          drop.chars[j] = MATRIX_CHARS[Math.floor(Math.random() * MATRIX_CHARS.length)]
+        }
+      }
+
+      if (Math.random() < 0.03) {
+        const idx = Math.floor(Math.random() * drop.chars.length)
+        drop.chars[idx] = MATRIX_CHARS[Math.floor(Math.random() * MATRIX_CHARS.length)]
+      }
+    })
+  }, [])
+
+  const draw = useCallback((ctx: CanvasRenderingContext2D, width: number, height: number, dpr: number) => {
+    const iOS = isIOS()
+    ctx.clearRect(0, 0, width * dpr, height * dpr)
+    ctx.save()
+    ctx.scale(dpr, dpr)
+
+    ctx.font = `${MATRIX_CHAR_SIZE}px monospace`
+    ctx.textAlign = 'center'
+
+    dropsRef.current.forEach((drop) => {
+      drop.chars.forEach((char, i) => {
+        const charY = drop.y + i * MATRIX_CHAR_SIZE
+
+        if (charY < -MATRIX_CHAR_SIZE || charY > height + MATRIX_CHAR_SIZE) return
+
+        const fadePosition = i / drop.chars.length
+        const fadeFactor = 1 - fadePosition * 0.7
+        const charOpacity = drop.opacity * fadeFactor
+
+        if (i === 0) {
+          ctx.fillStyle = `rgba(255, 255, 255, ${charOpacity * 1.5})`
+          if (!iOS) {
+            ctx.shadowBlur = 6
+            ctx.shadowColor = 'rgba(255, 255, 255, 0.3)'
+          }
+        } else {
+          ctx.fillStyle = `rgba(255, 255, 255, ${charOpacity})`
+          if (!iOS) {
+            ctx.shadowBlur = 0
+          }
+        }
+
+        ctx.fillText(char, drop.x, charY)
+      })
+    })
+
+    ctx.restore()
+  }, [])
+
   useEffect(() => {
-    if (!isPlaying) return
+    if (!isHovered) {
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current)
+        animationFrameRef.current = undefined
+      }
+      const canvas = canvasRef.current
+      if (canvas) {
+        const ctx = canvas.getContext('2d')
+        if (ctx) {
+          ctx.clearRect(0, 0, canvas.width, canvas.height)
+        }
+      }
+      return
+    }
 
-    const timer = setInterval(() => {
-      setDirection(1)
-      setCurrentIndex((prev) => (prev + 1) % TESTIMONIAL_KEYS.length)
-    }, 5000)
+    const canvas = canvasRef.current
+    if (!canvas) return
 
-    return () => clearInterval(timer)
-  }, [isPlaying])
+    const dpr = window.devicePixelRatio || 1
+    const rect = canvas.getBoundingClientRect()
+    canvas.width = rect.width * dpr
+    canvas.height = rect.height * dpr
+    canvas.style.width = `${rect.width}px`
+    canvas.style.height = `${rect.height}px`
+    initDrops(rect.width, rect.height)
 
-  const goToPrevious = useCallback(() => {
-    setDirection(-1)
-    setCurrentIndex(
-      (prev) => (prev - 1 + TESTIMONIAL_KEYS.length) % TESTIMONIAL_KEYS.length
-    )
-  }, [])
+    const animate = () => {
+      const ctx = canvas.getContext('2d')
+      if (!ctx) return
 
-  const goToNext = useCallback(() => {
-    setDirection(1)
-    setCurrentIndex((prev) => (prev + 1) % TESTIMONIAL_KEYS.length)
-  }, [])
+      updateDrops(rect.height)
+      draw(ctx, rect.width, rect.height, dpr)
 
-  const goToSlide = useCallback((index: number) => {
-    setDirection(index > currentIndex ? 1 : -1)
-    setCurrentIndex(index)
-  }, [currentIndex])
+      animationFrameRef.current = requestAnimationFrame(animate)
+    }
 
-  const togglePlay = useCallback(() => {
-    setIsPlaying((prev) => !prev)
-  }, [])
+    animationFrameRef.current = requestAnimationFrame(animate)
 
-  const variants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? 300 : -300,
-      opacity: 0,
-    }),
-    center: {
-      x: 0,
-      opacity: 1,
-    },
-    exit: (direction: number) => ({
-      x: direction < 0 ? 300 : -300,
-      opacity: 0,
-    }),
-  }
+    return () => {
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current)
+      }
+    }
+  }, [isHovered, canvasRef, initDrops, updateDrops, draw])
+}
 
-  const currentKey = TESTIMONIAL_KEYS[currentIndex]
-  const initials = t(`${currentKey}.name`).split(' ').map(n => n[0]).join('')
+// ============================================================================
+// TESTIMONIAL CARD
+// ============================================================================
+
+interface TestimonialCardProps {
+  testimonialKey: typeof TESTIMONIAL_KEYS[number]
+  t: ReturnType<typeof useTranslations>
+}
+
+function TestimonialCard({ testimonialKey, t }: TestimonialCardProps) {
+  const [isHovered, setIsHovered] = useState(false)
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+
+  useCardMatrixRain(canvasRef, isHovered)
+
+  const initials = t(`${testimonialKey}.name`).split(' ').map(n => n[0]).join('')
 
   return (
-    <Section id="testimonianze">
+    <div
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="flex-shrink-0 w-[350px] md:w-[400px] mx-3 group"
+    >
+      <div className="relative bg-bg-surface/60 backdrop-blur-sm border border-border/50 rounded-2xl p-6 h-full overflow-hidden hover:border-accent-orange/30 transition-all duration-300">
+        {/* Canvas Matrix Effect */}
+        <canvas
+          ref={canvasRef}
+          className="absolute inset-0 w-full h-full pointer-events-none z-0"
+          style={{ opacity: isHovered ? 1 : 0, transition: 'opacity 0.3s' }}
+        />
+
+        {/* Quote Icon decorativo */}
+        <div className="absolute -top-2 -left-2 opacity-5 group-hover:opacity-10 transition-opacity" aria-hidden="true">
+          <Quote className="w-16 h-16 text-accent-orange" />
+        </div>
+
+        <div className="relative z-10">
+          {/* Header: Stars + Verified */}
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex gap-0.5" aria-label={t('rating')}>
+              {[...Array(5)].map((_, i) => (
+                <Star
+                  key={i}
+                  className="w-4 h-4 fill-accent-orange text-accent-orange"
+                  aria-hidden="true"
+                />
+              ))}
+            </div>
+            <div className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-success/10 border border-success/20">
+              <BadgeCheck className="w-3 h-3 text-success" />
+              <span className="text-[10px] font-medium text-success">{t('verified')}</span>
+            </div>
+          </div>
+
+          {/* Quote Text */}
+          <blockquote className="text-sm md:text-base text-text-primary leading-relaxed mb-5 min-h-[80px]">
+            <p>&ldquo;{t(`${testimonialKey}.text`)}&rdquo;</p>
+          </blockquote>
+
+          {/* Author */}
+          <footer className="flex items-center gap-3 pt-4 border-t border-border/30">
+            {/* Avatar */}
+            <div
+              className="w-10 h-10 rounded-full bg-gradient-to-br from-accent-orange to-accent-amber flex items-center justify-center flex-shrink-0"
+              aria-hidden="true"
+            >
+              <span className="text-white font-bold text-sm">
+                {initials}
+              </span>
+            </div>
+
+            <cite className="not-italic">
+              <div className="font-semibold text-text-primary text-sm">
+                {t(`${testimonialKey}.name`)}
+              </div>
+              <div className="text-xs text-text-muted">
+                {t(`${testimonialKey}.role`)}, {t(`${testimonialKey}.company`)}
+              </div>
+            </cite>
+          </footer>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// ============================================================================
+// MARQUEE COMPONENT
+// ============================================================================
+
+interface MarqueeProps {
+  children: React.ReactNode
+  direction?: 'left' | 'right'
+  speed?: number
+  pauseOnHover?: boolean
+  className?: string
+}
+
+function Marquee({
+  children,
+  direction = 'left',
+  speed = 30,
+  pauseOnHover = true,
+  className = ''
+}: MarqueeProps) {
+  const [isPaused, setIsPaused] = useState(false)
+
+  return (
+    <div
+      className={`overflow-hidden ${className}`}
+      onMouseEnter={() => pauseOnHover && setIsPaused(true)}
+      onMouseLeave={() => pauseOnHover && setIsPaused(false)}
+    >
+      <div
+        className="flex"
+        style={{
+          animation: `marquee-${direction} ${speed}s linear infinite`,
+          animationPlayState: isPaused ? 'paused' : 'running',
+        }}
+      >
+        {/* Original content */}
+        {children}
+        {/* Duplicated content for seamless loop */}
+        {children}
+      </div>
+
+      <style jsx>{`
+        @keyframes marquee-left {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        @keyframes marquee-right {
+          0% {
+            transform: translateX(-50%);
+          }
+          100% {
+            transform: translateX(0%);
+          }
+        }
+      `}</style>
+    </div>
+  )
+}
+
+// ============================================================================
+// MAIN TESTIMONIALS COMPONENT
+// ============================================================================
+
+export function Testimonials() {
+  const t = useTranslations('testimonials')
+
+  return (
+    <Section id="testimonianze" className="overflow-hidden">
       <SectionHeader
         title={t('title')}
         description={t('description')}
       />
 
-      <div
-        className="relative max-w-4xl mx-auto"
-        role="region"
-        aria-roledescription="carousel"
-        aria-label={t('controls')}
-      >
-        {/* Quote Icon */}
-        <div className="absolute -top-4 left-0 md:left-8 opacity-10" aria-hidden="true">
-          <Quote className="w-24 h-24 text-accent-orange" />
-        </div>
+      {/* Gradient Fades */}
+      <div className="relative">
+        {/* Left fade */}
+        <div className="absolute left-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-r from-bg-primary to-transparent z-10 pointer-events-none" />
+        {/* Right fade */}
+        <div className="absolute right-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-l from-bg-primary to-transparent z-10 pointer-events-none" />
 
-        {/* Testimonial Card */}
-        <div
-          className="relative overflow-hidden"
-          aria-live={isPlaying ? 'off' : 'polite'}
-        >
-          <AnimatePresence initial={false} custom={direction} mode="wait">
-            <motion.div
-              key={currentIndex}
-              custom={direction}
-              variants={variants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{ duration: 0.4, ease: 'easeInOut' }}
-              drag="x"
-              dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={0.2}
-              onDragEnd={(_, info) => {
-                if (info.offset.x > 50) {
-                  goToPrevious()
-                } else if (info.offset.x < -50) {
-                  goToNext()
-                }
-              }}
-              className="w-full cursor-grab active:cursor-grabbing"
-              role="group"
-              aria-roledescription="slide"
-              aria-label={`${currentIndex + 1} / ${TESTIMONIAL_KEYS.length}`}
-            >
-              <div className="bg-bg-surface/60 backdrop-blur-sm border border-border/50 rounded-2xl p-5 sm:p-8 md:p-12">
-                {/* Stars + Verified Badge */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex gap-1" aria-label={t('rating')}>
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-5 h-5 fill-accent-orange text-accent-orange"
-                        aria-hidden="true"
-                      />
-                    ))}
-                  </div>
-                  <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-success/10 border border-success/20">
-                    <BadgeCheck className="w-4 h-4 text-success" />
-                    <span className="text-xs font-medium text-success">{t('verified')}</span>
-                  </div>
-                </div>
-
-                {/* Quote */}
-                <blockquote className="text-lg sm:text-xl md:text-2xl text-text-primary font-heading leading-relaxed mb-6 sm:mb-8">
-                  <p>&ldquo;{t(`${currentKey}.text`)}&rdquo;</p>
-                </blockquote>
-
-                {/* Author */}
-                <footer className="flex items-center gap-4">
-                  {/* Avatar */}
-                  <div
-                    className="w-14 h-14 rounded-full bg-gradient-to-br from-accent-orange to-accent-amber flex items-center justify-center"
-                    aria-hidden="true"
-                  >
-                    <span className="text-white font-bold text-lg">
-                      {initials}
-                    </span>
-                  </div>
-
-                  <cite className="not-italic">
-                    <div className="font-semibold text-text-primary">
-                      {t(`${currentKey}.name`)}
-                    </div>
-                    <div className="text-sm text-text-secondary">
-                      {t(`${currentKey}.role`)},{' '}
-                      {t(`${currentKey}.company`)}
-                    </div>
-                  </cite>
-                </footer>
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
-
-        {/* Navigation */}
-        <div className="flex items-center justify-center gap-3 sm:gap-4 mt-8" role="group" aria-label={t('controls')}>
-          <button
-            onClick={goToPrevious}
-            className="w-12 h-12 rounded-full border border-border/50 bg-bg-surface/60 backdrop-blur-sm flex items-center justify-center text-text-muted hover:text-accent-orange hover:border-accent-orange transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange"
-            aria-label={t('prev')}
-          >
-            <ChevronLeft className="w-5 h-5" aria-hidden="true" />
-          </button>
-
-          {/* Play/Pause Button */}
-          <button
-            onClick={togglePlay}
-            className="w-12 h-12 rounded-full border border-border/50 bg-bg-surface/60 backdrop-blur-sm flex items-center justify-center text-text-muted hover:text-accent-orange hover:border-accent-orange transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange"
-            aria-label={isPlaying ? t('pause') : t('play')}
-            aria-pressed={!isPlaying}
-          >
-            {isPlaying ? (
-              <Pause className="w-4 h-4" aria-hidden="true" />
-            ) : (
-              <Play className="w-4 h-4" aria-hidden="true" />
-            )}
-          </button>
-
-          {/* Dots */}
-          <div className="flex gap-2" role="tablist">
-            {TESTIMONIAL_KEYS.map((key, index) => (
-              <button
-                key={key}
-                role="tab"
-                onClick={() => goToSlide(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary ${
-                  index === currentIndex
-                    ? 'w-6 bg-accent-orange'
-                    : 'bg-border hover:bg-text-muted'
-                }`}
-                aria-label={`${t(`${key}.name`)}, ${t(`${key}.company`)}`}
-                aria-selected={index === currentIndex}
-                tabIndex={index === currentIndex ? 0 : -1}
-              />
-            ))}
-          </div>
-
-          <button
-            onClick={goToNext}
-            className="w-12 h-12 rounded-full border border-border/50 bg-bg-surface/60 backdrop-blur-sm flex items-center justify-center text-text-muted hover:text-accent-orange hover:border-accent-orange transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange"
-            aria-label={t('next')}
-          >
-            <ChevronRight className="w-5 h-5" aria-hidden="true" />
-          </button>
-        </div>
+        {/* Marquee */}
+        <Marquee speed={40} pauseOnHover={true}>
+          {TESTIMONIAL_KEYS.map((key) => (
+            <TestimonialCard key={key} testimonialKey={key} t={t} />
+          ))}
+        </Marquee>
       </div>
+
+      {/* Footer hint */}
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="text-center text-text-muted text-xs mt-6"
+      >
+        {t('hoverHint')}
+      </motion.p>
     </Section>
   )
 }

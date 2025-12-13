@@ -645,6 +645,7 @@ export interface PricingPlan {
   duration: string
   idealFor: string
   features: string[]
+  integrations: string[]
   highlighted?: boolean
 }
 
@@ -664,6 +665,12 @@ export const PRICING_PLANS: PricingPlan[] = [
       '1 round revisioni',
       'Training e documentazione',
     ],
+    integrations: [
+      'Google Analytics 4',
+      'Meta Pixel',
+      'Google Search Console',
+      'Cookie Consent GDPR',
+    ],
   },
   {
     name: 'Sito Aziendale',
@@ -679,6 +686,14 @@ export const PRICING_PLANS: PricingPlan[] = [
       'Blog integrato (opzionale)',
       '2 round revisioni',
       'Training completo + 30gg supporto',
+    ],
+    integrations: [
+      'Google Analytics 4 (eventi)',
+      'Meta Pixel',
+      'Google Search Console',
+      'Cookie Consent GDPR',
+      'Google Maps',
+      'Mailchimp/Brevo base',
     ],
     highlighted: true,
   },
@@ -696,6 +711,16 @@ export const PRICING_PLANS: PricingPlan[] = [
       'SEO avanzato e-commerce',
       '2 round revisioni',
       'Training avanzato + 30gg supporto',
+    ],
+    integrations: [
+      'Google Analytics 4 (e-commerce)',
+      'Meta Pixel + Conversions API',
+      'Google Search Console',
+      'Cookie Consent GDPR',
+      'Google Maps',
+      'Mailchimp/Brevo base',
+      'Stripe Checkout',
+      'Calendly/Cal.com (booking)',
     ],
   },
 ]
@@ -786,6 +811,286 @@ export const BUDGET_OPTIONS = [
   { value: '4-6k', label: '€4.000 - €6.000' },
   { value: '6k+', label: '+€6.000' },
 ] as const
+
+// Add-ons
+export interface AddOn {
+  id: string
+  icon: LucideIcon
+  name: string
+  description: string
+  setupPrice: string
+  monthlyPrice?: string
+  tier: 'core' | 'expansion' | 'enterprise'
+  idealFor: string[]
+}
+
+export const ADDONS: AddOn[] = [
+  // Tier 1 - Core
+  {
+    id: 'chatbot-ai',
+    icon: MessageSquare,
+    name: 'Chatbot AI',
+    description: 'Assistenza clienti 24/7, qualifica lead automatica, risposte intelligenti con OpenAI/Claude.',
+    setupPrice: '€400-600',
+    monthlyPrice: '€50-100',
+    tier: 'core',
+    idealFor: ['landing', 'website', 'ecommerce'],
+  },
+  {
+    id: 'crm-avanzato',
+    icon: Users,
+    name: 'CRM Avanzato',
+    description: 'Pipeline vendita, lead scoring, follow-up automatici. HubSpot o Pipedrive integrato.',
+    setupPrice: '€300-500',
+    tier: 'core',
+    idealFor: ['website', 'ecommerce'],
+  },
+  {
+    id: 'automazioni-zapier',
+    icon: Zap,
+    name: 'Automazioni Zapier/Make',
+    description: '3-5 workflow personalizzati per collegare i tuoi strumenti e automatizzare processi.',
+    setupPrice: '€200-400',
+    tier: 'core',
+    idealFor: ['website', 'ecommerce'],
+  },
+  {
+    id: 'whatsapp-business',
+    icon: Smartphone,
+    name: 'WhatsApp Business API',
+    description: 'Notifiche ordini, promemoria appuntamenti, chat diretta con i clienti.',
+    setupPrice: '€300-400',
+    monthlyPrice: '€30-50',
+    tier: 'core',
+    idealFor: ['ecommerce', 'booking'],
+  },
+  {
+    id: 'email-marketing',
+    icon: MessageSquare,
+    name: 'Email Marketing Avanzato',
+    description: 'Sequenze automatiche, segmentazione avanzata, A/B testing, analytics dettagliati.',
+    setupPrice: '€300-500',
+    tier: 'core',
+    idealFor: ['website', 'ecommerce'],
+  },
+  // Tier 2 - Expansion
+  {
+    id: 'multi-lingua',
+    icon: Users,
+    name: 'Multi-lingua',
+    description: 'Traduzione completa del sito + switch automatico lingua basato su geolocalizzazione.',
+    setupPrice: '€300-500/lingua',
+    tier: 'expansion',
+    idealFor: ['website', 'ecommerce'],
+  },
+  {
+    id: 'seo-continuativo',
+    icon: Search,
+    name: 'SEO Continuativo',
+    description: 'Ottimizzazione mensile, report posizionamento, keyword tracking, link building.',
+    monthlyPrice: '€200-400',
+    setupPrice: '-',
+    tier: 'expansion',
+    idealFor: ['landing', 'website', 'ecommerce'],
+  },
+  {
+    id: 'blog-content',
+    icon: Palette,
+    name: 'Blog & Content System',
+    description: 'CMS blog avanzato, categorie, tag, SEO articoli, condivisione social automatica.',
+    setupPrice: '€400-600',
+    tier: 'expansion',
+    idealFor: ['website'],
+  },
+  {
+    id: 'prenotazioni-avanzate',
+    icon: Clock,
+    name: 'Prenotazioni Avanzate',
+    description: 'Multi-servizio, gestione staff, pagamento anticipato, reminder automatici.',
+    setupPrice: '€400-600',
+    tier: 'expansion',
+    idealFor: ['booking'],
+  },
+  {
+    id: 'area-riservata',
+    icon: Lock,
+    name: 'Area Riservata / Login',
+    description: 'Accesso clienti, dashboard personale, documenti riservati, storico ordini.',
+    setupPrice: '€500-800',
+    tier: 'expansion',
+    idealFor: ['website', 'ecommerce'],
+  },
+  // Tier 3 - Enterprise
+  {
+    id: 'ecommerce-avanzato',
+    icon: TrendingUp,
+    name: 'E-commerce Avanzato',
+    description: 'Prodotti multi-variante, abbonamenti ricorrenti, listini B2B, sconti automatici.',
+    setupPrice: '€600-1.000',
+    tier: 'enterprise',
+    idealFor: ['ecommerce'],
+  },
+  {
+    id: 'integrazioni-custom',
+    icon: CircuitBoard,
+    name: 'Integrazioni Custom',
+    description: 'API personalizzate, connessione a gestionali, ERP, software proprietari.',
+    setupPrice: '€400-800',
+    tier: 'enterprise',
+    idealFor: ['website', 'ecommerce'],
+  },
+  {
+    id: 'analytics-avanzato',
+    icon: Search,
+    name: 'Analytics Avanzato',
+    description: 'Dashboard personalizzate, Hotjar, heatmaps, registrazione sessioni, funnel analysis.',
+    setupPrice: '€300-500',
+    tier: 'enterprise',
+    idealFor: ['landing', 'website', 'ecommerce'],
+  },
+  {
+    id: 'security-pro',
+    icon: Shield,
+    name: 'Backup & Security Pro',
+    description: 'Backup giornalieri, firewall avanzato, monitoring 24/7, certificato SSL premium.',
+    setupPrice: '€200-300',
+    monthlyPrice: '€50',
+    tier: 'enterprise',
+    idealFor: ['website', 'ecommerce'],
+  },
+]
+
+// Bundles
+export interface Bundle {
+  id: string
+  name: string
+  description: string
+  includes: {
+    plan: string
+    addons: string[]
+  }
+  originalPrice: string
+  bundlePrice: string
+  savings: string
+  idealFor: string
+  highlighted?: boolean
+}
+
+export const BUNDLES: Bundle[] = [
+  {
+    id: 'lead-generation-pro',
+    name: 'Lead Generation Pro',
+    description: 'Sistema completo per acquisire clienti online con chatbot e email marketing automatizzato.',
+    includes: {
+      plan: 'Sito Aziendale',
+      addons: ['Chatbot AI', 'Email Marketing Avanzato'],
+    },
+    originalPrice: '€3.800',
+    bundlePrice: '€3.400',
+    savings: '€400',
+    idealFor: 'Studi professionali, consulenti, PMI B2B',
+    highlighted: true,
+  },
+  {
+    id: 'ecommerce-growth',
+    name: 'E-commerce Growth',
+    description: 'Vendi di più con notifiche WhatsApp, carrello abbandonato e email automatiche.',
+    includes: {
+      plan: 'E-commerce',
+      addons: ['WhatsApp Business API', 'Email Marketing Avanzato'],
+    },
+    originalPrice: '€5.700',
+    bundlePrice: '€5.200',
+    savings: '€500',
+    idealFor: 'Negozi online, retail, vendita diretta',
+  },
+  {
+    id: 'automation-suite',
+    name: 'Automation Suite',
+    description: 'Risparmia tempo automatizzando CRM, follow-up e processi ripetitivi.',
+    includes: {
+      plan: 'Sito Aziendale',
+      addons: ['CRM Avanzato', 'Automazioni Zapier/Make'],
+    },
+    originalPrice: '€3.500',
+    bundlePrice: '€3.100',
+    savings: '€400',
+    idealFor: 'PMI in crescita, aziende multi-tool',
+  },
+]
+
+// Maintenance Plans
+export interface MaintenancePlan {
+  id: string
+  name: string
+  price: string
+  description: string
+  features: string[]
+  highlighted?: boolean
+}
+
+export const MAINTENANCE_PLANS: MaintenancePlan[] = [
+  {
+    id: 'base',
+    name: 'Base',
+    price: '€150/mese',
+    description: 'Manutenzione essenziale per mantenere il sito sicuro e aggiornato.',
+    features: [
+      'Aggiornamenti sicurezza',
+      'Backup settimanali',
+      'Supporto email (48h risposta)',
+      'Monitoring uptime',
+    ],
+  },
+  {
+    id: 'standard',
+    name: 'Standard',
+    price: '€250/mese',
+    description: 'Supporto prioritario con modifiche incluse e report mensili.',
+    features: [
+      'Tutto del piano Base',
+      'Modifiche minori (2h/mese)',
+      'Supporto prioritario (24h)',
+      'Report Analytics mensile',
+      'Backup giornalieri',
+    ],
+    highlighted: true,
+  },
+  {
+    id: 'premium',
+    name: 'Premium',
+    price: '€400/mese',
+    description: 'Gestione completa con supporto dedicato e ottimizzazione continua.',
+    features: [
+      'Tutto del piano Standard',
+      'Modifiche (4h/mese)',
+      'Gestione integrazioni',
+      'Supporto telefonico',
+      'Ottimizzazione performance',
+      'Report SEO mensile',
+    ],
+  },
+]
+
+// Included Integrations per Plan
+export interface IncludedIntegration {
+  name: string
+  landing: boolean | string
+  website: boolean | string
+  ecommerce: boolean | string
+}
+
+export const INCLUDED_INTEGRATIONS: IncludedIntegration[] = [
+  { name: 'Google Analytics 4', landing: 'Base', website: 'Eventi', ecommerce: 'E-commerce' },
+  { name: 'Meta Pixel', landing: true, website: true, ecommerce: 'Conv. API' },
+  { name: 'Google Search Console', landing: true, website: true, ecommerce: true },
+  { name: 'Cookie Consent GDPR', landing: true, website: true, ecommerce: true },
+  { name: 'Form contatto', landing: 'Email', website: '+ notifiche', ecommerce: '+ notifiche' },
+  { name: 'Google Maps', landing: false, website: true, ecommerce: true },
+  { name: 'Mailchimp/Brevo', landing: false, website: 'Setup base', ecommerce: 'Setup base' },
+  { name: 'Stripe Checkout', landing: false, website: false, ecommerce: true },
+  { name: 'Calendly/Cal.com', landing: false, website: false, ecommerce: 'Booking' },
+]
 
 // Footer
 export const FOOTER_SERVICES = [
