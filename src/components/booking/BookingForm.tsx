@@ -57,16 +57,19 @@ export function BookingForm({ onSubmit, isLoading, defaultValues }: BookingFormP
             htmlFor="nome"
             className="block text-sm font-medium text-text-primary mb-2"
           >
-            {t('nome')} <span className="text-error">*</span>
+            {t('nome')} <span className="text-error" aria-hidden="true">*</span>
           </label>
           <Input
             id="nome"
             placeholder={t('nomePlaceholder')}
             error={!!errors.nome}
+            aria-required="true"
+            aria-invalid={!!errors.nome}
+            aria-describedby={errors.nome ? 'nome-error' : undefined}
             {...register('nome')}
           />
           {errors.nome && (
-            <p className="mt-1 text-xs text-error">
+            <p id="nome-error" role="alert" className="mt-1 text-xs text-error">
               {getErrorMessage(errors.nome.message)}
             </p>
           )}
@@ -77,16 +80,19 @@ export function BookingForm({ onSubmit, isLoading, defaultValues }: BookingFormP
             htmlFor="cognome"
             className="block text-sm font-medium text-text-primary mb-2"
           >
-            {t('cognome')} <span className="text-error">*</span>
+            {t('cognome')} <span className="text-error" aria-hidden="true">*</span>
           </label>
           <Input
             id="cognome"
             placeholder={t('cognomePlaceholder')}
             error={!!errors.cognome}
+            aria-required="true"
+            aria-invalid={!!errors.cognome}
+            aria-describedby={errors.cognome ? 'cognome-error' : undefined}
             {...register('cognome')}
           />
           {errors.cognome && (
-            <p className="mt-1 text-xs text-error">
+            <p id="cognome-error" role="alert" className="mt-1 text-xs text-error">
               {getErrorMessage(errors.cognome.message)}
             </p>
           )}
@@ -99,17 +105,20 @@ export function BookingForm({ onSubmit, isLoading, defaultValues }: BookingFormP
           htmlFor="email"
           className="block text-sm font-medium text-text-primary mb-2"
         >
-          {t('email')} <span className="text-error">*</span>
+          {t('email')} <span className="text-error" aria-hidden="true">*</span>
         </label>
         <Input
           id="email"
           type="email"
           placeholder={t('emailPlaceholder')}
           error={!!errors.email}
+          aria-required="true"
+          aria-invalid={!!errors.email}
+          aria-describedby={errors.email ? 'email-error' : undefined}
           {...register('email')}
         />
         {errors.email && (
-          <p className="mt-1 text-xs text-error">
+          <p id="email-error" role="alert" className="mt-1 text-xs text-error">
             {getErrorMessage(errors.email.message)}
           </p>
         )}
@@ -121,17 +130,20 @@ export function BookingForm({ onSubmit, isLoading, defaultValues }: BookingFormP
           htmlFor="telefono"
           className="block text-sm font-medium text-text-primary mb-2"
         >
-          {t('telefono')} <span className="text-error">*</span>
+          {t('telefono')} <span className="text-error" aria-hidden="true">*</span>
         </label>
         <Input
           id="telefono"
           type="tel"
           placeholder={t('telefonoPlaceholder')}
           error={!!errors.telefono}
+          aria-required="true"
+          aria-invalid={!!errors.telefono}
+          aria-describedby={errors.telefono ? 'telefono-error' : undefined}
           {...register('telefono')}
         />
         {errors.telefono && (
-          <p className="mt-1 text-xs text-error">
+          <p id="telefono-error" role="alert" className="mt-1 text-xs text-error">
             {getErrorMessage(errors.telefono.message)}
           </p>
         )}
@@ -150,10 +162,12 @@ export function BookingForm({ onSubmit, isLoading, defaultValues }: BookingFormP
             id="azienda"
             placeholder={t('aziendaPlaceholder')}
             error={!!errors.azienda}
+            aria-invalid={!!errors.azienda}
+            aria-describedby={errors.azienda ? 'azienda-error' : undefined}
             {...register('azienda')}
           />
           {errors.azienda && (
-            <p className="mt-1 text-xs text-error">
+            <p id="azienda-error" role="alert" className="mt-1 text-xs text-error">
               {getErrorMessage(errors.azienda.message)}
             </p>
           )}
@@ -170,10 +184,12 @@ export function BookingForm({ onSubmit, isLoading, defaultValues }: BookingFormP
             id="ruolo"
             placeholder={t('ruoloPlaceholder')}
             error={!!errors.ruolo}
+            aria-invalid={!!errors.ruolo}
+            aria-describedby={errors.ruolo ? 'ruolo-error' : undefined}
             {...register('ruolo')}
           />
           {errors.ruolo && (
-            <p className="mt-1 text-xs text-error">
+            <p id="ruolo-error" role="alert" className="mt-1 text-xs text-error">
               {getErrorMessage(errors.ruolo.message)}
             </p>
           )}
@@ -193,11 +209,13 @@ export function BookingForm({ onSubmit, isLoading, defaultValues }: BookingFormP
           placeholder={t('messaggioPlaceholder')}
           rows={4}
           error={!!errors.messaggio}
+          aria-invalid={!!errors.messaggio}
+          aria-describedby="messaggio-helper messaggio-error"
           {...register('messaggio')}
         />
-        <p className="mt-1 text-xs text-text-muted">{t('messaggioHelper')}</p>
+        <p id="messaggio-helper" className="mt-1 text-xs text-text-muted">{t('messaggioHelper')}</p>
         {errors.messaggio && (
-          <p className="mt-1 text-xs text-error">
+          <p id="messaggio-error" role="alert" className="mt-1 text-xs text-error">
             {getErrorMessage(errors.messaggio.message)}
           </p>
         )}
@@ -209,6 +227,9 @@ export function BookingForm({ onSubmit, isLoading, defaultValues }: BookingFormP
           type="checkbox"
           id="privacy"
           className="mt-1 w-4 h-4 rounded border-border bg-bg-elevated text-accent-orange focus:ring-accent-orange focus:ring-offset-bg-primary"
+          aria-required="true"
+          aria-invalid={!!errors.privacy}
+          aria-describedby={errors.privacy ? 'privacy-error' : undefined}
           {...register('privacy')}
         />
         <label htmlFor="privacy" className="text-sm text-text-secondary">
@@ -216,11 +237,11 @@ export function BookingForm({ onSubmit, isLoading, defaultValues }: BookingFormP
           <Link href="/privacy-policy" className="text-accent-orange hover:underline">
             {t('privacyLink')}
           </Link>{' '}
-          <span className="text-error">*</span>
+          <span className="text-error" aria-hidden="true">*</span>
         </label>
       </div>
       {errors.privacy && (
-        <p className="text-xs text-error">{getErrorMessage(errors.privacy.message)}</p>
+        <p id="privacy-error" role="alert" className="text-xs text-error">{getErrorMessage(errors.privacy.message)}</p>
       )}
 
       {/* Submit Button */}

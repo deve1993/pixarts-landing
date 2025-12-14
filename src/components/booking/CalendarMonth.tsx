@@ -80,9 +80,10 @@ export function CalendarMonth({
           size="sm"
           onClick={() => onMonthChange(subMonths(currentMonth, 1))}
           disabled={!canGoBack}
+          aria-label="Mese precedente"
           className="p-2"
         >
-          <ChevronLeft className="w-5 h-5" />
+          <ChevronLeft className="w-5 h-5" aria-hidden="true" />
         </Button>
 
         <h3 className="text-lg font-heading font-semibold text-text-primary capitalize">
@@ -94,9 +95,10 @@ export function CalendarMonth({
           size="sm"
           onClick={() => onMonthChange(addMonths(currentMonth, 1))}
           disabled={!canGoForward}
+          aria-label="Mese successivo"
           className="p-2"
         >
-          <ChevronRight className="w-5 h-5" />
+          <ChevronRight className="w-5 h-5" aria-hidden="true" />
         </Button>
       </div>
 

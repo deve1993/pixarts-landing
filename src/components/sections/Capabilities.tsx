@@ -79,7 +79,7 @@ export function Capabilities() {
               <div className="relative z-10">
                 {/* Icon */}
                 <div className="w-12 h-12 rounded-lg bg-accent-orange/10 flex items-center justify-center mb-4 group-hover:bg-accent-orange/20 transition-colors">
-                  <Icon className="w-6 h-6 text-accent-orange" />
+                  <Icon className="w-6 h-6 text-accent-orange" aria-hidden="true" />
                 </div>
 
                 {/* Content */}

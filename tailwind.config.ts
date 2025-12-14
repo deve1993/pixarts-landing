@@ -18,7 +18,7 @@ const config: Config = {
         text: {
           primary: '#FFFFFF',
           secondary: '#A1A1A6',
-          muted: '#6B6B70',
+          muted: '#8A8A8F', // Improved contrast ratio (was #6B6B70)
         },
         accent: {
           orange: '#FF6B2C',

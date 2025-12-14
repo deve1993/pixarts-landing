@@ -35,6 +35,8 @@ export function FAQ() {
           >
             <button
               onClick={() => toggleFaq(index)}
+              aria-expanded={openIndex === index}
+              aria-controls={`faq-${faqKey}-content`}
               className={cn(
                 'w-full text-left rounded-xl border bg-bg-surface/60 backdrop-blur-sm p-6 transition-all duration-300',
                 openIndex === index
@@ -43,13 +45,14 @@ export function FAQ() {
               )}
             >
               <div className="flex items-start justify-between gap-4">
-                <h3 className="text-lg font-heading font-semibold text-text-primary pr-4">
+                <h3 id={`faq-${faqKey}-heading`} className="text-lg font-heading font-semibold text-text-primary pr-4">
                   {t(`${faqKey}.question`)}
                 </h3>
                 <motion.div
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.2 }}
                   className="flex-shrink-0 mt-1"
+                  aria-hidden="true"
                 >
                   <ChevronDown
                     className={cn(
@@ -65,6 +68,9 @@ export function FAQ() {
               <AnimatePresence>
                 {openIndex === index && (
                   <motion.div
+                    id={`faq-${faqKey}-content`}
+                    role="region"
+                    aria-labelledby={`faq-${faqKey}-heading`}
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}

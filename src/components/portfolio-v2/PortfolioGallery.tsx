@@ -132,9 +132,10 @@ export function PortfolioGallery() {
           <button
             onClick={handlePrev}
             disabled={activeIndex === 0}
+            aria-label={t('previous')}
             className="flex items-center gap-2 px-4 py-2 bg-bg-surface/60 backdrop-blur-sm border border-border/50 rounded-full disabled:opacity-30 disabled:cursor-not-allowed hover:bg-bg-surface hover:border-accent-orange/30 transition-all group"
           >
-            <ChevronLeft className="w-5 h-5 text-text-primary group-hover:text-accent-orange transition-colors" />
+            <ChevronLeft className="w-5 h-5 text-text-primary group-hover:text-accent-orange transition-colors" aria-hidden="true" />
             <span className="text-sm text-text-secondary group-hover:text-text-primary transition-colors hidden sm:inline">
               {t('previous')}
             </span>
@@ -165,12 +166,13 @@ export function PortfolioGallery() {
           <button
             onClick={handleNext}
             disabled={activeIndex === PROJECT_KEYS.length - 1}
+            aria-label={t('next')}
             className="flex items-center gap-2 px-4 py-2 bg-bg-surface/60 backdrop-blur-sm border border-border/50 rounded-full disabled:opacity-30 disabled:cursor-not-allowed hover:bg-bg-surface hover:border-accent-orange/30 transition-all group"
           >
             <span className="text-sm text-text-secondary group-hover:text-text-primary transition-colors hidden sm:inline">
               {t('next')}
             </span>
-            <ChevronRight className="w-5 h-5 text-text-primary group-hover:text-accent-orange transition-colors" />
+            <ChevronRight className="w-5 h-5 text-text-primary group-hover:text-accent-orange transition-colors" aria-hidden="true" />
           </button>
         </div>
 
@@ -206,24 +208,29 @@ export function PortfolioGallery() {
               <button
                 onClick={handleImagePrev}
                 disabled={imageIndex === 0}
+                aria-label={t('previousImage')}
                 className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-bg-surface/80 backdrop-blur-sm border border-border/50 rounded-full disabled:opacity-30 disabled:cursor-not-allowed hover:bg-bg-surface hover:border-accent-orange/30 transition-all z-10"
               >
-                <ChevronLeft className="w-5 h-5 text-text-primary" />
+                <ChevronLeft className="w-5 h-5 text-text-primary" aria-hidden="true" />
               </button>
               <button
                 onClick={handleImageNext}
                 disabled={imageIndex === activeProjectStatic.images.length - 1}
+                aria-label={t('nextImage')}
                 className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-bg-surface/80 backdrop-blur-sm border border-border/50 rounded-full disabled:opacity-30 disabled:cursor-not-allowed hover:bg-bg-surface hover:border-accent-orange/30 transition-all z-10"
               >
-                <ChevronRight className="w-5 h-5 text-text-primary" />
+                <ChevronRight className="w-5 h-5 text-text-primary" aria-hidden="true" />
               </button>
 
               {/* Image dots */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10">
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10" role="tablist" aria-label={t('imageNavigation')}>
                 {activeProjectStatic.images.map((_, idx) => (
                   <button
                     key={idx}
                     onClick={() => setImageIndex(idx)}
+                    role="tab"
+                    aria-selected={idx === imageIndex}
+                    aria-label={`${t('image')} ${idx + 1}`}
                     className={`w-2 h-2 rounded-full transition-all ${
                       idx === imageIndex
                         ? 'bg-accent-orange w-6'
@@ -321,16 +328,20 @@ export function PortfolioGallery() {
         </AnimatePresence>
 
         {/* Project Dots Navigation */}
-        <div className="flex items-center justify-center gap-3 mt-8">
+        <div className="flex items-center justify-center gap-3 mt-8" role="tablist" aria-label={t('projectNavigation')}>
           {PROJECT_KEYS.map((projectKey, index) => (
             <button
               key={projectKey}
               onClick={() => handleSelect(index)}
+              role="tab"
+              aria-selected={index === activeIndex}
+              aria-label={`${t('viewProject')} ${PROJECT_STATIC_DATA[projectKey].name}`}
               className={`group relative transition-all ${
                 index === activeIndex ? 'scale-110' : ''
               }`}
             >
               <span
+                aria-hidden="true"
                 className={`block w-3 h-3 rounded-full transition-all ${
                   index === activeIndex
                     ? 'bg-accent-orange shadow-lg shadow-accent-orange/30'
@@ -338,7 +349,7 @@ export function PortfolioGallery() {
                 }`}
               />
               {/* Tooltip */}
-              <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-bg-surface border border-border/50 rounded text-xs text-text-secondary whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+              <span aria-hidden="true" className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-bg-surface border border-border/50 rounded text-xs text-text-secondary whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                 {PROJECT_STATIC_DATA[projectKey].name}
               </span>
             </button>

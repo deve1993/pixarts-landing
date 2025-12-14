@@ -46,7 +46,7 @@ export function Problems() {
                 {/* Badge "Problema N" */}
                 <div className="flex items-center gap-2 mb-6">
                   <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-error/10 border border-error/20 group-hover:bg-error/20 transition-colors">
-                    <AlertTriangle className="w-3.5 h-3.5 text-error" />
+                    <AlertTriangle className="w-3.5 h-3.5 text-error" aria-hidden="true" />
                     <span className="text-xs font-medium text-error">
                       Problema {index + 1}
                     </span>
@@ -58,6 +58,7 @@ export function Problems() {
                   whileHover={{ rotate: [0, -5, 5, -5, 0], scale: 1.1 }}
                   transition={{ duration: 0.5 }}
                   className="w-16 h-16 rounded-xl bg-gradient-to-br from-error/15 to-error/5 border border-error/20 flex items-center justify-center mb-6 group-hover:border-error/40 group-hover:shadow-[0_0_16px_rgba(248,113,113,0.2)] transition-all duration-300"
+                  aria-hidden="true"
                 >
                   <Icon className="w-8 h-8 text-error" />
                 </motion.div>

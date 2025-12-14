@@ -18,11 +18,18 @@ export function TimeSlot({ slot, isSelected, onClick }: TimeSlotProps) {
   const startTime = format(parseISO(slot.startTime), 'HH:mm')
   const endTime = format(parseISO(slot.endTime), 'HH:mm')
 
+  const ariaLabel = slot.available
+    ? `${startTime} - ${endTime}${isSelected ? ', selezionato' : ', disponibile'}`
+    : `${startTime} - ${endTime}, non disponibile`
+
   return (
     <button
       type="button"
       onClick={onClick}
       disabled={!slot.available}
+      aria-label={ariaLabel}
+      aria-pressed={isSelected}
+      aria-disabled={!slot.available}
       className={cn(
         'px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200',
         'border',
