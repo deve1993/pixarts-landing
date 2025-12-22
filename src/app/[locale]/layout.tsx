@@ -9,6 +9,7 @@ import { BackgroundWrapper } from "@/components/BackgroundWrapper"
 import { StructuredData } from "@/components/StructuredData"
 import { SkipToContent } from "@/components/SkipToContent"
 import { CookieConsent } from "@/components/CookieConsent"
+import { GoogleAnalytics } from "@/components/GoogleAnalytics"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -133,6 +134,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html lang={locale} className={`${inter.variable} ${spaceGrotesk.variable} ${megrim.variable}`}>
       <head>
         <StructuredData />
+        <GoogleAnalytics />
       </head>
       <body className="font-body bg-bg-primary text-text-primary antialiased">
         <NextIntlClientProvider messages={messages}>
