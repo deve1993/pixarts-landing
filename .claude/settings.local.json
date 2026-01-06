@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx lighthouse:*)",
+      "Bash(pnpm lint:*)",
+      "Bash(npm run lint)",
+      "Bash(npx tsc:*)",
+      "Bash(timeout 30 npm run dev:*)",
+      "Bash(start:*)",
+      "Bash(npx payload migrate:create:*)",
+      "Bash(timeout 45 npm run dev:*)",
+      "Bash(npx payload:*)",
+      "Bash(curl:*)",
+      "Bash(rm:*)",
+      "Bash(timeout 35 npm run dev)",
+      "Bash(timeout 60 npm run dev:*)",
+      "Bash(pnpm add:*)",
+      "Bash(npm install:*)",
+      "Bash(cat:*)",
+      "Bash(powershell -Command \"Remove-Item -Path ''payload.db'' -Force\")",
+      "Bash(powershell -Command \"Get-Process node -ErrorAction SilentlyContinue | Stop-Process -Force; Start-Sleep -Seconds 1; Remove-Item ''c:\\\\Users\\\\devec\\\\progetti-web\\\\Pixarts\\\\web_pixarts\\\\payload.db'' -Force -ErrorAction SilentlyContinue; if \\(!\\(Test-Path ''c:\\\\Users\\\\devec\\\\progetti-web\\\\Pixarts\\\\web_pixarts\\\\payload.db''\\)\\) { Write-Host ''Database eliminato!'' } else { Write-Host ''Ancora bloccato'' }\")",
+      "Bash(dir:*)",
+      "Bash(npx tsx:*)",
+      "Bash(taskkill:*)",
+      "Bash(timeout /t:*)",
+      "Bash(ls -la \"c:\\\\Users\\\\devec\\\\progetti-web\\\\Pixarts\\\\web_pixarts\\\\.claude\"\" 2>/dev/null || dir \"c:Usersdevecprogetti-webPixartsweb_pixarts.claude\"\")",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git checkout:*)",
+      "Bash(git stash:*)",
+      "Bash(sqlite3:*)",
+      "Bash(python3 -c \"import sqlite3; conn = sqlite3.connect\\(''payload.db''\\); cursor = conn.cursor\\(\\); cursor.execute\\(''SELECT sql FROM sqlite_master WHERE type=\"\"table\"\" AND name LIKE \"\"%navigation%\"\" OR name LIKE \"\"%footer%\"\"''\\); print\\(''\\\\n''.join\\([row[0] for row in cursor.fetchall\\(\\)]\\)\\)\")",
+      "Bash(ls:*)",
+      "Bash(find:*)"
+    ]
+  }
+}
