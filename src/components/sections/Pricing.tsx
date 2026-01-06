@@ -7,7 +7,7 @@ import { Section, SectionHeader } from '@/components/ui/section'
 import { Button } from '@/components/ui/button'
 import { scrollToElement } from '@/lib/utils'
 import { staggerContainer, staggerItem } from '@/lib/motion-variants'
-import { useEffect, useRef, useState, useCallback } from 'react'
+import { useRef, useState, useCallback, useEffect } from 'react'
 import { ADDONS } from '@/lib/constants'
 
 const PLAN_KEYS = ['plan1', 'plan2', 'plan3'] as const
@@ -462,6 +462,7 @@ function AddonsSection() {
 export function Pricing() {
   const t = useTranslations('pricing')
 
+  // Use translations for plans
   const plans = PLAN_KEYS.map((planKey) => ({
     key: planKey,
     name: t(`${planKey}.name`),

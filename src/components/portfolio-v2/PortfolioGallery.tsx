@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
@@ -48,14 +48,57 @@ const PROJECT_STATIC_DATA = {
   },
 } as const
 
+// Normalized project type for use within the component
+interface NormalizedProject {
+  id: string
+  name: string
+  client: string
+  subtitle: string
+  description: string
+  images: string[]
+  services: Array<{ name: string; detail: string }>
+  results: Array<{ value: string; label: string; suffix?: string }>
+  technologies: string[]
+  integrations: string[]
+}
+
 export function PortfolioGallery() {
   const t = useTranslations('portfolio.gallery')
+
   const [activeIndex, setActiveIndex] = useState(0)
   const [direction, setDirection] = useState(0)
   const [imageIndex, setImageIndex] = useState(0)
 
-  const activeProjectKey = PROJECT_KEYS[activeIndex]
-  const activeProjectStatic = PROJECT_STATIC_DATA[activeProjectKey]
+  // Use translations for projects
+  const normalizedProjects: NormalizedProject[] = useMemo(() => {
+    return PROJECT_KEYS.map(key => {
+      const staticData = PROJECT_STATIC_DATA[key]
+      return {
+        id: key,
+        name: staticData.name,
+        client: t(`projects.${key}.client`),
+        subtitle: t(`projects.${key}.subtitle`),
+        description: t(`projects.${key}.description`),
+        images: [...staticData.images] as string[],
+        services: staticData.serviceKeys.map(sk => ({
+          name: t(`projects.${key}.services.${sk}.name`),
+          detail: t(`projects.${key}.services.${sk}.detail`),
+        })),
+        results: staticData.resultKeys.map(rk => ({
+          value: t(`projects.${key}.results.${rk}.value`),
+          label: t(`projects.${key}.results.${rk}.label`),
+          suffix: t.has(`projects.${key}.results.${rk}.suffix`)
+            ? t(`projects.${key}.results.${rk}.suffix`)
+            : undefined,
+        })),
+        technologies: [...staticData.technologies] as string[],
+        integrations: [...staticData.integrations] as string[],
+      }
+    })
+  }, [t])
+
+  const activeProject = normalizedProjects[activeIndex] || normalizedProjects[0]
+  const activeProjectKey = activeProject.id
 
   const handleSelect = useCallback(
     (index: number) => {
@@ -75,12 +118,12 @@ export function PortfolioGallery() {
   }, [activeIndex])
 
   const handleNext = useCallback(() => {
-    if (activeIndex < PROJECT_KEYS.length - 1) {
+    if (activeIndex < normalizedProjects.length - 1) {
       setDirection(1)
       setActiveIndex(activeIndex + 1)
       setImageIndex(0)
     }
-  }, [activeIndex])
+  }, [activeIndex, normalizedProjects.length])
 
   const handleImagePrev = useCallback(() => {
     if (imageIndex > 0) {
@@ -89,33 +132,10 @@ export function PortfolioGallery() {
   }, [imageIndex])
 
   const handleImageNext = useCallback(() => {
-    if (imageIndex < activeProjectStatic.images.length - 1) {
+    if (imageIndex < activeProject.images.length - 1) {
       setImageIndex(imageIndex + 1)
     }
-  }, [imageIndex, activeProjectStatic.images.length])
-
-  // Get translated data for active project
-  const getProjectTranslations = (projectKey: typeof PROJECT_KEYS[number]) => {
-    const staticData = PROJECT_STATIC_DATA[projectKey]
-    return {
-      client: t(`projects.${projectKey}.client`),
-      subtitle: t(`projects.${projectKey}.subtitle`),
-      description: t(`projects.${projectKey}.description`),
-      services: staticData.serviceKeys.map((key) => ({
-        name: t(`projects.${projectKey}.services.${key}.name`),
-        detail: t(`projects.${projectKey}.services.${key}.detail`),
-      })),
-      results: staticData.resultKeys.map((key) => ({
-        value: t(`projects.${projectKey}.results.${key}.value`),
-        label: t(`projects.${projectKey}.results.${key}.label`),
-        suffix: t.has(`projects.${projectKey}.results.${key}.suffix`)
-          ? t(`projects.${projectKey}.results.${key}.suffix`)
-          : undefined,
-      })),
-    }
-  }
-
-  const activeProject = getProjectTranslations(activeProjectKey)
+  }, [imageIndex, activeProject.images.length])
 
   return (
     <Section id="portfolio" className="overflow-hidden">
@@ -157,7 +177,7 @@ export function PortfolioGallery() {
                 </span>
               </div>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary font-heading">
-                {activeProjectStatic.name}
+                {activeProject.name}
               </h2>
               <p className="text-text-secondary mt-1">{activeProject.subtitle}</p>
             </motion.div>
@@ -165,7 +185,7 @@ export function PortfolioGallery() {
 
           <button
             onClick={handleNext}
-            disabled={activeIndex === PROJECT_KEYS.length - 1}
+            disabled={activeIndex === normalizedProjects.length - 1}
             aria-label={t('next')}
             className="flex items-center gap-2 px-4 py-2 bg-bg-surface/60 backdrop-blur-sm border border-border/50 rounded-full disabled:opacity-30 disabled:cursor-not-allowed hover:bg-bg-surface hover:border-accent-orange/30 transition-all group"
           >
@@ -188,8 +208,8 @@ export function PortfolioGallery() {
               className="relative aspect-[16/10] w-full"
             >
               <Image
-                src={activeProjectStatic.images[imageIndex]}
-                alt={`${activeProjectStatic.name} screenshot ${imageIndex + 1}`}
+                src={activeProject.images[imageIndex]}
+                alt={`${activeProject.name} screenshot ${imageIndex + 1}`}
                 fill
                 className="object-contain"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
@@ -203,7 +223,7 @@ export function PortfolioGallery() {
           </AnimatePresence>
 
           {/* Image Navigation (if multiple images) */}
-          {activeProjectStatic.images.length > 1 && (
+          {activeProject.images.length > 1 && (
             <>
               <button
                 onClick={handleImagePrev}
@@ -215,7 +235,7 @@ export function PortfolioGallery() {
               </button>
               <button
                 onClick={handleImageNext}
-                disabled={imageIndex === activeProjectStatic.images.length - 1}
+                disabled={imageIndex === activeProject.images.length - 1}
                 aria-label={t('nextImage')}
                 className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-bg-surface/80 backdrop-blur-sm border border-border/50 rounded-full disabled:opacity-30 disabled:cursor-not-allowed hover:bg-bg-surface hover:border-accent-orange/30 transition-all z-10"
               >
@@ -224,7 +244,7 @@ export function PortfolioGallery() {
 
               {/* Image dots */}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10" role="tablist" aria-label={t('imageNavigation')}>
-                {activeProjectStatic.images.map((_, idx) => (
+                {activeProject.images.map((_, idx) => (
                   <button
                     key={idx}
                     onClick={() => setImageIndex(idx)}
@@ -262,7 +282,7 @@ export function PortfolioGallery() {
               <div className="space-y-3">
                 {activeProject.services.map((service, index) => (
                   <ServiceCard
-                    key={service.name}
+                    key={`${activeProject.id}-service-${index}`}
                     name={service.name}
                     detail={service.detail}
                     index={index}
@@ -280,7 +300,7 @@ export function PortfolioGallery() {
               <div className="space-y-3">
                 {activeProject.results.map((result, index) => (
                   <MetricCard
-                    key={result.label}
+                    key={`${activeProject.id}-result-${index}`}
                     value={result.value}
                     label={result.label}
                     suffix={result.suffix}
@@ -304,8 +324,8 @@ export function PortfolioGallery() {
                 {t('technologies')}
               </h3>
               <div className="flex flex-wrap gap-2 mb-6">
-                {activeProjectStatic.technologies.map((tech) => (
-                  <TechLogo key={tech} name={tech} />
+                {activeProject.technologies.map((tech, index) => (
+                  <TechLogo key={`${activeProject.id}-tech-${index}`} name={tech} />
                 ))}
               </div>
 
@@ -314,9 +334,9 @@ export function PortfolioGallery() {
                 {t('integrations')}
               </h3>
               <div className="flex flex-wrap gap-2">
-                {activeProjectStatic.integrations.map((integration) => (
+                {activeProject.integrations.map((integration, index) => (
                   <span
-                    key={integration}
+                    key={`${activeProject.id}-integration-${index}`}
                     className="px-3 py-1.5 bg-bg-surface/60 border border-border/50 rounded-lg text-xs text-text-secondary hover:border-accent-orange/30 hover:text-text-primary transition-colors"
                   >
                     {integration}
@@ -329,13 +349,13 @@ export function PortfolioGallery() {
 
         {/* Project Dots Navigation */}
         <div className="flex items-center justify-center gap-3 mt-8" role="tablist" aria-label={t('projectNavigation')}>
-          {PROJECT_KEYS.map((projectKey, index) => (
+          {normalizedProjects.map((project, index) => (
             <button
-              key={projectKey}
+              key={project.id}
               onClick={() => handleSelect(index)}
               role="tab"
               aria-selected={index === activeIndex}
-              aria-label={`${t('viewProject')} ${PROJECT_STATIC_DATA[projectKey].name}`}
+              aria-label={`${t('viewProject')} ${project.name}`}
               className={`group relative transition-all ${
                 index === activeIndex ? 'scale-110' : ''
               }`}
@@ -350,7 +370,7 @@ export function PortfolioGallery() {
               />
               {/* Tooltip */}
               <span aria-hidden="true" className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-bg-surface border border-border/50 rounded text-xs text-text-secondary whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                {PROJECT_STATIC_DATA[projectKey].name}
+                {project.name}
               </span>
             </button>
           ))}

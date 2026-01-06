@@ -3,10 +3,46 @@
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import { CAPABILITIES } from '@/lib/constants'
+import { Code, TrendingUp, Users, Search, Sparkles, MessageSquare, type LucideIcon } from 'lucide-react'
 import { Section } from '@/components/ui/section'
 import { MatrixRain } from '@/components/ui/MatrixRain'
 import { staggerContainer, staggerItem, fadeInUp } from '@/lib/motion-variants'
+
+// Capability keys for translation lookup
+const CAPABILITY_KEYS = ['web', 'ecommerce', 'crm', 'analytics', 'automation', 'email'] as const
+
+// Static data that doesn't need translation
+interface CapabilityStaticData {
+  icon: LucideIcon
+  integrations: string[]
+}
+
+const CAPABILITY_STATIC_DATA: Record<typeof CAPABILITY_KEYS[number], CapabilityStaticData> = {
+  web: {
+    icon: Code,
+    integrations: ['nextjs', 'vercel', 'tailwind'],
+  },
+  ecommerce: {
+    icon: TrendingUp,
+    integrations: ['stripe', 'shopify'],
+  },
+  crm: {
+    icon: Users,
+    integrations: ['hubspot'],
+  },
+  analytics: {
+    icon: Search,
+    integrations: ['google-analytics', 'hotjar'],
+  },
+  automation: {
+    icon: Sparkles,
+    integrations: ['openai', 'zapier', 'make'],
+  },
+  email: {
+    icon: MessageSquare,
+    integrations: ['mailchimp', 'sendgrid', 'twilio'],
+  },
+}
 
 // Mapping for display names
 const INTEGRATION_NAMES: Record<string, string> = {
@@ -59,11 +95,12 @@ export function Capabilities() {
         variants={staggerContainer}
         className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
       >
-        {CAPABILITIES.map((capability, index) => {
-          const Icon = capability.icon
+        {CAPABILITY_KEYS.map((key, index) => {
+          const staticData = CAPABILITY_STATIC_DATA[key]
+          const Icon = staticData.icon
           return (
             <motion.div
-              key={index}
+              key={key}
               variants={staggerItem}
               whileHover={{ y: -4 }}
               className="group relative overflow-hidden rounded-xl border border-border/50 bg-bg-surface/60 backdrop-blur-sm p-6 hover:border-accent-orange/30 transition-all duration-300"
@@ -84,15 +121,15 @@ export function Capabilities() {
 
                 {/* Content */}
                 <h3 className="text-lg font-heading font-semibold text-text-primary mb-2">
-                  {capability.title}
+                  {t(`items.${key}.title`)}
                 </h3>
                 <p className="text-text-secondary text-sm leading-relaxed mb-4">
-                  {capability.description}
+                  {t(`items.${key}.description`)}
                 </p>
 
                 {/* Integration Logos with Names */}
                 <div className="flex flex-wrap items-center gap-3 pt-3 border-t border-border/30">
-                  {capability.integrations.map((integration) => (
+                  {staticData.integrations.map((integration) => (
                     <div
                       key={integration}
                       className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-bg-elevated/50 opacity-70 group-hover:opacity-100 transition-opacity"

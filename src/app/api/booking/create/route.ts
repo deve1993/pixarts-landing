@@ -11,7 +11,7 @@ import { clientEmailTranslations, type EmailLocale } from '@/emails/translations
 // ============================================================================
 
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>()
-const RATE_LIMIT = 3 // richieste
+const RATE_LIMIT = 10 // richieste (increased from 3)
 const RATE_LIMIT_WINDOW = 60 * 60 * 1000 // 1 ora
 
 function checkRateLimit(ip: string): boolean {
@@ -135,8 +135,26 @@ export async function POST(request: NextRequest) {
     })
   } catch (error) {
     console.error('Errore creazione booking:', error)
+
+    // Handle specific Google Calendar errors
+    const errorMessage = error instanceof Error ? error.message : 'Errore sconosciuto'
+
+    if (errorMessage.includes('invalid_grant')) {
+      return NextResponse.json(
+        { error: 'Servizio di prenotazione temporaneamente non disponibile. Contattaci via email.' },
+        { status: 503 }
+      )
+    }
+
+    if (errorMessage.includes('quota') || errorMessage.includes('rate')) {
+      return NextResponse.json(
+        { error: 'Troppi tentativi. Riprova tra qualche minuto.' },
+        { status: 429 }
+      )
+    }
+
     return NextResponse.json(
-      { error: 'Errore nella creazione della prenotazione' },
+      { error: 'Errore nella creazione della prenotazione. Riprova.' },
       { status: 500 }
     )
   }

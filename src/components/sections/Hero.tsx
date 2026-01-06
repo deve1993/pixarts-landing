@@ -43,6 +43,26 @@ export function Hero() {
   const t = useTranslations('hero')
   const tStats = useTranslations('stats')
 
+  // Use translations for hero content
+  const heroData = {
+    title1: t('title1'),
+    title2: t('title2'),
+    title3: t('title3'),
+    title4: t('title4'),
+    subtitle1: t('subtitle1'),
+    subtitle2: t('subtitle2'),
+    subtitle3: t('subtitle3'),
+    ctaPrimary: t('ctaPrimary'),
+    ctaSecondary: t('ctaSecondary'),
+  }
+
+  // Use translations for stats
+  const statsData = STATS_DATA.map((stat) => ({
+    value: stat.value,
+    suffix: stat.suffix,
+    label: tStats(stat.labelKey),
+  }))
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-24 pb-20 md:pb-32">
       {/* Content */}
@@ -66,16 +86,16 @@ export function Hero() {
             <span className="block mb-2">
               <span className="relative inline-block">
                 <span className="relative z-10 bg-gradient-to-r from-accent-orange via-accent-amber to-accent-orange bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-rotate">
-                  {t('title1')}
+                  {heroData.title1}
                 </span>
               </span>
               {' '}
-              <span className="text-text-primary">{t('title2')}</span>
+              <span className="text-text-primary">{heroData.title2}</span>
             </span>
             <span className="block text-text-primary">
-              {t('title3')}{' '}
+              {heroData.title3}{' '}
               <span className="relative inline-block">
-                <span className="relative z-10">{t('title4')}</span>
+                <span className="relative z-10">{heroData.title4}</span>
                 <motion.span
                   className="absolute -bottom-2 left-0 right-0 h-3 bg-gradient-to-r from-accent-orange/30 to-accent-amber/30 rounded-full -z-10"
                   initial={{ scaleX: 0 }}
@@ -91,10 +111,10 @@ export function Hero() {
             variants={itemVariants}
             className="text-lg md:text-xl lg:text-2xl text-text-secondary max-w-3xl mx-auto mb-12 leading-relaxed"
           >
-            {t('subtitle1')}{' '}
-            <span className="text-text-primary font-semibold">{t('subtitle2')}</span>.
+            {heroData.subtitle1}{' '}
+            <span className="text-text-primary font-semibold">{heroData.subtitle2}</span>.
             <br className="hidden sm:block" />
-            {t('subtitle3')}{' '}
+            {heroData.subtitle3}{' '}
             <span className="text-accent-orange font-semibold">100%</span>.
           </motion.p>
 
@@ -108,7 +128,7 @@ export function Hero() {
               className="group text-base px-8 py-6 shadow-xl shadow-accent-orange/20"
               onClick={() => scrollToElement('contatti')}
             >
-              <span>{t('ctaPrimary')}</span>
+              <span>{heroData.ctaPrimary}</span>
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
@@ -117,7 +137,7 @@ export function Hero() {
               className="text-base px-8 py-6"
               onClick={() => scrollToElement('portfolio')}
             >
-              {t('ctaSecondary')}
+              {heroData.ctaSecondary}
             </Button>
           </motion.div>
 
@@ -126,11 +146,11 @@ export function Hero() {
             variants={itemVariants}
             className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 max-w-3xl mx-auto"
           >
-            {STATS_DATA.map((stat, index) => {
-              const Icon = statIcons[index]
+            {statsData.map((stat, index) => {
+              const Icon = statIcons[index] || Zap
               return (
                 <motion.div
-                  key={stat.labelKey}
+                  key={`stat-${index}`}
                   initial={{ opacity: 0, y: 30, scale: 0.9 }}
                   animate={{
                     opacity: 1,
@@ -161,7 +181,9 @@ export function Hero() {
                         duration={2000}
                       />
                     </div>
-                    <p className="text-[10px] sm:text-xs md:text-sm text-text-muted font-medium">{tStats(stat.labelKey)}</p>
+                    <p className="text-[10px] sm:text-xs md:text-sm text-text-muted font-medium">
+                      {stat.label}
+                    </p>
                   </div>
                 </motion.div>
               )

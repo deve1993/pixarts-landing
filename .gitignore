@@ -32,3 +32,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Payload CMS
+payload.db
+payload.db-journal
+/public/media/*
+!/public/media/.gitkeep
+/src/payload/payload-types.ts
+nul

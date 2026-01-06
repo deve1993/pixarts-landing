@@ -91,7 +91,14 @@ async function getExistingEvents(startDate: Date, endDate: Date) {
 
     return response.data.items || []
   } catch (error) {
-    console.error('Errore recupero eventi Google Calendar:', error)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    console.error('Errore recupero eventi Google Calendar:', errorMessage)
+
+    // Re-throw invalid_grant errors so they can be handled upstream
+    if (errorMessage.includes('invalid_grant')) {
+      throw new Error('invalid_grant: Google Calendar token expired')
+    }
+
     return []
   }
 }

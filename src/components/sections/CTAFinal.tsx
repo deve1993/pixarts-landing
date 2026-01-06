@@ -259,7 +259,7 @@ export function CTAFinal() {
                 >
                   {t('form.privacy')}{' '}
                   <a
-                    href="/privacy"
+                    href="/privacy-policy"
                     className="text-accent-orange hover:underline"
                   >
                     {t('form.privacyLink')}

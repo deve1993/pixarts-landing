@@ -8,6 +8,16 @@ import { Section, SectionHeader } from '@/components/ui/section'
 
 const TESTIMONIAL_KEYS = ['testimonial1', 'testimonial2', 'testimonial3'] as const
 
+// Normalized testimonial type used by the component
+interface NormalizedTestimonial {
+  id: string
+  name: string
+  role: string
+  company: string
+  text: string
+  rating: number
+}
+
 // ============================================================================
 // MATRIX RAIN MINI - Stesso effetto usato in Pricing.tsx
 // ============================================================================
@@ -173,17 +183,17 @@ function useCardMatrixRain(
 // ============================================================================
 
 interface TestimonialCardProps {
-  testimonialKey: typeof TESTIMONIAL_KEYS[number]
+  testimonial: NormalizedTestimonial
   t: ReturnType<typeof useTranslations>
 }
 
-function TestimonialCard({ testimonialKey, t }: TestimonialCardProps) {
+function TestimonialCard({ testimonial, t }: TestimonialCardProps) {
   const [isHovered, setIsHovered] = useState(false)
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useCardMatrixRain(canvasRef, isHovered)
 
-  const initials = t(`${testimonialKey}.name`).split(' ').map(n => n[0]).join('')
+  const initials = testimonial.name.split(' ').map(n => n[0]).join('')
 
   return (
     <div
@@ -208,7 +218,7 @@ function TestimonialCard({ testimonialKey, t }: TestimonialCardProps) {
           {/* Header: Stars + Verified */}
           <div className="flex items-center justify-between mb-4">
             <div className="flex gap-0.5" aria-label={t('rating')}>
-              {[...Array(5)].map((_, i) => (
+              {[...Array(testimonial.rating)].map((_, i) => (
                 <Star
                   key={i}
                   className="w-4 h-4 fill-accent-orange text-accent-orange"
@@ -224,7 +234,7 @@ function TestimonialCard({ testimonialKey, t }: TestimonialCardProps) {
 
           {/* Quote Text */}
           <blockquote className="text-sm md:text-base text-text-primary leading-relaxed mb-5 min-h-[80px]">
-            <p>&ldquo;{t(`${testimonialKey}.text`)}&rdquo;</p>
+            <p>&ldquo;{testimonial.text}&rdquo;</p>
           </blockquote>
 
           {/* Author */}
@@ -241,10 +251,10 @@ function TestimonialCard({ testimonialKey, t }: TestimonialCardProps) {
 
             <cite className="not-italic">
               <div className="font-semibold text-text-primary text-sm">
-                {t(`${testimonialKey}.name`)}
+                {testimonial.name}
               </div>
               <div className="text-xs text-text-muted">
-                {t(`${testimonialKey}.role`)}, {t(`${testimonialKey}.company`)}
+                {testimonial.role}, {testimonial.company}
               </div>
             </cite>
           </footer>
@@ -323,6 +333,16 @@ function Marquee({
 export function Testimonials() {
   const t = useTranslations('testimonials')
 
+  // Use translations for testimonials
+  const testimonialItems: NormalizedTestimonial[] = TESTIMONIAL_KEYS.map(key => ({
+    id: `testimonial-${key}`,
+    name: t(`${key}.name`),
+    role: t(`${key}.role`),
+    company: t(`${key}.company`),
+    text: t(`${key}.text`),
+    rating: 5,
+  }))
+
   return (
     <Section id="testimonianze" className="overflow-hidden">
       <SectionHeader
@@ -339,8 +359,8 @@ export function Testimonials() {
 
         {/* Marquee */}
         <Marquee speed={40} pauseOnHover={true}>
-          {TESTIMONIAL_KEYS.map((key) => (
-            <TestimonialCard key={key} testimonialKey={key} t={t} />
+          {testimonialItems.map((item) => (
+            <TestimonialCard key={item.id} testimonial={item} t={t} />
           ))}
         </Marquee>
       </div>

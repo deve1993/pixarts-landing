@@ -271,7 +271,33 @@
   },
   "capabilities": {
     "titlePrefix": "Co dokážeme s",
-    "description": "Kompletní řešení pro růst vašeho podnikání online"
+    "description": "Kompletní řešení pro růst vašeho podnikání online",
+    "items": {
+      "web": {
+        "title": "Webové stránky & Landing",
+        "description": "Moderní design, který konvertuje, optimalizovaný pro SEO a výkon. Od konceptu po spuštění v rekordním čase."
+      },
+      "ecommerce": {
+        "title": "E-commerce & Platby",
+        "description": "Plynulý checkout, bezpečné platby, automatizovaná správa objednávek. Prodávejte online bez starostí."
+      },
+      "crm": {
+        "title": "CRM & Lead Generation",
+        "description": "Automatizované prodejní pipeline, lead scoring, inteligentní follow-upy. Konvertujte více kontaktů na zákazníky."
+      },
+      "analytics": {
+        "title": "Analytika & Přehledy",
+        "description": "Personalizované dashboardy, pokročilé sledování, rozhodování založené na datech. Měřte to, na čem záleží."
+      },
+      "automation": {
+        "title": "Automatizace & AI",
+        "description": "Inteligentní chatboty, automatické workflow, integrace na míru. Šetřete čas, škálujte byznys."
+      },
+      "email": {
+        "title": "Email & Komunikace",
+        "description": "Automatické kampaně, vícekanálové notifikace, newslettery, které konvertují. Zůstaňte v kontaktu se zákazníky."
+      }
+    }
   },
   "benefits": {
     "title": "Proč zvolit Pixarts",

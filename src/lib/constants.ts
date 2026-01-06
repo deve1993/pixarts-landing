@@ -1109,9 +1109,9 @@ export const FOOTER_RESOURCES = [
 ] as const
 
 export const FOOTER_LEGAL = [
-  { label: 'Privacy Policy', href: '/privacy' },
-  { label: 'Cookie Policy', href: '/cookies' },
-  { label: 'Termini e Condizioni', href: '/terms' },
+  { label: 'Privacy Policy', href: '/privacy-policy' },
+  { label: 'Cookie Policy', href: '/cookie-policy' },
+  { label: 'Termini e Condizioni', href: '/terms-conditions' },
 ] as const
 
 export const SOCIAL_LINKS = [

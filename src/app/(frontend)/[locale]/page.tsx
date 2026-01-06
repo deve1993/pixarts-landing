@@ -2,6 +2,7 @@ import { setRequestLocale } from 'next-intl/server'
 import dynamic from 'next/dynamic'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+
 // Above-fold components - loaded immediately
 import { Hero, TrustBadges, SocialProof } from '@/components/sections'
 

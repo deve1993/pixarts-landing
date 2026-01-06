@@ -13,6 +13,13 @@ export function FAQ() {
   const t = useTranslations('faq')
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
+  // Use translations for FAQs
+  const faqItems = FAQ_KEYS.map(key => ({
+    id: `faq-${key}`,
+    question: t(`${key}.question`),
+    answer: t(`${key}.answer`),
+  }))
+
   const toggleFaq = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
   }
@@ -25,9 +32,9 @@ export function FAQ() {
       />
 
       <div className="max-w-3xl mx-auto space-y-4">
-        {FAQ_KEYS.map((faqKey, index) => (
+        {faqItems.map((faq, index) => (
           <motion.div
-            key={faqKey}
+            key={faq.id}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -36,7 +43,7 @@ export function FAQ() {
             <button
               onClick={() => toggleFaq(index)}
               aria-expanded={openIndex === index}
-              aria-controls={`faq-${faqKey}-content`}
+              aria-controls={`${faq.id}-content`}
               className={cn(
                 'w-full text-left rounded-xl border bg-bg-surface/60 backdrop-blur-sm p-6 transition-all duration-300',
                 openIndex === index
@@ -45,8 +52,8 @@ export function FAQ() {
               )}
             >
               <div className="flex items-start justify-between gap-4">
-                <h3 id={`faq-${faqKey}-heading`} className="text-lg font-heading font-semibold text-text-primary pr-4">
-                  {t(`${faqKey}.question`)}
+                <h3 id={`${faq.id}-heading`} className="text-lg font-heading font-semibold text-text-primary pr-4">
+                  {faq.question}
                 </h3>
                 <motion.div
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
@@ -68,9 +75,9 @@ export function FAQ() {
               <AnimatePresence>
                 {openIndex === index && (
                   <motion.div
-                    id={`faq-${faqKey}-content`}
+                    id={`${faq.id}-content`}
                     role="region"
-                    aria-labelledby={`faq-${faqKey}-heading`}
+                    aria-labelledby={`${faq.id}-heading`}
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
@@ -78,7 +85,7 @@ export function FAQ() {
                     className="overflow-hidden"
                   >
                     <p className="text-text-secondary mt-4 pt-4 border-t border-border leading-relaxed">
-                      {t(`${faqKey}.answer`)}
+                      {faq.answer}
                     </p>
                   </motion.div>
                 )}

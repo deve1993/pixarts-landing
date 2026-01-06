@@ -271,7 +271,33 @@
   },
   "capabilities": {
     "titlePrefix": "Cosa possiamo fare con",
-    "description": "Soluzioni complete per far crescere il tuo business online"
+    "description": "Soluzioni complete per far crescere il tuo business online",
+    "items": {
+      "web": {
+        "title": "Siti Web & Landing",
+        "description": "Design moderno che converte, ottimizzato SEO e performance. Dal concept al lancio in tempi record."
+      },
+      "ecommerce": {
+        "title": "E-commerce & Pagamenti",
+        "description": "Checkout fluido, pagamenti sicuri, gestione ordini automatizzata. Vendi online senza pensieri."
+      },
+      "crm": {
+        "title": "CRM & Lead Generation",
+        "description": "Pipeline vendita automatizzate, lead scoring, follow-up intelligenti. Converti più contatti in clienti."
+      },
+      "analytics": {
+        "title": "Analytics & Insights",
+        "description": "Dashboard personalizzate, tracking avanzato, decisioni data-driven. Misura ciò che conta."
+      },
+      "automation": {
+        "title": "Automazioni & AI",
+        "description": "Chatbot intelligenti, workflow automatici, integrazioni su misura. Risparmia tempo, scala il business."
+      },
+      "email": {
+        "title": "Email & Comunicazione",
+        "description": "Campagne automatiche, notifiche multi-canale, newsletter che convertono. Resta connesso coi clienti."
+      }
+    }
   },
   "benefits": {
     "title": "Perché scegliere Pixarts",
