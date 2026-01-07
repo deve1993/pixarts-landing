@@ -12,10 +12,9 @@ import { LanguageSwitcher } from './LanguageSwitcher'
 import { cn, scrollToElement } from '@/lib/utils'
 
 const NAV_ITEMS_KEYS = [
-  { key: 'portfolio', href: '#portfolio' },
-  { key: 'services', href: '#pricing' },
-  { key: 'process', href: '#processo' },
-  { key: 'faq', href: '#faq' },
+  { key: 'portfolio', href: '/portfolio', isPage: true },
+  { key: 'services', href: '#pricing', isPage: false },
+  { key: 'contact', href: '#contatti', isPage: false },
 ] as const
 
 export function Header() {
@@ -135,13 +134,25 @@ export function Header() {
             aria-label="Navigazione principale"
           >
             {NAV_ITEMS_KEYS.map((item) => (
-              <button
-                key={item.key}
-                onClick={() => handleNavClick(item.href)}
-                className="text-text-secondary hover:text-text-primary transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary rounded-sm"
-              >
-                {t(item.key)}
-              </button>
+              item.isPage ? (
+                <Link
+                  key={item.key}
+                  href={item.href}
+                  className="relative text-text-secondary hover:text-text-primary transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary rounded-sm group"
+                >
+                  {t(item.key)}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent-orange transition-all duration-300 ease-out group-hover:w-full" />
+                </Link>
+              ) : (
+                <button
+                  key={item.key}
+                  onClick={() => handleNavClick(item.href)}
+                  className="relative text-text-secondary hover:text-text-primary transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary rounded-sm group"
+                >
+                  {t(item.key)}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent-orange transition-all duration-300 ease-out group-hover:w-full" />
+                </button>
+              )
             ))}
           </nav>
 
@@ -149,13 +160,10 @@ export function Header() {
           <div className="hidden md:flex items-center gap-4">
             <LanguageSwitcher />
             <Link href="/prenota">
-              <Button variant="secondary" size="sm">
+              <Button size="sm">
                 Prenota
               </Button>
             </Link>
-            <Button onClick={() => handleNavClick('#contatti')} size="sm">
-              {t('contact')}
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -205,17 +213,34 @@ export function Header() {
               aria-label="Menu mobile"
             >
               {NAV_ITEMS_KEYS.map((item, index) => (
-                <motion.button
-                  key={item.key}
-                  ref={index === 0 ? firstFocusableRef : undefined}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 + index * 0.05 }}
-                  onClick={() => handleNavClick(item.href)}
-                  className="text-2xl font-heading font-semibold text-text-primary hover:text-accent-orange transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary rounded-md px-4 py-2"
-                >
-                  {t(item.key)}
-                </motion.button>
+                item.isPage ? (
+                  <motion.div
+                    key={item.key}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 + index * 0.05 }}
+                  >
+                    <Link
+                      href={item.href}
+                      onClick={closeMobileMenu}
+                      className="text-2xl font-heading font-semibold text-text-primary hover:text-accent-orange transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary rounded-md px-4 py-2 block"
+                    >
+                      {t(item.key)}
+                    </Link>
+                  </motion.div>
+                ) : (
+                  <motion.button
+                    key={item.key}
+                    ref={index === 0 ? firstFocusableRef : undefined}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 + index * 0.05 }}
+                    onClick={() => handleNavClick(item.href)}
+                    className="text-2xl font-heading font-semibold text-text-primary hover:text-accent-orange transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary rounded-md px-4 py-2"
+                  >
+                    {t(item.key)}
+                  </motion.button>
+                )
               ))}
 
               {/* Mobile Language Switcher */}
@@ -231,20 +256,13 @@ export function Header() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="flex flex-col items-center gap-4 mt-4"
+                className="mt-4"
               >
                 <Link href="/prenota" onClick={closeMobileMenu}>
-                  <Button variant="secondary" size="lg">
+                  <Button ref={lastFocusableRef} size="lg">
                     Prenota
                   </Button>
                 </Link>
-                <Button
-                  ref={lastFocusableRef}
-                  size="lg"
-                  onClick={() => handleNavClick('#contatti')}
-                >
-                  {t('contact')}
-                </Button>
               </motion.div>
             </motion.nav>
           </motion.div>

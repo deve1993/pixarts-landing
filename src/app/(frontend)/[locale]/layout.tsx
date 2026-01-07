@@ -111,8 +111,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         "it": "https://pixarts.eu",
         "en": "https://pixarts.eu/en",
+        "cs": "https://pixarts.eu/cs",
       },
     },
+    manifest: "/manifest.json",
   }
 }
 

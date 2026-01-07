@@ -139,3 +139,103 @@
     transform: translateZ(0);
   }
 }
+
+/* Glitch effect for error pages */
+@keyframes glitch {
+  0% {
+    text-shadow:
+      0.05em 0 0 rgba(255, 107, 44, 0.75),
+      -0.05em -0.025em 0 rgba(255, 179, 71, 0.75),
+      -0.025em 0.05em 0 rgba(255, 255, 255, 0.75);
+  }
+  14% {
+    text-shadow:
+      0.05em 0 0 rgba(255, 107, 44, 0.75),
+      -0.05em -0.025em 0 rgba(255, 179, 71, 0.75),
+      -0.025em 0.05em 0 rgba(255, 255, 255, 0.75);
+  }
+  15% {
+    text-shadow:
+      -0.05em -0.025em 0 rgba(255, 107, 44, 0.75),
+      0.025em 0.025em 0 rgba(255, 179, 71, 0.75),
+      -0.05em -0.05em 0 rgba(255, 255, 255, 0.75);
+  }
+  49% {
+    text-shadow:
+      -0.05em -0.025em 0 rgba(255, 107, 44, 0.75),
+      0.025em 0.025em 0 rgba(255, 179, 71, 0.75),
+      -0.05em -0.05em 0 rgba(255, 255, 255, 0.75);
+  }
+  50% {
+    text-shadow:
+      0.025em 0.05em 0 rgba(255, 107, 44, 0.75),
+      0.05em 0 0 rgba(255, 179, 71, 0.75),
+      0 -0.05em 0 rgba(255, 255, 255, 0.75);
+  }
+  99% {
+    text-shadow:
+      0.025em 0.05em 0 rgba(255, 107, 44, 0.75),
+      0.05em 0 0 rgba(255, 179, 71, 0.75),
+      0 -0.05em 0 rgba(255, 255, 255, 0.75);
+  }
+  100% {
+    text-shadow:
+      -0.025em 0 0 rgba(255, 107, 44, 0.75),
+      -0.025em -0.025em 0 rgba(255, 179, 71, 0.75),
+      -0.025em -0.05em 0 rgba(255, 255, 255, 0.75);
+  }
+}
+
+.glitch-text {
+  animation: glitch 1s infinite;
+}
+
+/* Reduced motion: disable glitch animation */
+@media (prefers-reduced-motion: reduce) {
+  .glitch-text {
+    animation: none;
+  }
+}
+
+/* Floating animation for 404 page */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float {
+    animation: none;
+  }
+}
+
+/* Star twinkle animation for 404 page */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-twinkle {
+    animation: none;
+    opacity: 0.5;
+  }
+}

@@ -142,63 +142,63 @@
           "client": "FL1 Srl",
           "subtitle": "Sito Aziendale con AI Integration",
           "services": {
-            "webDesign": { "name": "Web Design", "detail": "Design corporate moderno e professionale" },
-            "backend": { "name": "Backend", "detail": "API REST e integrazioni server-side" },
-            "seo": { "name": "SEO", "detail": "Ottimizzazione on-page e tecnica" },
-            "ai": { "name": "AI Integration", "detail": "Chatbot e automazioni LLM" }
+            "webDesign": { "name": "Web Design", "detail": "Design corporate moderno con focus su conversione e trust building" },
+            "backend": { "name": "Backend", "detail": "Architettura Node.js scalabile con API REST e webhooks" },
+            "seo": { "name": "SEO", "detail": "SEO tecnico avanzato con schema markup e Core Web Vitals ottimizzati" },
+            "ai": { "name": "AI Integration", "detail": "Chatbot GPT-4 personalizzato per supporto 24/7 e qualificazione lead" }
           },
           "results": {
             "leads": { "value": "+220", "label": "lead generati", "suffix": "%" },
             "response": { "value": "45", "label": "tempo risposta chat", "suffix": "sec" },
             "satisfaction": { "value": "98", "label": "soddisfazione clienti", "suffix": "%" }
           },
-          "description": "Sito aziendale completo con sistema di lead generation automatizzato, chatbot AI per supporto clienti e integrazione CRM per gestione commerciale."
+          "description": "Trasformazione digitale completa per FL1, azienda leader nel settore B2B. Abbiamo progettato un ecosistema digitale integrato: sito web corporate con design premium, chatbot AI che gestisce autonomamente il primo contatto con i prospect qualificando i lead in tempo reale, e integrazione bidirezionale con HubSpot CRM per tracciare ogni interazione. Il risultato? Un sistema di vendita automatizzato che lavora 24/7, riducendo il carico sul team commerciale e aumentando drasticamente il tasso di conversione."
         },
         "flowmatics": {
           "client": "FlowMatics",
-          "subtitle": "Piattaforma Automazione Marketing",
+          "subtitle": "Piattaforma Automazione Marketing B2B",
           "services": {
-            "webDesign": { "name": "Web Design", "detail": "Landing page ad alta conversione" },
-            "seo": { "name": "SEO", "detail": "SEO tecnico e contenuti ottimizzati" },
-            "cro": { "name": "CRO", "detail": "Ottimizzazione tasso conversione" }
+            "webDesign": { "name": "Web Design", "detail": "Landing page con micro-animazioni e storytelling visivo" },
+            "seo": { "name": "SEO", "detail": "Strategia SEO completa: keyword research, content pillars e link building" },
+            "cro": { "name": "CRO", "detail": "A/B testing continuo, heatmaps e ottimizzazione funnel multi-step" }
           },
           "results": {
             "contacts": { "value": "+180", "label": "richieste contatto", "suffix": "%" },
             "visibility": { "value": "+40", "label": "visibilità Google", "suffix": "%" },
             "keywords": { "value": "Top 3", "label": "keyword target" }
           },
-          "description": "Landing page B2B progettata per convertire visitatori in lead qualificati. Funnel ottimizzato con A/B testing e analytics avanzati."
+          "description": "FlowMatics aveva una sfida: comunicare una piattaforma di automazione marketing complessa a un pubblico B2B esigente. Abbiamo creato una landing page che racconta la storia del prodotto attraverso animazioni fluide e demo interattive. Il design minimalista ma d'impatto guida l'utente in un percorso di scoperta che culmina nella richiesta demo. Grazie a una strategia SEO mirata e ottimizzazione continua basata sui dati, FlowMatics ora domina le keyword strategiche del settore marketing automation in Italia."
         },
         "quickfy-web": {
           "client": "Quickfy",
           "subtitle": "SaaS Marketing Website",
           "services": {
-            "webDesign": { "name": "Web Design", "detail": "Design SaaS moderno con demo interattiva" },
-            "seo": { "name": "SEO", "detail": "SEO per SaaS e content strategy" },
-            "cro": { "name": "CRO", "detail": "Funnel di conversione ottimizzato" }
+            "webDesign": { "name": "Web Design", "detail": "Design SaaS premium con demo prodotto embedded e animazioni 3D" },
+            "seo": { "name": "SEO", "detail": "SEO per SaaS: comparison pages, feature pages e blog strategy" },
+            "cro": { "name": "CRO", "detail": "Pricing page ottimizzata con social proof e urgency triggers" }
           },
           "results": {
             "leads": { "value": "3-5", "label": "lead qualificati/settimana" },
             "conversion": { "value": "8.5", "label": "tasso conversione", "suffix": "%" },
             "bounce": { "value": "-37", "label": "bounce rate", "suffix": "%" }
           },
-          "description": "Sito marketing per piattaforma SaaS con demo interattiva integrata, pricing dinamico e sistema di lead nurturing automatizzato."
+          "description": "Quickfy è una piattaforma di analytics e automazione marketing in rapida crescita. Il loro sito precedente non comunicava il valore del prodotto. Abbiamo riprogettato l'intera esperienza: una demo interattiva che permette ai prospect di 'toccare con mano' il prodotto direttamente dalla homepage, una pricing page con comparazione piani chiara e convincente, e un sistema di nurturing che accompagna ogni visitatore verso la conversione. Il bounce rate è crollato del 37% e ora generano lead qualificati costantemente ogni settimana."
         },
         "quickfy-app": {
           "client": "Quickfy",
-          "subtitle": "Dashboard Analytics & Automazioni",
+          "subtitle": "Dashboard Analytics & Automazioni AI",
           "services": {
-            "frontend": { "name": "Frontend", "detail": "Dashboard React con UI/UX avanzata" },
-            "backend": { "name": "Backend", "detail": "API scalabili e microservizi" },
-            "ai": { "name": "AI & Automazioni", "detail": "Server MCP, chatbot AI, workflow automatici" },
-            "devops": { "name": "DevOps", "detail": "CI/CD, monitoring e scaling" }
+            "frontend": { "name": "Frontend", "detail": "Dashboard React 19 con real-time updates e visualizzazioni dati avanzate" },
+            "backend": { "name": "Backend", "detail": "Architettura microservizi su AWS con auto-scaling e caching Redis" },
+            "ai": { "name": "AI & Automazioni", "detail": "Server MCP per Claude, workflow n8n, chatbot GPT-4 personalizzato" },
+            "devops": { "name": "DevOps", "detail": "CI/CD GitHub Actions, monitoring Datadog, deploy blue-green" }
           },
           "results": {
             "users": { "value": "500+", "label": "utenti attivi" },
             "time": { "value": "15", "label": "ore risparmiate/settimana", "suffix": "h" },
             "uptime": { "value": "99.9", "label": "uptime garantito", "suffix": "%" }
           },
-          "description": "Piattaforma SaaS completa con dashboard analytics, server MCP per automazioni AI, chatbot marketing intelligente, gestione campagne automatizzate e integrazioni multi-canale."
+          "description": "Il cuore tecnologico di Quickfy: una piattaforma SaaS enterprise-grade che abbiamo sviluppato da zero. Dashboard analytics con grafici real-time e filtri avanzati, un potente motore di automazione basato su server MCP che permette di orchestrare campagne marketing cross-canale, e un chatbot AI addestrato sui dati del cliente che gestisce autonomamente le interazioni. L'architettura cloud-native garantisce performance eccezionali anche sotto carico, con 500+ utenti attivi che risparmiano in media 15 ore a settimana grazie alle automazioni intelligenti."
         }
       }
     },
@@ -1559,5 +1559,132 @@
       "contactTitle": "Hai domande?",
       "contactText": "Per qualsiasi chiarimento puoi contattarci:"
     }
+  },
+  "portfolioPage": {
+    "metaTitle": "Portfolio - Progetti Web di Pixarts",
+    "metaDescription": "Scopri i progetti web realizzati da Pixarts: siti aziendali, landing page, web app e piattaforme SaaS. Casi studio con risultati reali.",
+    "badge": "Portfolio",
+    "title": "I Nostri",
+    "titleHighlight": "Progetti",
+    "description": "Scopri come abbiamo aiutato i nostri clienti a crescere online con soluzioni web su misura",
+    "backToHome": "Torna alla Home",
+    "viewDetails": "Vedi dettagli",
+    "close": "Chiudi",
+    "previousImage": "Immagine precedente",
+    "nextImage": "Immagine successiva",
+    "image": "Immagine",
+    "services": "Servizi",
+    "results": "Risultati",
+    "technologies": "Tecnologie",
+    "integrations": "Integrazioni",
+    "visitSite": "Visita il sito",
+    "theProject": "Il Progetto",
+    "previousProject": "Precedente",
+    "nextProject": "Successivo",
+    "ctaTitle": "Vuoi risultati simili?",
+    "ctaDescription": "Parliamo di come possiamo aiutare il tuo business a crescere online.",
+    "ctaButton": "Parliamo del tuo progetto",
+    "filters": {
+      "all": "Tutti",
+      "webapp": "Web App",
+      "saas": "SaaS",
+      "b2b-automation": "B2B",
+      "landing-page": "Landing",
+      "business-website": "Business"
+    },
+    "noProjects": "Nessun progetto trovato in questa categoria",
+    "categories": {
+      "webapp": "Web App",
+      "saas": "SaaS Platform",
+      "b2b-automation": "Automazione B2B",
+      "landing-page": "Landing Page",
+      "business-website": "Sito Business"
+    },
+    "projects": {
+      "singleflo": {
+        "client": "SingleFlo",
+        "subtitle": "Piattaforma ERP All-in-One con AI",
+        "description": "SingleFlo rivoluziona il modo in cui le PMI europee gestiscono il loro business. Abbiamo creato una landing page che comunica efficacemente la potenza di questa piattaforma ERP basata su Odoo 18: CRM, vendite, produzione, fatturazione e supporto clienti unificati con intelligenza artificiale integrata. Il design mette in primo piano la promessa chiave - setup in 48 ore - attraverso un percorso visivo che guida il visitatore dalla scoperta delle funzionalità fino alla richiesta demo. Performance Score 98/100 e SEO Score perfetto garantiscono visibilità e velocità.",
+        "services": {
+          "webDesign": { "name": "Web Design", "detail": "Design enterprise con animazioni GPU-accelerated e micro-interazioni" },
+          "seo": { "name": "SEO", "detail": "SEO tecnico perfetto: Core Web Vitals green, schema markup completo, sitemap dinamica" }
+        },
+        "results": {
+          "performance": { "value": "98", "label": "Performance Score", "suffix": "/100" },
+          "seoScore": { "value": "100", "label": "SEO Score", "suffix": "/100" }
+        }
+      },
+      "biemme": {
+        "client": "Biemme 2 S.r.l.",
+        "subtitle": "Sito Aziendale Impresa Edile",
+        "description": "Biemme 2 è un'impresa edile con oltre 30 anni di storia e 200+ appartamenti costruiti alle spalle. Il loro sito precedente non rifletteva questa solidità. Abbiamo progettato una presenza digitale all'altezza: design corporate con palette bordeaux che trasmette affidabilità, portfolio progetti con gallerie immersive, e una forte ottimizzazione SEO locale che li posiziona in cima alle ricerche 'impresa edile' nella loro zona. Le certificazioni ISO 9001 e SOA sono ora valorizzate come elementi di trust, convertendo visitatori in richieste di preventivo concrete.",
+        "services": {
+          "webDesign": { "name": "Web Design", "detail": "Design corporate autorevole con portfolio progetti e gallerie full-screen" },
+          "seo": { "name": "SEO", "detail": "Local SEO avanzato: Google Business ottimizzato, schema LocalBusiness, citazioni NAP" }
+        },
+        "results": {
+          "visibility": { "value": "+150", "label": "visibilità locale", "suffix": "%" },
+          "contacts": { "value": "+80", "label": "richieste preventivo", "suffix": "%" }
+        }
+      }
+    }
+  },
+  "portfolioShowcase": {
+    "badge": "Portfolio",
+    "title": "I nostri progetti migliori",
+    "description": "Risultati concreti per clienti reali",
+    "cta": "Vedi tutti i progetti",
+    "categories": {
+      "webapp": "Web App",
+      "business-website": "Sito Business",
+      "landing-page": "Landing Page"
+    },
+    "projects": {
+      "quickfy-app": {
+        "subtitle": "Dashboard Analytics & Automazioni AI"
+      },
+      "fl1": {
+        "subtitle": "Sito Aziendale con Chatbot AI"
+      },
+      "singleflo": {
+        "subtitle": "Piattaforma ERP All-in-One"
+      }
+    }
+  },
+  "portfolioCta": {
+    "badge": "Progetti Realizzati",
+    "title": "Scopri tutti i nostri",
+    "titleHighlight": "progetti",
+    "description": "Dai un'occhiata ai casi studio completi e scopri come abbiamo aiutato i nostri clienti a raggiungere i loro obiettivi.",
+    "ctaPrimary": "Vedi il Portfolio",
+    "trust1": "6+ Progetti completati",
+    "trust2": "Clienti soddisfatti",
+    "trust3": "Risultati misurabili"
+  },
+  "error": {
+    "title": "Qualcosa è andato storto",
+    "heading": "Oops!",
+    "description": "Si è verificato un errore imprevisto. Il nostro team è stato notificato e stiamo lavorando per risolvere il problema.",
+    "retry": "Riprova",
+    "backHome": "Torna alla Home",
+    "details": "Dettagli tecnici",
+    "code": "Codice errore"
+  },
+  "notFound": {
+    "heading": "404",
+    "title": "Pagina non trovata",
+    "description": "La pagina che stai cercando non esiste o è stata spostata.",
+    "suggestion": "Forse stavi cercando:",
+    "backHome": "Torna alla Home",
+    "explore": "Esplora il sito",
+    "popularPages": {
+      "portfolio": "Portfolio",
+      "pricing": "Prezzi",
+      "contact": "Contatti"
+    }
+  },
+  "loading": {
+    "text": "Caricamento...",
+    "preparing": "Preparazione contenuti"
   }
 }
