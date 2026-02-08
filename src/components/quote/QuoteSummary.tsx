@@ -16,7 +16,7 @@ export function QuoteSummary({ data }: QuoteSummaryProps) {
 
   return (
     <div className="space-y-6">
-      <div className="bg-bg-surface border border-border rounded-xl p-6">
+      <div className="bg-bg-surface/30 backdrop-blur-sm border border-border/50 rounded-xl p-6">
         <h3 className="text-xl font-heading font-semibold text-text-primary mb-4">
           {t('summary.title')}
         </h3>
@@ -68,7 +68,7 @@ export function QuoteSummary({ data }: QuoteSummaryProps) {
         )}
       </div>
 
-      <div className="bg-bg-elevated border border-border/50 rounded-xl p-6 relative overflow-hidden">
+      <div className="bg-bg-elevated/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 relative overflow-hidden">
         <div className="absolute top-0 right-0 p-4 opacity-10">
           <Flame className="w-24 h-24 text-accent-orange" />
         </div>

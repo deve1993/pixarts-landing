@@ -132,7 +132,7 @@ export function QuoteForm() {
                     key={item.id}
                     onClick={() => setValue('projectType', item.id as any /* eslint-disable-line @typescript-eslint/no-explicit-any */, { shouldValidate: true })}
                     className={cn(
-                      'cursor-pointer p-6 rounded-xl border-2 transition-all duration-200 hover:border-accent-orange/50 bg-bg-surface',
+                      'cursor-pointer p-6 rounded-xl border-2 transition-all duration-200 hover:border-accent-orange/50 bg-bg-surface/30 backdrop-blur-sm',
                       formData.projectType === item.id
                         ? 'border-accent-orange bg-accent-orange/5'
                         : 'border-border'
@@ -167,7 +167,7 @@ export function QuoteForm() {
                         key={range}
                         onClick={() => setValue('pages', range as any /* eslint-disable-line @typescript-eslint/no-explicit-any */, { shouldValidate: true })}
                         className={cn(
-                          'cursor-pointer p-4 rounded-lg border-2 text-center transition-all bg-bg-surface',
+                          'cursor-pointer p-4 rounded-lg border-2 text-center transition-all bg-bg-surface/30 backdrop-blur-sm',
                           formData.pages === range
                             ? 'border-accent-orange bg-accent-orange/5 text-accent-orange font-bold'
                             : 'border-border text-text-secondary hover:border-accent-orange/30'
@@ -188,7 +188,7 @@ export function QuoteForm() {
                         key={option}
                         onClick={() => setValue('design', option as any /* eslint-disable-line @typescript-eslint/no-explicit-any */, { shouldValidate: true })}
                         className={cn(
-                          'cursor-pointer p-4 rounded-lg border-2 transition-all bg-bg-surface',
+                          'cursor-pointer p-4 rounded-lg border-2 transition-all bg-bg-surface/30 backdrop-blur-sm',
                           formData.design === option
                             ? 'border-accent-orange bg-accent-orange/5'
                             : 'border-border hover:border-accent-orange/30'
@@ -227,7 +227,7 @@ export function QuoteForm() {
                         setValue('features', updated as any /* eslint-disable-line @typescript-eslint/no-explicit-any */)
                       }}
                       className={cn(
-                        'cursor-pointer p-4 rounded-lg border-2 flex items-center justify-between transition-all bg-bg-surface',
+                        'cursor-pointer p-4 rounded-lg border-2 flex items-center justify-between transition-all bg-bg-surface/30 backdrop-blur-sm',
                         isSelected
                           ? 'border-accent-orange bg-accent-orange/5'
                           : 'border-border hover:border-accent-orange/30'
@@ -259,7 +259,7 @@ export function QuoteForm() {
                         key={option}
                         onClick={() => setValue('cms', option as any /* eslint-disable-line @typescript-eslint/no-explicit-any */, { shouldValidate: true })}
                         className={cn(
-                          'cursor-pointer p-4 rounded-lg border-2 transition-all bg-bg-surface',
+                          'cursor-pointer p-4 rounded-lg border-2 transition-all bg-bg-surface/30 backdrop-blur-sm',
                           formData.cms === option
                             ? 'border-accent-orange bg-accent-orange/5'
                             : 'border-border hover:border-accent-orange/30'
@@ -285,7 +285,7 @@ export function QuoteForm() {
                         key={option}
                         onClick={() => setValue('timeline', option as any /* eslint-disable-line @typescript-eslint/no-explicit-any */, { shouldValidate: true })}
                         className={cn(
-                          'cursor-pointer p-4 rounded-lg border-2 transition-all bg-bg-surface',
+                          'cursor-pointer p-4 rounded-lg border-2 transition-all bg-bg-surface/30 backdrop-blur-sm',
                           formData.timeline === option
                             ? 'border-accent-orange bg-accent-orange/5'
                             : 'border-border hover:border-accent-orange/30'

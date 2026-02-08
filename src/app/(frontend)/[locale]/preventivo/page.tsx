@@ -45,32 +45,35 @@ export default async function QuotePage({ params }: { params: Promise<{ locale: 
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-bg-primary pt-24 pb-16">
-        <div className="container mx-auto px-4">
+      <main className="relative min-h-screen pt-32 pb-20">
+        <div className="max-w-6xl mx-auto px-6">
           {/* Header Section */}
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-accent-orange/10 text-accent-orange text-sm font-medium mb-4">
-              {t('badge')}
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-orange/10 border border-accent-orange/30 mb-6">
+              <Zap className="w-4 h-4 text-accent-orange" />
+              <span className="text-sm font-medium text-accent-orange">
+                {t('badge')}
+              </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-heading font-bold text-text-primary mb-4">
               {t('title')}
             </h1>
-            <p className="text-lg text-text-secondary">
+            <p className="text-text-secondary max-w-2xl mx-auto text-lg">
               {t('subtitle')}
             </p>
           </div>
 
           {/* Benefits Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-bg-surface border border-border rounded-xl p-6 flex flex-col items-center text-center">
-                <div className="w-12 h-12 rounded-full bg-accent-orange/10 flex items-center justify-center text-accent-orange mb-4">
-                  <benefit.icon className="w-6 h-6" />
+              <div key={index} className="p-4 rounded-xl border border-border/50 bg-bg-surface/30 backdrop-blur-sm">
+                <div className="w-10 h-10 rounded-lg bg-accent-orange/10 flex items-center justify-center mb-3">
+                  <benefit.icon className="w-5 h-5 text-accent-orange" />
                 </div>
-                <h3 className="font-heading font-semibold text-text-primary mb-2">
+                <h3 className="font-semibold text-text-primary mb-1">
                   {benefit.title}
                 </h3>
-                <p className="text-sm text-text-secondary">
+                <p className="text-sm text-text-muted">
                   {benefit.description}
                 </p>
               </div>
