@@ -15,6 +15,7 @@ import { BookingCard } from '@/components/booking'
 import { Link } from '@/i18n/routing'
 import { contactFormSchema, type ContactFormData } from '@/lib/validations'
 import { staggerContainer, staggerItem } from '@/lib/motion-variants'
+import { useAnalytics } from '@/lib/hooks/useAnalytics'
 
 type FormStatus = 'idle' | 'loading' | 'success' | 'error'
 
@@ -25,6 +26,7 @@ export function CTAFinal() {
   const t = useTranslations('cta')
   const tBooking = useTranslations('booking')
   const [status, setStatus] = useState<FormStatus>('idle')
+  const { trackConversion, trackEvent } = useAnalytics()
 
   const {
     register,
@@ -46,6 +48,12 @@ export function CTAFinal() {
       })
 
       if (!response.ok) throw new Error('Failed to send')
+
+      trackConversion('contact_form_submit', {
+        source: 'cta_final_form',
+        project_type: data.projectType,
+        budget_range: data.budget,
+      })
 
       setStatus('success')
       reset()
@@ -288,6 +296,12 @@ export function CTAFinal() {
                 size="lg"
                 className="w-full"
                 disabled={status === 'loading'}
+                onClick={() => {
+                  trackEvent('cta_click', {
+                    cta_name: 'cta_final_submit',
+                    cta_location: 'cta_final',
+                  })
+                }}
               >
                 {status === 'loading' ? (
                   <>

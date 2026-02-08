@@ -275,6 +275,7 @@ export function BookingWidget() {
                     slot={selectedSlot}
                     formData={formData}
                     meetLink={bookingResult?.meetLink}
+                    bookingId={bookingResult?.calendarEventId}
                     labels={confirmationLabels}
                   />
                 </motion.div>

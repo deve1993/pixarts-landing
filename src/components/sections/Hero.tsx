@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
 import { AnimatedCounter } from '@/components/AnimatedCounter'
 import { HeroLogo } from '@/components/HeroLogo'
+import { useAnalytics } from '@/lib/hooks/useAnalytics'
 import { scrollToElement } from '@/lib/utils'
 
 // Animation variants
@@ -42,6 +43,7 @@ const STATS_DATA = [
 export function Hero() {
   const t = useTranslations('hero')
   const tStats = useTranslations('stats')
+  const { trackEvent } = useAnalytics()
 
   // Use translations for hero content
   const heroData = {
@@ -126,7 +128,13 @@ export function Hero() {
             <Button
               size="lg"
               className="group text-base px-8 py-6 shadow-xl shadow-accent-orange/20"
-              onClick={() => scrollToElement('contatti')}
+              onClick={() => {
+                trackEvent('cta_click', {
+                  cta_name: 'hero_primary',
+                  cta_location: 'hero',
+                })
+                scrollToElement('contatti')
+              }}
             >
               <span>{heroData.ctaPrimary}</span>
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -135,7 +143,13 @@ export function Hero() {
               size="lg"
               variant="secondary"
               className="text-base px-8 py-6"
-              onClick={() => scrollToElement('portfolio')}
+              onClick={() => {
+                trackEvent('cta_click', {
+                  cta_name: 'hero_secondary',
+                  cta_location: 'hero',
+                })
+                scrollToElement('portfolio')
+              }}
             >
               {heroData.ctaSecondary}
             </Button>

@@ -15,6 +15,26 @@ interface CookiePreferences {
 
 const STORAGE_KEY = 'pixarts-cookie-consent'
 
+function updateConsentMode(prefs: CookiePreferences) {
+  if (typeof window === 'undefined') return
+
+  window.dataLayer = window.dataLayer || []
+
+  const consentPayload = {
+    analytics_storage: prefs.analytics ? 'granted' : 'denied',
+    ad_storage: prefs.marketing ? 'granted' : 'denied',
+    ad_user_data: prefs.marketing ? 'granted' : 'denied',
+    ad_personalization: prefs.marketing ? 'granted' : 'denied',
+  }
+
+  if (typeof window.gtag === 'function') {
+    window.gtag('consent', 'update', consentPayload)
+    return
+  }
+
+  window.dataLayer.push(['consent', 'update', consentPayload])
+}
+
 export function CookieConsent() {
   const t = useTranslations('cookieConsent')
   const [isVisible, setIsVisible] = useState(false)
@@ -34,6 +54,7 @@ export function CookieConsent() {
         const parsed = JSON.parse(stored) as CookiePreferences
         setPreferences(parsed)
         setIsVisible(false)
+        updateConsentMode(parsed)
       } catch {
         setIsVisible(true)
       }
@@ -48,6 +69,7 @@ export function CookieConsent() {
     const toSave = { ...prefs, timestamp: Date.now() }
     localStorage.setItem(STORAGE_KEY, JSON.stringify(toSave))
     setPreferences(toSave)
+    updateConsentMode(toSave)
     setIsVisible(false)
     // Notify GoogleAnalytics component of consent change (same-tab)
     window.dispatchEvent(new CustomEvent('cookie-consent-updated'))

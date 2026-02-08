@@ -9,6 +9,7 @@ import { ServiceCard } from '@/components/portfolio-v2/ServiceCard'
 import { MetricCard } from '@/components/portfolio-v2/MetricCard'
 import { TechLogo } from '@/components/portfolio-v2/TechLogo'
 import { Button } from '@/components/ui/button'
+import { useAnalytics } from '@/lib/hooks/useAnalytics'
 import { scrollToElement } from '@/lib/utils'
 import { ProjectData } from './ProjectCard'
 
@@ -23,6 +24,7 @@ interface ProjectModalProps {
 export function ProjectModal({ project, isOpen, onClose, projects = [], onNavigate }: ProjectModalProps) {
   const t = useTranslations('portfolioPage')
   const [imageIndex, setImageIndex] = useState(0)
+  const { trackConversion, trackEvent } = useAnalytics()
 
   // Find current project index for navigation
   const currentIndex = projects.findIndex(p => p.id === project?.id)
@@ -56,6 +58,15 @@ export function ProjectModal({ project, isOpen, onClose, projects = [], onNaviga
     }
   }, [isOpen, handleKeyDown])
 
+  useEffect(() => {
+    if (!isOpen || !project) return
+
+    trackConversion('portfolio_view', {
+      project_name: project.name,
+      project_category: project.category,
+    })
+  }, [isOpen, project, trackConversion])
+
   if (!project) return null
 
   const handleImagePrev = () => {
@@ -67,6 +78,11 @@ export function ProjectModal({ project, isOpen, onClose, projects = [], onNaviga
   }
 
   const handleContactClick = () => {
+    trackEvent('cta_click', {
+      cta_name: 'portfolio_modal_contact',
+      cta_location: 'portfolio_modal',
+    })
+
     onClose()
     setTimeout(() => {
       scrollToElement('contatti')

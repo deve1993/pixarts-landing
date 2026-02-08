@@ -1,11 +1,13 @@
 'use client'
 
+import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { CheckCircle, Calendar, Clock, Video, ArrowRight } from 'lucide-react'
 import { format, parseISO } from 'date-fns'
 import { it } from 'date-fns/locale'
 import { Button } from '@/components/ui/button'
 import { Link } from '@/i18n/routing'
+import { useAnalytics } from '@/lib/hooks/useAnalytics'
 import type { TimeSlot, BookingFormData } from '@/types/booking'
 
 // ============================================================================
@@ -16,6 +18,7 @@ interface BookingConfirmationProps {
   slot: TimeSlot
   formData: BookingFormData
   meetLink?: string
+  bookingId?: string
   labels: {
     title: string
     subtitle: string
@@ -37,12 +40,28 @@ export function BookingConfirmation({
   slot,
   formData,
   meetLink,
+  bookingId,
   labels,
 }: BookingConfirmationProps) {
+  const { trackConversion } = useAnalytics()
+  const hasTrackedRef = useRef(false)
+
   const formattedDate = format(parseISO(slot.startTime), 'EEEE d MMMM yyyy', {
     locale: it,
   })
   const formattedTime = format(parseISO(slot.startTime), 'HH:mm', { locale: it })
+
+  useEffect(() => {
+    if (hasTrackedRef.current) return
+
+    trackConversion('booking_complete', {
+      booking_date: slot.startTime.slice(0, 10),
+      booking_time: slot.startTime.slice(11, 16),
+      booking_id: bookingId,
+    })
+
+    hasTrackedRef.current = true
+  }, [bookingId, slot.startTime, trackConversion])
 
   return (
     <motion.div
