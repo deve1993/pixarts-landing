@@ -1,6 +1,7 @@
 {
   "nav": {
     "portfolio": "Portfolio",
+    "quote": "Nabídka",
     "services": "Služby",
     "process": "Proces",
     "faq": "FAQ",
@@ -1712,5 +1713,190 @@
   "loading": {
     "text": "Načítání...",
     "preparing": "Příprava obsahu"
+  },
+  "quotePage": {
+    "metaTitle": "Nezávazná nabídka",
+    "metaDescription": "Získejte personalizovanou nabídku pro váš webový projekt během několika minut. Landing page, firemní weby, e-shopy a webové aplikace.",
+    "badge": "Okamžitá nabídka",
+    "title": "Požádejte o nabídku",
+    "subtitle": "Odpovězte na pár otázek a obdržíte personalizovaný odhad přímo do svého e-mailu.",
+    "steps": {
+      "project": "Projekt",
+      "details": "Detaily",
+      "features": "Funkce",
+      "timeline": "Termín",
+      "contact": "Kontakt",
+      "summary": "Shrnutí"
+    },
+    "projectTypes": {
+      "landing": {
+        "title": "Landing Page",
+        "description": "Jedna stránka optimalizovaná pro konverze"
+      },
+      "website": {
+        "title": "Firemní web",
+        "description": "Vícestránkový web pro prezentaci vašeho podnikání"
+      },
+      "ecommerce": {
+        "title": "E-Shop",
+        "description": "Online obchod se správou produktů a platbami"
+      },
+      "webapp": {
+        "title": "Webová aplikace",
+        "description": "Vlastní webová aplikace s pokročilými funkcemi"
+      }
+    },
+    "pages": {
+      "label": "Kolik stránek?",
+      "1-3": "1-3 stránky",
+      "4-7": "4-7 stránek",
+      "8-15": "8-15 stránek",
+      "15+": "15+ stránek"
+    },
+    "design": {
+      "label": "Typ designu"
+    },
+    "designOptions": {
+      "template": {
+        "title": "Upravená šablona",
+        "description": "Profesionální šablona přizpůsobená vašim potřebám"
+      },
+      "custom": {
+        "title": "Vlastní design",
+        "description": "Kompletně na míru, vytvořený od nuly"
+      },
+      "existing": {
+        "title": "Mám vlastní design",
+        "description": "Máte připravené mockupy nebo grafické soubory"
+      }
+    },
+    "featuresList": {
+      "contact_form": {
+        "title": "Kontaktní formulář",
+        "description": "Formulář s validací a e-mailovými notifikacemi"
+      },
+      "booking": {
+        "title": "Rezervační systém",
+        "description": "Kalendář a online správa schůzek"
+      },
+      "blog": {
+        "title": "Blog / Novinky",
+        "description": "Sekce článků s CMS pro správu obsahu"
+      },
+      "multilang": {
+        "title": "Vícejazyčnost",
+        "description": "Podpora více jazyků s integrovaným přepínačem"
+      },
+      "auth": {
+        "title": "Členská sekce",
+        "description": "Přihlášení, registrace a uživatelský dashboard"
+      },
+      "payments": {
+        "title": "Online platby",
+        "description": "Integrace Stripe nebo jiné platební brány"
+      },
+      "seo": {
+        "title": "Pokročilé SEO",
+        "description": "Kompletní optimalizace pro vyhledávače"
+      },
+      "analytics": {
+        "title": "Analytika & Tracking",
+        "description": "Google Analytics, Tag Manager a vlastní reporty"
+      }
+    },
+    "cms": {
+      "label": "Chcete spravovat obsah sami?"
+    },
+    "cmsOptions": {
+      "yes": {
+        "title": "Ano, spravuji sám",
+        "description": "Intuitivní CMS pro aktualizaci textů, obrázků a obsahu"
+      },
+      "no": {
+        "title": "Ne, spravujete vy",
+        "description": "Aktualizace zajistíme my, když bude potřeba"
+      }
+    },
+    "timeline": {
+      "label": "Termín"
+    },
+    "timelineOptions": {
+      "standard": {
+        "title": "Standard",
+        "description": "4-6 týdnů, pečlivý vývoj"
+      },
+      "urgent": {
+        "title": "Urgentní (+30%)",
+        "description": "2-3 týdny, nejvyšší priorita"
+      },
+      "flexible": {
+        "title": "Flexibilní",
+        "description": "Žádný spěch, pohodlný termín"
+      }
+    },
+    "form": {
+      "nome": "Jméno",
+      "cognome": "Příjmení",
+      "email": "E-mail",
+      "telefono": "Telefon",
+      "azienda": "Firma (nepovinné)",
+      "messaggio": "Zpráva (nepovinné)",
+      "privacy": "Souhlasím s",
+      "privacyLink": "Zásadami ochrany osobních údajů"
+    },
+    "summary": {
+      "title": "Shrnutí projektu",
+      "projectType": "Typ projektu",
+      "pages": "Stránky",
+      "design": "Design",
+      "features": "Funkce",
+      "cms": "CMS",
+      "estimatedPrice": "Odhadovaná cena",
+      "estimatedTimeline": "Odhadovaný termín",
+      "leadScore": "Priorita"
+    },
+    "leadScore": {
+      "high": "Vysoká",
+      "medium": "Střední",
+      "low": "Nízká"
+    },
+    "buttons": {
+      "next": "Další",
+      "back": "Zpět",
+      "submit": "Požádat o nabídku",
+      "submitting": "Odesílání...",
+      "submitNote": "Nabídku obdržíte e-mailem do 24 hodin"
+    },
+    "confirmation": {
+      "title": "Nabídka odeslána!",
+      "message": "Děkujeme za váš zájem. Ozveme se vám do 24 hodin s podrobnou a personalizovanou nabídkou.",
+      "backHome": "Zpět na hlavní stránku"
+    },
+    "validation": {
+      "required": "Povinné pole",
+      "nomeMin": "Jméno musí mít alespoň 2 znaky",
+      "cognomeMin": "Příjmení musí mít alespoň 2 znaky",
+      "emailInvalid": "Zadejte platnou e-mailovou adresu",
+      "telefonoInvalid": "Zadejte platné telefonní číslo",
+      "privacyRequired": "Musíte souhlasit se Zásadami ochrany osobních údajů"
+    },
+    "benefits": {
+      "instant": {
+        "title": "Okamžitá nabídka",
+        "description": "Získejte odhad v reálném čase během vyplňování formuláře"
+      },
+      "customized": {
+        "title": "Na míru",
+        "description": "Každá nabídka je přizpůsobena vašim konkrétním potřebám"
+      },
+      "noObligation": {
+        "title": "Bez závazků",
+        "description": "Žádné závazky, žádné skryté náklady. Plná transparentnost"
+      },
+      "fast": {
+        "title": "Odpověď do 24h",
+        "description": "Ozveme se vám do jednoho pracovního dne s detaily"
+      }
+    }
   }
 }

@@ -1,6 +1,7 @@
 {
   "nav": {
     "portfolio": "Portfolio",
+    "quote": "Quote",
     "services": "Services",
     "process": "Process",
     "faq": "FAQ",
@@ -1712,5 +1713,190 @@
   "loading": {
     "text": "Loading...",
     "preparing": "Preparing content"
+  },
+  "quotePage": {
+    "metaTitle": "Free Quote",
+    "metaDescription": "Get a personalized quote for your web project in minutes. Landing pages, business websites, e-commerce and web apps.",
+    "badge": "Instant Quote",
+    "title": "Request your quote",
+    "subtitle": "Answer a few questions and receive a personalized estimate directly in your inbox.",
+    "steps": {
+      "project": "Project",
+      "details": "Details",
+      "features": "Features",
+      "timeline": "Timeline",
+      "contact": "Contact",
+      "summary": "Summary"
+    },
+    "projectTypes": {
+      "landing": {
+        "title": "Landing Page",
+        "description": "Single page optimized for conversion"
+      },
+      "website": {
+        "title": "Business Website",
+        "description": "Multi-page site to showcase your business"
+      },
+      "ecommerce": {
+        "title": "E-Commerce",
+        "description": "Online store with product management and payments"
+      },
+      "webapp": {
+        "title": "Web App",
+        "description": "Custom web application with advanced features"
+      }
+    },
+    "pages": {
+      "label": "How many pages?",
+      "1-3": "1-3 pages",
+      "4-7": "4-7 pages",
+      "8-15": "8-15 pages",
+      "15+": "15+ pages"
+    },
+    "design": {
+      "label": "Design type"
+    },
+    "designOptions": {
+      "template": {
+        "title": "Custom Template",
+        "description": "Professional template-based design, customized for you"
+      },
+      "custom": {
+        "title": "Custom Design",
+        "description": "Fully bespoke design, created from scratch"
+      },
+      "existing": {
+        "title": "I have a design",
+        "description": "You already have mockups or design files ready"
+      }
+    },
+    "featuresList": {
+      "contact_form": {
+        "title": "Contact Form",
+        "description": "Contact form with validation and email notifications"
+      },
+      "booking": {
+        "title": "Booking System",
+        "description": "Calendar and online appointment management"
+      },
+      "blog": {
+        "title": "Blog / News",
+        "description": "Articles section with CMS for content management"
+      },
+      "multilang": {
+        "title": "Multi-language",
+        "description": "Support for multiple languages with integrated switcher"
+      },
+      "auth": {
+        "title": "Members Area",
+        "description": "Login, registration and user dashboard"
+      },
+      "payments": {
+        "title": "Online Payments",
+        "description": "Stripe or other payment gateway integration"
+      },
+      "seo": {
+        "title": "Advanced SEO",
+        "description": "Complete search engine optimization"
+      },
+      "analytics": {
+        "title": "Analytics & Tracking",
+        "description": "Google Analytics, Tag Manager and custom reports"
+      }
+    },
+    "cms": {
+      "label": "Do you want to manage content yourself?"
+    },
+    "cmsOptions": {
+      "yes": {
+        "title": "Yes, I'll manage it",
+        "description": "Intuitive CMS to update text, images and content"
+      },
+      "no": {
+        "title": "No, you manage it",
+        "description": "We handle updates when needed"
+      }
+    },
+    "timeline": {
+      "label": "Timeline"
+    },
+    "timelineOptions": {
+      "standard": {
+        "title": "Standard",
+        "description": "4-6 weeks, careful development"
+      },
+      "urgent": {
+        "title": "Urgent (+30%)",
+        "description": "2-3 weeks, top priority"
+      },
+      "flexible": {
+        "title": "Flexible",
+        "description": "No rush, comfortable timeline"
+      }
+    },
+    "form": {
+      "nome": "First Name",
+      "cognome": "Last Name",
+      "email": "Email",
+      "telefono": "Phone",
+      "azienda": "Company (optional)",
+      "messaggio": "Message (optional)",
+      "privacy": "I accept the",
+      "privacyLink": "Privacy Policy"
+    },
+    "summary": {
+      "title": "Project Summary",
+      "projectType": "Project Type",
+      "pages": "Pages",
+      "design": "Design",
+      "features": "Features",
+      "cms": "CMS",
+      "estimatedPrice": "Estimated Price",
+      "estimatedTimeline": "Estimated timeline",
+      "leadScore": "Priority"
+    },
+    "leadScore": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "buttons": {
+      "next": "Next",
+      "back": "Back",
+      "submit": "Request Quote",
+      "submitting": "Sending...",
+      "submitNote": "You'll receive the quote via email within 24h"
+    },
+    "confirmation": {
+      "title": "Quote Sent!",
+      "message": "Thank you for your request. We'll contact you within 24 hours with a detailed, personalized quote.",
+      "backHome": "Back to Home"
+    },
+    "validation": {
+      "required": "Required field",
+      "nomeMin": "First name must be at least 2 characters",
+      "cognomeMin": "Last name must be at least 2 characters",
+      "emailInvalid": "Please enter a valid email address",
+      "telefonoInvalid": "Please enter a valid phone number",
+      "privacyRequired": "You must accept the Privacy Policy"
+    },
+    "benefits": {
+      "instant": {
+        "title": "Instant Quote",
+        "description": "Get a real-time estimate as you fill in the form"
+      },
+      "customized": {
+        "title": "Tailored",
+        "description": "Every quote is customized to your specific needs"
+      },
+      "noObligation": {
+        "title": "No Obligation",
+        "description": "No commitment, no hidden costs. Full transparency"
+      },
+      "fast": {
+        "title": "24h Response",
+        "description": "We'll get back to you within one business day with details"
+      }
+    }
   }
 }

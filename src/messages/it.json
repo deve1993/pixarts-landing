@@ -1,6 +1,7 @@
 {
   "nav": {
     "portfolio": "Portfolio",
+    "quote": "Preventivo",
     "services": "Servizi",
     "process": "Processo",
     "faq": "FAQ",
@@ -1712,5 +1713,190 @@
   "loading": {
     "text": "Caricamento...",
     "preparing": "Preparazione contenuti"
+  },
+  "quotePage": {
+    "metaTitle": "Preventivo Gratuito",
+    "metaDescription": "Ottieni un preventivo personalizzato per il tuo progetto web in pochi minuti. Landing page, siti vetrina, e-commerce e web app.",
+    "badge": "Preventivo Istantaneo",
+    "title": "Richiedi il tuo preventivo",
+    "subtitle": "Rispondi a poche domande e ricevi una stima personalizzata direttamente nella tua email.",
+    "steps": {
+      "project": "Progetto",
+      "details": "Dettagli",
+      "features": "Funzionalità",
+      "timeline": "Tempistiche",
+      "contact": "Contatto",
+      "summary": "Riepilogo"
+    },
+    "projectTypes": {
+      "landing": {
+        "title": "Landing Page",
+        "description": "Pagina singola ottimizzata per la conversione"
+      },
+      "website": {
+        "title": "Sito Vetrina",
+        "description": "Sito multi-pagina per presentare la tua attività"
+      },
+      "ecommerce": {
+        "title": "E-Commerce",
+        "description": "Negozio online con gestione prodotti e pagamenti"
+      },
+      "webapp": {
+        "title": "Web App",
+        "description": "Applicazione web personalizzata con funzionalità avanzate"
+      }
+    },
+    "pages": {
+      "label": "Quante pagine?",
+      "1-3": "1-3 pagine",
+      "4-7": "4-7 pagine",
+      "8-15": "8-15 pagine",
+      "15+": "15+ pagine"
+    },
+    "design": {
+      "label": "Tipo di design"
+    },
+    "designOptions": {
+      "template": {
+        "title": "Template Personalizzato",
+        "description": "Design basato su template professionali, personalizzato per te"
+      },
+      "custom": {
+        "title": "Design Custom",
+        "description": "Design completamente su misura, creato da zero"
+      },
+      "existing": {
+        "title": "Ho già il design",
+        "description": "Hai già mockup o file grafici pronti"
+      }
+    },
+    "featuresList": {
+      "contact_form": {
+        "title": "Form di Contatto",
+        "description": "Modulo contatti con validazione e notifiche email"
+      },
+      "booking": {
+        "title": "Sistema Prenotazioni",
+        "description": "Calendario e gestione appuntamenti online"
+      },
+      "blog": {
+        "title": "Blog / News",
+        "description": "Sezione articoli con CMS per la gestione dei contenuti"
+      },
+      "multilang": {
+        "title": "Multi-lingua",
+        "description": "Supporto per più lingue con switcher integrato"
+      },
+      "auth": {
+        "title": "Area Riservata",
+        "description": "Login, registrazione e dashboard utente"
+      },
+      "payments": {
+        "title": "Pagamenti Online",
+        "description": "Integrazione Stripe o altri gateway di pagamento"
+      },
+      "seo": {
+        "title": "SEO Avanzato",
+        "description": "Ottimizzazione completa per i motori di ricerca"
+      },
+      "analytics": {
+        "title": "Analytics & Tracking",
+        "description": "Google Analytics, Tag Manager e report personalizzati"
+      }
+    },
+    "cms": {
+      "label": "Vuoi gestire i contenuti in autonomia?"
+    },
+    "cmsOptions": {
+      "yes": {
+        "title": "Sì, gestisco io",
+        "description": "CMS intuitivo per aggiornare testi, immagini e contenuti"
+      },
+      "no": {
+        "title": "No, gestite voi",
+        "description": "Ci occupiamo noi degli aggiornamenti quando necessario"
+      }
+    },
+    "timeline": {
+      "label": "Tempistiche"
+    },
+    "timelineOptions": {
+      "standard": {
+        "title": "Standard",
+        "description": "4-6 settimane, sviluppo accurato"
+      },
+      "urgent": {
+        "title": "Urgente (+30%)",
+        "description": "2-3 settimane, priorità massima"
+      },
+      "flexible": {
+        "title": "Flessibile",
+        "description": "Nessuna fretta, tempi comodi"
+      }
+    },
+    "form": {
+      "nome": "Nome",
+      "cognome": "Cognome",
+      "email": "Email",
+      "telefono": "Telefono",
+      "azienda": "Azienda (opzionale)",
+      "messaggio": "Messaggio (opzionale)",
+      "privacy": "Accetto la",
+      "privacyLink": "Privacy Policy"
+    },
+    "summary": {
+      "title": "Riepilogo del Progetto",
+      "projectType": "Tipo Progetto",
+      "pages": "Pagine",
+      "design": "Design",
+      "features": "Funzionalità",
+      "cms": "CMS",
+      "estimatedPrice": "Prezzo Stimato",
+      "estimatedTimeline": "Timeline stimata",
+      "leadScore": "Priorità"
+    },
+    "leadScore": {
+      "high": "Alta",
+      "medium": "Media",
+      "low": "Bassa"
+    },
+    "buttons": {
+      "next": "Avanti",
+      "back": "Indietro",
+      "submit": "Richiedi Preventivo",
+      "submitting": "Invio in corso...",
+      "submitNote": "Riceverai il preventivo via email entro 24h"
+    },
+    "confirmation": {
+      "title": "Preventivo Inviato!",
+      "message": "Grazie per la tua richiesta. Ti contatteremo entro 24 ore con un preventivo dettagliato e personalizzato.",
+      "backHome": "Torna alla Home"
+    },
+    "validation": {
+      "required": "Campo obbligatorio",
+      "nomeMin": "Il nome deve avere almeno 2 caratteri",
+      "cognomeMin": "Il cognome deve avere almeno 2 caratteri",
+      "emailInvalid": "Inserisci un indirizzo email valido",
+      "telefonoInvalid": "Inserisci un numero di telefono valido",
+      "privacyRequired": "Devi accettare la Privacy Policy"
+    },
+    "benefits": {
+      "instant": {
+        "title": "Preventivo Istantaneo",
+        "description": "Ricevi una stima in tempo reale mentre compili il form"
+      },
+      "customized": {
+        "title": "Su Misura",
+        "description": "Ogni preventivo è personalizzato sulle tue esigenze specifiche"
+      },
+      "noObligation": {
+        "title": "Senza Impegno",
+        "description": "Nessun obbligo, nessun costo nascosto. Trasparenza totale"
+      },
+      "fast": {
+        "title": "Risposta in 24h",
+        "description": "Ti ricontattiamo entro un giorno lavorativo con i dettagli"
+      }
+    }
   }
 }

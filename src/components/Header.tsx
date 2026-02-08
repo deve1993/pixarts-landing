@@ -13,6 +13,7 @@ import { cn, scrollToElement } from '@/lib/utils'
 
 const NAV_ITEMS_KEYS = [
   { key: 'portfolio', href: '/portfolio', isPage: true },
+  { key: 'quote', href: '/preventivo', isPage: true },
   { key: 'services', href: '#pricing', isPage: false },
   { key: 'contact', href: '#contatti', isPage: false },
 ] as const
