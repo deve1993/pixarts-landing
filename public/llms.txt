@@ -1,0 +1,35 @@
+# Pixarts
+
+> Pixarts crea siti web professionali in 10 giorni. Design moderno, SEO incluso, garanzia soddisfazione. Servizio italiano con supporto in inglese e ceco.
+
+## Servizi
+- [Landing Page](/it#pricing): Siti web one-page ottimizzati per conversione, da €1.200
+- [Sito Aziendale](/it#pricing): Siti multi-pagina con CMS, da €2.500
+- [E-commerce / Booking](/it#pricing): Shop online e sistemi di prenotazione, da €4.000
+- [Portfolio](/it/portfolio): Esempi di lavori completati
+
+## Pagine principali
+- [Home](https://pixarts.eu): Panoramica servizi, pricing, portfolio, FAQ
+- [Portfolio](https://pixarts.eu/portfolio): Progetti completati (FlowMatics, Quickfy)
+- [Prenota una call](https://pixarts.eu/prenota): Sistema di prenotazione consulenza gratuita
+- [Privacy Policy](https://pixarts.eu/privacy-policy): Informativa privacy GDPR
+- [Cookie Policy](https://pixarts.eu/cookie-policy): Gestione cookie
+- [Richiesta GDPR](https://pixarts.eu/gdpr-request): Esercizio diritti GDPR
+
+## Caratteristiche
+- Consegna garantita in 10 giorni lavorativi
+- Design responsive mobile-first
+- SEO tecnico incluso in ogni progetto
+- Stack: Next.js 15, React 19, Tailwind CSS, TypeScript
+- Hosting su infrastruttura europea
+- Supporto multilingua: Italiano, English, Cestina
+
+## Contatti
+- Email: info@pixarts.eu
+- Sito: https://pixarts.eu
+- Prenota call gratuita: https://pixarts.eu/prenota
+
+## Lingue disponibili
+- Italiano (default): https://pixarts.eu
+- English: https://pixarts.eu/en
+- Cestina: https://pixarts.eu/cs

@@ -1,0 +1,1716 @@
+{
+  "nav": {
+    "portfolio": "Portfolio",
+    "services": "Služby",
+    "process": "Proces",
+    "faq": "FAQ",
+    "contact": "Kontaktujte nás"
+  },
+  "hero": {
+    "badge": "úspěšně dokončených projektů",
+    "title1": "Webové stránky",
+    "title2": "které",
+    "title3": "přinášejí",
+    "title4": "zákazníky",
+    "subtitle1": "Od prvního návrhu po spuštění za",
+    "subtitle2": "10 dní",
+    "subtitle3": "Moderní design, SEO v ceně, záruka spokojenosti",
+    "ctaPrimary": "Získat bezplatnou nabídku",
+    "ctaSecondary": "Zobrazit portfolio",
+    "scroll": "Posunout"
+  },
+  "stats": {
+    "projects": "Dokončených projektů",
+    "satisfaction": "Spokojených klientů",
+    "delivery": "Průměrná dodací lhůta"
+  },
+  "trustBadges": {
+    "moneyBack": "100% záruka vrácení peněz",
+    "delivery": "Dodání za 10 dní",
+    "secure": "Bezpečné platby",
+    "support": "Přímá podpora",
+    "projects": "12+ dokončených projektů"
+  },
+  "socialProof": {
+    "title": "Vybrali si Pixarts",
+    "description": "Skutečné projekty, které proměnily skutečné podniky",
+    "challenge": "Výzva",
+    "solutions": "Řešení",
+    "projects": {
+      "flowmatics": {
+        "type": "B2B Marketingová Automatizace",
+        "challenge": "Složitá platforma k jednoduché komunikaci",
+        "solution1": "Čistý a profesionální design",
+        "solution2": "Optimalizovaný konverzní trychtýř",
+        "result1": { "value": "+180%", "label": "žádostí o kontakt" },
+        "result2": { "value": "+40%", "label": "viditelnost Google" },
+        "result3": { "value": "Top 3", "label": "strategická klíčová slova" }
+      },
+      "quickfy": {
+        "type": "SaaS Analytická Platforma",
+        "challenge": "Složitý dashboard pro prezentaci B2B cílové skupině",
+        "solution1": "Moderní design s interaktivními animacemi",
+        "solution2": "Interaktivní demo na homepage",
+        "result1": { "value": "3-5", "label": "kvalifikovaných leadů/týden" },
+        "result2": { "value": "8.5%", "label": "konverzní poměr" },
+        "result3": { "value": "-37%", "label": "bounce rate" }
+      },
+      "benetti": {
+        "type": "Řemeslné Portfolio",
+        "challenge": "Ukázat řemeslnou kvalitu a získat kvalifikované kontakty",
+        "solution1": "Profesionální fotografické portfolio",
+        "solution2": "Optimalizovaný kontaktní formulář pro nabídky",
+        "result1": { "value": "+300%", "label": "žádostí o nabídku" },
+        "result2": { "value": "Top 5", "label": "lokální Google" },
+        "result3": { "value": "10 dní", "label": "dodání projektu" }
+      },
+      "fl1": {
+        "type": "Firemní Web + AI",
+        "challenge": "Integrace AI chatbota pro automatizovanou zákaznickou podporu",
+        "solution1": "Chatbot s integrací OpenAI",
+        "solution2": "HubSpot CRM pro správu leadů",
+        "result1": { "value": "+220%", "label": "generovaných leadů" },
+        "result2": { "value": "45s", "label": "doba odpovědi" },
+        "result3": { "value": "98%", "label": "spokojenost" }
+      }
+    }
+  },
+  "problems": {
+    "title": "Tři problémy, které zná každý podnikatel",
+    "description": "Pokud se poznáte alespoň v jednom z nich, jste na správném místě",
+    "problem1": {
+      "title": "Můj web nepřináší klienty",
+      "description": "Amatérský design, matoucí navigace, neviditelné výzvy k akci. Výsledek? Návštěvnost, která nekonvertuje."
+    },
+    "problem2": {
+      "title": "Příliš dlouho na vytvoření webu",
+      "description": "Měsíce čekání, nekonečné revize, zmeškané termíny. Mezitím vás konkurence předběhne."
+    },
+    "problem3": {
+      "title": "Nerozumím technice",
+      "description": "Hosting, CMS, SEO, analytika. Nesrozumitelné pojmy a nikdo, kdo by skutečně vysvětlil, jak to funguje."
+    }
+  },
+  "solution": {
+    "title": "Řešení: partner zaměřený na váš úspěch",
+    "description": "Nejste jen klient s projektem. Jste firma, která chce růst. Proto je každý web, který vytváříme, navržen tak, aby proměnil návštěvníky v zákazníky.",
+    "prop1": {
+      "title": "Garantované dodání",
+      "subtitle": "7-14 dní",
+      "description": "Jasné termíny, žádná překvapení. Písemná záruka: 10% sleva za každý den zpoždění."
+    },
+    "prop2": {
+      "title": "Design, který konvertuje",
+      "subtitle": "+180% kontaktních žádostí",
+      "description": "Každý prvek navržen tak, aby vedl uživatele k akci: nákup, kontakt, rezervace."
+    },
+    "prop3": {
+      "title": "Nulové technické starosti",
+      "subtitle": "Vše v ceně",
+      "description": "Hosting, SEO, analytika, školení. Vy řídíte byznys, my se staráme o technologie."
+    },
+    "prop4": {
+      "title": "Nulové riziko",
+      "subtitle": "Trojitá záruka",
+      "description": "100% vrácení peněz při nespokojenosti + 2 revize + 30 dní podpory zdarma."
+    }
+  },
+  "portfolio": {
+    "title": "Projekty, které mluví samy za sebe",
+    "description": "Dvě případové studie ukazující, jak dobře vytvořený web může proměnit vaše podnikání",
+    "challenge": "Výzva",
+    "solution": "Řešení",
+    "visit": "Navštívit",
+    "gallery": {
+      "badge": "Portfolio",
+      "title": "Naše projekty",
+      "description": "Zjistěte, jak jsme pomohli našim klientům růst online",
+      "previous": "Předchozí",
+      "next": "Další",
+      "previousImage": "Předchozí obrázek",
+      "nextImage": "Další obrázek",
+      "imageNavigation": "Navigace obrázků",
+      "projectNavigation": "Navigace projektů",
+      "viewProject": "Zobrazit projekt",
+      "image": "Obrázek",
+      "services": "Služby",
+      "results": "Výsledky",
+      "technologies": "Technologie",
+      "integrations": "Integrace",
+      "projects": {
+        "fl1": {
+          "client": "FL1 Srl",
+          "subtitle": "Firemní web s integrací AI",
+          "services": {
+            "webDesign": { "name": "Web Design", "detail": "Moderní firemní design zaměřený na konverzi a budování důvěry" },
+            "backend": { "name": "Backend", "detail": "Škálovatelná Node.js architektura s REST API a webhooky" },
+            "seo": { "name": "SEO", "detail": "Pokročilé technické SEO se schema markup a optimalizovanými Core Web Vitals" },
+            "ai": { "name": "AI integrace", "detail": "Vlastní GPT-4 chatbot pro podporu 24/7 a kvalifikaci leadů" }
+          },
+          "results": {
+            "leads": { "value": "+220", "label": "získaných leadů", "suffix": "%" },
+            "response": { "value": "45", "label": "doba odpovědi chatu", "suffix": "sec" },
+            "satisfaction": { "value": "98", "label": "spokojenost klientů", "suffix": "%" }
+          },
+          "description": "Kompletní digitální transformace pro FL1, přední B2B společnost. Navrhli jsme integrovaný digitální ekosystém: prémiový firemní web, AI chatbot, který autonomně zpracovává první kontakt s potenciálními klienty a kvalifikuje leady v reálném čase, a obousměrnou integraci s HubSpot CRM pro sledování každé interakce. Výsledek? Automatizovaný prodejní systém pracující 24/7, který snižuje zatížení obchodního týmu a dramaticky zvyšuje konverzní poměr."
+        },
+        "flowmatics": {
+          "client": "FlowMatics",
+          "subtitle": "B2B platforma pro marketingovou automatizaci",
+          "services": {
+            "webDesign": { "name": "Web Design", "detail": "Landing page s mikro-animacemi a vizuálním storytellingem" },
+            "seo": { "name": "SEO", "detail": "Kompletní SEO strategie: výzkum klíčových slov, obsahové pilíře a link building" },
+            "cro": { "name": "CRO", "detail": "Kontinuální A/B testování, heatmapy a optimalizace vícekrokového funnelu" }
+          },
+          "results": {
+            "contacts": { "value": "+180", "label": "kontaktních požadavků", "suffix": "%" },
+            "visibility": { "value": "+40", "label": "viditelnost na Google", "suffix": "%" },
+            "keywords": { "value": "Top 3", "label": "cílová klíčová slova" }
+          },
+          "description": "FlowMatics čelil výzvě: komunikovat komplexní platformu pro marketingovou automatizaci náročnému B2B publiku. Vytvořili jsme landing page, která vypráví příběh produktu prostřednictvím plynulých animací a interaktivních dem. Minimalistický, ale působivý design provází uživatele na cestě objevování, která vrcholí žádostí o demo. Díky cílené SEO strategii a kontinuální optimalizaci založené na datech nyní FlowMatics dominuje strategickým klíčovým slovům v italském sektoru marketingové automatizace."
+        },
+        "quickfy-web": {
+          "client": "Quickfy",
+          "subtitle": "SaaS marketingový web",
+          "services": {
+            "webDesign": { "name": "Web Design", "detail": "Prémiový SaaS design s embedded produktovým demem a 3D animacemi" },
+            "seo": { "name": "SEO", "detail": "SaaS SEO: srovnávací stránky, feature stránky a blogová strategie" },
+            "cro": { "name": "CRO", "detail": "Optimalizovaná cenová stránka se social proof a urgency triggery" }
+          },
+          "results": {
+            "leads": { "value": "3-5", "label": "kvalifikovaných leadů/týden" },
+            "conversion": { "value": "8.5", "label": "konverzní poměr", "suffix": "%" },
+            "bounce": { "value": "-37", "label": "bounce rate", "suffix": "%" }
+          },
+          "description": "Quickfy je rychle rostoucí analytická a marketingová automatizační platforma. Jejich předchozí web nedokázal komunikovat hodnotu produktu. Přepracovali jsme celý zážitek: interaktivní demo umožňující potenciálním klientům 'vyzkoušet' produkt přímo z domovské stránky, cenová stránka s jasným a přesvědčivým porovnáním plánů a nurturing systém provázející každého návštěvníka ke konverzi. Bounce rate klesl o 37% a nyní generují kvalifikované leady konzistentně každý týden."
+        },
+        "quickfy-app": {
+          "client": "Quickfy",
+          "subtitle": "Analytický dashboard a AI automatizace",
+          "services": {
+            "frontend": { "name": "Frontend", "detail": "React 19 dashboard s real-time aktualizacemi a pokročilými vizualizacemi dat" },
+            "backend": { "name": "Backend", "detail": "AWS mikroslužby s auto-scalingem a Redis cachingem" },
+            "ai": { "name": "AI a automatizace", "detail": "MCP server pro Claude, n8n workflow, vlastní GPT-4 chatbot" },
+            "devops": { "name": "DevOps", "detail": "GitHub Actions CI/CD, Datadog monitoring, blue-green deploy" }
+          },
+          "results": {
+            "users": { "value": "500+", "label": "aktivních uživatelů" },
+            "time": { "value": "15", "label": "ušetřených hodin/týden", "suffix": "h" },
+            "uptime": { "value": "99.9", "label": "garantovaná dostupnost", "suffix": "%" }
+          },
+          "description": "Technologické srdce Quickfy: enterprise-grade SaaS platforma, kterou jsme vybudovali od nuly. Analytický dashboard s real-time grafy a pokročilými filtry, výkonný automatizační engine založený na MCP serveru orchestrující cross-channel marketingové kampaně a AI chatbot trénovaný na datech klienta, který autonomně zpracovává interakce. Cloud-native architektura zajišťuje výjimečný výkon i při zátěži, s 500+ aktivními uživateli, kteří ušetří průměrně 15 hodin týdně díky inteligentním automatizacím."
+        }
+      }
+    },
+    "hero": {
+      "badge": "Portfolio ukázka",
+      "title": "Naše",
+      "titleHighlight": "Projekty",
+      "subtitle": "Vytváříme digitální zážitky, které proměňují nápady ve skutečnost. Od designu výkonných landing pages přes vývoj komplexních webových aplikací až po návrh rozhraní pro mobilní a desktopové aplikace.",
+      "categories": {
+        "webapp": "Webová aplikace",
+        "saas": "SaaS platforma",
+        "b2b-automation": "B2B automatizace",
+        "landing-page": "Landing page",
+        "business-website": "Firemní web"
+      },
+      "sections": {
+        "hero": "Hlavní sekce",
+        "dashboard": "Dashboard",
+        "features": "Funkce",
+        "pricing": "Ceny",
+        "process": "Proces",
+        "integration": "Integrace",
+        "benefits": "Výhody",
+        "login": "Přihlášení",
+        "campaigns": "Marketingové kampaně",
+        "social": "Správa sociálních sítí",
+        "credits": "Kreditní systém",
+        "about": "O nás",
+        "cta": "Výzva k akci",
+        "implementation": "Implementace"
+      }
+    },
+    "cta": {
+      "badge": "Začněte dnes",
+      "title": "Připraveni vytvořit",
+      "titleHighlight": "výjimečný projekt?",
+      "description": "Proměníme vaše nápady v digitální realitu. Kontaktujte nás pro bezplatnou konzultaci a zjistěte, jak vám můžeme pomoci.",
+      "ctaPrimary": "Získat bezplatnou nabídku",
+      "ctaSecondary": "Zjistit více o procesu",
+      "trust1": "Odpověď do 24h",
+      "trust2": "Podrobná nabídka",
+      "trust3": "Bez závazků"
+    }
+  },
+  "process": {
+    "title": "Jak to funguje: 4 kroky, nulové komplikace",
+    "description": "Od prvního kontaktu po spuštění, transparentní a rychlý proces",
+    "total": "Celkem:",
+    "totalTime": "7-14 pracovních dní",
+    "step1": {
+      "title": "Brief",
+      "duration": "30 minut",
+      "description": "Hovor nebo schůzka k pochopení cílů, cílové skupiny a konkurence. Shromáždíme vše potřebné k zahájení."
+    },
+    "step2": {
+      "title": "Design",
+      "duration": "2-3 dny",
+      "description": "Vytváříme detailní návrhy založené na vaší značce. Schválení před zahájením vývoje."
+    },
+    "step3": {
+      "title": "Vývoj",
+      "duration": "4-7 dní",
+      "description": "Kódování, testování, optimalizace výkonu a SEO. Průběžné aktualizace o stavu práce."
+    },
+    "step4": {
+      "title": "Spuštění",
+      "duration": "1 den",
+      "description": "Nasazení, kompletní školení a předání přístupů. Jste online a samostatní."
+    }
+  },
+  "capabilities": {
+    "titlePrefix": "Co dokážeme s",
+    "description": "Kompletní řešení pro růst vašeho podnikání online",
+    "items": {
+      "web": {
+        "title": "Webové stránky & Landing",
+        "description": "Moderní design, který konvertuje, optimalizovaný pro SEO a výkon. Od konceptu po spuštění v rekordním čase."
+      },
+      "ecommerce": {
+        "title": "E-commerce & Platby",
+        "description": "Plynulý checkout, bezpečné platby, automatizovaná správa objednávek. Prodávejte online bez starostí."
+      },
+      "crm": {
+        "title": "CRM & Lead Generation",
+        "description": "Automatizované prodejní pipeline, lead scoring, inteligentní follow-upy. Konvertujte více kontaktů na zákazníky."
+      },
+      "analytics": {
+        "title": "Analytika & Přehledy",
+        "description": "Personalizované dashboardy, pokročilé sledování, rozhodování založené na datech. Měřte to, na čem záleží."
+      },
+      "automation": {
+        "title": "Automatizace & AI",
+        "description": "Inteligentní chatboty, automatické workflow, integrace na míru. Šetřete čas, škálujte byznys."
+      },
+      "email": {
+        "title": "Email & Komunikace",
+        "description": "Automatické kampaně, vícekanálové notifikace, newslettery, které konvertují. Zůstaňte v kontaktu se zákazníky."
+      }
+    }
+  },
+  "benefits": {
+    "title": "Proč zvolit Pixarts",
+    "titlePrefix": "Proč zvolit",
+    "description": "Vše, co potřebujete pro web, který přináší výsledky",
+    "benefit1": {
+      "title": "Moderní a profesionální design",
+      "description": "Čisté rozhraní, které vzbuzuje důvěru. Na prvním dojmu záleží a my to víme."
+    },
+    "benefit2": {
+      "title": "Optimalizace konverzí",
+      "description": "Strategické CTA, promyšlené uživatelské cesty, efektivní formuláře. Každý detail směřuje ke konverzi."
+    },
+    "benefit3": {
+      "title": "SEO v ceně",
+      "description": "Indexace Google, optimalizovaná rychlost, mobile-first struktura. Organická viditelnost od prvního dne."
+    },
+    "benefit4": {
+      "title": "Průběžná podpora",
+      "description": "Školení, dokumentace, 30 dní podpory zdarma. Nikdy nejste sami."
+    },
+    "benefit5": {
+      "title": "Mobile-first responzivita",
+      "description": "70% uživatelů prohlíží ze smartphonu. Váš web bude perfektní na každém zařízení."
+    },
+    "benefit6": {
+      "title": "Bezpečnost a výkon",
+      "description": "HTTPS, automatické zálohy, globální CDN. Rychlost a bezpečnost zaručeny."
+    }
+  },
+  "guarantee": {
+    "title": "Naše trojitá záruka",
+    "description": "Nulové riziko, maximální klid. Tečka.",
+    "guarantee1": {
+      "badge": "10%",
+      "title": "Záruka termínu",
+      "description": "Dodání v dohodnutém termínu nebo 10% sleva za každý den zpoždění. Písemný závazek ve smlouvě."
+    },
+    "guarantee2": {
+      "badge": "100%",
+      "title": "Záruka spokojenosti",
+      "description": "Nejste spokojeni? Plná refundace do 7 dnů od spuštění. Žádné otázky, žádné podmínky."
+    },
+    "guarantee3": {
+      "badge": "30d",
+      "title": "Záruka podpory",
+      "description": "2 kola revizí v ceně + 30 dní bezplatné podpory po spuštění. Vždy po vašem boku."
+    }
+  },
+  "pricing": {
+    "title": "Řešení pro každou potřebu",
+    "description": "Transparentní ceny, žádné skryté náklady. První rok hostingu v ceně.",
+    "deliveryIn": "Dodání za",
+    "idealFor": "Ideální pro:",
+    "cta": "Vyžádat nabídku",
+    "maintenance": "Měsíční údržba",
+    "maintenancePrice": "€200-400/měsíc",
+    "maintenanceDesc": "Aktualizace, zálohy, technická podpora, drobné změny",
+    "plan1": {
+      "name": "Landing Page",
+      "badge": "Nejrychlejší",
+      "price": "€1 200 - €1 500",
+      "duration": "7 dní",
+      "idealFor": "Freelanceři, profesionálové, marketingové kampaně",
+      "features": [
+        "Vlastní jednostránkový design",
+        "Základní SEO a meta tagy",
+        "Integrovaný kontaktní formulář",
+        "1 rok hostingu v ceně",
+        "Mobilní responzivita",
+        "1 kolo revizí",
+        "Školení a dokumentace"
+      ]
+    },
+    "plan2": {
+      "name": "Firemní web",
+      "badge": "Nejoblíbenější",
+      "price": "€2 500 - €3 500",
+      "duration": "10 dní",
+      "idealFor": "SME, profesní firmy, agentury",
+      "features": [
+        "Prémiový vícestránkový design",
+        "Pokročilé SEO a analytika",
+        "CMS pro autonomní správu",
+        "1 rok hostingu v ceně",
+        "Integrovaný blog (volitelně)",
+        "2 kola revizí",
+        "Kompletní školení + 30d podpora"
+      ]
+    },
+    "plan3": {
+      "name": "E-shop / Rezervace",
+      "badge": "Nejkompletnější",
+      "price": "€4 500 - €6 000",
+      "duration": "14 dní",
+      "idealFor": "Online obchody, restaurace, hotely, penziony",
+      "features": [
+        "Prémiový e-shop design",
+        "Bezpečná integrace plateb",
+        "Správa objednávek/rezervací",
+        "1 rok hostingu v ceně",
+        "Pokročilé e-shop SEO",
+        "2 kola revizí",
+        "Pokročilé školení + 30d podpora"
+      ]
+    },
+    "integrationsIncluded": "Integrace v ceně"
+  },
+  "addons": {
+    "title": "Vylepšete svůj web",
+    "description": "Přidejte pokročilé funkce pro rychlejší růst",
+    "setupPrice": "Nastavení",
+    "monthlyPrice": "Měsíčně",
+    "learnMore": "Zjistit více",
+    "advancedNote": "Pokročilé integrace dostupné na vyžádání",
+    "tiers": {
+      "core": "Nejžádanější",
+      "expansion": "Rozšíření",
+      "enterprise": "Enterprise"
+    },
+    "chatbot-ai": {
+      "name": "AI Chatbot",
+      "description": "Zákaznická podpora 24/7, automatická kvalifikace leadů, inteligentní odpovědi s OpenAI/Claude."
+    },
+    "crm-avanzato": {
+      "name": "Pokročilé CRM",
+      "description": "Prodejní pipeline, lead scoring, automatické follow-upy. HubSpot nebo Pipedrive integrován."
+    },
+    "automazioni-zapier": {
+      "name": "Zapier/Make Automatizace",
+      "description": "3-5 vlastních workflow pro propojení vašich nástrojů a automatizaci procesů."
+    },
+    "whatsapp-business": {
+      "name": "WhatsApp Business API",
+      "description": "Notifikace objednávek, připomínky schůzek, přímý chat se zákazníky."
+    },
+    "email-marketing": {
+      "name": "Pokročilý Email Marketing",
+      "description": "Automatické sekvence, pokročilá segmentace, A/B testování, detailní analytika."
+    },
+    "multi-lingua": {
+      "name": "Vícejazyčnost",
+      "description": "Kompletní překlad webu + automatické přepínání jazyka na základě geolokace."
+    },
+    "seo-continuativo": {
+      "name": "Průběžné SEO",
+      "description": "Měsíční optimalizace, reporty pozic, sledování klíčových slov, budování odkazů."
+    },
+    "blog-content": {
+      "name": "Blog & Content System",
+      "description": "Pokročilý CMS pro blog, kategorie, štítky, SEO článků, automatické sdílení na sociální sítě."
+    },
+    "prenotazioni-avanzate": {
+      "name": "Pokročilé Rezervace",
+      "description": "Multi-služby, správa personálu, platba předem, automatické připomínky."
+    },
+    "area-riservata": {
+      "name": "Členská Sekce / Přihlášení",
+      "description": "Přístup pro klienty, osobní dashboard, soukromé dokumenty, historie objednávek."
+    },
+    "ecommerce-avanzato": {
+      "name": "Pokročilý E-shop",
+      "description": "Multi-variantní produkty, opakující se předplatné, B2B ceníky, automatické slevy."
+    },
+    "integrazioni-custom": {
+      "name": "Vlastní Integrace",
+      "description": "Vlastní API, propojení s účetními systémy, ERP, proprietární software."
+    },
+    "analytics-avanzato": {
+      "name": "Pokročilá Analytika",
+      "description": "Vlastní dashboardy, Hotjar, heatmapy, nahrávání session, analýza funnelů."
+    },
+    "security-pro": {
+      "name": "Backup & Security Pro",
+      "description": "Denní zálohy, pokročilý firewall, monitoring 24/7, prémiový SSL certifikát."
+    }
+  },
+  "bundles": {
+    "title": "Doporučené balíčky",
+    "description": "Kompletní řešení připravená ke spuštění s věrnostní slevou",
+    "includes": "Zahrnuje",
+    "price": "Cena balíčku",
+    "originalPrice": "Hodnota",
+    "savings": "Ušetříte",
+    "idealFor": "Ideální pro",
+    "cta": "Vybrat tento balíček",
+    "lead-generation-pro": {
+      "name": "Lead Generation Pro",
+      "description": "Kompletní systém pro získávání zákazníků online s chatbotem a automatizovaným email marketingem."
+    },
+    "ecommerce-growth": {
+      "name": "E-commerce Growth",
+      "description": "Prodávejte více s WhatsApp notifikacemi, obnovou opuštěného košíku a automatickými emaily."
+    },
+    "automation-suite": {
+      "name": "Automation Suite",
+      "description": "Šetřete čas automatizací CRM, follow-upů a opakujících se procesů."
+    }
+  },
+  "maintenance": {
+    "title": "Měsíční údržba",
+    "description": "Vyberte si úroveň podpory, která nejlépe vyhovuje vašim potřebám",
+    "perMonth": "/měsíc",
+    "cta": "Přidat do nabídky",
+    "base": {
+      "name": "Základní",
+      "description": "Základní údržba pro udržení webu bezpečného a aktuálního.",
+      "features": [
+        "Bezpečnostní aktualizace",
+        "Týdenní zálohy",
+        "Email podpora (48h odpověď)",
+        "Monitoring dostupnosti"
+      ]
+    },
+    "standard": {
+      "name": "Standardní",
+      "description": "Prioritní podpora s drobnými změnami a měsíčními reporty.",
+      "features": [
+        "Vše ze základního plánu",
+        "Drobné změny (2h/měsíc)",
+        "Prioritní podpora (24h)",
+        "Měsíční Analytics report",
+        "Denní zálohy"
+      ]
+    },
+    "premium": {
+      "name": "Premium",
+      "description": "Kompletní správa s dedikovanou podporou a průběžnou optimalizací.",
+      "features": [
+        "Vše ze standardního plánu",
+        "Změny (4h/měsíc)",
+        "Správa integrací",
+        "Telefonická podpora",
+        "Optimalizace výkonu",
+        "Měsíční SEO report"
+      ]
+    }
+  },
+  "testimonials": {
+    "title": "Co o nás říkají",
+    "description": "Slova našich klientů mají větší váhu než tisíc slibů",
+    "verified": "Ověřený klient",
+    "rating": "Hodnocení: 5 hvězd z 5",
+    "controls": "Ovládání karuselu",
+    "prev": "Předchozí reference",
+    "next": "Další reference",
+    "pause": "Pozastavit prezentaci",
+    "play": "Pokračovat v prezentaci",
+    "testimonial1": {
+      "name": "Marco Benetti",
+      "role": "Majitel",
+      "company": "Řemeslné truhlářství",
+      "text": "Za 10 dní jsem měl web, který konečně reprezentuje kvalitu mé práce. Poptávky se ztrojnásobily a nyní mohu s hrdostí ukazovat své portfolio klientům."
+    },
+    "testimonial2": {
+      "name": "Sofia Rossi",
+      "role": "Partner",
+      "company": "Asociovaná advokátní kancelář",
+      "text": "Profesionalita a jasnost od prvního kontaktu. Okamžitě pochopili naše potřeby a výsledek překonal očekávání. Podpora vždy k dispozici."
+    },
+    "testimonial3": {
+      "name": "Luca Marino",
+      "role": "Majitel",
+      "company": "Restaurace Da Luca",
+      "text": "Rezervační systém, který funguje skvěle. Termíny dodrženy do písmene a podpora vždy k dispozici. Doporučuji na 100%."
+    },
+    "hoverHint": "Najedte mysi pro pozastaveni"
+  },
+  "faq": {
+    "title": "Často kladené otázky",
+    "description": "Vše, co potřebujete vědět před zahájením",
+    "q1": {
+      "question": "Jak dlouho to skutečně trvá?",
+      "answer": "7-14 pracovních dní podle složitosti. Landing page 7 dní, firemní web 10 dní, e-shop 14 dní. S písemnou zárukou: 10% sleva za každý den zpoždění."
+    },
+    "q2": {
+      "question": "Co se stane, když se mi výsledek nelíbí?",
+      "answer": "Neboj se, pracujeme společně krok za krokem. Zapojujeme tě do každého rozhodnutí: výběr barev, rozložení, obsah. Máš 2 kola revizí v ceně a každou fázi schvalujeme, než pokračujeme. Takže výsledek bude přesně takový, jaký sis představoval."
+    },
+    "q3": {
+      "question": "Mohu si web sám aktualizovat?",
+      "answer": "Rozhodně ano. Web obsahuje intuitivní administrační panel pro úpravy textů, obrázků a obsahu. Poskytujeme kompletní školení a dokumentaci, abys byl soběstačný."
+    },
+    "q4": {
+      "question": "Je v ceně hosting a doména?",
+      "answer": "Ano, první rok je v ceně projektu. Od druhého roku: hosting €150-300/rok, doména €15-30/rok podle potřeb."
+    },
+    "q5": {
+      "question": "Bude web viditelný na Google?",
+      "answer": "Ano, základní nebo pokročilé SEO v ceně: sitemap, meta tagy, optimalizovaná rychlost, mobile-first struktura. Pro garantované výsledky nabízíme také průběžné SEO poradenství."
+    },
+    "q6": {
+      "question": "Nabízíte údržbu po spuštění?",
+      "answer": "Ano, prvních 30 dní bezplatné podpory v ceně. Poté balíčky údržby od €150-400/měsíc: aktualizace, zálohy, technická podpora, drobné změny."
+    },
+    "q7": {
+      "question": "Jaké integrace jsou v ceně?",
+      "answer": "Každý plán zahrnuje základní integrace: Google Analytics, Meta Pixel, kontaktní formuláře a GDPR cookie consent. Vyšší plány zahrnují také Google Maps, Mailchimp/Brevo a (pro E-shop) Stripe Checkout. Pro pokročilé integrace jako AI chatbot, Zapier automatizace nebo WhatsApp Business nabízíme dedikované doplňky."
+    },
+    "q8": {
+      "question": "Mohu přidat funkce po spuštění?",
+      "answer": "Rozhodně ano. Můžete přidat AI chatbot, automatizace, CRM integrace, členskou sekci nebo další funkce kdykoliv. Poskytneme vám dedikovanou nabídku a vše implementujeme bez přerušení vašeho webu."
+    }
+  },
+  "cta": {
+    "title": "Připraveni růst online?",
+    "description": "Bezplatná nabídka do 24 hodin. Žádný závazek, jen příležitost.",
+    "successTitle": "Děkujeme!",
+    "successMessage": "Nabídku obdržíte do 24 hodin na uvedený email.",
+    "sendAnother": "Odeslat další zprávu",
+    "errorMessage": "Došlo k chybě. Zkuste to znovu nebo nás kontaktujte přímo na info@pixarts.eu",
+    "submit": "Získat bezplatnou nabídku",
+    "submitting": "Odesílání...",
+    "form": {
+      "name": "Celé jméno",
+      "namePlaceholder": "Jan Novák",
+      "email": "Email",
+      "emailPlaceholder": "jan@firma.cz",
+      "phone": "Telefon",
+      "phonePlaceholder": "+420 123 456 789",
+      "projectType": "Typ projektu",
+      "projectTypePlaceholder": "Vyberte...",
+      "budget": "Odhadovaný rozpočet",
+      "budgetPlaceholder": "Vyberte...",
+      "message": "Zpráva",
+      "messagePlaceholder": "Stručně nám popište svůj projekt...",
+      "privacy": "Souhlasím s",
+      "privacyLink": "Zásadami ochrany osobních údajů",
+      "privacyText": "a souhlasím se zpracováním údajů pro získání nabídky.",
+      "required": "*"
+    },
+    "projectTypes": {
+      "landing": "Landing Page",
+      "website": "Firemní web",
+      "ecommerce": "E-shop / Rezervace",
+      "other": "Jiné"
+    },
+    "budgetOptions": {
+      "1-2k": "€1 000 - €2 000",
+      "2-4k": "€2 000 - €4 000",
+      "4-6k": "€4 000 - €6 000",
+      "6k+": "+€6 000"
+    }
+  },
+  "footer": {
+    "description": "Profesionální webové stránky za 10 dní, které přinášejí zákazníky. Moderní design, SEO v ceně, záruka spokojenosti.",
+    "services": "Služby",
+    "resources": "Zdroje",
+    "legal": "Právní informace",
+    "contact": "Kontakt",
+    "comingSoon": "Již brzy",
+    "copyright": "Všechna práva vyhrazena.",
+    "madeWith": "Vytvořeno s",
+    "inItaly": "v Itálii",
+    "gdprRequest": "Práva GDPR"
+  },
+  "notifications": {
+    "newProject": "právě dokončil svůj web",
+    "daysAgo": "dny zpět"
+  },
+  "metadata": {
+    "title": "Pixarts - Profesionální webové stránky za 10 dní | Webdesign",
+    "description": "Vytvořte si profesionální web za 10 dní. Moderní design, SEO v ceně, záruka spokojenosti. Od €1 200. Portfolio FlowMatics a Quickfy."
+  },
+  "privacyPolicy": {
+    "metaTitle": "Zásady ochrany osobních údajů - Pixarts",
+    "metaDescription": "Zásady ochrany osobních údajů Pixarts (Fl1 s.r.o.). Informace o zpracování osobních údajů podle GDPR.",
+    "title": "Zásady ochrany osobních údajů",
+    "lastUpdate": "Poslední aktualizace",
+    "section1": {
+      "title": "Správce údajů",
+      "intro": "Správcem osobních údajů je:",
+      "operatingAs": "působící pod obchodním názvem",
+      "address": "Sídlo"
+    },
+    "section2": {
+      "title": "Typy shromažďovaných údajů",
+      "voluntary": {
+        "title": "Údaje dobrovolně poskytnuté uživatelem",
+        "intro": "Prostřednictvím kontaktního formuláře shromažďujeme:",
+        "required": "Povinné údaje",
+        "optional": "Nepovinné údaje",
+        "name": "Jméno a příjmení",
+        "email": "E-mailová adresa",
+        "phone": "Telefonní číslo",
+        "projectDesc": "Popis projektu",
+        "budget": "Odhadovaný rozpočet",
+        "timeline": "Požadované termíny"
+      },
+      "automatic": {
+        "title": "Automaticky shromažďované údaje",
+        "intro": "Během prohlížení webu jsou automaticky shromažďovány:",
+        "ip": "IP adresa (anonymizovaná)",
+        "browser": "Typ prohlížeče a zařízení",
+        "os": "Operační systém",
+        "pages": "Navštívené stránky a doba strávená na webu",
+        "referrer": "Zdroj návštěvnosti (referrer)",
+        "interaction": "Data o interakci s webem"
+      },
+      "cookies": {
+        "title": "Údaje shromažďované pomocí cookies",
+        "intro": "Podrobné informace o používaných cookies najdete v našich"
+      }
+    },
+    "section3": {
+      "title": "Účely a právní základ zpracování",
+      "table": {
+        "purpose": "Účel",
+        "legalBasis": "Právní základ",
+        "data": "Zpracovávané údaje"
+      },
+      "purposes": {
+        "contact": "Odpovědi na kontaktní požadavky",
+        "services": "Poskytování požadovaných služeb",
+        "invoicing": "Fakturace a daňové povinnosti",
+        "analytics": "Anonymní statistické analýzy",
+        "marketing": "Přímý marketing (newsletter)",
+        "profiling": "Reklamní profilování"
+      },
+      "data": {
+        "contact": "Jméno, email, telefon, detaily projektu",
+        "identification": "Identifikační údaje, fakturační údaje",
+        "billing": "Fakturační údaje",
+        "navigation": "Anonymizované navigační údaje",
+        "profiling": "Navigační údaje, zájmy"
+      }
+    },
+    "section4": {
+      "title": "Způsoby zpracování",
+      "intro": "Osobní údaje jsou zpracovávány elektronickými a/nebo papírovými nástroji, s logikou přísně související s výše uvedenými účely a vždy způsobem, který zaručuje bezpečnost a důvěrnost údajů.",
+      "security": {
+        "title": "Přijatá bezpečnostní opatření:",
+        "ssl": "SSL/TLS šifrování pro veškerou komunikaci",
+        "access": "Přístup k údajům omezen na oprávněný personál",
+        "backup": "Pravidelné šifrované zálohy",
+        "servers": "Servery umístěné v zabezpečených infrastrukturách",
+        "incidents": "Postupy pro řízení bezpečnostních incidentů"
+      }
+    },
+    "section5": {
+      "title": "Doba uchovávání údajů",
+      "table": {
+        "dataType": "Typ údajů",
+        "retention": "Doba uchovávání"
+      },
+      "types": {
+        "leads": "Kontaktní údaje (nekonvertované leady)",
+        "contract": "Smluvní a fakturační údaje",
+        "navigation": "Navigační údaje",
+        "marketing": "Údaje pro přímý marketing",
+        "cookies": "Profilovací cookies"
+      },
+      "periods": {
+        "leads": "24 měsíců od posledního kontaktu",
+        "contract": "10 let od ukončení smlouvy",
+        "navigation": "26 měsíců (nastavení GA4)",
+        "marketing": "Do odvolání souhlasu",
+        "cookies": "Viz Zásady používání cookies"
+      }
+    },
+    "section6": {
+      "title": "Příjemci údajů",
+      "providers": {
+        "title": "Poskytovatelé služeb (zpracovatelé údajů)",
+        "provider": "Poskytovatel",
+        "service": "Služba",
+        "payments": "Zpracování plateb"
+      },
+      "thirdParty": {
+        "title": "Obsah vložený třetími stranami",
+        "intro": "Web může obsahovat vložený obsah od:",
+        "videos": "videa",
+        "maps": "mapy"
+      },
+      "others": {
+        "title": "Další příjemci",
+        "authorities": "Příslušné orgány, na legitimní žádost",
+        "consultants": "Právní a daňoví poradci, pro povinné plnění"
+      }
+    },
+    "section7": {
+      "title": "Přenos údajů mimo EU",
+      "intro": "Někteří z našich poskytovatelů služeb sídlí mimo Evropský hospodářský prostor (EHP), zejména ve Spojených státech.",
+      "basedOn": "Pro tyto přenosy se opíráme o:",
+      "adequacy": {
+        "title": "Rozhodnutí Evropské komise o odpovídající úrovni ochrany",
+        "desc": "EU-US Data Privacy Framework pro certifikované poskytovatele"
+      },
+      "scc": {
+        "title": "Standardní smluvní doložky (SCC)",
+        "desc": "schválené Evropskou komisí"
+      },
+      "measures": {
+        "title": "Doplňková opatření",
+        "desc": "technického a organizačního zabezpečení"
+      }
+    },
+    "section8": {
+      "title": "Práva subjektu údajů",
+      "intro": "Podle článků 15-22 GDPR máte právo na:",
+      "rights": {
+        "access": "Přístup (čl. 15)",
+        "accessDesc": "Získat potvrzení o zpracování a kopii vašich údajů",
+        "rectification": "Opravu (čl. 16)",
+        "rectificationDesc": "Opravit nepřesné nebo neúplné údaje",
+        "erasure": "Výmaz (čl. 17)",
+        "erasureDesc": "Požádat o vymazání vašich údajů",
+        "restriction": "Omezení (čl. 18)",
+        "restrictionDesc": "Omezit zpracování za určitých okolností",
+        "portability": "Přenositelnost (čl. 20)",
+        "portabilityDesc": "Obdržet vaše údaje ve strukturovaném, čitelném formátu",
+        "objection": "Námitku (čl. 21)",
+        "objectionDesc": "Vznést námitku proti zpracování založenému na oprávněném zájmu"
+      },
+      "howTo": {
+        "title": "Jak uplatnit svá práva",
+        "intro": "Svá práva můžete uplatnit zasláním žádosti na:",
+        "response": "Na vaši žádost odpovíme do 30 dnů. Ve složitých případech může být lhůta prodloužena o dalších 60 dnů, s předchozím oznámením."
+      },
+      "complaint": {
+        "title": "Stížnost u dozorového úřadu",
+        "intro": "Máte právo podat stížnost u Úřadu pro ochranu osobních údajů:",
+        "italy": "Pro uživatele v Itálii:",
+        "czech": "Pro uživatele v České republice:"
+      }
+    },
+    "section9": {
+      "title": "Poskytnutí údajů",
+      "content": "Poskytnutí údajů označených jako povinné v kontaktním formuláři je nezbytné pro zodpovězení vašeho požadavku. Neposkytnutí těchto údajů znemožňuje zpracování požadavku. Nepovinné údaje nám umožňují poskytnout personalizovanější službu, ale nejsou nezbytné."
+    },
+    "section10": {
+      "title": "Automatizované rozhodování",
+      "content": "Neprovádíme automatizované rozhodovací procesy, včetně profilování, které by měly právní účinky nebo vás významně ovlivňovaly."
+    },
+    "section11": {
+      "title": "Nezletilí",
+      "content": "Naše služby jsou určeny profesionálnímu publiku (firmám a profesionálům). Vědomě neshromažďujeme osobní údaje nezletilých mladších 16 let. Pokud se domníváte, že jsme shromáždili údaje nezletilého, neprodleně nás kontaktujte."
+    },
+    "section12": {
+      "title": "Změny zásad ochrany osobních údajů",
+      "content": "Vyhrazujeme si právo kdykoli změnit tyto Zásady ochrany osobních údajů. Změny budou zveřejněny na této stránce s uvedením data poslední úpravy. O podstatných změnách vás budeme informovat oznámením na webu nebo, pokud máme vaši e-mailovou adresu pro marketingové účely, přímou komunikací."
+    },
+    "section13": {
+      "title": "Kontakty",
+      "intro": "Pro jakékoli dotazy týkající se těchto Zásad ochrany osobních údajů nebo zpracování vašich osobních údajů:"
+    },
+    "footer": "Tyto Zásady ochrany osobních údajů jsou v souladu s Nařízením (EU) 2016/679 (GDPR) a platnou legislativou o ochraně osobních údajů."
+  },
+  "cookiePolicy": {
+    "metaTitle": "Zásady používání cookies - Pixarts",
+    "metaDescription": "Zásady používání cookies Pixarts (Fl1 s.r.o.). Informace o používání cookies podle GDPR a směrnice ePrivacy.",
+    "title": "Zásady používání cookies",
+    "lastUpdate": "Poslední aktualizace",
+    "section1": {
+      "title": "Co jsou cookies",
+      "intro": "Cookies jsou malé textové soubory, které webové stránky ukládají na vaše zařízení (počítač, smartphone, tablet) během prohlížení. Slouží k ukládání užitečných informací pro zlepšení prohlížení.",
+      "technologies": "Podobné technologie jako cookies zahrnují: pixel tagy, web beacony, local storage a identifikátory zařízení."
+    },
+    "section2": {
+      "title": "Správce údajů",
+      "operatingAs": "působící pod obchodním názvem"
+    },
+    "section3": {
+      "title": "Typy používaných cookies",
+      "table": {
+        "name": "Název",
+        "provider": "Poskytovatel",
+        "purpose": "Účel",
+        "duration": "Doba trvání",
+        "consent": "Souhlas"
+      },
+      "duration": {
+        "session": "Relace",
+        "months": "měsíců",
+        "years": "let",
+        "hours": "hodin",
+        "minute": "minuta",
+        "minutes": "minut",
+        "month": "měsíc"
+      },
+      "required": "Vyžadován",
+      "note": "Poznámka",
+      "technical": {
+        "title": "Technické cookies (vždy aktivní)",
+        "intro": "Tyto cookies jsou nezbytné pro fungování webu a nevyžadují váš souhlas.",
+        "session": "Správa uživatelské relace",
+        "consent": "Ukládá vaše preference cookies",
+        "csrf": "Ochrana bezpečnosti formulářů"
+      },
+      "analytics": {
+        "title": "Analytické cookies",
+        "intro": "Pomáhají nám pochopit, jak návštěvníci interagují s webem, shromažďováním anonymních informací.",
+        "distinguish": "Rozlišuje uživatele",
+        "sessionState": "Udržuje stav relace",
+        "rateLimit": "Omezuje frekvenci požadavků",
+        "ipNote": "Používáme Google Analytics 4 s aktivovanou anonymizací IP adresy. To znamená, že vaše IP je zkrácena před přenosem na servery Google, což zajišťuje větší soukromí."
+      },
+      "marketing": {
+        "title": "Marketingové/Profilovací cookies",
+        "intro": "Tyto cookies se používají k zobrazování relevantních reklam a měření účinnosti reklamních kampaní.",
+        "browserId": "Identifikuje prohlížeč pro reklamu",
+        "clickTracking": "Sleduje kliknutí z Facebooku",
+        "adsMeasurement": "Reklama a měření",
+        "conversions": "Reklamní konverze",
+        "personalizedAds": "Personalizovaná reklama",
+        "cookieSupport": "Ověření podpory cookies"
+      },
+      "thirdParty": {
+        "title": "Cookies třetích stran (Vložený obsah)",
+        "intro": "Když vkládáme obsah z externích služeb, mohou nastavit vlastní cookies.",
+        "youtube": {
+          "bandwidth": "Odhad šířky pásma",
+          "session": "Video relace",
+          "geo": "Geolokace",
+          "note": "Kdykoli je to možné, vkládáme videa YouTube v režimu \"enhanced privacy\" (youtube-nocookie.com) pro omezení sledování."
+        },
+        "maps": {
+          "preferences": "Preference a statistiky",
+          "stats": "Statistiky"
+        },
+        "social": {
+          "title": "Sociální widgety",
+          "desc": "Tlačítka pro sdílení na sociálních sítích mohou nastavit cookies pro sledování vaší aktivity. Tyto jsou načteny pouze po vašem souhlasu."
+        }
+      }
+    },
+    "section4": {
+      "title": "Právní základ",
+      "table": {
+        "type": "Typ",
+        "legalBasis": "Právní základ"
+      },
+      "types": {
+        "technical": "Technické cookies",
+        "analytics": "Analytické cookies",
+        "marketing": "Marketingové cookies",
+        "thirdParty": "Cookies třetích stran"
+      },
+      "basis": {
+        "legitimate": "Oprávněný zájem (čl. 6.1.f GDPR) - nezbytné pro provoz",
+        "consent": "Souhlas (čl. 6.1.a GDPR)"
+      }
+    },
+    "section5": {
+      "title": "Správa preferencí cookies",
+      "banner": {
+        "title": "Banner cookies",
+        "intro": "Při první návštěvě webu se vám zobrazí banner, který vám umožní:",
+        "acceptAll": "Přijmout všechny cookies",
+        "reject": "Odmítnout nepodstatné cookies",
+        "customize": "Přizpůsobit své volby podle kategorie",
+        "modify": "Své preference můžete kdykoli změnit kliknutím na odkaz \"Spravovat cookies\" v patičce webu."
+      },
+      "browser": {
+        "title": "Nastavení prohlížeče",
+        "intro": "Cookies můžete spravovat také prostřednictvím nastavení prohlížeče:",
+        "guide": "Průvodce",
+        "manageCookies": "Spravovat cookies",
+        "cookiesData": "Cookies a data webů",
+        "cookiesEdge": "Cookies v Microsoft Edge",
+        "warning": "Upozornění",
+        "warningText": "Zakázání všech cookies může ohrozit funkčnost některých částí webu."
+      },
+      "optout": {
+        "title": "Specifické opt-outy",
+        "intro": "Můžete zakázat sledování pro konkrétní služby:",
+        "service": "Služba",
+        "link": "Odkaz pro opt-out"
+      }
+    },
+    "section6": {
+      "title": "Přenos údajů",
+      "intro": "Některé cookies třetích stran zahrnují přenos údajů do zemí mimo Evropskou unii, zejména do Spojených států.",
+      "basedOn": "Pro tyto přenosy se spoléháme na:",
+      "scc": "Standardní smluvní doložky",
+      "measures": "Doplňková bezpečnostní opatření",
+      "moreInfo": "Pro více informací viz naše"
+    },
+    "section7": {
+      "title": "Doba uchovávání",
+      "content": "Každá cookie má specifickou dobu trvání uvedenou v tabulkách výše. Cookies relace jsou smazány při zavření prohlížeče, zatímco trvalé cookies zůstávají na zařízení po uvedenou dobu nebo do ručního smazání."
+    },
+    "section8": {
+      "title": "Vaše práva",
+      "intro": "Máte právo:",
+      "rights": {
+        "informed": "Být informován o používaných cookies",
+        "accept": "Přijmout nebo odmítnout nepodstatné cookies",
+        "modify": "Kdykoli změnit své preference",
+        "request": "Požádat o informace o datech shromážděných prostřednictvím cookies"
+      },
+      "moreInfo": "Pro uplatnění svých práv viz příslušnou sekci v našich",
+      "orContact": "nebo nás kontaktujte na"
+    },
+    "section9": {
+      "title": "Aktualizace",
+      "content1": "Tyto Zásady používání cookies mohou být pravidelně aktualizovány, aby odrážely změny v používaných cookies nebo platných předpisech.",
+      "content2": "Datum poslední změny je uvedeno na začátku dokumentu. Doporučujeme vám tuto stránku pravidelně kontrolovat."
+    },
+    "section10": {
+      "title": "Kontakty",
+      "intro": "Pro dotazy ohledně Zásad používání cookies:"
+    },
+    "footer": "Tyto Zásady používání cookies jsou vypracovány v souladu s Nařízením (EU) 2016/679 (GDPR), Směrnicí 2002/58/ES (ePrivacy) a Opatřením italského Úřadu pro ochranu osobních údajů ze dne 8. května 2014."
+  },
+  "cookieConsent": {
+    "title": "Používáme cookies",
+    "description": "Tento web používá technické cookies nezbytné pro provoz a s vaším souhlasem analytické a marketingové cookies pro zlepšení vašeho zážitku.",
+    "moreInfo": "Více informací",
+    "necessary": "Nezbytné cookies",
+    "necessaryDesc": "Nezbytné pro fungování webu. Nelze je zakázat.",
+    "analytics": "Analytické cookies",
+    "analyticsDesc": "Pomáhají nám pochopit, jak web používáte, abychom ho mohli zlepšit.",
+    "marketing": "Marketingové cookies",
+    "marketingDesc": "Používají se k zobrazování reklam relevantních pro vaše zájmy.",
+    "acceptAll": "Přijmout vše",
+    "rejectAll": "Odmítnout",
+    "customize": "Přizpůsobit",
+    "hideSettings": "Skrýt nastavení",
+    "save": "Uložit preference",
+    "alwaysOn": "Vždy aktivní",
+    "manageCookies": "Spravovat cookies"
+  },
+  "termsConditions": {
+    "metaTitle": "Obchodní podmínky",
+    "metaDescription": "Obchodní podmínky služeb Pixarts. Informace o nabízených službách, cenách, zárukách, duševním vlastnictví a smluvních ustanoveních.",
+    "title": "Obchodní podmínky",
+    "lastUpdate": "Poslední změna",
+    "section1": {
+      "title": "Preambule a definice",
+      "identification": {
+        "title": "Identifikace poskytovatele",
+        "intro": "Tyto Obchodní podmínky upravují poskytování služeb společností:",
+        "operatingAs": "Působící pod obchodním názvem",
+        "address": "Sídlo",
+        "website": "Webové stránky"
+      },
+      "definitions": {
+        "title": "Definice",
+        "client": "Klient",
+        "clientDesc": "fyzická nebo právnická osoba, která požaduje a/nebo nakupuje Služby",
+        "services": "Služby",
+        "servicesDesc": "služby webového designu, vývoje webu a související služby nabízené společností Pixarts",
+        "project": "Projekt",
+        "projectDesc": "soubor aktivit dohodnutých pro vytvoření webových stránek nebo jiného digitálního řešení",
+        "deliverable": "Deliverable",
+        "deliverableDesc": "materiály, soubory a produkty dodané Klientovi",
+        "briefing": "Briefing",
+        "briefingDesc": "fáze sběru požadavků a definice projektu"
+      }
+    },
+    "section2": {
+      "title": "Předmět smlouvy",
+      "offered": {
+        "title": "Nabízené služby",
+        "intro": "Pixarts nabízí následující profesionální služby:",
+        "landing": "jednotlivé webové stránky optimalizované pro konverzi (dodání do 7 dnů)",
+        "businessSite": "Business webové stránky",
+        "businessDesc": "profesionální vícestránkové webové stránky (dodání do 10 dnů)",
+        "ecommerce": "platformy pro online prodej a rezervace (dodání do 14 dnů)",
+        "maintenance": "Údržba a podpora",
+        "maintenanceDesc": "měsíční plány průběžné podpory"
+      },
+      "exclusions": {
+        "title": "Vyloučení",
+        "intro": "Pokud není písemně dohodnuto jinak, Služby NEZAHRNUJÍ:",
+        "copywriting": "Tvorbu obsahu (copywriting)",
+        "photo": "Fotografické služby nebo produkci videa",
+        "ads": "Reklamní kampaně a správu sociálních médií",
+        "domains": "Registraci domén (asistence zahrnuta, náklady hradí Klient)",
+        "hosting": "Hosting (asistence při výběru zahrnuta, náklady hradí Klient)",
+        "translations": "Překlady do cizích jazyků"
+      }
+    },
+    "section3": {
+      "title": "Pracovní proces",
+      "phases": {
+        "title": "Fáze projektu",
+        "intro": "Každý projekt sleduje strukturovaný proces:",
+        "day": "Den",
+        "briefingDesc": "Sběr požadavků, definice cílů a podpis smlouvy",
+        "designDesc": "Tvorba mockupů, prezentace a schválení designu",
+        "development": "Vývoj",
+        "developmentDesc": "Kódování, implementace funkcí",
+        "launch": "Spuštění",
+        "launchDesc": "Testování, finální revize a publikace",
+        "note": "Uvedené časy se vztahují k plánu \"Business webové stránky\" a mohou se lišit v závislosti na typu projektu."
+      },
+      "communication": {
+        "title": "Komunikace",
+        "email": "Oficiální komunikace probíhá prostřednictvím e-mailu",
+        "updates": "Klient bude dostávat pravidelné aktualizace o stavu projektu",
+        "response": "Pixarts se zavazuje odpovědět do 24 pracovních hodin"
+      },
+      "approvals": {
+        "title": "Schválení",
+        "design": "Klient bude mít možnost schválit design před vývojem",
+        "changes": "Podstatné změny po schválení mohou vést k dodatečným nákladům",
+        "tacit": "Absence zpětné vazby do 5 pracovních dnů se rovná tichému schválení"
+      }
+    },
+    "section4": {
+      "title": "Povinnosti Klienta",
+      "materials": {
+        "title": "Poskytnutí materiálů",
+        "intro": "Klient se zavazuje poskytnout včas:",
+        "logo": "Logo a existující grafické materiály",
+        "texts": "Texty a obsah pro web",
+        "images": "Obrázky a média (nebo oprávnění k nákupu ze stocků)",
+        "credentials": "Potřebné přístupové údaje (hosting, domény atd.)",
+        "feedback": "Zpětnou vazbu a schválení v dohodnutých termínech"
+      },
+      "responsibility": {
+        "title": "Odpovědnost za obsah",
+        "intro": "Klient zaručuje, že:",
+        "rights": "Poskytnuté materiály neporušují práva třetích stran (autorská práva, ochranné známky, soukromí)",
+        "truthful": "Obsah je pravdivý a není zavádějící",
+        "usage": "Má potřebná práva k použití všech poskytnutých materiálů",
+        "disclaimer": "Pixarts nebude odpovědný za obsah poskytnutý Klientem, který porušuje platné předpisy nebo práva třetích stran."
+      },
+      "collaboration": {
+        "title": "Spolupráce",
+        "intro": "Klient se zavazuje:",
+        "referent": "Určit jednu kontaktní osobu pro projekt",
+        "participate": "Aktivně se účastnit fáze briefingu",
+        "respond": "Odpovídat na požadavky v rozumných časových lhůtách",
+        "communicate": "Včas komunikovat jakékoli problémy nebo změny"
+      }
+    },
+    "section5": {
+      "title": "Ceny a platby",
+      "priceList": {
+        "title": "Ceník",
+        "service": "Služba",
+        "price": "Cena",
+        "delivery": "Dodání",
+        "days": "dnů",
+        "businessSite": "Business webové stránky",
+        "monthlyMaintenance": "Měsíční údržba",
+        "month": "měsíc",
+        "continuous": "Průběžně",
+        "note": "Ceny jsou orientační a podléhají individuální nabídce."
+      },
+      "paymentTerms": {
+        "title": "Platební podmínky",
+        "intro": "Platba probíhá následovně:",
+        "atOrder": "při objednávce",
+        "atOrderDesc": "k úhradě při podpisu smlouvy",
+        "atDelivery": "při dodání",
+        "atDeliveryDesc": "k úhradě před publikací"
+      },
+      "paymentMethods": {
+        "title": "Akceptované platební metody",
+        "bankTransfer": "Bankovní převod",
+        "card": "Kreditní/debetní karta (přes Stripe)",
+        "secure": "bezpečná online platba"
+      },
+      "invoicing": {
+        "title": "Fakturace",
+        "regular": "Pixarts vystavuje řádnou fakturu za každou platbu",
+        "electronic": "Faktury jsou vystavovány v elektronické podobě",
+        "vat": "Uvedené ceny jsou bez DPH, kde je to aplikovatelné"
+      },
+      "latePayment": {
+        "title": "Opožděné platby",
+        "intro": "V případě opožděných plateb:",
+        "suspend": "Pixarts si vyhrazuje právo pozastavit práce",
+        "interest": "Může být uplatněn úrok z prodlení dle platných předpisů",
+        "noPublish": "Web nebude publikován do úplného zaplacení"
+      }
+    },
+    "section6": {
+      "title": "Záruky Pixarts",
+      "delivery": {
+        "title": "Záruka dodání",
+        "intro": "Zavazujeme se dodržet dohodnuté termíny. V případě zpoždění přičitatelného Pixarts:",
+        "discount": "10% sleva za každý den zpoždění",
+        "discountDesc": "z celkové ceny projektu",
+        "maxDiscount": "Aplikovatelné maximálně do 30% hodnoty projektu",
+        "notApplicable": "Neaplikuje se v případě zpoždění způsobeného Klientem"
+      },
+      "satisfaction": {
+        "title": "Záruka spokojenosti nebo vrácení peněz",
+        "intro": "Nabízíme plnou záruku vrácení peněz:",
+        "refund": "100% vrácení do 7 dnů",
+        "refundDesc": "od dodání prvního mockupu",
+        "applicable": "Aplikovatelné, pokud Klient není spokojen s kreativním směřováním",
+        "written": "Klient musí písemně sdělit důvody nespokojenosti",
+        "notAfter": "Neaplikuje se po schválení designu"
+      },
+      "revisions": {
+        "title": "Záruka revizí a podpory",
+        "intro": "Každý projekt zahrnuje:",
+        "unlimited": "Neomezené revize",
+        "unlimitedDesc": "během fáze designu (před schválením)",
+        "twoRounds": "2 kola revizí",
+        "twoRoundsDesc": "po schválení designu",
+        "support": "30 dnů podpory",
+        "supportDesc": "zdarma od publikace",
+        "bugs": "Opravy chyb a poruch bez dodatečných nákladů"
+      },
+      "exclusions": {
+        "title": "Vyloučení ze záruk",
+        "intro": "Záruky se nevztahují na případy:",
+        "clientDelay": "Zpoždění způsobená nedostatečnou spoluprací Klienta",
+        "majorChanges": "Požadavky na podstatné změny po schválení",
+        "thirdParty": "Problémy vyplývající ze služeb třetích stran (hosting, domény atd.)",
+        "unauthorized": "Škody způsobené neoprávněnými zásahy do webu"
+      }
+    },
+    "section7": {
+      "title": "Duševní vlastnictví",
+      "clientMaterials": {
+        "title": "Materiály Klienta",
+        "intro": "Klient si zachovává plné vlastnictví:",
+        "logo": "Předexistujícího loga a vizuální identity",
+        "content": "Textového obsahu a poskytnutých médií",
+        "data": "Obchodních dat a informací"
+      },
+      "deliverables": {
+        "title": "Projektové výstupy",
+        "intro": "Po úplné platbě Klient získává:",
+        "code": "Plné vlastnictví vyvinutého zdrojového kódu",
+        "design": "Neomezená práva k užívání vytvořeného designu",
+        "licenses": "Licence na fonty, stockové obrázky a komponenty zahrnuté v projektu"
+      },
+      "portfolio": {
+        "title": "Portfolio a reference",
+        "intro": "Pokud není písemně dohodnuto jinak, Pixarts si vyhrazuje právo:",
+        "include": "Zahrnout projekt do svého portfolia",
+        "cite": "Citovat Klienta jako referenci",
+        "screenshots": "Použít screenshoty projektu pro propagační účely",
+        "removal": "Klient může kdykoli požádat o odstranění z portfolia."
+      },
+      "tools": {
+        "title": "Nástroje a metodiky",
+        "intro": "Pixarts si zachovává vlastnictví:",
+        "methodologies": "Pracovních metodik a procesů",
+        "libraries": "Opakovaně použitelného kódu a proprietárních knihoven",
+        "knowhow": "Know-how a vyvinutých kompetencí"
+      }
+    },
+    "section8": {
+      "title": "Odpovědnost a omezení",
+      "pixartsResp": {
+        "title": "Odpovědnost Pixarts",
+        "intro": "Pixarts odpovídá za:",
+        "professional": "Profesionální provedení dohodnutých Služeb",
+        "timing": "Dodržení termínů (kromě nepřičitatelných příčin)",
+        "defects": "Opravu nahlášených vad a poruch",
+        "specs": "Soulad s dohodnutými technickými specifikacemi"
+      },
+      "limitation": {
+        "title": "Omezení odpovědnosti",
+        "intro": "Pixarts NEODPOVÍDÁ za:",
+        "indirect": "Nepřímé, nahodilé nebo následné škody",
+        "profits": "Ztrátu zisku, dat nebo obchodních příležitostí",
+        "thirdParty": "Poruchy služeb třetích stran",
+        "misuse": "Škody z nesprávného použití webu",
+        "results": "Obchodní výsledky webu (prodeje, konverze atd.)",
+        "maxLiability": "Maximální odpovědnost Pixarts je omezena na částku skutečně zaplacenou Klientem za předmětnou Službu."
+      },
+      "forceMajeure": {
+        "title": "Vyšší moc",
+        "desc": "Žádná strana nenese odpovědnost za zpoždění nebo selhání způsobené událostmi vyšší moci, včetně: přírodních katastrof, válek, pandemií, přerušení základních služeb, vládních opatření."
+      }
+    },
+    "section9": {
+      "title": "Důvěrnost",
+      "confidential": {
+        "title": "Důvěrné informace",
+        "intro": "Obě strany se zavazují uchovávat v tajnosti:",
+        "commercial": "Obchodní a strategické informace",
+        "technical": "Technická data a projektovou dokumentaci",
+        "economic": "Dohodnuté ekonomické podmínky",
+        "marked": "Jakékoli informace výslovně označené jako důvěrné"
+      },
+      "duration": {
+        "title": "Doba trvání",
+        "desc": "Povinnost mlčenlivosti trvá 2 roky od ukončení smluvního vztahu."
+      },
+      "exceptions": {
+        "title": "Výjimky",
+        "intro": "Povinnost mlčenlivosti se nevztahuje na informace:",
+        "public": "Již veřejně dostupné",
+        "thirdParty": "Legitimně získané od třetích stran",
+        "authorities": "Vyžádané příslušnými orgány"
+      }
+    },
+    "section10": {
+      "title": "Ukončení a odstoupení",
+      "clientWithdrawal": {
+        "title": "Odstoupení Klienta",
+        "intro": "Klient může kdykoli odstoupit od smlouvy s následujícími důsledky:",
+        "moment": "Okamžik odstoupení",
+        "consequences": "Důsledky",
+        "beforeStart": "Před zahájením prací",
+        "refund100": "100% vrácení zálohy",
+        "duringBriefing": "Během fáze briefingu",
+        "refund80": "80% vrácení zálohy",
+        "duringDesign": "Během fáze designu (před schválením)",
+        "refund50": "50% vrácení zálohy",
+        "afterApproval": "Po schválení designu",
+        "noRefund": "Bez vrácení"
+      },
+      "pixartsWithdrawal": {
+        "title": "Odstoupení Pixarts",
+        "intro": "Pixarts může odstoupit od smlouvy v případě:",
+        "nonPayment": "Neplacení déle než 30 dní od splatnosti",
+        "nonCollaborative": "Nespolupracujícího chování Klienta",
+        "illegal": "Požadavků v rozporu se zákonem nebo profesní etikou",
+        "impossibility": "Následné nemožnosti provést Službu",
+        "noRefund": "V případě odstoupení Pixarts z důvodů přičitatelných Klientovi záloha nebude vrácena."
+      },
+      "termination": {
+        "title": "Ukončení pro porušení",
+        "desc": "Kterákoli strana může ukončit smlouvu pro závažné porušení druhou stranou, a to po písemném upozornění s 15denní lhůtou k nápravě."
+      }
+    },
+    "section11": {
+      "title": "Závěrečná ustanovení",
+      "applicableLaw": {
+        "title": "Rozhodné právo",
+        "desc": "Tato smlouva se řídí právem České republiky."
+      },
+      "jurisdiction": {
+        "title": "Soudní příslušnost",
+        "desc": "Pro jakýkoli spor vyplývající z této smlouvy je výlučně příslušný Soud v Praze (Česká republika).",
+        "amicable": "Strany se zavazují pokusit se o smírné řešení před zahájením soudního řízení."
+      },
+      "severability": {
+        "title": "Salvátorská klauzule",
+        "desc": "Pokud jedno nebo více ustanovení těchto Podmínek bude neplatných nebo neúčinných, zbývající ustanovení zůstanou plně platná a účinná."
+      },
+      "modifications": {
+        "title": "Změny",
+        "desc": "Pixarts si vyhrazuje právo měnit tyto Obchodní podmínky. Změny budou oznámeny zveřejněním na webu a pro klienty s probíhajícími smlouvami prostřednictvím e-mailu.",
+        "existing": "Změny se nevztahují na již podepsané smlouvy, pokud není dohodnuto jinak."
+      },
+      "communications": {
+        "title": "Komunikace",
+        "desc": "Veškerá komunikace týkající se smlouvy musí být zaslána na:"
+      },
+      "entireAgreement": {
+        "title": "Úplná dohoda",
+        "desc": "Tyto Obchodní podmínky spolu s konkrétní podepsanou nabídkou/smlouvou představují úplnou dohodu mezi stranami a nahrazují jakékoli předchozí ústní nebo písemné ujednání."
+      }
+    },
+    "section12": {
+      "title": "Přijetí",
+      "intro": "Využívání Služeb Pixarts znamená plné přijetí těchto Obchodních podmínek.",
+      "acceptance": "Pro konkrétní projekty dochází k přijetí prostřednictvím:",
+      "methods": {
+        "signature": "Podpisu nabídky/smlouvy",
+        "payment": "Platby zálohy",
+        "email": "Písemného potvrzení e-mailem"
+      }
+    },
+    "footer": "Obchodní podmínky vypracované v souladu s evropskými a českými předpisy o B2B smlouvách a ochraně spotřebitele."
+  },
+  "booking": {
+    "metaTitle": "Rezervujte si bezplatný hovor - Pixarts",
+    "metaDescription": "Rezervujte si bezplatný hodinový briefingový hovor s Pixarts. Probereme váš webový projekt a poskytneme vám personalizovanou nabídku.",
+    "badge": "Bezplatný briefingový hovor",
+    "title": "Rezervujte si hovor",
+    "subtitle": "Vyberte si datum a čas pro bezplatný hodinový hovor. Probereme váš projekt a do 24 hodin obdržíte personalizovanou nabídku.",
+    "features": {
+      "flexible": "Flexibilní časy",
+      "flexibleDesc": "Vyberte si den a čas, který vám vyhovuje",
+      "online": "100% online",
+      "onlineDesc": "Hovor přes Google Meet, pohodlné odkudkoli",
+      "duration": "Celá 1 hodina",
+      "durationDesc": "Věnovaný čas pro analýzu vašeho projektu",
+      "free": "Zcela zdarma",
+      "freeDesc": "Bez závazků, nabídka do 24 hodin"
+    },
+    "steps": {
+      "date": "Datum",
+      "time": "Čas",
+      "form": "Údaje",
+      "confirm": "Potvrzení"
+    },
+    "summary": {
+      "title": "Shrnutí",
+      "selectedDate": "Vybrané datum",
+      "selectedTime": "Vybraný čas",
+      "yourInfo": "Vaše údaje",
+      "notSelected": "Nevybráno"
+    },
+    "dateStep": {
+      "title": "Vyberte datum",
+      "next": "Pokračovat"
+    },
+    "timeStep": {
+      "title": "Vyberte čas",
+      "back": "Zpět",
+      "next": "Pokračovat"
+    },
+    "formStep": {
+      "title": "Vaše údaje",
+      "back": "Zpět"
+    },
+    "slots": {
+      "loading": "Načítání dostupných časů...",
+      "noSlots": "Pro toto datum nejsou dostupné žádné časy",
+      "selectTime": "Vyberte dostupný čas:"
+    },
+    "form": {
+      "nome": "Jméno",
+      "nomePlaceholder": "Jan",
+      "cognome": "Příjmení",
+      "cognomePlaceholder": "Novák",
+      "email": "E-mail",
+      "emailPlaceholder": "jan.novak@firma.cz",
+      "telefono": "Telefon",
+      "telefonoPlaceholder": "+420 123 456 789",
+      "azienda": "Společnost",
+      "aziendaPlaceholder": "Název společnosti (nepovinné)",
+      "ruolo": "Pozice",
+      "ruoloPlaceholder": "Vaše pozice (nepovinné)",
+      "messaggio": "Zpráva",
+      "messaggioPlaceholder": "Stručně nám řekněte o vašem projektu...",
+      "messaggioHelper": "Nepovinné: pomozte nám připravit se na hovor",
+      "privacy": "Souhlasím s",
+      "privacyLink": "Zásadami ochrany osobních údajů",
+      "submit": "Potvrdit rezervaci",
+      "submitting": "Rezervace probíhá..."
+    },
+    "validation": {
+      "nomeMin": "Jméno musí mít alespoň 2 znaky",
+      "nomeMax": "Jméno nesmí přesáhnout 50 znaků",
+      "cognomeMin": "Příjmení musí mít alespoň 2 znaky",
+      "cognomeMax": "Příjmení nesmí přesáhnout 50 znaků",
+      "emailInvalid": "Zadejte platnou e-mailovou adresu",
+      "telefonoInvalid": "Zadejte platné telefonní číslo",
+      "aziendaMax": "Název společnosti nesmí přesáhnout 100 znaků",
+      "ruoloMax": "Pozice nesmí přesáhnout 50 znaků",
+      "messaggioMax": "Zpráva nesmí přesáhnout 1000 znaků",
+      "privacyRequired": "Musíte souhlasit se Zásadami ochrany osobních údajů"
+    },
+    "info": {
+      "title": "Informace o hovoru",
+      "duration": "Délka: 1 hodina",
+      "free": "Zcela zdarma",
+      "googleMeet": "Přes Google Meet"
+    },
+    "confirmation": {
+      "title": "Rezervace potvrzena!",
+      "subtitle": "Děkujeme {nome}, váš hovor byl úspěšně rezervován.",
+      "dateLabel": "Datum",
+      "timeLabel": "Čas",
+      "durationLabel": "Délka",
+      "durationValue": "1 hodina",
+      "whereLabel": "Kde",
+      "whereValue": "Google Meet",
+      "meetButton": "Otevřít Google Meet",
+      "calendarNote": "Obdržíte potvrzovací e-mail se všemi údaji a pozvánkou do kalendáře.",
+      "whatNext": "Co se stane dál?",
+      "whatNextItems": [
+        "Obdržíte potvrzovací e-mail s odkazem na Google Meet",
+        "Pošleme vám pozvánku do Google Kalendáře",
+        "Připravte se na to, abyste nám řekli o svém projektu",
+        "Do 24 hodin od hovoru obdržíte personalizovanou nabídku"
+      ],
+      "backHome": "Zpět na hlavní stránku"
+    }
+  },
+  "gdprRequest": {
+    "metaTitle": "Uplatnění práv GDPR - Pixarts",
+    "metaDescription": "Uplatněte svá práva na ochranu soukromí podle GDPR. Požádejte o přístup, opravu, výmaz nebo přenositelnost vašich osobních údajů.",
+    "badge": "GDPR čl. 12-23",
+    "title": "Uplatnění práv na ochranu soukromí",
+    "subtitle": "Vyplňte formulář pro uplatnění vašich práv podle Nařízení EU 2016/679 (GDPR). Odpovíme do 30 dnů od obdržení.",
+    "features": {
+      "secure": "Bezpečný přenos",
+      "secureDesc": "Vaše údaje jsou chráněny SSL šifrováním",
+      "response": "Odpověď do 30 dnů",
+      "responseDesc": "Vaši žádost zpracujeme v zákonné lhůtě",
+      "privacy": "Zaručené soukromí",
+      "privacyDesc": "Údaje jsou zpracovány pouze pro vyřízení žádosti",
+      "confirmation": "E-mailové potvrzení",
+      "confirmationDesc": "Obdržíte potvrzení s číslem případu"
+    },
+    "section1": {
+      "title": "Vaše údaje"
+    },
+    "section2": {
+      "title": "Typ žádosti"
+    },
+    "section3": {
+      "title": "Další podrobnosti"
+    },
+    "section4": {
+      "title": "Prohlášení"
+    },
+    "form": {
+      "fullName": "Jméno a příjmení",
+      "fullNamePlaceholder": "Jan Novák",
+      "email": "Kontaktní e-mail",
+      "emailPlaceholder": "jan.novak@email.cz",
+      "phone": "Telefon (volitelné)",
+      "phonePlaceholder": "+420 777 123 456",
+      "details": "Podrobnosti žádosti",
+      "detailsPlaceholder": "Popište podrobně vaši žádost...",
+      "detailsHelper": "Volitelné: uveďte konkrétní podrobnosti, které nám pomohou zpracovat vaši žádost.",
+      "emailUsed": "E-mail použitý pro kontakt s námi",
+      "emailUsedPlaceholder": "Pokud se liší od kontaktního e-mailu",
+      "emailUsedHelper": "Pokud jste v předchozích kontaktech s námi použili jiný e-mail.",
+      "confirmIdentity": "Prohlašuji, že jsem vlastníkem osobních údajů, kterých se tato žádost týká, nebo že jsem právně oprávněn/a jednat jejich jménem.",
+      "confirmTruthful": "Prohlašuji, že poskytnuté informace jsou pravdivé a úplné.",
+      "privacyAccepted": "Přečetl/a jsem a souhlasím s",
+      "privacyLink": "Zásadami ochrany osobních údajů"
+    },
+    "requestTypes": {
+      "access": "Právo na přístup",
+      "accessDesc": "Získat potvrzení a kopii vašich osobních údajů",
+      "rectification": "Právo na opravu",
+      "rectificationDesc": "Opravit nepřesné nebo neúplné údaje",
+      "erasure": "Právo na výmaz",
+      "erasureDesc": "Požádat o smazání vašich údajů",
+      "restriction": "Právo na omezení",
+      "restrictionDesc": "Omezit zpracování za určitých okolností",
+      "portability": "Právo na přenositelnost",
+      "portabilityDesc": "Obdržet vaše údaje ve strukturovaném formátu",
+      "objection": "Právo vznést námitku",
+      "objectionDesc": "Namítat proti zpracování z oprávněných důvodů",
+      "consentWithdrawal": "Odvolání souhlasu",
+      "consentWithdrawalDesc": "Odvolat dříve udělené souhlasy"
+    },
+    "validation": {
+      "fullNameMin": "Jméno musí obsahovat alespoň 2 znaky",
+      "fullNameMax": "Jméno nesmí přesáhnout 100 znaků",
+      "emailInvalid": "Zadejte platnou e-mailovou adresu",
+      "phoneInvalid": "Zadejte platné telefonní číslo",
+      "requestTypeRequired": "Vyberte typ žádosti",
+      "detailsMax": "Podrobnosti nesmí přesáhnout 1000 znaků",
+      "confirmIdentityRequired": "Musíte potvrdit svou totožnost",
+      "confirmTruthfulRequired": "Musíte potvrdit pravdivost informací",
+      "privacyRequired": "Musíte souhlasit se Zásadami ochrany osobních údajů"
+    },
+    "submit": "Odeslat žádost",
+    "submitting": "Odesílání...",
+    "successTitle": "Žádost odeslána",
+    "successMessage": "Vaše žádost #{requestId} byla úspěšně odeslána.",
+    "successEmailNote": "Obdržíte potvrzení na adresu {email}.",
+    "backToHome": "Zpět na hlavní stránku",
+    "errorMessage": "Při odesílání žádosti došlo k chybě. Zkuste to prosím znovu nebo nás kontaktujte přímo.",
+    "sidebar": {
+      "infoTitle": "Informace",
+      "infoText1": "Podle GDPR máte právo kontrolovat, jak jsou vaše osobní údaje zpracovávány.",
+      "infoText2": "Vaši žádost zpracujeme do 30 dnů. Ve složitých případech může být lhůta prodloužena o 60 dnů s předchozím upozorněním.",
+      "rightsTitle": "Vaše práva",
+      "rightAccess": "Právo na přístup k údajům",
+      "rightRectification": "Právo na opravu",
+      "rightErasure": "Právo na výmaz",
+      "rightRestriction": "Právo na omezení",
+      "rightPortability": "Právo na přenositelnost",
+      "rightObjection": "Právo vznést námitku",
+      "contactTitle": "Máte otázky?",
+      "contactText": "Pro jakékoli upřesnění nás můžete kontaktovat:"
+    }
+  },
+  "portfolioPage": {
+    "metaTitle": "Portfolio - Webové projekty Pixarts",
+    "metaDescription": "Objevte webové projekty vytvořené Pixarts: firemní weby, landing pages, webové aplikace a SaaS platformy. Případové studie s reálnými výsledky.",
+    "badge": "Portfolio",
+    "title": "Naše",
+    "titleHighlight": "Projekty",
+    "description": "Objevte, jak jsme pomohli našim klientům růst online s webovými řešeními na míru",
+    "backToHome": "Zpět na hlavní stránku",
+    "viewDetails": "Zobrazit podrobnosti",
+    "close": "Zavřít",
+    "previousImage": "Předchozí obrázek",
+    "nextImage": "Další obrázek",
+    "image": "Obrázek",
+    "services": "Služby",
+    "results": "Výsledky",
+    "technologies": "Technologie",
+    "integrations": "Integrace",
+    "visitSite": "Navštívit web",
+    "theProject": "Projekt",
+    "previousProject": "Předchozí",
+    "nextProject": "Další",
+    "ctaTitle": "Chcete podobné výsledky?",
+    "ctaDescription": "Pojďme si promluvit o tom, jak můžeme pomoci vašemu podnikání růst online.",
+    "ctaButton": "Promluvme o vašem projektu",
+    "filters": {
+      "all": "Vše",
+      "webapp": "Web App",
+      "saas": "SaaS",
+      "b2b-automation": "B2B",
+      "landing-page": "Landing",
+      "business-website": "Firemní",
+      "restaurant": "Restaurace"
+    },
+    "viewProject": "Zobrazit projekt",
+    "noProjects": "V této kategorii nebyly nalezeny žádné projekty",
+    "statsProjects": "{count} projektů",
+    "statsSectors": "{count} odvětví",
+    "statsConversion": "+180% průměrná konverze",
+    "heroStatLine": "{projects} projektů · {sectors} odvětví · +180% průměrná konverze",
+    "ctaSectionTitle": "Líbí se vám, co vidíte?",
+    "ctaSectionDescription": "Každý projekt začíná konkrétním cílem. Řekněte nám svůj a navrhneme řešení společně.",
+    "ctaSectionButton": "Promluvme o vašem projektu",
+    "ctaSectionBook": "Rezervujte bezplatný hovor",
+    "categories": {
+      "webapp": "Webová aplikace",
+      "saas": "SaaS platforma",
+      "b2b-automation": "B2B automatizace",
+      "landing-page": "Landing Page",
+      "business-website": "Firemní web",
+      "restaurant": "Restaurace"
+    },
+    "projects": {
+      "singleflo": {
+        "client": "SingleFlo",
+        "subtitle": "All-in-One ERP platforma s AI",
+        "description": "SingleFlo revolucionizuje způsob, jakým evropské SME řídí své podnikání. Vytvořili jsme landing page, která efektivně komunikuje sílu této ERP platformy založené na Odoo 18: CRM, prodej, výroba, fakturace a zákaznická podpora sjednocené s integrovanou umělou inteligencí. Design zdůrazňuje klíčový slib - nastavení do 48 hodin - prostřednictvím vizuální cesty vedoucí návštěvníky od objevování funkcí až k žádosti o demo. Performance Score 98/100 a perfektní SEO Score zajišťují viditelnost a rychlost.",
+        "services": {
+          "webDesign": { "name": "Web Design", "detail": "Enterprise design s GPU-akcelerovanými animacemi a mikro-interakcemi" },
+          "seo": { "name": "SEO", "detail": "Perfektní technické SEO: zelené Core Web Vitals, kompletní schema markup, dynamická sitemap" }
+        },
+        "results": {
+          "performance": { "value": "98", "label": "Performance Score", "suffix": "/100" },
+          "seoScore": { "value": "100", "label": "SEO Score", "suffix": "/100" }
+        }
+      },
+      "biemme": {
+        "client": "Biemme 2 S.r.l.",
+        "subtitle": "Web stavební společnosti",
+        "description": "Biemme 2 je stavební společnost s více než 30 lety historie a 200+ postavenými byty. Jejich předchozí web neodrážel tuto solidnost. Navrhli jsme digitální přítomnost odpovídající jejich postavení: firemní design s vínovou paletou vyzařující spolehlivost, projektové portfolio s immersivními galeriemi a silná optimalizace lokálního SEO, která je staví na špici vyhledávání 'stavební firma' v jejich oblasti. Certifikace ISO 9001 a SOA jsou nyní prezentovány jako prvky budující důvěru, konvertující návštěvníky na konkrétní žádosti o cenovou nabídku.",
+        "services": {
+          "webDesign": { "name": "Web Design", "detail": "Autoritativní firemní design s projektovým portfoliem a full-screen galeriemi" },
+          "seo": { "name": "SEO", "detail": "Pokročilé lokální SEO: optimalizovaný Google Business, LocalBusiness schema, NAP citace" }
+        },
+        "results": {
+          "visibility": { "value": "+150", "label": "lokální viditelnost", "suffix": "%" },
+          "contacts": { "value": "+80", "label": "žádostí o cenovou nabídku", "suffix": "%" }
+        }
+      },
+      "ichnusa": {
+        "client": "Ichnusa Botega & Bistro",
+        "subtitle": "Web pro sardskou restauraci v Praze",
+        "description": "Ichnusa Botega & Bistro je autentická sardská restaurace v srdci Malé Strany v Praze. Vytvořili jsme trojjazyčný web (IT/EN/CS), který zachycuje esenci sardské kuchyně: od porceddu po culurgiones, čerstvé mořské plody po vína Cannonau. Web integruje online rezervaci přes DISH.co, interaktivní menu s kategoriemi, živé Google recenze (4,7/5 s 497 recenzemi), sekci soukromých akcí a newsletter. Lokální SEO optimalizované pro umístění restaurace ve vyhledávání v Praze, se schema markup Restaurant a hreflang pro tři jazyky.",
+        "services": {
+          "webDesign": { "name": "Web Design", "detail": "Elegantní design s full-screen hero, interaktivním menu a fotogalerií" },
+          "seo": { "name": "Lokální SEO", "detail": "Restaurant schema, Google Business, trojjazyčný hreflang, pražská lokální klíčová slova" },
+          "i18n": { "name": "Vícejazyčný", "detail": "Kompletní web v italštině, angličtině a češtině s next-intl" }
+        },
+        "results": {
+          "reviews": { "value": "4.7", "label": "Google recenze", "suffix": "/5" },
+          "visibility": { "value": "+150", "label": "lokální viditelnost", "suffix": "%" },
+          "performance": { "value": "95", "label": "Performance Score", "suffix": "/100" }
+        }
+      }
+    }
+  },
+  "portfolioShowcase": {
+    "badge": "Portfolio",
+    "title": "Naše nejlepší projekty",
+    "description": "Reálné výsledky pro reálné klienty",
+    "cta": "Zobrazit všechny projekty",
+    "categories": {
+      "webapp": "Webová aplikace",
+      "business-website": "Firemní web",
+      "landing-page": "Landing Page"
+    },
+    "projects": {
+      "quickfy-app": {
+        "subtitle": "Analytický dashboard a AI automatizace"
+      },
+      "fl1": {
+        "subtitle": "Firemní web s AI chatbotem"
+      },
+      "singleflo": {
+        "subtitle": "All-in-One ERP platforma"
+      }
+    }
+  },
+  "portfolioCta": {
+    "badge": "Dokončené projekty",
+    "title": "Objevte všechny naše",
+    "titleHighlight": "projekty",
+    "description": "Podívejte se na kompletní případové studie a zjistěte, jak jsme pomohli našim klientům dosáhnout jejich cílů.",
+    "ctaPrimary": "Zobrazit Portfolio",
+    "trust1": "7+ Dokončených projektů",
+    "trust2": "Spokojení klienti",
+    "trust3": "Měřitelné výsledky"
+  },
+  "error": {
+    "title": "Něco se pokazilo",
+    "heading": "Oops!",
+    "description": "Došlo k neočekávané chybě. Náš tým byl informován a pracujeme na řešení problému.",
+    "retry": "Zkusit znovu",
+    "backHome": "Zpět na hlavní stránku",
+    "details": "Technické detaily",
+    "code": "Kód chyby"
+  },
+  "notFound": {
+    "heading": "404",
+    "title": "Stránka nenalezena",
+    "description": "Stránka, kterou hledáte, neexistuje nebo byla přesunuta.",
+    "suggestion": "Možná jste hledali:",
+    "backHome": "Zpět na hlavní stránku",
+    "explore": "Prozkoumat web",
+    "popularPages": {
+      "portfolio": "Portfolio",
+      "pricing": "Ceník",
+      "contact": "Kontakt"
+    }
+  },
+  "loading": {
+    "text": "Načítání...",
+    "preparing": "Příprava obsahu"
+  }
+}

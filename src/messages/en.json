@@ -1,0 +1,1716 @@
+{
+  "nav": {
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "process": "Process",
+    "faq": "FAQ",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "badge": "projects successfully completed",
+    "title1": "Websites",
+    "title2": "that",
+    "title3": "bring",
+    "title4": "customers",
+    "subtitle1": "From first draft to launch in",
+    "subtitle2": "10 days",
+    "subtitle3": "Modern design, SEO included, satisfaction guarantee at",
+    "ctaPrimary": "Get a free quote",
+    "ctaSecondary": "View portfolio",
+    "scroll": "Scroll"
+  },
+  "stats": {
+    "projects": "Projects completed",
+    "satisfaction": "Satisfied clients",
+    "delivery": "Average delivery"
+  },
+  "trustBadges": {
+    "moneyBack": "100% Money Back Guarantee",
+    "delivery": "10-Day Delivery",
+    "secure": "Secure Payments",
+    "support": "Direct Support",
+    "projects": "12+ Projects Completed"
+  },
+  "socialProof": {
+    "title": "They chose Pixarts",
+    "description": "Real projects that transformed real businesses",
+    "challenge": "The challenge",
+    "solutions": "Solutions",
+    "projects": {
+      "flowmatics": {
+        "type": "B2B Marketing Automation",
+        "challenge": "Complex platform to communicate simply",
+        "solution1": "Clean and professional design",
+        "solution2": "Optimized conversion funnel",
+        "result1": { "value": "+180%", "label": "contact requests" },
+        "result2": { "value": "+40%", "label": "Google visibility" },
+        "result3": { "value": "Top 3", "label": "strategic keywords" }
+      },
+      "quickfy": {
+        "type": "SaaS Analytics Platform",
+        "challenge": "Complex dashboard to present to B2B target",
+        "solution1": "Modern design with interactive animations",
+        "solution2": "Interactive demo on homepage",
+        "result1": { "value": "3-5", "label": "qualified leads/week" },
+        "result2": { "value": "8.5%", "label": "conversion rate" },
+        "result3": { "value": "-37%", "label": "bounce rate" }
+      },
+      "benetti": {
+        "type": "Artisan Portfolio",
+        "challenge": "Show artisan quality and generate qualified contacts",
+        "solution1": "Professional photo portfolio",
+        "solution2": "Optimized contact form for quotes",
+        "result1": { "value": "+300%", "label": "quote requests" },
+        "result2": { "value": "Top 5", "label": "local Google" },
+        "result3": { "value": "10 days", "label": "project delivery" }
+      },
+      "fl1": {
+        "type": "Corporate Website + AI",
+        "challenge": "Integrate AI chatbot for automated customer support",
+        "solution1": "OpenAI-powered chatbot",
+        "solution2": "HubSpot CRM for lead management",
+        "result1": { "value": "+220%", "label": "leads generated" },
+        "result2": { "value": "45sec", "label": "response time" },
+        "result3": { "value": "98%", "label": "satisfaction" }
+      }
+    }
+  },
+  "problems": {
+    "title": "Three problems every entrepreneur knows",
+    "description": "If you recognize yourself in at least one of these, you're in the right place",
+    "problem1": {
+      "title": "My website doesn't bring clients",
+      "description": "Amateur design, confusing navigation, invisible call-to-actions. The result? Traffic that doesn't convert."
+    },
+    "problem2": {
+      "title": "Too long to get a website",
+      "description": "Months of waiting, endless revisions, missed deadlines. Meanwhile, the competition passes you by."
+    },
+    "problem3": {
+      "title": "I don't understand anything technical",
+      "description": "Hosting, CMS, SEO, analytics. Incomprehensible terms and no one to really explain how it works."
+    }
+  },
+  "solution": {
+    "title": "The solution: a partner focused on your success",
+    "description": "You're not just a client with a project. You're a business that wants to grow. That's why every website we create is designed to convert visitors into customers.",
+    "prop1": {
+      "title": "Guaranteed delivery",
+      "subtitle": "7-14 days",
+      "description": "Certain timelines, no surprises. Written guarantee: 10% discount for each day of delay."
+    },
+    "prop2": {
+      "title": "Design that converts",
+      "subtitle": "+180% contact requests",
+      "description": "Every element designed to guide the user toward action: purchase, contact, booking."
+    },
+    "prop3": {
+      "title": "Zero technical worries",
+      "subtitle": "All included",
+      "description": "Hosting, SEO, analytics, training. You manage the business, we handle the technology."
+    },
+    "prop4": {
+      "title": "Zero risk",
+      "subtitle": "Triple guarantee",
+      "description": "100% refund if unsatisfied + 2 revisions + 30 days free support."
+    }
+  },
+  "portfolio": {
+    "title": "Projects that speak for themselves",
+    "description": "Two case studies that show how a well-made website can transform your business",
+    "challenge": "The challenge",
+    "solution": "The solution",
+    "visit": "Visit",
+    "gallery": {
+      "badge": "Portfolio",
+      "title": "Our projects",
+      "description": "Discover how we helped our clients grow online",
+      "previous": "Previous",
+      "next": "Next",
+      "previousImage": "Previous image",
+      "nextImage": "Next image",
+      "imageNavigation": "Image navigation",
+      "projectNavigation": "Project navigation",
+      "viewProject": "View project",
+      "image": "Image",
+      "services": "Services",
+      "results": "Results",
+      "technologies": "Technologies",
+      "integrations": "Integrations",
+      "projects": {
+        "fl1": {
+          "client": "FL1 Srl",
+          "subtitle": "Corporate Website with AI Integration",
+          "services": {
+            "webDesign": { "name": "Web Design", "detail": "Modern corporate design focused on conversion and trust building" },
+            "backend": { "name": "Backend", "detail": "Scalable Node.js architecture with REST APIs and webhooks" },
+            "seo": { "name": "SEO", "detail": "Advanced technical SEO with schema markup and optimized Core Web Vitals" },
+            "ai": { "name": "AI Integration", "detail": "Custom GPT-4 chatbot for 24/7 support and lead qualification" }
+          },
+          "results": {
+            "leads": { "value": "+220", "label": "leads generated", "suffix": "%" },
+            "response": { "value": "45", "label": "chat response time", "suffix": "sec" },
+            "satisfaction": { "value": "98", "label": "client satisfaction", "suffix": "%" }
+          },
+          "description": "Complete digital transformation for FL1, a leading B2B company. We designed an integrated digital ecosystem: premium corporate website, AI chatbot that autonomously handles initial prospect contact and qualifies leads in real-time, and bidirectional HubSpot CRM integration to track every interaction. The result? An automated sales system working 24/7, reducing workload on the sales team while dramatically increasing conversion rates."
+        },
+        "flowmatics": {
+          "client": "FlowMatics",
+          "subtitle": "B2B Marketing Automation Platform",
+          "services": {
+            "webDesign": { "name": "Web Design", "detail": "Landing page with micro-animations and visual storytelling" },
+            "seo": { "name": "SEO", "detail": "Complete SEO strategy: keyword research, content pillars and link building" },
+            "cro": { "name": "CRO", "detail": "Continuous A/B testing, heatmaps and multi-step funnel optimization" }
+          },
+          "results": {
+            "contacts": { "value": "+180", "label": "contact requests", "suffix": "%" },
+            "visibility": { "value": "+40", "label": "Google visibility", "suffix": "%" },
+            "keywords": { "value": "Top 3", "label": "target keywords" }
+          },
+          "description": "FlowMatics faced a challenge: communicating a complex marketing automation platform to a demanding B2B audience. We created a landing page that tells the product story through fluid animations and interactive demos. The minimalist yet impactful design guides users through a discovery journey culminating in a demo request. Thanks to a targeted SEO strategy and continuous data-driven optimization, FlowMatics now dominates strategic keywords in the Italian marketing automation sector."
+        },
+        "quickfy-web": {
+          "client": "Quickfy",
+          "subtitle": "SaaS Marketing Website",
+          "services": {
+            "webDesign": { "name": "Web Design", "detail": "Premium SaaS design with embedded product demo and 3D animations" },
+            "seo": { "name": "SEO", "detail": "SaaS SEO: comparison pages, feature pages and blog strategy" },
+            "cro": { "name": "CRO", "detail": "Optimized pricing page with social proof and urgency triggers" }
+          },
+          "results": {
+            "leads": { "value": "3-5", "label": "qualified leads/week" },
+            "conversion": { "value": "8.5", "label": "conversion rate", "suffix": "%" },
+            "bounce": { "value": "-37", "label": "bounce rate", "suffix": "%" }
+          },
+          "description": "Quickfy is a fast-growing analytics and marketing automation platform. Their previous website failed to communicate the product's value. We redesigned the entire experience: an interactive demo letting prospects 'try' the product directly from the homepage, a pricing page with clear and convincing plan comparison, and a nurturing system guiding every visitor toward conversion. Bounce rate dropped 37% and they now generate qualified leads consistently every week."
+        },
+        "quickfy-app": {
+          "client": "Quickfy",
+          "subtitle": "Analytics Dashboard & AI Automations",
+          "services": {
+            "frontend": { "name": "Frontend", "detail": "React 19 dashboard with real-time updates and advanced data visualizations" },
+            "backend": { "name": "Backend", "detail": "AWS microservices architecture with auto-scaling and Redis caching" },
+            "ai": { "name": "AI & Automations", "detail": "MCP server for Claude, n8n workflows, custom GPT-4 chatbot" },
+            "devops": { "name": "DevOps", "detail": "GitHub Actions CI/CD, Datadog monitoring, blue-green deploy" }
+          },
+          "results": {
+            "users": { "value": "500+", "label": "active users" },
+            "time": { "value": "15", "label": "hours saved/week", "suffix": "h" },
+            "uptime": { "value": "99.9", "label": "guaranteed uptime", "suffix": "%" }
+          },
+          "description": "The technological heart of Quickfy: an enterprise-grade SaaS platform we built from scratch. Analytics dashboard with real-time charts and advanced filters, a powerful automation engine based on MCP server that orchestrates cross-channel marketing campaigns, and an AI chatbot trained on client data that autonomously handles interactions. The cloud-native architecture ensures exceptional performance even under load, with 500+ active users saving an average of 15 hours per week thanks to intelligent automations."
+        }
+      }
+    },
+    "hero": {
+      "badge": "Portfolio Showcase",
+      "title": "Our",
+      "titleHighlight": "Projects",
+      "subtitle": "We create digital experiences that transform ideas into reality. From high-performing landing page design to complex web application development, up to mobile and desktop interface design.",
+      "categories": {
+        "webapp": "Web App",
+        "saas": "SaaS Platform",
+        "b2b-automation": "B2B Automation",
+        "landing-page": "Landing Page",
+        "business-website": "Business Website"
+      },
+      "sections": {
+        "hero": "Hero Section",
+        "dashboard": "Dashboard",
+        "features": "Features",
+        "pricing": "Pricing",
+        "process": "Process",
+        "integration": "Integrations",
+        "benefits": "Benefits",
+        "login": "Login",
+        "campaigns": "Marketing Campaigns",
+        "social": "Social Management",
+        "credits": "Credits System",
+        "about": "About Us",
+        "cta": "Call to Action",
+        "implementation": "Implementation"
+      }
+    },
+    "cta": {
+      "badge": "Start Today",
+      "title": "Ready to create an",
+      "titleHighlight": "extraordinary project?",
+      "description": "We transform your ideas into digital realities. Contact us for a free consultation and discover how we can help you.",
+      "ctaPrimary": "Request free quote",
+      "ctaSecondary": "Discover the process",
+      "trust1": "24h response",
+      "trust2": "Detailed quote",
+      "trust3": "Zero commitment"
+    }
+  },
+  "process": {
+    "title": "How it works: 4 steps, zero complications",
+    "description": "From first contact to launch, a transparent and fast process",
+    "total": "Total:",
+    "totalTime": "7-14 business days",
+    "step1": {
+      "title": "Brief",
+      "duration": "30 minutes",
+      "description": "Call or meeting to understand goals, target, and competitors. We gather everything needed to start."
+    },
+    "step2": {
+      "title": "Design",
+      "duration": "2-3 days",
+      "description": "We create high-fidelity mockups based on your brand. Approval before starting development."
+    },
+    "step3": {
+      "title": "Development",
+      "duration": "4-7 days",
+      "description": "Coding, testing, performance and SEO optimization. Continuous updates on work status."
+    },
+    "step4": {
+      "title": "Launch",
+      "duration": "1 day",
+      "description": "Deploy, complete training, and credential handover. You're online and autonomous."
+    }
+  },
+  "capabilities": {
+    "titlePrefix": "What we can do with",
+    "description": "Complete solutions to grow your business online",
+    "items": {
+      "web": {
+        "title": "Websites & Landing Pages",
+        "description": "Modern design that converts, optimized for SEO and performance. From concept to launch in record time."
+      },
+      "ecommerce": {
+        "title": "E-commerce & Payments",
+        "description": "Smooth checkout, secure payments, automated order management. Sell online worry-free."
+      },
+      "crm": {
+        "title": "CRM & Lead Generation",
+        "description": "Automated sales pipelines, lead scoring, smart follow-ups. Convert more contacts into customers."
+      },
+      "analytics": {
+        "title": "Analytics & Insights",
+        "description": "Custom dashboards, advanced tracking, data-driven decisions. Measure what matters."
+      },
+      "automation": {
+        "title": "Automation & AI",
+        "description": "Smart chatbots, automated workflows, custom integrations. Save time, scale your business."
+      },
+      "email": {
+        "title": "Email & Communication",
+        "description": "Automated campaigns, multi-channel notifications, newsletters that convert. Stay connected with customers."
+      }
+    }
+  },
+  "benefits": {
+    "title": "Why choose Pixarts",
+    "titlePrefix": "Why choose",
+    "description": "Everything you need for a website that delivers results",
+    "benefit1": {
+      "title": "Modern and professional design",
+      "description": "Clean interfaces that inspire trust. First impressions matter, and we know it well."
+    },
+    "benefit2": {
+      "title": "Conversion optimization",
+      "description": "Strategic CTAs, studied user paths, effective forms. Every detail aims for conversion."
+    },
+    "benefit3": {
+      "title": "SEO included",
+      "description": "Google indexing, optimized speed, mobile-first structure. Organic visibility from day one."
+    },
+    "benefit4": {
+      "title": "Continuous support",
+      "description": "Training, documentation, 30 days free support. You're never alone."
+    },
+    "benefit5": {
+      "title": "Mobile-first responsive",
+      "description": "70% of users browse from smartphones. Your site will be perfect on every device."
+    },
+    "benefit6": {
+      "title": "Security and performance",
+      "description": "HTTPS, automatic backups, global CDN. Speed and security guaranteed."
+    }
+  },
+  "guarantee": {
+    "title": "Our triple guarantee",
+    "description": "Zero risks, maximum peace of mind. Period.",
+    "guarantee1": {
+      "badge": "10%",
+      "title": "Time guarantee",
+      "description": "Delivery on agreed time or 10% discount for each day of delay. Written commitment in contract."
+    },
+    "guarantee2": {
+      "badge": "100%",
+      "title": "Satisfaction guarantee",
+      "description": "Not convinced? Full refund within 7 days of launch. No questions, no strings attached."
+    },
+    "guarantee3": {
+      "badge": "30d",
+      "title": "Support guarantee",
+      "description": "2 rounds of revisions included + 30 days of free post-launch support. Always by your side."
+    }
+  },
+  "pricing": {
+    "title": "Solutions for every need",
+    "description": "Transparent pricing, no hidden costs. First year hosting included.",
+    "deliveryIn": "Delivery in",
+    "idealFor": "Ideal for:",
+    "cta": "Request quote",
+    "maintenance": "Monthly maintenance",
+    "maintenancePrice": "€200-400/month",
+    "maintenanceDesc": "Updates, backups, technical support, minor changes",
+    "plan1": {
+      "name": "Landing Page",
+      "badge": "Fastest",
+      "price": "€1,200 - €1,500",
+      "duration": "7 days",
+      "idealFor": "Freelancers, professionals, marketing campaigns",
+      "features": [
+        "Custom 1-page design",
+        "Basic SEO and meta tags",
+        "Integrated contact form",
+        "1 year hosting included",
+        "Mobile responsive",
+        "1 round of revisions",
+        "Training and documentation"
+      ]
+    },
+    "plan2": {
+      "name": "Business Website",
+      "badge": "Most popular",
+      "price": "€2,500 - €3,500",
+      "duration": "10 days",
+      "idealFor": "SMEs, professional firms, agencies",
+      "features": [
+        "Premium multi-page design",
+        "Advanced SEO and analytics",
+        "CMS for autonomous management",
+        "1 year hosting included",
+        "Integrated blog (optional)",
+        "2 rounds of revisions",
+        "Complete training + 30d support"
+      ]
+    },
+    "plan3": {
+      "name": "E-commerce / Booking",
+      "badge": "Most complete",
+      "price": "€4,500 - €6,000",
+      "duration": "14 days",
+      "idealFor": "Online stores, restaurants, hotels, B&Bs",
+      "features": [
+        "Premium e-commerce design",
+        "Secure payment integration",
+        "Order/booking management",
+        "1 year hosting included",
+        "Advanced e-commerce SEO",
+        "2 rounds of revisions",
+        "Advanced training + 30d support"
+      ]
+    },
+    "integrationsIncluded": "Integrations included"
+  },
+  "addons": {
+    "title": "Power up your website",
+    "description": "Add advanced features to grow faster",
+    "setupPrice": "Setup",
+    "monthlyPrice": "Monthly",
+    "learnMore": "Learn more",
+    "advancedNote": "Advanced integrations available on request",
+    "tiers": {
+      "core": "Most requested",
+      "expansion": "Expansion",
+      "enterprise": "Enterprise"
+    },
+    "chatbot-ai": {
+      "name": "AI Chatbot",
+      "description": "24/7 customer support, automatic lead qualification, intelligent responses with OpenAI/Claude."
+    },
+    "crm-avanzato": {
+      "name": "Advanced CRM",
+      "description": "Sales pipeline, lead scoring, automated follow-ups. HubSpot or Pipedrive integrated."
+    },
+    "automazioni-zapier": {
+      "name": "Zapier/Make Automations",
+      "description": "3-5 custom workflows to connect your tools and automate processes."
+    },
+    "whatsapp-business": {
+      "name": "WhatsApp Business API",
+      "description": "Order notifications, appointment reminders, direct chat with customers."
+    },
+    "email-marketing": {
+      "name": "Advanced Email Marketing",
+      "description": "Automated sequences, advanced segmentation, A/B testing, detailed analytics."
+    },
+    "multi-lingua": {
+      "name": "Multi-language",
+      "description": "Complete website translation + automatic language switch based on geolocation."
+    },
+    "seo-continuativo": {
+      "name": "Ongoing SEO",
+      "description": "Monthly optimization, ranking reports, keyword tracking, link building."
+    },
+    "blog-content": {
+      "name": "Blog & Content System",
+      "description": "Advanced blog CMS, categories, tags, article SEO, automatic social sharing."
+    },
+    "prenotazioni-avanzate": {
+      "name": "Advanced Bookings",
+      "description": "Multi-service, staff management, advance payment, automatic reminders."
+    },
+    "area-riservata": {
+      "name": "Members Area / Login",
+      "description": "Client access, personal dashboard, private documents, order history."
+    },
+    "ecommerce-avanzato": {
+      "name": "Advanced E-commerce",
+      "description": "Multi-variant products, recurring subscriptions, B2B pricing, automatic discounts."
+    },
+    "integrazioni-custom": {
+      "name": "Custom Integrations",
+      "description": "Custom APIs, connection to management systems, ERP, proprietary software."
+    },
+    "analytics-avanzato": {
+      "name": "Advanced Analytics",
+      "description": "Custom dashboards, Hotjar, heatmaps, session recording, funnel analysis."
+    },
+    "security-pro": {
+      "name": "Backup & Security Pro",
+      "description": "Daily backups, advanced firewall, 24/7 monitoring, premium SSL certificate."
+    }
+  },
+  "bundles": {
+    "title": "Recommended packages",
+    "description": "Complete solutions, ready to launch with a dedicated discount",
+    "includes": "Includes",
+    "price": "Package price",
+    "originalPrice": "Value",
+    "savings": "You save",
+    "idealFor": "Perfect for",
+    "cta": "Choose this package",
+    "lead-generation-pro": {
+      "name": "Lead Generation Pro",
+      "description": "Complete system to acquire customers online with chatbot and automated email marketing."
+    },
+    "ecommerce-growth": {
+      "name": "E-commerce Growth",
+      "description": "Sell more with WhatsApp notifications, abandoned cart recovery, and automated emails."
+    },
+    "automation-suite": {
+      "name": "Automation Suite",
+      "description": "Save time by automating CRM, follow-ups, and repetitive processes."
+    }
+  },
+  "maintenance": {
+    "title": "Monthly maintenance",
+    "description": "Choose the support level that best fits your needs",
+    "perMonth": "/month",
+    "cta": "Add to quote",
+    "base": {
+      "name": "Base",
+      "description": "Essential maintenance to keep your site secure and updated.",
+      "features": [
+        "Security updates",
+        "Weekly backups",
+        "Email support (48h response)",
+        "Uptime monitoring"
+      ]
+    },
+    "standard": {
+      "name": "Standard",
+      "description": "Priority support with included changes and monthly reports.",
+      "features": [
+        "Everything in Base plan",
+        "Minor changes (2h/month)",
+        "Priority support (24h)",
+        "Monthly Analytics report",
+        "Daily backups"
+      ]
+    },
+    "premium": {
+      "name": "Premium",
+      "description": "Complete management with dedicated support and continuous optimization.",
+      "features": [
+        "Everything in Standard plan",
+        "Changes (4h/month)",
+        "Integration management",
+        "Phone support",
+        "Performance optimization",
+        "Monthly SEO report"
+      ]
+    }
+  },
+  "testimonials": {
+    "title": "What they say about us",
+    "description": "Our clients' words are worth more than a thousand promises",
+    "verified": "Verified Client",
+    "rating": "Rating: 5 stars out of 5",
+    "controls": "Carousel controls",
+    "prev": "Previous testimonial",
+    "next": "Next testimonial",
+    "pause": "Pause slideshow",
+    "play": "Resume slideshow",
+    "testimonial1": {
+      "name": "Marco Benetti",
+      "role": "Owner",
+      "company": "Artisan Carpentry",
+      "text": "In 10 days I had a website that finally represents the quality of my work. Inquiries tripled and now I can proudly show my portfolio to clients."
+    },
+    "testimonial2": {
+      "name": "Sofia Rossi",
+      "role": "Partner",
+      "company": "Associated Law Firm",
+      "text": "Professionalism and clarity from the first contact. They immediately understood our needs and the result exceeds expectations. Support always available."
+    },
+    "testimonial3": {
+      "name": "Luca Marino",
+      "role": "Owner",
+      "company": "Restaurant Da Luca",
+      "text": "Booking system that works great. Timelines respected to the letter and support always available. 100% recommended."
+    },
+    "hoverHint": "Hover to pause"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "description": "Everything you need to know before starting",
+    "q1": {
+      "question": "How long does it really take?",
+      "answer": "7-14 business days depending on complexity. Landing page 7 days, business website 10 days, e-commerce 14 days. With written guarantee: 10% discount for each day of delay."
+    },
+    "q2": {
+      "question": "What happens if I don't like the result?",
+      "answer": "Don't worry, we work together step by step. We involve you in every decision: color choices, layout, content. You have 2 rounds of revisions included and we approve each phase before moving forward. So the final result will be exactly what you had in mind."
+    },
+    "q3": {
+      "question": "Can I update the site myself afterward?",
+      "answer": "Absolutely yes. The site includes an intuitive management panel to edit texts, images, and content independently. We provide complete training and documentation to make you self-sufficient."
+    },
+    "q4": {
+      "question": "Does the price include hosting and domain?",
+      "answer": "Yes, first year included in project price. From second year: hosting €150-300/year, domain €15-30/year depending on needs."
+    },
+    "q5": {
+      "question": "Will the site be visible on Google?",
+      "answer": "Yes, basic or advanced SEO included: sitemap, meta tags, optimized speed, mobile-first structure. For guaranteed results, we also offer ongoing SEO consulting."
+    },
+    "q6": {
+      "question": "Do you offer maintenance after launch?",
+      "answer": "Yes, first 30 days of free support included. Then maintenance packages from €150-400/month: updates, backups, technical support, minor changes."
+    },
+    "q7": {
+      "question": "What integrations are included?",
+      "answer": "Every plan includes essential integrations: Google Analytics, Meta Pixel, contact forms, and GDPR cookie consent. Higher plans also include Google Maps, Mailchimp/Brevo, and (for E-commerce) Stripe Checkout. For advanced integrations like AI chatbot, Zapier automations, or WhatsApp Business, we offer dedicated add-ons."
+    },
+    "q8": {
+      "question": "Can I add features after launch?",
+      "answer": "Absolutely yes. You can add AI chatbot, automations, CRM integrations, members area, or other features at any time. We'll provide a dedicated quote and implement everything without interrupting your site."
+    }
+  },
+  "cta": {
+    "title": "Ready to grow your business online?",
+    "description": "Free quote in 24 hours. No commitment, just an opportunity.",
+    "successTitle": "Thank you!",
+    "successMessage": "You'll receive the quote within 24 hours at the email provided.",
+    "sendAnother": "Send another message",
+    "errorMessage": "An error occurred. Try again or contact us directly at info@pixarts.eu",
+    "submit": "Get a free quote",
+    "submitting": "Sending...",
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "John Smith",
+      "email": "Email",
+      "emailPlaceholder": "john@company.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+1 555 123 4567",
+      "projectType": "Project type",
+      "projectTypePlaceholder": "Select...",
+      "budget": "Estimated budget",
+      "budgetPlaceholder": "Select...",
+      "message": "Message",
+      "messagePlaceholder": "Tell us briefly about your project...",
+      "privacy": "I accept the",
+      "privacyLink": "Privacy Policy",
+      "privacyText": "and authorize data processing to receive the quote.",
+      "required": "*"
+    },
+    "projectTypes": {
+      "landing": "Landing Page",
+      "website": "Business Website",
+      "ecommerce": "E-commerce / Booking",
+      "other": "Other"
+    },
+    "budgetOptions": {
+      "1-2k": "€1,000 - €2,000",
+      "2-4k": "€2,000 - €4,000",
+      "4-6k": "€4,000 - €6,000",
+      "6k+": "+€6,000"
+    }
+  },
+  "footer": {
+    "description": "Professional websites in 10 days that bring customers. Modern design, SEO included, satisfaction guarantee.",
+    "services": "Services",
+    "resources": "Resources",
+    "legal": "Legal",
+    "contact": "Contact",
+    "comingSoon": "Coming soon",
+    "copyright": "All rights reserved.",
+    "madeWith": "Made with",
+    "inItaly": "in Italy",
+    "gdprRequest": "GDPR Rights"
+  },
+  "notifications": {
+    "newProject": "just completed their website",
+    "daysAgo": "days ago"
+  },
+  "metadata": {
+    "title": "Pixarts - Professional Websites in 10 Days | Web Design Italy",
+    "description": "Create your professional website in 10 days. Modern design, SEO included, satisfaction guarantee. From €1,200. FlowMatics and Quickfy portfolio."
+  },
+  "privacyPolicy": {
+    "metaTitle": "Privacy Policy - Pixarts",
+    "metaDescription": "Pixarts (Fl1 s.r.o.) Privacy Policy. Information on personal data processing under GDPR.",
+    "title": "Privacy Policy",
+    "lastUpdate": "Last updated",
+    "section1": {
+      "title": "Data Controller",
+      "intro": "The Data Controller for personal data processing is:",
+      "operatingAs": "operating under the trade name",
+      "address": "Registered office"
+    },
+    "section2": {
+      "title": "Types of Data Collected",
+      "voluntary": {
+        "title": "Data voluntarily provided by the user",
+        "intro": "Through the contact form we collect:",
+        "required": "Required data",
+        "optional": "Optional data",
+        "name": "Full name",
+        "email": "Email address",
+        "phone": "Phone number",
+        "projectDesc": "Project description",
+        "budget": "Estimated budget",
+        "timeline": "Desired timeline"
+      },
+      "automatic": {
+        "title": "Automatically collected data",
+        "intro": "During website navigation, the following data is automatically collected:",
+        "ip": "IP address (anonymized)",
+        "browser": "Browser type and device",
+        "os": "Operating system",
+        "pages": "Pages visited and time spent",
+        "referrer": "Traffic source (referrer)",
+        "interaction": "Site interaction data"
+      },
+      "cookies": {
+        "title": "Data collected via cookies",
+        "intro": "For detailed information about cookies used, please see our"
+      }
+    },
+    "section3": {
+      "title": "Purposes and Legal Basis of Processing",
+      "table": {
+        "purpose": "Purpose",
+        "legalBasis": "Legal basis",
+        "data": "Data processed"
+      },
+      "purposes": {
+        "contact": "Responding to contact requests",
+        "services": "Providing requested services",
+        "invoicing": "Invoicing and tax compliance",
+        "analytics": "Anonymous statistical analysis",
+        "marketing": "Direct marketing (newsletter)",
+        "profiling": "Advertising profiling"
+      },
+      "data": {
+        "contact": "Name, email, phone, project details",
+        "identification": "Identification data, billing data",
+        "billing": "Billing data",
+        "navigation": "Anonymized navigation data",
+        "profiling": "Navigation data, interests"
+      }
+    },
+    "section4": {
+      "title": "Processing Methods",
+      "intro": "Personal data is processed using electronic and/or paper tools, with logic strictly related to the purposes indicated above and, in any case, in a way that guarantees the security and confidentiality of the data.",
+      "security": {
+        "title": "Security measures adopted:",
+        "ssl": "SSL/TLS encryption for all communications",
+        "access": "Data access limited to authorized personnel",
+        "backup": "Regular encrypted backups",
+        "servers": "Servers located in secure infrastructures",
+        "incidents": "Security incident management procedures"
+      }
+    },
+    "section5": {
+      "title": "Data Retention Period",
+      "table": {
+        "dataType": "Data type",
+        "retention": "Retention period"
+      },
+      "types": {
+        "leads": "Contact data (unconverted leads)",
+        "contract": "Contract and billing data",
+        "navigation": "Navigation data",
+        "marketing": "Direct marketing data",
+        "cookies": "Profiling cookies"
+      },
+      "periods": {
+        "leads": "24 months from last contact",
+        "contract": "10 years from contract conclusion",
+        "navigation": "26 months (GA4 setting)",
+        "marketing": "Until consent withdrawal",
+        "cookies": "See Cookie Policy"
+      }
+    },
+    "section6": {
+      "title": "Data Recipients",
+      "providers": {
+        "title": "Service providers (Data Processors)",
+        "provider": "Provider",
+        "service": "Service",
+        "payments": "Payment processing"
+      },
+      "thirdParty": {
+        "title": "Third-party embedded content",
+        "intro": "The site may embed content from:",
+        "videos": "videos",
+        "maps": "maps"
+      },
+      "others": {
+        "title": "Other recipients",
+        "authorities": "Competent authorities, upon legitimate request",
+        "consultants": "Legal and tax consultants, for mandatory compliance"
+      }
+    },
+    "section7": {
+      "title": "Extra-EU Data Transfers",
+      "intro": "Some of our service providers are located outside the European Economic Area (EEA), particularly in the United States.",
+      "basedOn": "For these transfers we rely on:",
+      "adequacy": {
+        "title": "European Commission adequacy decision",
+        "desc": "EU-US Data Privacy Framework for certified providers"
+      },
+      "scc": {
+        "title": "Standard Contractual Clauses (SCC)",
+        "desc": "approved by the European Commission"
+      },
+      "measures": {
+        "title": "Supplementary measures",
+        "desc": "of technical and organizational security"
+      }
+    },
+    "section8": {
+      "title": "Data Subject Rights",
+      "intro": "Under Articles 15-22 of the GDPR, you have the right to:",
+      "rights": {
+        "access": "Access (Art. 15)",
+        "accessDesc": "Obtain confirmation of processing and a copy of your data",
+        "rectification": "Rectification (Art. 16)",
+        "rectificationDesc": "Correct inaccurate or incomplete data",
+        "erasure": "Erasure (Art. 17)",
+        "erasureDesc": "Request deletion of your data",
+        "restriction": "Restriction (Art. 18)",
+        "restrictionDesc": "Restrict processing in certain circumstances",
+        "portability": "Portability (Art. 20)",
+        "portabilityDesc": "Receive your data in a structured, readable format",
+        "objection": "Objection (Art. 21)",
+        "objectionDesc": "Object to processing based on legitimate interest"
+      },
+      "howTo": {
+        "title": "How to exercise your rights",
+        "intro": "You can exercise your rights by sending a request to:",
+        "response": "We will respond to your request within 30 days. In complex cases, the deadline may be extended by an additional 60 days, with prior notice."
+      },
+      "complaint": {
+        "title": "Complaint to Supervisory Authority",
+        "intro": "You have the right to lodge a complaint with the Data Protection Authority:",
+        "italy": "For users in Italy:",
+        "czech": "For users in Czech Republic:"
+      }
+    },
+    "section9": {
+      "title": "Data Provision",
+      "content": "Providing data marked as mandatory in the contact form is necessary to respond to your request. Failure to provide this data makes it impossible to process the request. Optional data allows us to provide a more personalized service but is not essential."
+    },
+    "section10": {
+      "title": "Automated Decision-Making",
+      "content": "We do not carry out automated decision-making processes, including profiling, that produce legal effects or significantly affect you."
+    },
+    "section11": {
+      "title": "Minors",
+      "content": "Our services are intended for a professional audience (businesses and professionals). We do not knowingly collect personal data from minors under 16 years of age. If you believe we have collected data from a minor, please contact us immediately."
+    },
+    "section12": {
+      "title": "Changes to Privacy Policy",
+      "content": "We reserve the right to modify this Privacy Policy at any time. Changes will be published on this page with an indication of the last modification date. For substantial changes, we will notify you via a notice on the site or, if we have your email address for marketing purposes, via direct communication."
+    },
+    "section13": {
+      "title": "Contacts",
+      "intro": "For any questions regarding this Privacy Policy or the processing of your personal data:"
+    },
+    "footer": "This Privacy Policy complies with Regulation (EU) 2016/679 (GDPR) and applicable data protection legislation."
+  },
+  "cookiePolicy": {
+    "metaTitle": "Cookie Policy - Pixarts",
+    "metaDescription": "Pixarts (Fl1 s.r.o.) Cookie Policy. Information on the use of cookies under GDPR and ePrivacy Directive.",
+    "title": "Cookie Policy",
+    "lastUpdate": "Last updated",
+    "section1": {
+      "title": "What are Cookies",
+      "intro": "Cookies are small text files that websites save on your device (computer, smartphone, tablet) during browsing. They store useful information to improve the browsing experience.",
+      "technologies": "Similar technologies to cookies include: pixel tags, web beacons, local storage, and device identifiers."
+    },
+    "section2": {
+      "title": "Data Controller",
+      "operatingAs": "operating under the trade name"
+    },
+    "section3": {
+      "title": "Types of Cookies Used",
+      "table": {
+        "name": "Name",
+        "provider": "Provider",
+        "purpose": "Purpose",
+        "duration": "Duration",
+        "consent": "Consent"
+      },
+      "duration": {
+        "session": "Session",
+        "months": "months",
+        "years": "years",
+        "hours": "hours",
+        "minute": "minute",
+        "minutes": "minutes",
+        "month": "month"
+      },
+      "required": "Required",
+      "note": "Note",
+      "technical": {
+        "title": "Technical Cookies (always active)",
+        "intro": "These cookies are essential for the website to function and do not require your consent.",
+        "session": "User session management",
+        "consent": "Stores your cookie preferences",
+        "csrf": "Form security protection"
+      },
+      "analytics": {
+        "title": "Analytics Cookies",
+        "intro": "They help us understand how visitors interact with the site, collecting information anonymously.",
+        "distinguish": "Distinguishes users",
+        "sessionState": "Maintains session state",
+        "rateLimit": "Limits request frequency",
+        "ipNote": "We use Google Analytics 4 with IP address anonymization enabled. This means your IP is truncated before being transmitted to Google servers, ensuring greater privacy."
+      },
+      "marketing": {
+        "title": "Marketing/Profiling Cookies",
+        "intro": "These cookies are used to show you relevant advertisements and measure the effectiveness of advertising campaigns.",
+        "browserId": "Identifies browser for advertising",
+        "clickTracking": "Tracks clicks from Facebook",
+        "adsMeasurement": "Advertising and measurement",
+        "conversions": "Advertising conversions",
+        "personalizedAds": "Personalized advertising",
+        "cookieSupport": "Cookie support verification"
+      },
+      "thirdParty": {
+        "title": "Third-Party Cookies (Embedded Content)",
+        "intro": "When we embed content from external services, they may set their own cookies.",
+        "youtube": {
+          "bandwidth": "Bandwidth estimation",
+          "session": "Video session",
+          "geo": "Geolocation",
+          "note": "When possible, we embed YouTube videos in \"privacy enhanced\" mode (youtube-nocookie.com) to limit tracking."
+        },
+        "maps": {
+          "preferences": "Preferences and statistics",
+          "stats": "Statistics"
+        },
+        "social": {
+          "title": "Social Widgets",
+          "desc": "Social sharing buttons may set cookies to track your activity. These are loaded only after your consent."
+        }
+      }
+    },
+    "section4": {
+      "title": "Legal Basis",
+      "table": {
+        "type": "Type",
+        "legalBasis": "Legal basis"
+      },
+      "types": {
+        "technical": "Technical cookies",
+        "analytics": "Analytics cookies",
+        "marketing": "Marketing cookies",
+        "thirdParty": "Third-party cookies"
+      },
+      "basis": {
+        "legitimate": "Legitimate interest (Art. 6.1.f GDPR) - necessary for operation",
+        "consent": "Consent (Art. 6.1.a GDPR)"
+      }
+    },
+    "section5": {
+      "title": "Managing Cookie Preferences",
+      "banner": {
+        "title": "Cookie Banner",
+        "intro": "On your first visit to the site, you will be shown a banner that allows you to:",
+        "acceptAll": "Accept all cookies",
+        "reject": "Reject non-essential cookies",
+        "customize": "Customize your choices by category",
+        "modify": "You can change your preferences at any time by clicking the \"Manage Cookies\" link in the site footer."
+      },
+      "browser": {
+        "title": "Browser Settings",
+        "intro": "You can also manage cookies through your browser settings:",
+        "guide": "Guide",
+        "manageCookies": "Manage cookies",
+        "cookiesData": "Cookies and site data",
+        "cookiesEdge": "Cookies in Microsoft Edge",
+        "warning": "Warning",
+        "warningText": "Disabling all cookies may compromise the functionality of some parts of the site."
+      },
+      "optout": {
+        "title": "Specific Opt-outs",
+        "intro": "You can disable tracking for specific services:",
+        "service": "Service",
+        "link": "Opt-out Link"
+      }
+    },
+    "section6": {
+      "title": "Data Transfer",
+      "intro": "Some third-party cookies involve the transfer of data to countries outside the European Union, particularly the United States.",
+      "basedOn": "For these transfers we rely on:",
+      "scc": "Standard contractual clauses",
+      "measures": "Supplementary security measures",
+      "moreInfo": "For more information, see our"
+    },
+    "section7": {
+      "title": "Retention Period",
+      "content": "Each cookie has a specific duration indicated in the tables above. Session cookies are deleted when the browser is closed, while persistent cookies remain on the device for the indicated period or until manually deleted."
+    },
+    "section8": {
+      "title": "Your Rights",
+      "intro": "You have the right to:",
+      "rights": {
+        "informed": "Be informed about the cookies used",
+        "accept": "Accept or reject non-essential cookies",
+        "modify": "Change your preferences at any time",
+        "request": "Request information about data collected through cookies"
+      },
+      "moreInfo": "To exercise your rights, see the dedicated section in our",
+      "orContact": "or contact us at"
+    },
+    "section9": {
+      "title": "Updates",
+      "content1": "This Cookie Policy may be updated periodically to reflect changes to the cookies used or applicable regulations.",
+      "content2": "The date of the last modification is indicated at the beginning of the document. We invite you to periodically consult this page."
+    },
+    "section10": {
+      "title": "Contacts",
+      "intro": "For questions about the Cookie Policy:"
+    },
+    "footer": "This Cookie Policy is drafted in compliance with Regulation (EU) 2016/679 (GDPR), Directive 2002/58/EC (ePrivacy), and the Italian Data Protection Authority's provision of May 8, 2014."
+  },
+  "cookieConsent": {
+    "title": "We use cookies",
+    "description": "This site uses technical cookies necessary for operation and, with your consent, analytics and marketing cookies to improve your experience.",
+    "moreInfo": "More information",
+    "necessary": "Necessary cookies",
+    "necessaryDesc": "Essential for the website to function. They cannot be disabled.",
+    "analytics": "Analytics cookies",
+    "analyticsDesc": "Help us understand how you use the site to improve it.",
+    "marketing": "Marketing cookies",
+    "marketingDesc": "Used to show you ads relevant to your interests.",
+    "acceptAll": "Accept all",
+    "rejectAll": "Reject",
+    "customize": "Customize",
+    "hideSettings": "Hide settings",
+    "save": "Save preferences",
+    "alwaysOn": "Always on",
+    "manageCookies": "Manage cookies"
+  },
+  "termsConditions": {
+    "metaTitle": "Terms and Conditions of Service",
+    "metaDescription": "Pixarts terms and conditions of service. Information about services offered, prices, guarantees, intellectual property and contractual provisions.",
+    "title": "Terms and Conditions of Service",
+    "lastUpdate": "Last modified",
+    "section1": {
+      "title": "Premises and Definitions",
+      "identification": {
+        "title": "Provider Identification",
+        "intro": "These Terms and Conditions govern the provision of services by:",
+        "operatingAs": "Operating under the trade name",
+        "address": "Registered office",
+        "website": "Website"
+      },
+      "definitions": {
+        "title": "Definitions",
+        "client": "Client",
+        "clientDesc": "the natural or legal person who requests and/or purchases the Services",
+        "services": "Services",
+        "servicesDesc": "web design, web development and related services offered by Pixarts",
+        "project": "Project",
+        "projectDesc": "the set of activities agreed upon for the creation of a website or other digital solution",
+        "deliverable": "Deliverable",
+        "deliverableDesc": "materials, files and products delivered to the Client",
+        "briefing": "Briefing",
+        "briefingDesc": "the requirements gathering and project definition phase"
+      }
+    },
+    "section2": {
+      "title": "Subject of the Contract",
+      "offered": {
+        "title": "Services Offered",
+        "intro": "Pixarts offers the following professional services:",
+        "landing": "single web pages optimized for conversion (delivery in 7 days)",
+        "businessSite": "Business Websites",
+        "businessDesc": "professional multi-page websites (delivery in 10 days)",
+        "ecommerce": "platforms for online sales and bookings (delivery in 14 days)",
+        "maintenance": "Maintenance and Support",
+        "maintenanceDesc": "monthly ongoing support plans"
+      },
+      "exclusions": {
+        "title": "Exclusions",
+        "intro": "Unless otherwise agreed in writing, Services do NOT include:",
+        "copywriting": "Content creation (copywriting)",
+        "photo": "Photography services or video production",
+        "ads": "Advertising campaigns and social media management",
+        "domains": "Domain registration (assistance included, cost borne by Client)",
+        "hosting": "Hosting (assistance in selection included, cost borne by Client)",
+        "translations": "Translations into foreign languages"
+      }
+    },
+    "section3": {
+      "title": "Work Process",
+      "phases": {
+        "title": "Project Phases",
+        "intro": "Each project follows a structured process:",
+        "day": "Day",
+        "briefingDesc": "Requirements gathering, goal definition and contract signing",
+        "designDesc": "Mockup creation, presentation and design approval",
+        "development": "Development",
+        "developmentDesc": "Coding, feature implementation",
+        "launch": "Launch",
+        "launchDesc": "Testing, final revisions and publication",
+        "note": "The times indicated refer to the \"Business Website\" plan and may vary depending on the project type."
+      },
+      "communication": {
+        "title": "Communication",
+        "email": "Official communications take place via email",
+        "updates": "The Client will receive regular updates on project status",
+        "response": "Pixarts commits to responding within 24 business hours"
+      },
+      "approvals": {
+        "title": "Approvals",
+        "design": "The Client will be able to approve the design before development",
+        "changes": "Substantial changes after approval may incur additional costs",
+        "tacit": "Absence of feedback within 5 business days is equivalent to tacit approval"
+      }
+    },
+    "section4": {
+      "title": "Client Obligations",
+      "materials": {
+        "title": "Material Provision",
+        "intro": "The Client agrees to provide promptly:",
+        "logo": "Logo and existing graphic materials",
+        "texts": "Texts and content for the site",
+        "images": "Images and media (or authorization to purchase from stock)",
+        "credentials": "Necessary access credentials (hosting, domains, etc.)",
+        "feedback": "Feedback and approvals within agreed timeframes"
+      },
+      "responsibility": {
+        "title": "Content Responsibility",
+        "intro": "The Client guarantees that:",
+        "rights": "Materials provided do not violate third-party rights (copyright, trademarks, privacy)",
+        "truthful": "Content is truthful and not misleading",
+        "usage": "Has the necessary rights for the use of all materials provided",
+        "disclaimer": "Pixarts will not be responsible for content provided by the Client that violates current regulations or third-party rights."
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "intro": "The Client agrees to:",
+        "referent": "Designate a single point of contact for the project",
+        "participate": "Actively participate in the briefing phase",
+        "respond": "Respond to requests within reasonable timeframes",
+        "communicate": "Promptly communicate any problems or changes"
+      }
+    },
+    "section5": {
+      "title": "Prices and Payments",
+      "priceList": {
+        "title": "Price List",
+        "service": "Service",
+        "price": "Price",
+        "delivery": "Delivery",
+        "days": "days",
+        "businessSite": "Business Website",
+        "monthlyMaintenance": "Monthly Maintenance",
+        "month": "month",
+        "continuous": "Ongoing",
+        "note": "Prices are indicative and subject to customized quote."
+      },
+      "paymentTerms": {
+        "title": "Payment Terms",
+        "intro": "Payment is made as follows:",
+        "atOrder": "at order",
+        "atOrderDesc": "to be paid at contract signing",
+        "atDelivery": "at delivery",
+        "atDeliveryDesc": "to be paid before publication"
+      },
+      "paymentMethods": {
+        "title": "Accepted Payment Methods",
+        "bankTransfer": "Bank transfer",
+        "card": "Credit/debit card (via Stripe)",
+        "secure": "secure online payment"
+      },
+      "invoicing": {
+        "title": "Invoicing",
+        "regular": "Pixarts issues a regular invoice for each payment",
+        "electronic": "Invoices are issued in electronic format",
+        "vat": "Prices shown are exclusive of VAT, where applicable"
+      },
+      "latePayment": {
+        "title": "Late Payments",
+        "intro": "In case of late payments:",
+        "suspend": "Pixarts reserves the right to suspend work",
+        "interest": "Late payment interest may be applied according to current regulations",
+        "noPublish": "The site will not be published until full payment"
+      }
+    },
+    "section6": {
+      "title": "Pixarts Guarantees",
+      "delivery": {
+        "title": "Delivery Guarantee",
+        "intro": "We commit to meeting agreed timelines. In case of delay attributable to Pixarts:",
+        "discount": "10% discount for each day of delay",
+        "discountDesc": "on the total project price",
+        "maxDiscount": "Applicable up to a maximum of 30% of the project value",
+        "notApplicable": "Not applicable in case of delays caused by the Client"
+      },
+      "satisfaction": {
+        "title": "Satisfaction or Money Back Guarantee",
+        "intro": "We offer a full refund guarantee:",
+        "refund": "100% refund within 7 days",
+        "refundDesc": "from delivery of the first mockup",
+        "applicable": "Applicable if the Client is not satisfied with the creative direction",
+        "written": "The Client must communicate the reasons for dissatisfaction in writing",
+        "notAfter": "Not applicable after design approval"
+      },
+      "revisions": {
+        "title": "Revisions and Support Guarantee",
+        "intro": "Each project includes:",
+        "unlimited": "Unlimited revisions",
+        "unlimitedDesc": "during the design phase (before approval)",
+        "twoRounds": "2 rounds of revisions",
+        "twoRoundsDesc": "after design approval",
+        "support": "30 days of support",
+        "supportDesc": "free from publication",
+        "bugs": "Bug and malfunction fixes at no additional cost"
+      },
+      "exclusions": {
+        "title": "Exclusions from Guarantees",
+        "intro": "Guarantees do not apply in case of:",
+        "clientDelay": "Delays caused by lack of Client cooperation",
+        "majorChanges": "Requests for substantial changes after approval",
+        "thirdParty": "Problems arising from third-party services (hosting, domains, etc.)",
+        "unauthorized": "Damage caused by unauthorized interventions on the site"
+      }
+    },
+    "section7": {
+      "title": "Intellectual Property",
+      "clientMaterials": {
+        "title": "Client Materials",
+        "intro": "The Client maintains full ownership of:",
+        "logo": "Pre-existing logo and visual identity",
+        "content": "Text content and media provided",
+        "data": "Business data and information"
+      },
+      "deliverables": {
+        "title": "Project Deliverables",
+        "intro": "Upon full payment, the Client acquires:",
+        "code": "Full ownership of developed source code",
+        "design": "Unlimited usage rights on created design",
+        "licenses": "Licenses for fonts, stock images and components included in the project"
+      },
+      "portfolio": {
+        "title": "Portfolio and References",
+        "intro": "Unless otherwise agreed in writing, Pixarts reserves the right to:",
+        "include": "Include the project in its portfolio",
+        "cite": "Cite the Client as a reference",
+        "screenshots": "Use project screenshots for promotional purposes",
+        "removal": "The Client may request removal from the portfolio at any time."
+      },
+      "tools": {
+        "title": "Tools and Methodologies",
+        "intro": "Pixarts maintains ownership of:",
+        "methodologies": "Work methodologies and processes",
+        "libraries": "Reusable code and proprietary libraries",
+        "knowhow": "Know-how and developed competencies"
+      }
+    },
+    "section8": {
+      "title": "Liability and Limitations",
+      "pixartsResp": {
+        "title": "Pixarts Liability",
+        "intro": "Pixarts is responsible for:",
+        "professional": "Professional execution of agreed Services",
+        "timing": "Meeting timelines (except for causes not attributable)",
+        "defects": "Correction of reported defects and malfunctions",
+        "specs": "Compliance with agreed technical specifications"
+      },
+      "limitation": {
+        "title": "Limitation of Liability",
+        "intro": "Pixarts is NOT responsible for:",
+        "indirect": "Indirect, incidental or consequential damages",
+        "profits": "Loss of profits, data or business opportunities",
+        "thirdParty": "Third-party service malfunctions",
+        "misuse": "Damage from improper use of the site",
+        "results": "Commercial results of the site (sales, conversions, etc.)",
+        "maxLiability": "Pixarts' maximum liability is limited to the amount actually paid by the Client for the Service in question."
+      },
+      "forceMajeure": {
+        "title": "Force Majeure",
+        "desc": "Neither party shall be liable for delays or failures caused by force majeure events, including: natural disasters, wars, pandemics, essential service interruptions, government measures."
+      }
+    },
+    "section9": {
+      "title": "Confidentiality",
+      "confidential": {
+        "title": "Confidential Information",
+        "intro": "Both parties agree to keep confidential:",
+        "commercial": "Commercial and strategic information",
+        "technical": "Technical data and project documentation",
+        "economic": "Agreed economic conditions",
+        "marked": "Any information expressly indicated as confidential"
+      },
+      "duration": {
+        "title": "Duration",
+        "desc": "The confidentiality obligation remains for 2 years from the end of the contractual relationship."
+      },
+      "exceptions": {
+        "title": "Exceptions",
+        "intro": "The confidentiality obligation does not apply to information:",
+        "public": "Already in the public domain",
+        "thirdParty": "Legitimately obtained from third parties",
+        "authorities": "Requested by competent authorities"
+      }
+    },
+    "section10": {
+      "title": "Termination and Withdrawal",
+      "clientWithdrawal": {
+        "title": "Client Withdrawal",
+        "intro": "The Client may withdraw from the contract at any time, with the following consequences:",
+        "moment": "Withdrawal moment",
+        "consequences": "Consequences",
+        "beforeStart": "Before work begins",
+        "refund100": "100% deposit refund",
+        "duringBriefing": "During briefing phase",
+        "refund80": "80% deposit refund",
+        "duringDesign": "During design phase (before approval)",
+        "refund50": "50% deposit refund",
+        "afterApproval": "After design approval",
+        "noRefund": "No refund"
+      },
+      "pixartsWithdrawal": {
+        "title": "Pixarts Withdrawal",
+        "intro": "Pixarts may withdraw from the contract in case of:",
+        "nonPayment": "Non-payment beyond 30 days from due date",
+        "nonCollaborative": "Non-collaborative behavior by the Client",
+        "illegal": "Requests contrary to law or professional ethics",
+        "impossibility": "Subsequent impossibility of performing the Service",
+        "noRefund": "In case of Pixarts withdrawal due to causes attributable to the Client, the deposit will not be refunded."
+      },
+      "termination": {
+        "title": "Termination for Breach",
+        "desc": "Either party may terminate the contract for serious breach by the other, subject to written notice with a 15-day period to remedy."
+      }
+    },
+    "section11": {
+      "title": "Final Provisions",
+      "applicableLaw": {
+        "title": "Applicable Law",
+        "desc": "This contract is governed by the law of the Czech Republic."
+      },
+      "jurisdiction": {
+        "title": "Jurisdiction",
+        "desc": "For any dispute arising from this contract, the Court of Prague (Czech Republic) shall have exclusive jurisdiction.",
+        "amicable": "The parties agree to attempt an amicable resolution before taking legal action."
+      },
+      "severability": {
+        "title": "Severability Clause",
+        "desc": "If one or more clauses of these Terms should be null or ineffective, the remaining clauses shall remain fully valid and effective."
+      },
+      "modifications": {
+        "title": "Modifications",
+        "desc": "Pixarts reserves the right to modify these Terms and Conditions. Changes will be communicated through publication on the site and, for clients with ongoing contracts, via email.",
+        "existing": "Modifications do not apply to contracts already signed, unless otherwise agreed."
+      },
+      "communications": {
+        "title": "Communications",
+        "desc": "All communications relating to the contract must be sent to:"
+      },
+      "entireAgreement": {
+        "title": "Entire Agreement",
+        "desc": "These Terms and Conditions, together with the specific quote/contract signed, constitute the entire agreement between the parties, replacing any prior verbal or written understanding."
+      }
+    },
+    "section12": {
+      "title": "Acceptance",
+      "intro": "Use of Pixarts Services implies full acceptance of these Terms and Conditions.",
+      "acceptance": "For specific projects, acceptance occurs through:",
+      "methods": {
+        "signature": "Signature of quote/contract",
+        "payment": "Payment of deposit",
+        "email": "Written confirmation via email"
+      }
+    },
+    "footer": "Terms and Conditions drafted in compliance with European and Czech regulations on B2B contracts and consumer protection."
+  },
+  "booking": {
+    "metaTitle": "Book a Free Call - Pixarts",
+    "metaDescription": "Book a free 1-hour Briefing Call with Pixarts. We'll discuss your web project and provide you with a personalized proposal.",
+    "badge": "Free Briefing Call",
+    "title": "Book a Call",
+    "subtitle": "Choose a date and time for a free 1-hour call. We'll talk about your project and you'll receive a personalized proposal within 24 hours.",
+    "features": {
+      "flexible": "Flexible Hours",
+      "flexibleDesc": "Choose the day and time that suits you",
+      "online": "100% Online",
+      "onlineDesc": "Call via Google Meet, convenient from anywhere",
+      "duration": "Full 1 Hour",
+      "durationDesc": "Dedicated time to analyze your project",
+      "free": "Completely Free",
+      "freeDesc": "No commitment, receive proposal in 24h"
+    },
+    "steps": {
+      "date": "Date",
+      "time": "Time",
+      "form": "Info",
+      "confirm": "Confirm"
+    },
+    "summary": {
+      "title": "Summary",
+      "selectedDate": "Selected date",
+      "selectedTime": "Selected time",
+      "yourInfo": "Your info",
+      "notSelected": "Not selected"
+    },
+    "dateStep": {
+      "title": "Select a date",
+      "next": "Continue"
+    },
+    "timeStep": {
+      "title": "Select a time",
+      "back": "Back",
+      "next": "Continue"
+    },
+    "formStep": {
+      "title": "Your information",
+      "back": "Back"
+    },
+    "slots": {
+      "loading": "Loading available times...",
+      "noSlots": "No times available for this date",
+      "selectTime": "Select an available time:"
+    },
+    "form": {
+      "nome": "First Name",
+      "nomePlaceholder": "John",
+      "cognome": "Last Name",
+      "cognomePlaceholder": "Doe",
+      "email": "Email",
+      "emailPlaceholder": "john.doe@company.com",
+      "telefono": "Phone",
+      "telefonoPlaceholder": "+1 234 567 8900",
+      "azienda": "Company",
+      "aziendaPlaceholder": "Company name (optional)",
+      "ruolo": "Role",
+      "ruoloPlaceholder": "Your role (optional)",
+      "messaggio": "Message",
+      "messaggioPlaceholder": "Tell us briefly about your project...",
+      "messaggioHelper": "Optional: help us prepare for the call",
+      "privacy": "I accept the",
+      "privacyLink": "Privacy Policy",
+      "submit": "Confirm Booking",
+      "submitting": "Booking in progress..."
+    },
+    "validation": {
+      "nomeMin": "First name must be at least 2 characters",
+      "nomeMax": "First name cannot exceed 50 characters",
+      "cognomeMin": "Last name must be at least 2 characters",
+      "cognomeMax": "Last name cannot exceed 50 characters",
+      "emailInvalid": "Enter a valid email address",
+      "telefonoInvalid": "Enter a valid phone number",
+      "aziendaMax": "Company name cannot exceed 100 characters",
+      "ruoloMax": "Role cannot exceed 50 characters",
+      "messaggioMax": "Message cannot exceed 1000 characters",
+      "privacyRequired": "You must accept the Privacy Policy"
+    },
+    "info": {
+      "title": "Call info",
+      "duration": "Duration: 1 hour",
+      "free": "Completely free",
+      "googleMeet": "Via Google Meet"
+    },
+    "confirmation": {
+      "title": "Booking Confirmed!",
+      "subtitle": "Thank you {nome}, your call has been successfully booked.",
+      "dateLabel": "Date",
+      "timeLabel": "Time",
+      "durationLabel": "Duration",
+      "durationValue": "1 hour",
+      "whereLabel": "Where",
+      "whereValue": "Google Meet",
+      "meetButton": "Open Google Meet",
+      "calendarNote": "You will receive a confirmation email with all details and calendar invite.",
+      "whatNext": "What happens now?",
+      "whatNextItems": [
+        "You will receive a confirmation email with Google Meet link",
+        "We will send you a Google Calendar invite",
+        "Prepare to tell us about your project",
+        "Within 24h of the call you will receive the personalized proposal"
+      ],
+      "backHome": "Back to Home"
+    }
+  },
+  "gdprRequest": {
+    "metaTitle": "Exercise GDPR Rights - Pixarts",
+    "metaDescription": "Exercise your privacy rights under GDPR. Request access, rectification, deletion or portability of your personal data.",
+    "badge": "GDPR Art. 12-23",
+    "title": "Exercise Privacy Rights",
+    "subtitle": "Fill out the form to exercise your rights under EU Regulation 2016/679 (GDPR). We will respond within 30 days of receipt.",
+    "features": {
+      "secure": "Secure Transmission",
+      "secureDesc": "Your data is protected with SSL encryption",
+      "response": "Response in 30 days",
+      "responseDesc": "We will process your request within legal deadlines",
+      "privacy": "Privacy Guaranteed",
+      "privacyDesc": "Data is only processed to handle your request",
+      "confirmation": "Email Confirmation",
+      "confirmationDesc": "You will receive confirmation with case number"
+    },
+    "section1": {
+      "title": "Your details"
+    },
+    "section2": {
+      "title": "Request type"
+    },
+    "section3": {
+      "title": "Additional details"
+    },
+    "section4": {
+      "title": "Declarations"
+    },
+    "form": {
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "John Smith",
+      "email": "Contact Email",
+      "emailPlaceholder": "john.smith@email.com",
+      "phone": "Phone (optional)",
+      "phonePlaceholder": "+1 555 123 4567",
+      "details": "Request Details",
+      "detailsPlaceholder": "Describe your request in detail...",
+      "detailsHelper": "Optional: provide specific details to help us process your request.",
+      "emailUsed": "Email used to contact us",
+      "emailUsedPlaceholder": "If different from contact email",
+      "emailUsedHelper": "If you used a different email in previous contacts with us.",
+      "confirmIdentity": "I declare that I am the owner of the personal data subject to this request or am legally authorized to act on their behalf.",
+      "confirmTruthful": "I declare that the information provided is truthful and complete.",
+      "privacyAccepted": "I have read and accept the",
+      "privacyLink": "Privacy Policy"
+    },
+    "requestTypes": {
+      "access": "Right of Access",
+      "accessDesc": "Obtain confirmation and copy of your personal data",
+      "rectification": "Right to Rectification",
+      "rectificationDesc": "Correct inaccurate or incomplete data",
+      "erasure": "Right to Erasure",
+      "erasureDesc": "Request deletion of your data",
+      "restriction": "Right to Restriction",
+      "restrictionDesc": "Restrict processing under certain circumstances",
+      "portability": "Right to Portability",
+      "portabilityDesc": "Receive your data in a structured format",
+      "objection": "Right to Object",
+      "objectionDesc": "Object to processing for legitimate reasons",
+      "consentWithdrawal": "Withdraw Consent",
+      "consentWithdrawalDesc": "Withdraw previously given consents"
+    },
+    "validation": {
+      "fullNameMin": "Name must contain at least 2 characters",
+      "fullNameMax": "Name cannot exceed 100 characters",
+      "emailInvalid": "Enter a valid email address",
+      "phoneInvalid": "Enter a valid phone number",
+      "requestTypeRequired": "Select the request type",
+      "detailsMax": "Details cannot exceed 1000 characters",
+      "confirmIdentityRequired": "You must confirm your identity",
+      "confirmTruthfulRequired": "You must confirm the truthfulness of information",
+      "privacyRequired": "You must accept the Privacy Policy"
+    },
+    "submit": "Submit Request",
+    "submitting": "Submitting...",
+    "successTitle": "Request Submitted",
+    "successMessage": "Your request #{requestId} has been successfully submitted.",
+    "successEmailNote": "You will receive confirmation at {email}.",
+    "backToHome": "Back to Home",
+    "errorMessage": "An error occurred while sending the request. Please try again or contact us directly.",
+    "sidebar": {
+      "infoTitle": "Information",
+      "infoText1": "Under GDPR you have the right to control how your personal data is processed.",
+      "infoText2": "We will process your request within 30 days. In complex cases, the deadline may be extended by 60 days, with prior notice.",
+      "rightsTitle": "Your Rights",
+      "rightAccess": "Right of access to data",
+      "rightRectification": "Right to rectification",
+      "rightErasure": "Right to erasure",
+      "rightRestriction": "Right to restriction",
+      "rightPortability": "Right to portability",
+      "rightObjection": "Right to object",
+      "contactTitle": "Have questions?",
+      "contactText": "For any clarification you can contact us:"
+    }
+  },
+  "portfolioPage": {
+    "metaTitle": "Portfolio - Web Projects by Pixarts",
+    "metaDescription": "Discover web projects created by Pixarts: business websites, landing pages, web apps and SaaS platforms. Case studies with real results.",
+    "badge": "Portfolio",
+    "title": "Our",
+    "titleHighlight": "Projects",
+    "description": "Discover how we've helped our clients grow online with custom web solutions",
+    "backToHome": "Back to Home",
+    "viewDetails": "View details",
+    "close": "Close",
+    "previousImage": "Previous image",
+    "nextImage": "Next image",
+    "image": "Image",
+    "services": "Services",
+    "results": "Results",
+    "technologies": "Technologies",
+    "integrations": "Integrations",
+    "visitSite": "Visit website",
+    "theProject": "The Project",
+    "previousProject": "Previous",
+    "nextProject": "Next",
+    "ctaTitle": "Want similar results?",
+    "ctaDescription": "Let's talk about how we can help your business grow online.",
+    "ctaButton": "Let's discuss your project",
+    "filters": {
+      "all": "All",
+      "webapp": "Web App",
+      "saas": "SaaS",
+      "b2b-automation": "B2B",
+      "landing-page": "Landing",
+      "business-website": "Business",
+      "restaurant": "Restaurant"
+    },
+    "viewProject": "View project",
+    "noProjects": "No projects found in this category",
+    "statsProjects": "{count} projects",
+    "statsSectors": "{count} sectors",
+    "statsConversion": "+180% avg conversion",
+    "heroStatLine": "{projects} projects \u00b7 {sectors} sectors \u00b7 +180% avg conversion",
+    "ctaSectionTitle": "Like what you see?",
+    "ctaSectionDescription": "Every project starts with a concrete goal. Tell us yours and let\u2019s design the solution together.",
+    "ctaSectionButton": "Let\u2019s discuss your project",
+    "ctaSectionBook": "Book a free call",
+    "categories": {
+      "webapp": "Web App",
+      "saas": "SaaS Platform",
+      "b2b-automation": "B2B Automation",
+      "landing-page": "Landing Page",
+      "business-website": "Business Website",
+      "restaurant": "Restaurant"
+    },
+    "projects": {
+      "singleflo": {
+        "client": "SingleFlo",
+        "subtitle": "All-in-One ERP Platform with AI",
+        "description": "SingleFlo is revolutionizing how European SMEs manage their business. We created a landing page that effectively communicates the power of this Odoo 18-based ERP platform: CRM, sales, manufacturing, invoicing and customer support unified with integrated artificial intelligence. The design highlights the key promise - 48-hour setup - through a visual journey guiding visitors from feature discovery to demo request. 98/100 Performance Score and perfect SEO Score ensure visibility and speed.",
+        "services": {
+          "webDesign": { "name": "Web Design", "detail": "Enterprise design with GPU-accelerated animations and micro-interactions" },
+          "seo": { "name": "SEO", "detail": "Perfect technical SEO: green Core Web Vitals, complete schema markup, dynamic sitemap" }
+        },
+        "results": {
+          "performance": { "value": "98", "label": "Performance Score", "suffix": "/100" },
+          "seoScore": { "value": "100", "label": "SEO Score", "suffix": "/100" }
+        }
+      },
+      "biemme": {
+        "client": "Biemme 2 S.r.l.",
+        "subtitle": "Construction Company Website",
+        "description": "Biemme 2 is a construction company with over 30 years of history and 200+ apartments built. Their previous website didn't reflect this solidity. We designed a digital presence to match: corporate design with a burgundy palette that conveys reliability, project portfolio with immersive galleries, and strong local SEO optimization positioning them at the top of 'construction company' searches in their area. ISO 9001 and SOA certifications are now showcased as trust elements, converting visitors into concrete quote requests.",
+        "services": {
+          "webDesign": { "name": "Web Design", "detail": "Authoritative corporate design with project portfolio and full-screen galleries" },
+          "seo": { "name": "SEO", "detail": "Advanced Local SEO: optimized Google Business, LocalBusiness schema, NAP citations" }
+        },
+        "results": {
+          "visibility": { "value": "+150", "label": "local visibility", "suffix": "%" },
+          "contacts": { "value": "+80", "label": "quote requests", "suffix": "%" }
+        }
+      },
+      "ichnusa": {
+        "client": "Ichnusa Botega & Bistro",
+        "subtitle": "Website for Sardinian Restaurant in Prague",
+        "description": "Ichnusa Botega & Bistro is an authentic Sardinian restaurant in the heart of Malá Strana, Prague. We built a trilingual website (IT/EN/CS) that captures the essence of Sardinian cuisine: from porceddu to culurgiones, fresh seafood to Cannonau wines. The site integrates online reservation via DISH.co, interactive menu with categories, live Google Reviews (4.7/5 with 497 reviews), private events section and newsletter. Local SEO optimized to rank the restaurant in Prague searches, with Restaurant schema markup and hreflang for three languages.",
+        "services": {
+          "webDesign": { "name": "Web Design", "detail": "Elegant design with full-screen hero, interactive menu and photo gallery" },
+          "seo": { "name": "Local SEO", "detail": "Restaurant schema, Google Business, trilingual hreflang, Prague local keywords" },
+          "i18n": { "name": "Multilingual", "detail": "Full website in Italian, English and Czech with next-intl" }
+        },
+        "results": {
+          "reviews": { "value": "4.7", "label": "Google Reviews", "suffix": "/5" },
+          "visibility": { "value": "+150", "label": "local visibility", "suffix": "%" },
+          "performance": { "value": "95", "label": "Performance Score", "suffix": "/100" }
+        }
+      }
+    }
+  },
+  "portfolioShowcase": {
+    "badge": "Portfolio",
+    "title": "Our best projects",
+    "description": "Real results for real clients",
+    "cta": "View all projects",
+    "categories": {
+      "webapp": "Web App",
+      "business-website": "Business Website",
+      "landing-page": "Landing Page"
+    },
+    "projects": {
+      "quickfy-app": {
+        "subtitle": "Analytics Dashboard & AI Automations"
+      },
+      "fl1": {
+        "subtitle": "Business Website with AI Chatbot"
+      },
+      "singleflo": {
+        "subtitle": "All-in-One ERP Platform"
+      }
+    }
+  },
+  "portfolioCta": {
+    "badge": "Completed Projects",
+    "title": "Discover all our",
+    "titleHighlight": "projects",
+    "description": "Take a look at complete case studies and discover how we helped our clients achieve their goals.",
+    "ctaPrimary": "View Portfolio",
+    "trust1": "7+ Projects completed",
+    "trust2": "Satisfied clients",
+    "trust3": "Measurable results"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "heading": "Oops!",
+    "description": "An unexpected error occurred. Our team has been notified and we're working to fix the issue.",
+    "retry": "Try again",
+    "backHome": "Back to Home",
+    "details": "Technical details",
+    "code": "Error code"
+  },
+  "notFound": {
+    "heading": "404",
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "suggestion": "Maybe you were looking for:",
+    "backHome": "Back to Home",
+    "explore": "Explore the site",
+    "popularPages": {
+      "portfolio": "Portfolio",
+      "pricing": "Pricing",
+      "contact": "Contact"
+    }
+  },
+  "loading": {
+    "text": "Loading...",
+    "preparing": "Preparing content"
+  }
+}

@@ -1,0 +1,333 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Colors */
+    --bg-primary: #0A0A0B;
+    --bg-surface: #141415;
+    --bg-elevated: #1C1C1E;
+    --border: #2A2A2D;
+    --text-primary: #FFFFFF;
+    --text-secondary: #B0B0B5; /* Increased from #A1A1A6 for WCAG AA contrast 4.5:1 */
+    --text-muted: #8A8A8F; /* Increased from #6B6B70 for WCAG AA contrast 4.5:1 */
+    --accent-orange: #FF6B2C;
+    --accent-amber: #FFB347;
+
+    /* Spacing */
+    --spacing-section: 5rem;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 4px 24px rgba(0, 0, 0, 0.2);
+    --shadow-glow: 0 0 24px rgba(255, 107, 44, 0.3);
+
+    /* Glow */
+    --glow-cta: rgba(255, 107, 44, 0.3);
+    --glow-accent: rgba(255, 107, 44, 0.2);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-bg-primary text-text-primary;
+  }
+
+  /* Respect user's motion preferences */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent-orange to-accent-amber bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-md bg-bg-surface/70 border border-white/10;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 py-20 md:py-32;
+  }
+
+  /* Note: Button styles are now in components/ui/button.tsx
+   * These legacy classes are kept for backwards compatibility
+   * but should be avoided in new code - use Button component instead
+   */
+
+  .card {
+    @apply bg-bg-surface border border-border rounded-xl p-6;
+    @apply hover:border-accent-orange/50 hover:-translate-y-1;
+    @apply transition-all duration-300;
+  }
+
+  /* Glass effect for cards - unified background system */
+  .card-glass {
+    @apply bg-bg-surface/60 backdrop-blur-sm border border-border/50 rounded-xl;
+  }
+
+  .card-glass-hover {
+    @apply hover:border-accent-orange/30 hover:bg-bg-surface/80;
+    @apply transition-all duration-300;
+  }
+
+  /* Transparent section for unified background */
+  .section-transparent {
+    @apply bg-transparent;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* ── Gradient border glow effect for portfolio cards ── */
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes border-rotate {
+  to {
+    --border-angle: 360deg;
+  }
+}
+
+.glow-border {
+  --border-radius: 0.75rem; /* rounded-xl */
+  position: relative;
+  border: none !important;
+}
+
+.glow-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: var(--border-radius);
+  padding: 1px;
+  background: conic-gradient(
+    from var(--border-angle),
+    transparent 40%,
+    var(--accent-orange) 50%,
+    var(--accent-amber) 55%,
+    transparent 65%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.glow-border:hover::before,
+.glow-border:focus-visible::before {
+  opacity: 1;
+  animation: border-rotate 3s linear infinite;
+}
+
+/* Glow shadow on hover */
+.glow-border::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 20px rgba(255, 107, 44, 0.15), 0 0 40px rgba(255, 107, 44, 0.05);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.glow-border:hover::after,
+.glow-border:focus-visible::after {
+  opacity: 1;
+}
+
+/* Reduced motion: disable animated border */
+@media (prefers-reduced-motion: reduce) {
+  .glow-border:hover::before,
+  .glow-border:focus-visible::before {
+    animation: none;
+    /* Show static gradient border instead */
+    background: linear-gradient(
+      135deg,
+      var(--accent-orange),
+      var(--accent-amber)
+    );
+  }
+}
+
+/* Hide scrollbar for filter chips mobile */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-orange);
+}
+
+/* Selection */
+::selection {
+  background: rgba(255, 107, 44, 0.3);
+  color: var(--text-primary);
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid var(--accent-orange);
+  outline-offset: 2px;
+}
+
+/* iOS Safari performance fixes */
+@supports (-webkit-touch-callout: none) {
+  /* Force GPU acceleration for animated elements on iOS */
+  .backdrop-blur-sm,
+  .backdrop-blur-md,
+  .backdrop-blur {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  /* Optimize canvas rendering on iOS */
+  canvas {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+/* Glitch effect for error pages */
+@keyframes glitch {
+  0% {
+    text-shadow:
+      0.05em 0 0 rgba(255, 107, 44, 0.75),
+      -0.05em -0.025em 0 rgba(255, 179, 71, 0.75),
+      -0.025em 0.05em 0 rgba(255, 255, 255, 0.75);
+  }
+  14% {
+    text-shadow:
+      0.05em 0 0 rgba(255, 107, 44, 0.75),
+      -0.05em -0.025em 0 rgba(255, 179, 71, 0.75),
+      -0.025em 0.05em 0 rgba(255, 255, 255, 0.75);
+  }
+  15% {
+    text-shadow:
+      -0.05em -0.025em 0 rgba(255, 107, 44, 0.75),
+      0.025em 0.025em 0 rgba(255, 179, 71, 0.75),
+      -0.05em -0.05em 0 rgba(255, 255, 255, 0.75);
+  }
+  49% {
+    text-shadow:
+      -0.05em -0.025em 0 rgba(255, 107, 44, 0.75),
+      0.025em 0.025em 0 rgba(255, 179, 71, 0.75),
+      -0.05em -0.05em 0 rgba(255, 255, 255, 0.75);
+  }
+  50% {
+    text-shadow:
+      0.025em 0.05em 0 rgba(255, 107, 44, 0.75),
+      0.05em 0 0 rgba(255, 179, 71, 0.75),
+      0 -0.05em 0 rgba(255, 255, 255, 0.75);
+  }
+  99% {
+    text-shadow:
+      0.025em 0.05em 0 rgba(255, 107, 44, 0.75),
+      0.05em 0 0 rgba(255, 179, 71, 0.75),
+      0 -0.05em 0 rgba(255, 255, 255, 0.75);
+  }
+  100% {
+    text-shadow:
+      -0.025em 0 0 rgba(255, 107, 44, 0.75),
+      -0.025em -0.025em 0 rgba(255, 179, 71, 0.75),
+      -0.025em -0.05em 0 rgba(255, 255, 255, 0.75);
+  }
+}
+
+.glitch-text {
+  animation: glitch 1s infinite;
+}
+
+/* Reduced motion: disable glitch animation */
+@media (prefers-reduced-motion: reduce) {
+  .glitch-text {
+    animation: none;
+  }
+}
+
+/* Floating animation for 404 page */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float {
+    animation: none;
+  }
+}
+
+/* Star twinkle animation for 404 page */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-twinkle {
+    animation: none;
+    opacity: 0.5;
+  }
+}
