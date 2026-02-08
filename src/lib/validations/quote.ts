@@ -14,6 +14,9 @@ export const quoteFormSchema = z.object({
   azienda: z.string().optional().or(z.literal('')),
   messaggio: z.string().optional().or(z.literal('')),
   privacy: z.boolean().refine((val) => val === true, 'validation.privacyRequired'),
+  // Anti-spam fields
+  _hp: z.string().optional(), // Honeypot - must be empty
+  _ts: z.number().optional(), // Timestamp - form load time
 })
 
 export type QuoteFormValues = z.infer<typeof quoteFormSchema>

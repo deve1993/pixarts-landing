@@ -25,6 +25,8 @@ export function QuoteForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
 
+  const [formLoadTime] = useState(() => Date.now())
+
   const {
     register,
     handleSubmit,
@@ -37,6 +39,8 @@ export function QuoteForm() {
     defaultValues: {
       features: [],
       privacy: false,
+      _hp: '',
+      _ts: Date.now(),
     },
     mode: 'onChange',
   })
@@ -76,7 +80,7 @@ export function QuoteForm() {
       const response = await fetch('/api/quote', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, _ts: formLoadTime }),
       })
 
       if (!response.ok) throw new Error('Failed to submit')
@@ -308,6 +312,12 @@ export function QuoteForm() {
             {/* STEP 5: CONTACT INFO */}
             {currentStep === 'contact' && (
               <div className="space-y-6">
+                {/* Honeypot - CSS hidden, only bots fill this */}
+                <div style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, overflow: 'hidden' }} aria-hidden="true">
+                  <label htmlFor="_hp">Leave empty</label>
+                  <Input {...register('_hp')} id="_hp" tabIndex={-1} autoComplete="off" />
+                </div>
+
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-text-primary mb-2">
