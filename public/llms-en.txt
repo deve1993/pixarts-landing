@@ -1,0 +1,35 @@
+# Pixarts
+
+> Pixarts creates professional websites in 10 days. Modern design, SEO included, satisfaction guarantee. Italian service with English and Czech support.
+
+## Services
+- [Landing Page](/en#pricing): One-page websites optimized for conversion, from €1,200
+- [Business Website](/en#pricing): Multi-page sites with CMS, from €2,500
+- [E-commerce / Booking](/en#pricing): Online shops and booking systems, from €4,000
+- [Portfolio](/en/portfolio): Examples of completed projects
+
+## Main Pages
+- [Home](https://pixarts.eu/en): Service overview, pricing, portfolio, FAQ
+- [Portfolio](https://pixarts.eu/en/portfolio): Completed projects (FlowMatics, Quickfy)
+- [Book a Call](https://pixarts.eu/en/prenota): Free consultation booking system
+- [Privacy Policy](https://pixarts.eu/en/privacy-policy): GDPR privacy notice
+- [Cookie Policy](https://pixarts.eu/en/cookie-policy): Cookie management
+- [GDPR Request](https://pixarts.eu/en/gdpr-request): Exercise GDPR rights
+
+## Features
+- Guaranteed delivery in 10 business days
+- Responsive mobile-first design
+- Technical SEO included in every project
+- Stack: Next.js 15, React 19, Tailwind CSS, TypeScript
+- Hosting on European infrastructure
+- Multilingual support: Italian, English, Czech
+
+## Contact
+- Email: info@pixarts.eu
+- Website: https://pixarts.eu/en
+- Book a free call: https://pixarts.eu/en/prenota
+
+## Available Languages
+- Italiano (default): https://pixarts.eu
+- English: https://pixarts.eu/en
+- Čeština: https://pixarts.eu/cs

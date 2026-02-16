@@ -2,8 +2,13 @@ import { Resend } from 'resend'
 import { render } from '@react-email/components'
 import * as React from 'react'
 
-// Initialize Resend client
-const resend = new Resend(process.env.RESEND_API_KEY)
+let _resend: Resend | null = null
+function getResend(): Resend {
+  if (!_resend) {
+    _resend = new Resend(process.env.RESEND_API_KEY!)
+  }
+  return _resend
+}
 
 // Default email configuration
 const DEFAULT_FROM = process.env.RESEND_FROM_EMAIL || 'noreply@pixarts.eu'
@@ -40,7 +45,7 @@ export async function sendEmail({
       return { success: true, data: { id: 'mock-id' } }
     }
 
-    const { data, error } = await resend.emails.send({
+    const { data, error } = await getResend().emails.send({
       from,
       to: Array.isArray(to) ? to : [to],
       subject,
@@ -87,4 +92,4 @@ export async function renderEmailToHtml(react: React.ReactElement): Promise<stri
   return render(react)
 }
 
-export { resend, DEFAULT_FROM, DEFAULT_TO }
+export { DEFAULT_FROM, DEFAULT_TO }

@@ -62,20 +62,20 @@ function localeUrl(path: string, locale?: string): string {
   return `${baseUrl}/${locale}${path}`
 }
 
-function buildUrlEntry(entry: SitemapEntry): string {
-  const italianUrl = localeUrl(entry.path)
+function buildUrlEntry(entry: SitemapEntry, locale: string): string {
+  const loc = localeUrl(entry.path, locale)
 
   const alternates = locales
     .map(
-      (locale) =>
-        `      <xhtml:link rel="alternate" hreflang="${locale}" href="${localeUrl(entry.path, locale)}" />`
+      (l) =>
+        `      <xhtml:link rel="alternate" hreflang="${l}" href="${localeUrl(entry.path, l)}" />`
     )
     .join('\n')
 
-  const xDefault = `      <xhtml:link rel="alternate" hreflang="x-default" href="${italianUrl}" />`
+  const xDefault = `      <xhtml:link rel="alternate" hreflang="x-default" href="${localeUrl(entry.path, 'it')}" />`
 
   return `  <url>
-    <loc>${italianUrl}</loc>
+    <loc>${loc}</loc>
     <lastmod>${entry.lastModified}</lastmod>
     <changefreq>${entry.changeFrequency}</changefreq>
     <priority>${entry.priority.toFixed(1)}</priority>
@@ -85,7 +85,9 @@ ${xDefault}
 }
 
 function buildSitemap(): string {
-  const urlEntries = pages.map(buildUrlEntry).join('\n')
+  const urlEntries = pages
+    .flatMap((entry) => locales.map((locale) => buildUrlEntry(entry, locale)))
+    .join('\n')
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>

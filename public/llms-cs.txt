@@ -1,0 +1,35 @@
+# Pixarts
+
+> Pixarts vytváří profesionální webové stránky za 10 dní. Moderní design, SEO v ceně, záruka spokojenosti. Italská služba s podporou v angličtině a češtině.
+
+## Služby
+- [Landing Page](/cs#pricing): Jednostránkové weby optimalizované pro konverzi, od 1 200 €
+- [Firemní web](/cs#pricing): Vícestránkové weby s CMS, od 2 500 €
+- [E-shop / Rezervace](/cs#pricing): Online obchody a rezervační systémy, od 4 000 €
+- [Portfolio](/cs/portfolio): Příklady dokončených projektů
+
+## Hlavní stránky
+- [Domů](https://pixarts.eu/cs): Přehled služeb, ceník, portfolio, FAQ
+- [Portfolio](https://pixarts.eu/cs/portfolio): Dokončené projekty (FlowMatics, Quickfy)
+- [Rezervovat hovor](https://pixarts.eu/cs/prenota): Systém rezervace bezplatné konzultace
+- [Zásady ochrany osobních údajů](https://pixarts.eu/cs/privacy-policy): Informace o ochraně osobních údajů dle GDPR
+- [Zásady používání cookies](https://pixarts.eu/cs/cookie-policy): Správa cookies
+- [Žádost GDPR](https://pixarts.eu/cs/gdpr-request): Uplatnění práv dle GDPR
+
+## Funkce
+- Garantované dodání za 10 pracovních dní
+- Responzivní mobile-first design
+- Technické SEO v ceně u každého projektu
+- Stack: Next.js 15, React 19, Tailwind CSS, TypeScript
+- Hosting na evropské infrastruktuře
+- Vícejazyčná podpora: italština, angličtina, čeština
+
+## Kontakt
+- Email: info@pixarts.eu
+- Web: https://pixarts.eu/cs
+- Rezervovat bezplatný hovor: https://pixarts.eu/cs/prenota
+
+## Dostupné jazyky
+- Italiano (výchozí): https://pixarts.eu
+- English: https://pixarts.eu/en
+- Čeština: https://pixarts.eu/cs

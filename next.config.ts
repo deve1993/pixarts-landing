@@ -7,6 +7,7 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts')
 const nextConfig: NextConfig = {
   outputFileTracingRoot: resolve(__dirname),
   devIndicators: false,
+  poweredByHeader: false,
 
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
