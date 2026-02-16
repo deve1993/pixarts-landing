@@ -1,12 +1,12 @@
 {
   "nav": {
     "home": "Domů",
-    "portfolio": "Portfolio",
-    "quote": "Nabídka",
     "services": "Služby",
+    "portfolio": "Portfolio",
+    "contact": "Kontakt",
+    "quote": "Nabídka",
     "process": "Proces",
     "faq": "FAQ",
-    "contact": "Kontakt",
     "book": "Rezervovat",
     "logoAria": "Pixarts - Zpět na úvodní stránku",
     "mainNav": "Hlavní navigace",
@@ -2087,5 +2087,29 @@
         "description": "Ozveme se vám do jednoho pracovního dne s detaily"
       }
     }
+  },
+  "serviziPage": {
+    "metaTitle": "Profesionální webové služby | Pixarts",
+    "metaDescription": "Landing page, firemní weby, e-shopy. Moderní design, dodání za 10 dní, záruka spokojenosti. Prohlédněte si naše balíčky.",
+    "heroTitle": "Naše",
+    "heroHighlight": "služby",
+    "heroSubtitle": "Webová řešení na míru pro vaše podnikání. Od designu po vývoj, od SEO po spuštění.",
+    "ctaTitle": "Připraveni začít?",
+    "ctaSubtitle": "Řekněte nám o svém projektu a do 24 hodin obdržíte nabídku na míru.",
+    "ctaPrimary": "Kontaktujte nás",
+    "ctaSecondary": "Zobrazit portfolio"
+  },
+  "contattiPage": {
+    "metaTitle": "Kontaktujte nás | Pixarts",
+    "metaDescription": "Vyžádejte si bezplatnou nabídku nebo si rezervujte seznamovací hovor. Odpovídáme do 24 hodin.",
+    "heroTitle": "Pojďme se bavit o vašem",
+    "heroHighlight": "projektu",
+    "heroSubtitle": "Vyplňte formulář nebo si zarezervujte bezplatný hovor. Odpovíme do 24 pracovních hodin."
+  },
+  "homeCta": {
+    "title": "Proměňte svůj nápad ve skutečnost",
+    "subtitle": "Zjistěte, co pro vás můžeme udělat, nebo nás kontaktujte přímo.",
+    "primaryLabel": "Prozkoumat služby",
+    "secondaryLabel": "Kontaktujte nás"
   }
 }

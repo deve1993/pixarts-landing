@@ -1,12 +1,12 @@
 {
   "nav": {
     "home": "Home",
-    "portfolio": "Portfolio",
-    "quote": "Quote",
     "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "quote": "Quote",
     "process": "Process",
     "faq": "FAQ",
-    "contact": "Contact Us",
     "book": "Book a Call",
     "logoAria": "Pixarts - Back to home",
     "mainNav": "Main navigation",
@@ -2087,5 +2087,29 @@
         "description": "We'll get back to you within one business day with details"
       }
     }
+  },
+  "serviziPage": {
+    "metaTitle": "Professional Web Services | Pixarts",
+    "metaDescription": "Landing pages, business websites, e-commerce. Modern design, 10-day delivery, satisfaction guarantee. Explore our packages.",
+    "heroTitle": "Our",
+    "heroHighlight": "services",
+    "heroSubtitle": "Tailored web solutions for your business. From design to development, from SEO to launch.",
+    "ctaTitle": "Ready to start?",
+    "ctaSubtitle": "Tell us about your project and receive a custom proposal within 24 hours.",
+    "ctaPrimary": "Contact us",
+    "ctaSecondary": "See portfolio"
+  },
+  "contattiPage": {
+    "metaTitle": "Contact Us | Pixarts",
+    "metaDescription": "Request a free quote or book a discovery call. We respond within 24 hours.",
+    "heroTitle": "Let's talk about your",
+    "heroHighlight": "project",
+    "heroSubtitle": "Fill out the form or book a free call. We'll respond within 24 business hours."
+  },
+  "homeCta": {
+    "title": "Turn your idea into reality",
+    "subtitle": "Discover what we can do for you or get in touch directly.",
+    "primaryLabel": "Explore services",
+    "secondaryLabel": "Contact us"
   }
 }

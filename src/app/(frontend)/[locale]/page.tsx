@@ -1,7 +1,8 @@
-import { setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import dynamic from 'next/dynamic'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { MiniCTA } from '@/components/sections/MiniCTA'
 
 // Above-fold components - loaded immediately
 import { Hero, TrustBadges, SocialProof } from '@/components/sections'
@@ -10,13 +11,7 @@ import { Hero, TrustBadges, SocialProof } from '@/components/sections'
 const Problems = dynamic(() => import('@/components/sections/Problems').then(m => m.Problems))
 const Solution = dynamic(() => import('@/components/sections/Solution').then(m => m.Solution))
 const PortfolioShowcase = dynamic(() => import('@/components/portfolio-v2').then(m => m.PortfolioShowcase))
-const Process = dynamic(() => import('@/components/sections/Process').then(m => m.Process))
-const Capabilities = dynamic(() => import('@/components/sections/Capabilities').then(m => m.Capabilities))
-const Guarantee = dynamic(() => import('@/components/sections/Guarantee').then(m => m.Guarantee))
-const Pricing = dynamic(() => import('@/components/sections/Pricing').then(m => m.Pricing))
 const Testimonials = dynamic(() => import('@/components/sections/Testimonials').then(m => m.Testimonials))
-const FAQ = dynamic(() => import('@/components/sections/FAQ').then(m => m.FAQ))
-const CTAFinal = dynamic(() => import('@/components/sections/CTAFinal').then(m => m.CTAFinal))
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -28,6 +23,8 @@ export default async function Home({ params }: Props) {
   // Enable static rendering
   setRequestLocale(locale)
 
+  const t = await getTranslations({ locale, namespace: 'homeCta' })
+
   return (
     <>
       <Header />
@@ -38,13 +35,15 @@ export default async function Home({ params }: Props) {
         <Problems />
         <Solution />
         <PortfolioShowcase />
-        <Process />
-        <Capabilities />
-        <Guarantee />
-        <Pricing />
         <Testimonials />
-        <FAQ />
-        <CTAFinal />
+        <MiniCTA
+          title={t('title')}
+          subtitle={t('subtitle')}
+          primaryLabel={t('primaryLabel')}
+          primaryHref="/servizi"
+          secondaryLabel={t('secondaryLabel')}
+          secondaryHref="/contatti"
+        />
       </main>
       <Footer />
     </>

@@ -13,10 +13,9 @@ import { cn, scrollToElement } from '@/lib/utils'
 
 const NAV_ITEMS_KEYS = [
   { key: 'home', href: '/', isPage: true },
+  { key: 'services', href: '/servizi', isPage: true },
   { key: 'portfolio', href: '/portfolio', isPage: true },
-  { key: 'services', href: '#pricing', isPage: false },
-  { key: 'quote', href: '/preventivo', isPage: true },
-  { key: 'contact', href: '#contatti', isPage: false },
+  { key: 'contact', href: '/contatti', isPage: true },
 ] as const
 
 export function Header() {

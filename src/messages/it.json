@@ -1,12 +1,12 @@
 {
   "nav": {
     "home": "Home",
-    "portfolio": "Portfolio",
-    "quote": "Preventivo",
     "services": "Servizi",
+    "portfolio": "Portfolio",
+    "contact": "Contatti",
+    "quote": "Preventivo",
     "process": "Processo",
     "faq": "FAQ",
-    "contact": "Contattaci",
     "book": "Prenota",
     "logoAria": "Pixarts - Torna alla home",
     "mainNav": "Navigazione principale",
@@ -2087,5 +2087,29 @@
         "description": "Ti ricontattiamo entro un giorno lavorativo con i dettagli"
       }
     }
+  },
+  "serviziPage": {
+    "metaTitle": "Servizi Web Professionali | Pixarts",
+    "metaDescription": "Landing page, siti aziendali, e-commerce. Design moderno, consegna in 10 giorni, garanzia soddisfazione. Scopri i nostri pacchetti.",
+    "heroTitle": "I nostri",
+    "heroHighlight": "servizi",
+    "heroSubtitle": "Soluzioni web su misura per il tuo business. Dal design allo sviluppo, dalla SEO al lancio.",
+    "ctaTitle": "Pronto a partire?",
+    "ctaSubtitle": "Raccontaci il tuo progetto e ricevi una proposta personalizzata entro 24 ore.",
+    "ctaPrimary": "Contattaci",
+    "ctaSecondary": "Vedi portfolio"
+  },
+  "contattiPage": {
+    "metaTitle": "Contattaci | Pixarts",
+    "metaDescription": "Richiedi un preventivo gratuito o prenota una call conoscitiva. Rispondiamo entro 24 ore.",
+    "heroTitle": "Parliamo del tuo",
+    "heroHighlight": "progetto",
+    "heroSubtitle": "Compila il form o prenota una call gratuita. Ti rispondiamo entro 24 ore lavorative."
+  },
+  "homeCta": {
+    "title": "Trasforma la tua idea in realtà",
+    "subtitle": "Scopri cosa possiamo fare per te oppure contattaci direttamente.",
+    "primaryLabel": "Scopri i servizi",
+    "secondaryLabel": "Contattaci"
   }
 }

@@ -17,8 +17,20 @@ const pages: SitemapEntry[] = [
     lastModified: new Date().toISOString().split('T')[0],
   },
   {
+    path: '/servizi',
+    changeFrequency: 'weekly',
+    priority: 0.9,
+    lastModified: new Date().toISOString().split('T')[0],
+  },
+  {
     path: '/portfolio',
     changeFrequency: 'weekly',
+    priority: 0.8,
+    lastModified: new Date().toISOString().split('T')[0],
+  },
+  {
+    path: '/contatti',
+    changeFrequency: 'monthly',
     priority: 0.8,
     lastModified: new Date().toISOString().split('T')[0],
   },
