@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useInView } from '@/lib/hooks'
 
 interface AnimatedCounterProps {
@@ -17,13 +17,14 @@ export function AnimatedCounter({
   className = '',
 }: AnimatedCounterProps) {
   const [count, setCount] = useState(end)
-  const [hasAnimated, setHasAnimated] = useState(false)
+  const hasAnimatedRef = useRef(false)
   const [ref, inView] = useInView<HTMLSpanElement>({ triggerOnce: true })
 
   useEffect(() => {
-    if (!inView || hasAnimated) return
+    if (!inView || hasAnimatedRef.current) return
+    hasAnimatedRef.current = true
+
     setCount(0)
-    setHasAnimated(true)
 
     let startTime: number
     let animationFrame: number
@@ -45,7 +46,7 @@ export function AnimatedCounter({
 
     animationFrame = requestAnimationFrame(animate)
     return () => cancelAnimationFrame(animationFrame)
-  }, [inView, end, duration, hasAnimated])
+  }, [inView, end, duration])
 
   return (
     <span ref={ref} className={className}>
