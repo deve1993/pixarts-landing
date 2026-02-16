@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { PageHero } from '@/components/sections/PageHero'
+import { FaqStructuredData } from '@/components/StructuredData'
 
 const CTAFinal = dynamic(() => import('@/components/sections/CTAFinal').then(m => m.CTAFinal))
 const FAQ = dynamic(() => import('@/components/sections/FAQ').then(m => m.FAQ))
@@ -38,6 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: 'Pixarts',
       locale: locale,
       type: 'website',
+      images: [{ url: '/og-image.png', width: 1200, height: 630 }],
     },
   }
 }
@@ -50,6 +52,7 @@ export default async function ContattiPage({ params }: Props) {
 
   return (
     <>
+      <FaqStructuredData locale={locale} />
       <Header />
       <main id="main-content">
         <PageHero

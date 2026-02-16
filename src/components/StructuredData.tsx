@@ -9,9 +9,9 @@ const localeContent = {
     inLanguage: 'it-IT',
     breadcrumbs: [
       { name: 'Home', item: 'https://pixarts.eu' },
-      { name: 'Portfolio', item: 'https://pixarts.eu/#portfolio' },
-      { name: 'Servizi', item: 'https://pixarts.eu/#pricing' },
-      { name: 'Contatti', item: 'https://pixarts.eu/#contatti' },
+      { name: 'Servizi', item: 'https://pixarts.eu/servizi' },
+      { name: 'Portfolio', item: 'https://pixarts.eu/portfolio' },
+      { name: 'Contatti', item: 'https://pixarts.eu/contatti' },
     ],
     faqs: [
       { question: 'Quanto tempo ci vuole davvero?', answer: '7-14 giorni lavorativi a seconda della complessità. Landing page 7 giorni, sito aziendale 10 giorni, e-commerce 14 giorni. Con garanzia scritta: sconto 10% per ogni giorno di ritardo.' },
@@ -34,9 +34,9 @@ const localeContent = {
     inLanguage: 'en-US',
     breadcrumbs: [
       { name: 'Home', item: 'https://pixarts.eu/en' },
-      { name: 'Portfolio', item: 'https://pixarts.eu/en#portfolio' },
-      { name: 'Services', item: 'https://pixarts.eu/en#pricing' },
-      { name: 'Contact', item: 'https://pixarts.eu/en#contatti' },
+      { name: 'Services', item: 'https://pixarts.eu/en/servizi' },
+      { name: 'Portfolio', item: 'https://pixarts.eu/en/portfolio' },
+      { name: 'Contact', item: 'https://pixarts.eu/en/contatti' },
     ],
     faqs: [
       { question: 'How long does it really take?', answer: '7-14 business days depending on complexity. Landing page 7 days, business website 10 days, e-commerce 14 days. With written guarantee: 10% discount for each day of delay.' },
@@ -59,9 +59,9 @@ const localeContent = {
     inLanguage: 'cs-CZ',
     breadcrumbs: [
       { name: 'Domů', item: 'https://pixarts.eu/cs' },
-      { name: 'Portfolio', item: 'https://pixarts.eu/cs#portfolio' },
-      { name: 'Služby', item: 'https://pixarts.eu/cs#pricing' },
-      { name: 'Kontakt', item: 'https://pixarts.eu/cs#contatti' },
+      { name: 'Služby', item: 'https://pixarts.eu/cs/servizi' },
+      { name: 'Portfolio', item: 'https://pixarts.eu/cs/portfolio' },
+      { name: 'Kontakt', item: 'https://pixarts.eu/cs/contatti' },
     ],
     faqs: [
       { question: 'Jak dlouho to skutečně trvá?', answer: '7-14 pracovních dní podle složitosti. Landing page 7 dní, firemní web 10 dní, e-shop 14 dní. S písemnou zárukou: 10% sleva za každý den zpoždění.' },
@@ -239,10 +239,6 @@ export function StructuredData({ locale = 'it' }: StructuredDataProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.breadcrumbSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.faqSchema) }}
-      />
       {schemas.serviceSchemas.map((schema, index) => (
         <script
           key={index}
@@ -251,5 +247,16 @@ export function StructuredData({ locale = 'it' }: StructuredDataProps) {
         />
       ))}
     </>
+  )
+}
+
+export function FaqStructuredData({ locale = 'it' }: StructuredDataProps) {
+  const schemas = buildSchemas(locale)
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.faqSchema) }}
+    />
   )
 }

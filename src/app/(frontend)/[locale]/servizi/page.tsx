@@ -41,6 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: 'Pixarts',
       locale: locale,
       type: 'website',
+      images: [{ url: '/og-image.png', width: 1200, height: 630 }],
     },
   }
 }
