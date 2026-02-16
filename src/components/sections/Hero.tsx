@@ -35,9 +35,9 @@ const statIcons = [Zap, Shield, Clock]
 
 // Stats data (values for AnimatedCounter)
 const STATS_DATA = [
-  { value: 12, suffix: '+', labelKey: 'projects' },
-  { value: 95, suffix: '%', labelKey: 'satisfaction' },
-  { value: 10, suffix: ' giorni', labelKey: 'delivery' },
+  { value: 12, suffix: '+', suffixKey: null, labelKey: 'projects' },
+  { value: 95, suffix: '%', suffixKey: null, labelKey: 'satisfaction' },
+  { value: 10, suffix: null, suffixKey: 'deliverySuffix', labelKey: 'delivery' },
 ] as const
 
 export function Hero() {
@@ -61,7 +61,7 @@ export function Hero() {
   // Use translations for stats
   const statsData = STATS_DATA.map((stat) => ({
     value: stat.value,
-    suffix: stat.suffix,
+    suffix: stat.suffixKey ? ` ${tStats(stat.suffixKey)}` : (stat.suffix ?? ''),
     label: tStats(stat.labelKey),
   }))
 

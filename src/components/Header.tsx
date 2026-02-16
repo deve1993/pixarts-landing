@@ -12,9 +12,10 @@ import { LanguageSwitcher } from './LanguageSwitcher'
 import { cn, scrollToElement } from '@/lib/utils'
 
 const NAV_ITEMS_KEYS = [
+  { key: 'home', href: '/', isPage: true },
   { key: 'portfolio', href: '/portfolio', isPage: true },
-  { key: 'quote', href: '/preventivo', isPage: true },
   { key: 'services', href: '#pricing', isPage: false },
+  { key: 'quote', href: '/preventivo', isPage: true },
   { key: 'contact', href: '#contatti', isPage: false },
 ] as const
 
@@ -123,7 +124,7 @@ export function Header() {
           <Link
             href="/"
             className="relative z-50"
-            aria-label="Pixarts - Torna alla home"
+            aria-label={t('logoAria')}
           >
             <Logo />
           </Link>
@@ -132,7 +133,7 @@ export function Header() {
           <nav
             className="hidden md:flex items-center gap-8"
             role="navigation"
-            aria-label="Navigazione principale"
+            aria-label={t('mainNav')}
           >
             {NAV_ITEMS_KEYS.map((item) => (
               item.isPage ? (
@@ -162,7 +163,7 @@ export function Header() {
             <LanguageSwitcher />
             <Link href="/prenota">
               <Button size="sm">
-                Prenota
+                {t('book')}
               </Button>
             </Link>
           </div>
@@ -172,7 +173,7 @@ export function Header() {
             ref={menuButtonRef}
             className="md:hidden relative z-50 p-2.5 -mr-2.5 text-text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange rounded-md"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label={isMobileMenuOpen ? 'Chiudi menu' : 'Apri menu'}
+            aria-label={isMobileMenuOpen ? t('closeMenu') : t('openMenu')}
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-menu"
           >
@@ -194,7 +195,7 @@ export function Header() {
             className="fixed inset-0 z-40 md:hidden"
             role="dialog"
             aria-modal="true"
-            aria-label="Menu di navigazione"
+            aria-label={t('mobileMenuDialog')}
           >
             {/* Backdrop */}
             <div
@@ -211,7 +212,7 @@ export function Header() {
               transition={{ duration: 0.3, delay: 0.1 }}
               className="relative flex flex-col items-center justify-center h-full gap-8"
               role="navigation"
-              aria-label="Menu mobile"
+              aria-label={t('mobileNav')}
             >
               {NAV_ITEMS_KEYS.map((item, index) => (
                 item.isPage ? (
@@ -261,7 +262,7 @@ export function Header() {
               >
                 <Link href="/prenota" onClick={closeMobileMenu}>
                   <Button ref={lastFocusableRef} size="lg">
-                    Prenota
+                    {t('book')}
                   </Button>
                 </Link>
               </motion.div>

@@ -14,22 +14,14 @@ import { EmailLayout, styles, colors } from './components/Layout'
 interface ContactInternalEmailProps {
   name: string
   email: string
-  phone?: string | null
-  company?: string | null
   projectType?: string | null
-  budget?: string | null
-  message: string
   submittedAt?: string
 }
 
 export function ContactInternalEmail({
   name = 'Mario Rossi',
   email = 'mario.rossi@email.com',
-  phone = '+39 333 1234567',
-  company = 'Acme Corp',
   projectType = 'Sito Aziendale',
-  budget = '€2.500 - €3.500',
-  message = 'Vorrei informazioni sui vostri servizi di web design.',
   submittedAt = new Date().toLocaleString('it-IT'),
 }: ContactInternalEmailProps) {
   return (
@@ -65,66 +57,14 @@ export function ContactInternalEmail({
           </Text>
         </Section>
 
-        {phone && (
-          <Section style={styles.infoBox}>
-            <Text style={styles.infoLabel}>Telefono</Text>
-            <Text style={styles.infoValue}>
-              <Link href={`tel:${phone}`} style={{ color: colors.accentOrange }}>
-                {phone}
-              </Link>
-            </Text>
-          </Section>
-        )}
-
-        {company && (
-          <Section style={styles.infoBox}>
-            <Text style={styles.infoLabel}>Azienda</Text>
-            <Text style={styles.infoValue}>{company}</Text>
-          </Section>
-        )}
-
         <Hr style={styles.hr} />
 
-        {/* Project Details */}
-        {(projectType || budget) && (
-          <>
-            <Text style={styles.infoLabel}>DETTAGLI PROGETTO</Text>
-
-            {projectType && (
-              <Section style={styles.infoBox}>
-                <Text style={styles.infoLabel}>Tipo Progetto</Text>
-                <Text style={styles.infoValue}>{projectType}</Text>
-              </Section>
-            )}
-
-            {budget && (
-              <Section style={styles.infoBox}>
-                <Text style={styles.infoLabel}>Budget Indicativo</Text>
-                <Text style={{ ...styles.infoValue, color: colors.success }}>
-                  {budget}
-                </Text>
-              </Section>
-            )}
-
-            <Hr style={styles.hr} />
-          </>
+        {projectType && (
+          <Section style={styles.infoBox}>
+            <Text style={styles.infoLabel}>Tipo Progetto</Text>
+            <Text style={styles.infoValue}>{projectType}</Text>
+          </Section>
         )}
-
-        {/* Message */}
-        <Text style={styles.infoLabel}>MESSAGGIO</Text>
-        <Section
-          style={{
-            backgroundColor: colors.bgPrimary,
-            borderRadius: '8px',
-            padding: '16px',
-            marginTop: '8px',
-            borderLeft: `4px solid ${colors.accentOrange}`,
-          }}
-        >
-          <Text style={{ ...styles.paragraph, margin: '0', whiteSpace: 'pre-wrap' }}>
-            {message}
-          </Text>
-        </Section>
 
         <Text
           style={{
@@ -145,13 +85,6 @@ export function ContactInternalEmail({
         >
           Rispondi Subito
         </Link>
-        {phone && (
-          <Text style={{ marginTop: '16px' }}>
-            <Link href={`tel:${phone}`} style={styles.buttonSecondary}>
-              📞 Chiama
-            </Link>
-          </Text>
-        )}
       </Section>
     </EmailLayout>
   )

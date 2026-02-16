@@ -16,11 +16,14 @@ export function AnimatedCounter({
   suffix = '',
   className = '',
 }: AnimatedCounterProps) {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(end)
+  const [hasAnimated, setHasAnimated] = useState(false)
   const [ref, inView] = useInView<HTMLSpanElement>({ triggerOnce: true })
 
   useEffect(() => {
-    if (!inView) return
+    if (!inView || hasAnimated) return
+    setCount(0)
+    setHasAnimated(true)
 
     let startTime: number
     let animationFrame: number
@@ -30,7 +33,6 @@ export function AnimatedCounter({
       const progress = timestamp - startTime
       const percentage = Math.min(progress / duration, 1)
 
-      // Easing function for smoother animation
       const easeOutQuart = 1 - Math.pow(1 - percentage, 4)
       setCount(Math.floor(end * easeOutQuart))
 
@@ -43,7 +45,7 @@ export function AnimatedCounter({
 
     animationFrame = requestAnimationFrame(animate)
     return () => cancelAnimationFrame(animationFrame)
-  }, [inView, end, duration])
+  }, [inView, end, duration, hasAnimated])
 
   return (
     <span ref={ref} className={className}>

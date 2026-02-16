@@ -1,11 +1,19 @@
 {
   "nav": {
+    "home": "Home",
     "portfolio": "Portfolio",
     "quote": "Quote",
     "services": "Services",
     "process": "Process",
     "faq": "FAQ",
-    "contact": "Contact Us"
+    "contact": "Contact Us",
+    "book": "Book a Call",
+    "logoAria": "Pixarts - Back to home",
+    "mainNav": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mobileMenuDialog": "Navigation menu",
+    "mobileNav": "Mobile menu"
   },
   "hero": {
     "badge": "projects successfully completed",
@@ -23,7 +31,8 @@
   "stats": {
     "projects": "Projects completed",
     "satisfaction": "Satisfied clients",
-    "delivery": "Average delivery"
+    "delivery": "Average delivery",
+    "deliverySuffix": "days"
   },
   "trustBadges": {
     "moneyBack": "100% Money Back Guarantee",
@@ -43,36 +52,72 @@
         "challenge": "Complex platform to communicate simply",
         "solution1": "Clean and professional design",
         "solution2": "Optimized conversion funnel",
-        "result1": { "value": "+180%", "label": "contact requests" },
-        "result2": { "value": "+40%", "label": "Google visibility" },
-        "result3": { "value": "Top 3", "label": "strategic keywords" }
+        "result1": {
+          "value": "+180%",
+          "label": "contact requests"
+        },
+        "result2": {
+          "value": "+40%",
+          "label": "Google visibility"
+        },
+        "result3": {
+          "value": "Top 3",
+          "label": "strategic keywords"
+        }
       },
       "quickfy": {
         "type": "SaaS Analytics Platform",
         "challenge": "Complex dashboard to present to B2B target",
         "solution1": "Modern design with interactive animations",
         "solution2": "Interactive demo on homepage",
-        "result1": { "value": "3-5", "label": "qualified leads/week" },
-        "result2": { "value": "8.5%", "label": "conversion rate" },
-        "result3": { "value": "-37%", "label": "bounce rate" }
+        "result1": {
+          "value": "3-5",
+          "label": "qualified leads/week"
+        },
+        "result2": {
+          "value": "8.5%",
+          "label": "conversion rate"
+        },
+        "result3": {
+          "value": "-37%",
+          "label": "bounce rate"
+        }
       },
       "benetti": {
         "type": "Artisan Portfolio",
         "challenge": "Show artisan quality and generate qualified contacts",
         "solution1": "Professional photo portfolio",
         "solution2": "Optimized contact form for quotes",
-        "result1": { "value": "+300%", "label": "quote requests" },
-        "result2": { "value": "Top 5", "label": "local Google" },
-        "result3": { "value": "10 days", "label": "project delivery" }
+        "result1": {
+          "value": "+300%",
+          "label": "quote requests"
+        },
+        "result2": {
+          "value": "Top 5",
+          "label": "local Google"
+        },
+        "result3": {
+          "value": "10 days",
+          "label": "project delivery"
+        }
       },
       "fl1": {
         "type": "Corporate Website + AI",
         "challenge": "Integrate AI chatbot for automated customer support",
         "solution1": "OpenAI-powered chatbot",
         "solution2": "HubSpot CRM for lead management",
-        "result1": { "value": "+220%", "label": "leads generated" },
-        "result2": { "value": "45sec", "label": "response time" },
-        "result3": { "value": "98%", "label": "satisfaction" }
+        "result1": {
+          "value": "+220%",
+          "label": "leads generated"
+        },
+        "result2": {
+          "value": "45sec",
+          "label": "response time"
+        },
+        "result3": {
+          "value": "98%",
+          "label": "satisfaction"
+        }
       }
     }
   },
@@ -90,7 +135,8 @@
     "problem3": {
       "title": "I don't understand anything technical",
       "description": "Hosting, CMS, SEO, analytics. Incomprehensible terms and no one to really explain how it works."
-    }
+    },
+    "problemLabel": "Problem {n}"
   },
   "solution": {
     "title": "The solution: a partner focused on your success",
@@ -143,15 +189,39 @@
           "client": "FL1 Srl",
           "subtitle": "Corporate Website with AI Integration",
           "services": {
-            "webDesign": { "name": "Web Design", "detail": "Modern corporate design focused on conversion and trust building" },
-            "backend": { "name": "Backend", "detail": "Scalable Node.js architecture with REST APIs and webhooks" },
-            "seo": { "name": "SEO", "detail": "Advanced technical SEO with schema markup and optimized Core Web Vitals" },
-            "ai": { "name": "AI Integration", "detail": "Custom GPT-4 chatbot for 24/7 support and lead qualification" }
+            "webDesign": {
+              "name": "Web Design",
+              "detail": "Modern corporate design focused on conversion and trust building"
+            },
+            "backend": {
+              "name": "Backend",
+              "detail": "Scalable Node.js architecture with REST APIs and webhooks"
+            },
+            "seo": {
+              "name": "SEO",
+              "detail": "Advanced technical SEO with schema markup and optimized Core Web Vitals"
+            },
+            "ai": {
+              "name": "AI Integration",
+              "detail": "Custom GPT-4 chatbot for 24/7 support and lead qualification"
+            }
           },
           "results": {
-            "leads": { "value": "+220", "label": "leads generated", "suffix": "%" },
-            "response": { "value": "45", "label": "chat response time", "suffix": "sec" },
-            "satisfaction": { "value": "98", "label": "client satisfaction", "suffix": "%" }
+            "leads": {
+              "value": "+220",
+              "label": "leads generated",
+              "suffix": "%"
+            },
+            "response": {
+              "value": "45",
+              "label": "chat response time",
+              "suffix": "sec"
+            },
+            "satisfaction": {
+              "value": "98",
+              "label": "client satisfaction",
+              "suffix": "%"
+            }
           },
           "description": "Complete digital transformation for FL1, a leading B2B company. We designed an integrated digital ecosystem: premium corporate website, AI chatbot that autonomously handles initial prospect contact and qualifies leads in real-time, and bidirectional HubSpot CRM integration to track every interaction. The result? An automated sales system working 24/7, reducing workload on the sales team while dramatically increasing conversion rates."
         },
@@ -159,14 +229,34 @@
           "client": "FlowMatics",
           "subtitle": "B2B Marketing Automation Platform",
           "services": {
-            "webDesign": { "name": "Web Design", "detail": "Landing page with micro-animations and visual storytelling" },
-            "seo": { "name": "SEO", "detail": "Complete SEO strategy: keyword research, content pillars and link building" },
-            "cro": { "name": "CRO", "detail": "Continuous A/B testing, heatmaps and multi-step funnel optimization" }
+            "webDesign": {
+              "name": "Web Design",
+              "detail": "Landing page with micro-animations and visual storytelling"
+            },
+            "seo": {
+              "name": "SEO",
+              "detail": "Complete SEO strategy: keyword research, content pillars and link building"
+            },
+            "cro": {
+              "name": "CRO",
+              "detail": "Continuous A/B testing, heatmaps and multi-step funnel optimization"
+            }
           },
           "results": {
-            "contacts": { "value": "+180", "label": "contact requests", "suffix": "%" },
-            "visibility": { "value": "+40", "label": "Google visibility", "suffix": "%" },
-            "keywords": { "value": "Top 3", "label": "target keywords" }
+            "contacts": {
+              "value": "+180",
+              "label": "contact requests",
+              "suffix": "%"
+            },
+            "visibility": {
+              "value": "+40",
+              "label": "Google visibility",
+              "suffix": "%"
+            },
+            "keywords": {
+              "value": "Top 3",
+              "label": "target keywords"
+            }
           },
           "description": "FlowMatics faced a challenge: communicating a complex marketing automation platform to a demanding B2B audience. We created a landing page that tells the product story through fluid animations and interactive demos. The minimalist yet impactful design guides users through a discovery journey culminating in a demo request. Thanks to a targeted SEO strategy and continuous data-driven optimization, FlowMatics now dominates strategic keywords in the Italian marketing automation sector."
         },
@@ -174,14 +264,34 @@
           "client": "Quickfy",
           "subtitle": "SaaS Marketing Website",
           "services": {
-            "webDesign": { "name": "Web Design", "detail": "Premium SaaS design with embedded product demo and 3D animations" },
-            "seo": { "name": "SEO", "detail": "SaaS SEO: comparison pages, feature pages and blog strategy" },
-            "cro": { "name": "CRO", "detail": "Optimized pricing page with social proof and urgency triggers" }
+            "webDesign": {
+              "name": "Web Design",
+              "detail": "Premium SaaS design with embedded product demo and 3D animations"
+            },
+            "seo": {
+              "name": "SEO",
+              "detail": "SaaS SEO: comparison pages, feature pages and blog strategy"
+            },
+            "cro": {
+              "name": "CRO",
+              "detail": "Optimized pricing page with social proof and urgency triggers"
+            }
           },
           "results": {
-            "leads": { "value": "3-5", "label": "qualified leads/week" },
-            "conversion": { "value": "8.5", "label": "conversion rate", "suffix": "%" },
-            "bounce": { "value": "-37", "label": "bounce rate", "suffix": "%" }
+            "leads": {
+              "value": "3-5",
+              "label": "qualified leads/week"
+            },
+            "conversion": {
+              "value": "8.5",
+              "label": "conversion rate",
+              "suffix": "%"
+            },
+            "bounce": {
+              "value": "-37",
+              "label": "bounce rate",
+              "suffix": "%"
+            }
           },
           "description": "Quickfy is a fast-growing analytics and marketing automation platform. Their previous website failed to communicate the product's value. We redesigned the entire experience: an interactive demo letting prospects 'try' the product directly from the homepage, a pricing page with clear and convincing plan comparison, and a nurturing system guiding every visitor toward conversion. Bounce rate dropped 37% and they now generate qualified leads consistently every week."
         },
@@ -189,15 +299,38 @@
           "client": "Quickfy",
           "subtitle": "Analytics Dashboard & AI Automations",
           "services": {
-            "frontend": { "name": "Frontend", "detail": "React 19 dashboard with real-time updates and advanced data visualizations" },
-            "backend": { "name": "Backend", "detail": "AWS microservices architecture with auto-scaling and Redis caching" },
-            "ai": { "name": "AI & Automations", "detail": "MCP server for Claude, n8n workflows, custom GPT-4 chatbot" },
-            "devops": { "name": "DevOps", "detail": "GitHub Actions CI/CD, Datadog monitoring, blue-green deploy" }
+            "frontend": {
+              "name": "Frontend",
+              "detail": "React 19 dashboard with real-time updates and advanced data visualizations"
+            },
+            "backend": {
+              "name": "Backend",
+              "detail": "AWS microservices architecture with auto-scaling and Redis caching"
+            },
+            "ai": {
+              "name": "AI & Automations",
+              "detail": "MCP server for Claude, n8n workflows, custom GPT-4 chatbot"
+            },
+            "devops": {
+              "name": "DevOps",
+              "detail": "GitHub Actions CI/CD, Datadog monitoring, blue-green deploy"
+            }
           },
           "results": {
-            "users": { "value": "500+", "label": "active users" },
-            "time": { "value": "15", "label": "hours saved/week", "suffix": "h" },
-            "uptime": { "value": "99.9", "label": "guaranteed uptime", "suffix": "%" }
+            "users": {
+              "value": "500+",
+              "label": "active users"
+            },
+            "time": {
+              "value": "15",
+              "label": "hours saved/week",
+              "suffix": "h"
+            },
+            "uptime": {
+              "value": "99.9",
+              "label": "guaranteed uptime",
+              "suffix": "%"
+            }
           },
           "description": "The technological heart of Quickfy: an enterprise-grade SaaS platform we built from scratch. Analytics dashboard with real-time charts and advanced filters, a powerful automation engine based on MCP server that orchestrates cross-channel marketing campaigns, and an AI chatbot trained on client data that autonomously handles interactions. The cloud-native architecture ensures exceptional performance even under load, with 500+ active users saving an average of 15 hours per week thanks to intelligent automations."
         }
@@ -653,7 +786,9 @@
     "copyright": "All rights reserved.",
     "madeWith": "Made with",
     "inItaly": "in Italy",
-    "gdprRequest": "GDPR Rights"
+    "gdprRequest": "GDPR Rights",
+    "opensNewWindow": "opens in a new window",
+    "emailAriaLabel": "Send email to info@pixarts.eu"
   },
   "notifications": {
     "newProject": "just completed their website",
@@ -1464,7 +1599,9 @@
         "Within 24h of the call you will receive the personalized proposal"
       ],
       "backHome": "Back to Home"
-    }
+    },
+    "orText": "or",
+    "trustLine": "No obligation • Reply within 24h"
   },
   "gdprRequest": {
     "metaTitle": "Exercise GDPR Rights - Pixarts",
@@ -1599,10 +1736,10 @@
     "statsProjects": "{count} projects",
     "statsSectors": "{count} sectors",
     "statsConversion": "+180% avg conversion",
-    "heroStatLine": "{projects} projects \u00b7 {sectors} sectors \u00b7 +180% avg conversion",
+    "heroStatLine": "{projects} projects · {sectors} sectors · +180% avg conversion",
     "ctaSectionTitle": "Like what you see?",
-    "ctaSectionDescription": "Every project starts with a concrete goal. Tell us yours and let\u2019s design the solution together.",
-    "ctaSectionButton": "Let\u2019s discuss your project",
+    "ctaSectionDescription": "Every project starts with a concrete goal. Tell us yours and let’s design the solution together.",
+    "ctaSectionButton": "Let’s discuss your project",
     "ctaSectionBook": "Book a free call",
     "categories": {
       "webapp": "Web App",
@@ -1618,12 +1755,26 @@
         "subtitle": "All-in-One ERP Platform with AI",
         "description": "SingleFlo is revolutionizing how European SMEs manage their business. We created a landing page that effectively communicates the power of this Odoo 18-based ERP platform: CRM, sales, manufacturing, invoicing and customer support unified with integrated artificial intelligence. The design highlights the key promise - 48-hour setup - through a visual journey guiding visitors from feature discovery to demo request. 98/100 Performance Score and perfect SEO Score ensure visibility and speed.",
         "services": {
-          "webDesign": { "name": "Web Design", "detail": "Enterprise design with GPU-accelerated animations and micro-interactions" },
-          "seo": { "name": "SEO", "detail": "Perfect technical SEO: green Core Web Vitals, complete schema markup, dynamic sitemap" }
+          "webDesign": {
+            "name": "Web Design",
+            "detail": "Enterprise design with GPU-accelerated animations and micro-interactions"
+          },
+          "seo": {
+            "name": "SEO",
+            "detail": "Perfect technical SEO: green Core Web Vitals, complete schema markup, dynamic sitemap"
+          }
         },
         "results": {
-          "performance": { "value": "98", "label": "Performance Score", "suffix": "/100" },
-          "seoScore": { "value": "100", "label": "SEO Score", "suffix": "/100" }
+          "performance": {
+            "value": "98",
+            "label": "Performance Score",
+            "suffix": "/100"
+          },
+          "seoScore": {
+            "value": "100",
+            "label": "SEO Score",
+            "suffix": "/100"
+          }
         }
       },
       "biemme": {
@@ -1631,12 +1782,26 @@
         "subtitle": "Construction Company Website",
         "description": "Biemme 2 is a construction company with over 30 years of history and 200+ apartments built. Their previous website didn't reflect this solidity. We designed a digital presence to match: corporate design with a burgundy palette that conveys reliability, project portfolio with immersive galleries, and strong local SEO optimization positioning them at the top of 'construction company' searches in their area. ISO 9001 and SOA certifications are now showcased as trust elements, converting visitors into concrete quote requests.",
         "services": {
-          "webDesign": { "name": "Web Design", "detail": "Authoritative corporate design with project portfolio and full-screen galleries" },
-          "seo": { "name": "SEO", "detail": "Advanced Local SEO: optimized Google Business, LocalBusiness schema, NAP citations" }
+          "webDesign": {
+            "name": "Web Design",
+            "detail": "Authoritative corporate design with project portfolio and full-screen galleries"
+          },
+          "seo": {
+            "name": "SEO",
+            "detail": "Advanced Local SEO: optimized Google Business, LocalBusiness schema, NAP citations"
+          }
         },
         "results": {
-          "visibility": { "value": "+150", "label": "local visibility", "suffix": "%" },
-          "contacts": { "value": "+80", "label": "quote requests", "suffix": "%" }
+          "visibility": {
+            "value": "+150",
+            "label": "local visibility",
+            "suffix": "%"
+          },
+          "contacts": {
+            "value": "+80",
+            "label": "quote requests",
+            "suffix": "%"
+          }
         }
       },
       "ichnusa": {
@@ -1644,14 +1809,35 @@
         "subtitle": "Website for Sardinian Restaurant in Prague",
         "description": "Ichnusa Botega & Bistro is an authentic Sardinian restaurant in the heart of Malá Strana, Prague. We built a trilingual website (IT/EN/CS) that captures the essence of Sardinian cuisine: from porceddu to culurgiones, fresh seafood to Cannonau wines. The site integrates online reservation via DISH.co, interactive menu with categories, live Google Reviews (4.7/5 with 497 reviews), private events section and newsletter. Local SEO optimized to rank the restaurant in Prague searches, with Restaurant schema markup and hreflang for three languages.",
         "services": {
-          "webDesign": { "name": "Web Design", "detail": "Elegant design with full-screen hero, interactive menu and photo gallery" },
-          "seo": { "name": "Local SEO", "detail": "Restaurant schema, Google Business, trilingual hreflang, Prague local keywords" },
-          "i18n": { "name": "Multilingual", "detail": "Full website in Italian, English and Czech with next-intl" }
+          "webDesign": {
+            "name": "Web Design",
+            "detail": "Elegant design with full-screen hero, interactive menu and photo gallery"
+          },
+          "seo": {
+            "name": "Local SEO",
+            "detail": "Restaurant schema, Google Business, trilingual hreflang, Prague local keywords"
+          },
+          "i18n": {
+            "name": "Multilingual",
+            "detail": "Full website in Italian, English and Czech with next-intl"
+          }
         },
         "results": {
-          "reviews": { "value": "4.7", "label": "Google Reviews", "suffix": "/5" },
-          "visibility": { "value": "+150", "label": "local visibility", "suffix": "%" },
-          "performance": { "value": "95", "label": "Performance Score", "suffix": "/100" }
+          "reviews": {
+            "value": "4.7",
+            "label": "Google Reviews",
+            "suffix": "/5"
+          },
+          "visibility": {
+            "value": "+150",
+            "label": "local visibility",
+            "suffix": "%"
+          },
+          "performance": {
+            "value": "95",
+            "label": "Performance Score",
+            "suffix": "/100"
+          }
         }
       }
     }
@@ -1676,7 +1862,10 @@
       "singleflo": {
         "subtitle": "All-in-One ERP Platform"
       }
-    }
+    },
+    "resultActiveUsers": "active users",
+    "resultLeads": "leads generated",
+    "resultPerformance": "Performance"
   },
   "portfolioCta": {
     "badge": "Completed Projects",

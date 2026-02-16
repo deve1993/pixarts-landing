@@ -1,11 +1,19 @@
 {
   "nav": {
+    "home": "Domů",
     "portfolio": "Portfolio",
     "quote": "Nabídka",
     "services": "Služby",
     "process": "Proces",
     "faq": "FAQ",
-    "contact": "Kontaktujte nás"
+    "contact": "Kontakt",
+    "book": "Rezervovat",
+    "logoAria": "Pixarts - Zpět na úvodní stránku",
+    "mainNav": "Hlavní navigace",
+    "openMenu": "Otevřít menu",
+    "closeMenu": "Zavřít menu",
+    "mobileMenuDialog": "Navigační menu",
+    "mobileNav": "Mobilní menu"
   },
   "hero": {
     "badge": "úspěšně dokončených projektů",
@@ -23,7 +31,8 @@
   "stats": {
     "projects": "Dokončených projektů",
     "satisfaction": "Spokojených klientů",
-    "delivery": "Průměrná dodací lhůta"
+    "delivery": "Průměrná dodací lhůta",
+    "deliverySuffix": "dní"
   },
   "trustBadges": {
     "moneyBack": "100% záruka vrácení peněz",
@@ -43,36 +52,72 @@
         "challenge": "Složitá platforma k jednoduché komunikaci",
         "solution1": "Čistý a profesionální design",
         "solution2": "Optimalizovaný konverzní trychtýř",
-        "result1": { "value": "+180%", "label": "žádostí o kontakt" },
-        "result2": { "value": "+40%", "label": "viditelnost Google" },
-        "result3": { "value": "Top 3", "label": "strategická klíčová slova" }
+        "result1": {
+          "value": "+180%",
+          "label": "žádostí o kontakt"
+        },
+        "result2": {
+          "value": "+40%",
+          "label": "viditelnost Google"
+        },
+        "result3": {
+          "value": "Top 3",
+          "label": "strategická klíčová slova"
+        }
       },
       "quickfy": {
         "type": "SaaS Analytická Platforma",
         "challenge": "Složitý dashboard pro prezentaci B2B cílové skupině",
         "solution1": "Moderní design s interaktivními animacemi",
         "solution2": "Interaktivní demo na homepage",
-        "result1": { "value": "3-5", "label": "kvalifikovaných leadů/týden" },
-        "result2": { "value": "8.5%", "label": "konverzní poměr" },
-        "result3": { "value": "-37%", "label": "bounce rate" }
+        "result1": {
+          "value": "3-5",
+          "label": "kvalifikovaných leadů/týden"
+        },
+        "result2": {
+          "value": "8.5%",
+          "label": "konverzní poměr"
+        },
+        "result3": {
+          "value": "-37%",
+          "label": "bounce rate"
+        }
       },
       "benetti": {
         "type": "Řemeslné Portfolio",
         "challenge": "Ukázat řemeslnou kvalitu a získat kvalifikované kontakty",
         "solution1": "Profesionální fotografické portfolio",
         "solution2": "Optimalizovaný kontaktní formulář pro nabídky",
-        "result1": { "value": "+300%", "label": "žádostí o nabídku" },
-        "result2": { "value": "Top 5", "label": "lokální Google" },
-        "result3": { "value": "10 dní", "label": "dodání projektu" }
+        "result1": {
+          "value": "+300%",
+          "label": "žádostí o nabídku"
+        },
+        "result2": {
+          "value": "Top 5",
+          "label": "lokální Google"
+        },
+        "result3": {
+          "value": "10 dní",
+          "label": "dodání projektu"
+        }
       },
       "fl1": {
         "type": "Firemní Web + AI",
         "challenge": "Integrace AI chatbota pro automatizovanou zákaznickou podporu",
         "solution1": "Chatbot s integrací OpenAI",
         "solution2": "HubSpot CRM pro správu leadů",
-        "result1": { "value": "+220%", "label": "generovaných leadů" },
-        "result2": { "value": "45s", "label": "doba odpovědi" },
-        "result3": { "value": "98%", "label": "spokojenost" }
+        "result1": {
+          "value": "+220%",
+          "label": "generovaných leadů"
+        },
+        "result2": {
+          "value": "45s",
+          "label": "doba odpovědi"
+        },
+        "result3": {
+          "value": "98%",
+          "label": "spokojenost"
+        }
       }
     }
   },
@@ -90,7 +135,8 @@
     "problem3": {
       "title": "Nerozumím technice",
       "description": "Hosting, CMS, SEO, analytika. Nesrozumitelné pojmy a nikdo, kdo by skutečně vysvětlil, jak to funguje."
-    }
+    },
+    "problemLabel": "Problém {n}"
   },
   "solution": {
     "title": "Řešení: partner zaměřený na váš úspěch",
@@ -143,15 +189,39 @@
           "client": "FL1 Srl",
           "subtitle": "Firemní web s integrací AI",
           "services": {
-            "webDesign": { "name": "Web Design", "detail": "Moderní firemní design zaměřený na konverzi a budování důvěry" },
-            "backend": { "name": "Backend", "detail": "Škálovatelná Node.js architektura s REST API a webhooky" },
-            "seo": { "name": "SEO", "detail": "Pokročilé technické SEO se schema markup a optimalizovanými Core Web Vitals" },
-            "ai": { "name": "AI integrace", "detail": "Vlastní GPT-4 chatbot pro podporu 24/7 a kvalifikaci leadů" }
+            "webDesign": {
+              "name": "Web Design",
+              "detail": "Moderní firemní design zaměřený na konverzi a budování důvěry"
+            },
+            "backend": {
+              "name": "Backend",
+              "detail": "Škálovatelná Node.js architektura s REST API a webhooky"
+            },
+            "seo": {
+              "name": "SEO",
+              "detail": "Pokročilé technické SEO se schema markup a optimalizovanými Core Web Vitals"
+            },
+            "ai": {
+              "name": "AI integrace",
+              "detail": "Vlastní GPT-4 chatbot pro podporu 24/7 a kvalifikaci leadů"
+            }
           },
           "results": {
-            "leads": { "value": "+220", "label": "získaných leadů", "suffix": "%" },
-            "response": { "value": "45", "label": "doba odpovědi chatu", "suffix": "sec" },
-            "satisfaction": { "value": "98", "label": "spokojenost klientů", "suffix": "%" }
+            "leads": {
+              "value": "+220",
+              "label": "získaných leadů",
+              "suffix": "%"
+            },
+            "response": {
+              "value": "45",
+              "label": "doba odpovědi chatu",
+              "suffix": "sec"
+            },
+            "satisfaction": {
+              "value": "98",
+              "label": "spokojenost klientů",
+              "suffix": "%"
+            }
           },
           "description": "Kompletní digitální transformace pro FL1, přední B2B společnost. Navrhli jsme integrovaný digitální ekosystém: prémiový firemní web, AI chatbot, který autonomně zpracovává první kontakt s potenciálními klienty a kvalifikuje leady v reálném čase, a obousměrnou integraci s HubSpot CRM pro sledování každé interakce. Výsledek? Automatizovaný prodejní systém pracující 24/7, který snižuje zatížení obchodního týmu a dramaticky zvyšuje konverzní poměr."
         },
@@ -159,14 +229,34 @@
           "client": "FlowMatics",
           "subtitle": "B2B platforma pro marketingovou automatizaci",
           "services": {
-            "webDesign": { "name": "Web Design", "detail": "Landing page s mikro-animacemi a vizuálním storytellingem" },
-            "seo": { "name": "SEO", "detail": "Kompletní SEO strategie: výzkum klíčových slov, obsahové pilíře a link building" },
-            "cro": { "name": "CRO", "detail": "Kontinuální A/B testování, heatmapy a optimalizace vícekrokového funnelu" }
+            "webDesign": {
+              "name": "Web Design",
+              "detail": "Landing page s mikro-animacemi a vizuálním storytellingem"
+            },
+            "seo": {
+              "name": "SEO",
+              "detail": "Kompletní SEO strategie: výzkum klíčových slov, obsahové pilíře a link building"
+            },
+            "cro": {
+              "name": "CRO",
+              "detail": "Kontinuální A/B testování, heatmapy a optimalizace vícekrokového funnelu"
+            }
           },
           "results": {
-            "contacts": { "value": "+180", "label": "kontaktních požadavků", "suffix": "%" },
-            "visibility": { "value": "+40", "label": "viditelnost na Google", "suffix": "%" },
-            "keywords": { "value": "Top 3", "label": "cílová klíčová slova" }
+            "contacts": {
+              "value": "+180",
+              "label": "kontaktních požadavků",
+              "suffix": "%"
+            },
+            "visibility": {
+              "value": "+40",
+              "label": "viditelnost na Google",
+              "suffix": "%"
+            },
+            "keywords": {
+              "value": "Top 3",
+              "label": "cílová klíčová slova"
+            }
           },
           "description": "FlowMatics čelil výzvě: komunikovat komplexní platformu pro marketingovou automatizaci náročnému B2B publiku. Vytvořili jsme landing page, která vypráví příběh produktu prostřednictvím plynulých animací a interaktivních dem. Minimalistický, ale působivý design provází uživatele na cestě objevování, která vrcholí žádostí o demo. Díky cílené SEO strategii a kontinuální optimalizaci založené na datech nyní FlowMatics dominuje strategickým klíčovým slovům v italském sektoru marketingové automatizace."
         },
@@ -174,14 +264,34 @@
           "client": "Quickfy",
           "subtitle": "SaaS marketingový web",
           "services": {
-            "webDesign": { "name": "Web Design", "detail": "Prémiový SaaS design s embedded produktovým demem a 3D animacemi" },
-            "seo": { "name": "SEO", "detail": "SaaS SEO: srovnávací stránky, feature stránky a blogová strategie" },
-            "cro": { "name": "CRO", "detail": "Optimalizovaná cenová stránka se social proof a urgency triggery" }
+            "webDesign": {
+              "name": "Web Design",
+              "detail": "Prémiový SaaS design s embedded produktovým demem a 3D animacemi"
+            },
+            "seo": {
+              "name": "SEO",
+              "detail": "SaaS SEO: srovnávací stránky, feature stránky a blogová strategie"
+            },
+            "cro": {
+              "name": "CRO",
+              "detail": "Optimalizovaná cenová stránka se social proof a urgency triggery"
+            }
           },
           "results": {
-            "leads": { "value": "3-5", "label": "kvalifikovaných leadů/týden" },
-            "conversion": { "value": "8.5", "label": "konverzní poměr", "suffix": "%" },
-            "bounce": { "value": "-37", "label": "bounce rate", "suffix": "%" }
+            "leads": {
+              "value": "3-5",
+              "label": "kvalifikovaných leadů/týden"
+            },
+            "conversion": {
+              "value": "8.5",
+              "label": "konverzní poměr",
+              "suffix": "%"
+            },
+            "bounce": {
+              "value": "-37",
+              "label": "bounce rate",
+              "suffix": "%"
+            }
           },
           "description": "Quickfy je rychle rostoucí analytická a marketingová automatizační platforma. Jejich předchozí web nedokázal komunikovat hodnotu produktu. Přepracovali jsme celý zážitek: interaktivní demo umožňující potenciálním klientům 'vyzkoušet' produkt přímo z domovské stránky, cenová stránka s jasným a přesvědčivým porovnáním plánů a nurturing systém provázející každého návštěvníka ke konverzi. Bounce rate klesl o 37% a nyní generují kvalifikované leady konzistentně každý týden."
         },
@@ -189,15 +299,38 @@
           "client": "Quickfy",
           "subtitle": "Analytický dashboard a AI automatizace",
           "services": {
-            "frontend": { "name": "Frontend", "detail": "React 19 dashboard s real-time aktualizacemi a pokročilými vizualizacemi dat" },
-            "backend": { "name": "Backend", "detail": "AWS mikroslužby s auto-scalingem a Redis cachingem" },
-            "ai": { "name": "AI a automatizace", "detail": "MCP server pro Claude, n8n workflow, vlastní GPT-4 chatbot" },
-            "devops": { "name": "DevOps", "detail": "GitHub Actions CI/CD, Datadog monitoring, blue-green deploy" }
+            "frontend": {
+              "name": "Frontend",
+              "detail": "React 19 dashboard s real-time aktualizacemi a pokročilými vizualizacemi dat"
+            },
+            "backend": {
+              "name": "Backend",
+              "detail": "AWS mikroslužby s auto-scalingem a Redis cachingem"
+            },
+            "ai": {
+              "name": "AI a automatizace",
+              "detail": "MCP server pro Claude, n8n workflow, vlastní GPT-4 chatbot"
+            },
+            "devops": {
+              "name": "DevOps",
+              "detail": "GitHub Actions CI/CD, Datadog monitoring, blue-green deploy"
+            }
           },
           "results": {
-            "users": { "value": "500+", "label": "aktivních uživatelů" },
-            "time": { "value": "15", "label": "ušetřených hodin/týden", "suffix": "h" },
-            "uptime": { "value": "99.9", "label": "garantovaná dostupnost", "suffix": "%" }
+            "users": {
+              "value": "500+",
+              "label": "aktivních uživatelů"
+            },
+            "time": {
+              "value": "15",
+              "label": "ušetřených hodin/týden",
+              "suffix": "h"
+            },
+            "uptime": {
+              "value": "99.9",
+              "label": "garantovaná dostupnost",
+              "suffix": "%"
+            }
           },
           "description": "Technologické srdce Quickfy: enterprise-grade SaaS platforma, kterou jsme vybudovali od nuly. Analytický dashboard s real-time grafy a pokročilými filtry, výkonný automatizační engine založený na MCP serveru orchestrující cross-channel marketingové kampaně a AI chatbot trénovaný na datech klienta, který autonomně zpracovává interakce. Cloud-native architektura zajišťuje výjimečný výkon i při zátěži, s 500+ aktivními uživateli, kteří ušetří průměrně 15 hodin týdně díky inteligentním automatizacím."
         }
@@ -355,12 +488,12 @@
     "idealFor": "Ideální pro:",
     "cta": "Vyžádat nabídku",
     "maintenance": "Měsíční údržba",
-    "maintenancePrice": "€200-400/měsíc",
+    "maintenancePrice": "€200-400/měsíc (cca 5 000 - 10 000 Kč)",
     "maintenanceDesc": "Aktualizace, zálohy, technická podpora, drobné změny",
     "plan1": {
       "name": "Landing Page",
       "badge": "Nejrychlejší",
-      "price": "€1 200 - €1 500",
+      "price": "€1 200 - €1 500 (cca 30 000 - 37 500 Kč)",
       "duration": "7 dní",
       "idealFor": "Freelanceři, profesionálové, marketingové kampaně",
       "features": [
@@ -376,7 +509,7 @@
     "plan2": {
       "name": "Firemní web",
       "badge": "Nejoblíbenější",
-      "price": "€2 500 - €3 500",
+      "price": "€2 500 - €3 500 (cca 62 500 - 87 500 Kč)",
       "duration": "10 dní",
       "idealFor": "SME, profesní firmy, agentury",
       "features": [
@@ -392,7 +525,7 @@
     "plan3": {
       "name": "E-shop / Rezervace",
       "badge": "Nejkompletnější",
-      "price": "€4 500 - €6 000",
+      "price": "€4 500 - €6 000 (cca 112 500 - 150 000 Kč)",
       "duration": "14 dní",
       "idealFor": "Online obchody, restaurace, hotely, penziony",
       "features": [
@@ -548,22 +681,22 @@
     "pause": "Pozastavit prezentaci",
     "play": "Pokračovat v prezentaci",
     "testimonial1": {
-      "name": "Marco Benetti",
+      "name": "Tomáš Novák",
       "role": "Majitel",
-      "company": "Řemeslné truhlářství",
-      "text": "Za 10 dní jsem měl web, který konečně reprezentuje kvalitu mé práce. Poptávky se ztrojnásobily a nyní mohu s hrdostí ukazovat své portfolio klientům."
+      "company": "Truhlářství Novák",
+      "text": "Za 10 dní jsem měl web, který konečně odpovídá kvalitě naší práce. Počet poptávek se ztrojnásobil a nyní mohu klientům s hrdostí ukázat naše portfolio."
     },
     "testimonial2": {
-      "name": "Sofia Rossi",
-      "role": "Partner",
-      "company": "Asociovaná advokátní kancelář",
-      "text": "Profesionalita a jasnost od prvního kontaktu. Okamžitě pochopili naše potřeby a výsledek překonal očekávání. Podpora vždy k dispozici."
+      "name": "Petra Dvořáková",
+      "role": "Partnerka",
+      "company": "Advokátní kancelář Dvořák & Partners",
+      "text": "Profesionalita a jasnost od prvního kontaktu. Okamžitě pochopili naše potřeby a výsledek předčil očekávání. Podpora je vždy k dispozici."
     },
     "testimonial3": {
-      "name": "Luca Marino",
+      "name": "Jan Procházka",
       "role": "Majitel",
-      "company": "Restaurace Da Luca",
-      "text": "Rezervační systém, který funguje skvěle. Termíny dodrženy do písmene a podpora vždy k dispozici. Doporučuji na 100%."
+      "company": "Restaurace U Procházků",
+      "text": "Rezervační systém funguje skvěle. Termíny dodrženy do písmene a podpora vždy po ruce. Doporučuji na 100%."
     },
     "hoverHint": "Najedte mysi pro pozastaveni"
   },
@@ -637,10 +770,10 @@
       "other": "Jiné"
     },
     "budgetOptions": {
-      "1-2k": "€1 000 - €2 000",
-      "2-4k": "€2 000 - €4 000",
-      "4-6k": "€4 000 - €6 000",
-      "6k+": "+€6 000"
+      "1-2k": "€1 000 - €2 000 (25-50 tis. Kč)",
+      "2-4k": "€2 000 - €4 000 (50-100 tis. Kč)",
+      "4-6k": "€4 000 - €6 000 (100-150 tis. Kč)",
+      "6k+": "+€6 000 (150+ tis. Kč)"
     }
   },
   "footer": {
@@ -653,7 +786,9 @@
     "copyright": "Všechna práva vyhrazena.",
     "madeWith": "Vytvořeno s",
     "inItaly": "v Itálii",
-    "gdprRequest": "Práva GDPR"
+    "gdprRequest": "Práva GDPR",
+    "opensNewWindow": "otevře se v novém okně",
+    "emailAriaLabel": "Napsat email na info@pixarts.eu"
   },
   "notifications": {
     "newProject": "právě dokončil svůj web",
@@ -1464,7 +1599,9 @@
         "Do 24 hodin od hovoru obdržíte personalizovanou nabídku"
       ],
       "backHome": "Zpět na hlavní stránku"
-    }
+    },
+    "orText": "nebo",
+    "trustLine": "Bez závazků • Odpověď do 24h"
   },
   "gdprRequest": {
     "metaTitle": "Uplatnění práv GDPR - Pixarts",
@@ -1618,12 +1755,26 @@
         "subtitle": "All-in-One ERP platforma s AI",
         "description": "SingleFlo revolucionizuje způsob, jakým evropské SME řídí své podnikání. Vytvořili jsme landing page, která efektivně komunikuje sílu této ERP platformy založené na Odoo 18: CRM, prodej, výroba, fakturace a zákaznická podpora sjednocené s integrovanou umělou inteligencí. Design zdůrazňuje klíčový slib - nastavení do 48 hodin - prostřednictvím vizuální cesty vedoucí návštěvníky od objevování funkcí až k žádosti o demo. Performance Score 98/100 a perfektní SEO Score zajišťují viditelnost a rychlost.",
         "services": {
-          "webDesign": { "name": "Web Design", "detail": "Enterprise design s GPU-akcelerovanými animacemi a mikro-interakcemi" },
-          "seo": { "name": "SEO", "detail": "Perfektní technické SEO: zelené Core Web Vitals, kompletní schema markup, dynamická sitemap" }
+          "webDesign": {
+            "name": "Web Design",
+            "detail": "Enterprise design s GPU-akcelerovanými animacemi a mikro-interakcemi"
+          },
+          "seo": {
+            "name": "SEO",
+            "detail": "Perfektní technické SEO: zelené Core Web Vitals, kompletní schema markup, dynamická sitemap"
+          }
         },
         "results": {
-          "performance": { "value": "98", "label": "Performance Score", "suffix": "/100" },
-          "seoScore": { "value": "100", "label": "SEO Score", "suffix": "/100" }
+          "performance": {
+            "value": "98",
+            "label": "Performance Score",
+            "suffix": "/100"
+          },
+          "seoScore": {
+            "value": "100",
+            "label": "SEO Score",
+            "suffix": "/100"
+          }
         }
       },
       "biemme": {
@@ -1631,12 +1782,26 @@
         "subtitle": "Web stavební společnosti",
         "description": "Biemme 2 je stavební společnost s více než 30 lety historie a 200+ postavenými byty. Jejich předchozí web neodrážel tuto solidnost. Navrhli jsme digitální přítomnost odpovídající jejich postavení: firemní design s vínovou paletou vyzařující spolehlivost, projektové portfolio s immersivními galeriemi a silná optimalizace lokálního SEO, která je staví na špici vyhledávání 'stavební firma' v jejich oblasti. Certifikace ISO 9001 a SOA jsou nyní prezentovány jako prvky budující důvěru, konvertující návštěvníky na konkrétní žádosti o cenovou nabídku.",
         "services": {
-          "webDesign": { "name": "Web Design", "detail": "Autoritativní firemní design s projektovým portfoliem a full-screen galeriemi" },
-          "seo": { "name": "SEO", "detail": "Pokročilé lokální SEO: optimalizovaný Google Business, LocalBusiness schema, NAP citace" }
+          "webDesign": {
+            "name": "Web Design",
+            "detail": "Autoritativní firemní design s projektovým portfoliem a full-screen galeriemi"
+          },
+          "seo": {
+            "name": "SEO",
+            "detail": "Pokročilé lokální SEO: optimalizovaný Google Business, LocalBusiness schema, NAP citace"
+          }
         },
         "results": {
-          "visibility": { "value": "+150", "label": "lokální viditelnost", "suffix": "%" },
-          "contacts": { "value": "+80", "label": "žádostí o cenovou nabídku", "suffix": "%" }
+          "visibility": {
+            "value": "+150",
+            "label": "lokální viditelnost",
+            "suffix": "%"
+          },
+          "contacts": {
+            "value": "+80",
+            "label": "žádostí o cenovou nabídku",
+            "suffix": "%"
+          }
         }
       },
       "ichnusa": {
@@ -1644,14 +1809,35 @@
         "subtitle": "Web pro sardskou restauraci v Praze",
         "description": "Ichnusa Botega & Bistro je autentická sardská restaurace v srdci Malé Strany v Praze. Vytvořili jsme trojjazyčný web (IT/EN/CS), který zachycuje esenci sardské kuchyně: od porceddu po culurgiones, čerstvé mořské plody po vína Cannonau. Web integruje online rezervaci přes DISH.co, interaktivní menu s kategoriemi, živé Google recenze (4,7/5 s 497 recenzemi), sekci soukromých akcí a newsletter. Lokální SEO optimalizované pro umístění restaurace ve vyhledávání v Praze, se schema markup Restaurant a hreflang pro tři jazyky.",
         "services": {
-          "webDesign": { "name": "Web Design", "detail": "Elegantní design s full-screen hero, interaktivním menu a fotogalerií" },
-          "seo": { "name": "Lokální SEO", "detail": "Restaurant schema, Google Business, trojjazyčný hreflang, pražská lokální klíčová slova" },
-          "i18n": { "name": "Vícejazyčný", "detail": "Kompletní web v italštině, angličtině a češtině s next-intl" }
+          "webDesign": {
+            "name": "Web Design",
+            "detail": "Elegantní design s full-screen hero, interaktivním menu a fotogalerií"
+          },
+          "seo": {
+            "name": "Lokální SEO",
+            "detail": "Restaurant schema, Google Business, trojjazyčný hreflang, pražská lokální klíčová slova"
+          },
+          "i18n": {
+            "name": "Vícejazyčný",
+            "detail": "Kompletní web v italštině, angličtině a češtině s next-intl"
+          }
         },
         "results": {
-          "reviews": { "value": "4.7", "label": "Google recenze", "suffix": "/5" },
-          "visibility": { "value": "+150", "label": "lokální viditelnost", "suffix": "%" },
-          "performance": { "value": "95", "label": "Performance Score", "suffix": "/100" }
+          "reviews": {
+            "value": "4.7",
+            "label": "Google recenze",
+            "suffix": "/5"
+          },
+          "visibility": {
+            "value": "+150",
+            "label": "lokální viditelnost",
+            "suffix": "%"
+          },
+          "performance": {
+            "value": "95",
+            "label": "Performance Score",
+            "suffix": "/100"
+          }
         }
       }
     }
@@ -1676,7 +1862,10 @@
       "singleflo": {
         "subtitle": "All-in-One ERP platforma"
       }
-    }
+    },
+    "resultActiveUsers": "aktivních uživatelů",
+    "resultLeads": "generovaných kontaktů",
+    "resultPerformance": "Performance"
   },
   "portfolioCta": {
     "badge": "Dokončené projekty",

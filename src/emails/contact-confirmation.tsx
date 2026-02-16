@@ -13,13 +13,13 @@ import { EmailLayout, styles, colors } from './components/Layout'
 
 interface ContactConfirmationEmailProps {
   name: string
-  message: string
+  projectType?: string | null
   submittedAt?: string
 }
 
 export function ContactConfirmationEmail({
   name = 'Mario',
-  message = 'Vorrei informazioni sui vostri servizi...',
+  projectType = 'Sito Aziendale',
   submittedAt = new Date().toLocaleDateString('it-IT'),
 }: ContactConfirmationEmailProps) {
   return (
@@ -54,28 +54,12 @@ export function ContactConfirmationEmail({
 
         <Hr style={styles.hr} />
 
-        {/* Message Preview */}
-        <Text style={styles.infoLabel}>IL TUO MESSAGGIO</Text>
-        <Section
-          style={{
-            backgroundColor: colors.bgPrimary,
-            borderRadius: '8px',
-            padding: '16px',
-            marginTop: '8px',
-            borderLeft: `4px solid ${colors.accentOrange}`,
-          }}
-        >
-          <Text
-            style={{
-              ...styles.paragraph,
-              margin: '0',
-              fontStyle: 'italic',
-              whiteSpace: 'pre-wrap',
-            }}
-          >
-            &quot;{message}&quot;
-          </Text>
-        </Section>
+        {projectType && (
+          <>
+            <Text style={styles.infoLabel}>TIPO PROGETTO</Text>
+            <Text style={styles.infoValue}>{projectType}</Text>
+          </>
+        )}
 
         <Text
           style={{

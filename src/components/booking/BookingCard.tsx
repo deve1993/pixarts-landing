@@ -18,6 +18,8 @@ interface BookingCardProps {
       free: string
     }
     cta: string
+    orText: string
+    trustLine: string
   }
 }
 
@@ -68,7 +70,7 @@ export function BookingCard({ labels }: BookingCardProps) {
         </div>
         <div className="relative flex justify-center">
           <span className="px-4 bg-transparent text-text-muted text-sm">
-            oppure
+            {labels.orText}
           </span>
         </div>
       </div>
@@ -83,7 +85,7 @@ export function BookingCard({ labels }: BookingCardProps) {
 
       {/* Trust Badge */}
       <p className="text-center text-xs text-text-muted mt-4">
-        Senza impegno • Risposta in 24h
+        {labels.trustLine}
       </p>
     </div>
   )

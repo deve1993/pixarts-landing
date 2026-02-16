@@ -43,13 +43,6 @@ export async function POST(request: Request) {
       other: 'Altro',
     }
 
-    const budgetLabels: Record<string, string> = {
-      '1-2k': '€1.000 - €2.000',
-      '2-4k': '€2.000 - €4.000',
-      '4-6k': '€4.000 - €6.000',
-      '6k+': '+€6.000',
-    }
-
     const submittedAt = new Date().toLocaleString('it-IT')
 
     const internalResult = await sendInternalNotification({
@@ -57,10 +50,7 @@ export async function POST(request: Request) {
       react: ContactInternalEmail({
         name: validatedData.name,
         email: validatedData.email,
-        phone: validatedData.phone,
         projectType: projectTypeLabels[validatedData.projectType],
-        budget: budgetLabels[validatedData.budget],
-        message: validatedData.message || 'Nessun messaggio aggiuntivo',
         submittedAt,
       }),
       replyTo: validatedData.email,
@@ -74,8 +64,8 @@ export async function POST(request: Request) {
       to: validatedData.email,
       subject: `Abbiamo ricevuto la tua richiesta - Pixarts`,
       react: ContactConfirmationEmail({
-        name: validatedData.name.split(' ')[0], // Use first name only
-        message: validatedData.message || `Richiesta per: ${projectTypeLabels[validatedData.projectType]}`,
+        name: validatedData.name.split(' ')[0],
+        projectType: projectTypeLabels[validatedData.projectType],
         submittedAt: new Date().toLocaleDateString('it-IT'),
       }),
     })

@@ -9,7 +9,6 @@ import { useTranslations } from 'next-intl'
 import { Section } from '@/components/ui/section'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
 import { Select } from '@/components/ui/select'
 import { BookingCard } from '@/components/booking'
 import { Link } from '@/i18n/routing'
@@ -20,7 +19,6 @@ import { useAnalytics } from '@/lib/hooks/useAnalytics'
 type FormStatus = 'idle' | 'loading' | 'success' | 'error'
 
 const PROJECT_TYPE_KEYS = ['landing', 'website', 'ecommerce', 'other'] as const
-const BUDGET_KEYS = ['1-2k', '2-4k', '4-6k', '6k+'] as const
 
 export function CTAFinal() {
   const t = useTranslations('cta')
@@ -52,7 +50,6 @@ export function CTAFinal() {
       trackConversion('contact_form_submit', {
         source: 'cta_final_form',
         project_type: data.projectType,
-        budget_range: data.budget,
       })
 
       setStatus('success')
@@ -156,100 +153,29 @@ export function CTAFinal() {
                 </div>
               </div>
 
-              {/* Phone */}
+              {/* Project Type */}
               <div>
                 <label
-                  htmlFor="phone"
+                  htmlFor="projectType"
                   className="block text-sm font-medium text-text-primary mb-2"
                 >
-                  {t('form.phone')}
+                  {t('form.projectType')} {t('form.required')}
                 </label>
-                <Input
-                  id="phone"
-                  type="tel"
-                  placeholder={t('form.phonePlaceholder')}
-                  error={!!errors.phone}
-                  {...register('phone')}
-                />
-                {errors.phone && (
-                  <p className="mt-1 text-xs text-error">
-                    {errors.phone.message}
-                  </p>
-                )}
-              </div>
-
-              {/* Project Type & Budget Row */}
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label
-                    htmlFor="projectType"
-                    className="block text-sm font-medium text-text-primary mb-2"
-                  >
-                    {t('form.projectType')} {t('form.required')}
-                  </label>
-                  <Select
-                    id="projectType"
-                    error={!!errors.projectType}
-                    {...register('projectType')}
-                  >
-                    <option value="">{t('form.projectTypePlaceholder')}</option>
-                    {PROJECT_TYPE_KEYS.map((key) => (
-                      <option key={key} value={key}>
-                        {t(`projectTypes.${key}`)}
-                      </option>
-                    ))}
-                  </Select>
-                  {errors.projectType && (
-                    <p className="mt-1 text-xs text-error">
-                      {errors.projectType.message}
-                    </p>
-                  )}
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="budget"
-                    className="block text-sm font-medium text-text-primary mb-2"
-                  >
-                    {t('form.budget')} {t('form.required')}
-                  </label>
-                  <Select
-                    id="budget"
-                    error={!!errors.budget}
-                    {...register('budget')}
-                  >
-                    <option value="">{t('form.budgetPlaceholder')}</option>
-                    {BUDGET_KEYS.map((key) => (
-                      <option key={key} value={key}>
-                        {t(`budgetOptions.${key}`)}
-                      </option>
-                    ))}
-                  </Select>
-                  {errors.budget && (
-                    <p className="mt-1 text-xs text-error">
-                      {errors.budget.message}
-                    </p>
-                  )}
-                </div>
-              </div>
-
-              {/* Message */}
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-text-primary mb-2"
+                <Select
+                  id="projectType"
+                  error={!!errors.projectType}
+                  {...register('projectType')}
                 >
-                  {t('form.message')}
-                </label>
-                <Textarea
-                  id="message"
-                  placeholder={t('form.messagePlaceholder')}
-                  error={!!errors.message}
-                  {...register('message')}
-                />
-                {errors.message && (
+                  <option value="">{t('form.projectTypePlaceholder')}</option>
+                  {PROJECT_TYPE_KEYS.map((key) => (
+                    <option key={key} value={key}>
+                      {t(`projectTypes.${key}`)}
+                    </option>
+                  ))}
+                </Select>
+                {errors.projectType && (
                   <p className="mt-1 text-xs text-error">
-                    {errors.message.message}
+                    {errors.projectType.message}
                   </p>
                 )}
               </div>
@@ -331,6 +257,8 @@ export function CTAFinal() {
                   free: tBooking('features.freeDesc'),
                 },
                 cta: tBooking('title'),
+                orText: tBooking('orText'),
+                trustLine: tBooking('trustLine'),
               }}
             />
           </motion.div>

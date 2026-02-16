@@ -48,7 +48,7 @@ export function Problems() {
                   <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-error/10 border border-error/20 group-hover:bg-error/20 transition-colors">
                     <AlertTriangle className="w-3.5 h-3.5 text-error" aria-hidden="true" />
                     <span className="text-xs font-medium text-error">
-                      Problema {index + 1}
+                      {t(`problemLabel`, { n: index + 1 })}
                     </span>
                   </div>
                 </div>

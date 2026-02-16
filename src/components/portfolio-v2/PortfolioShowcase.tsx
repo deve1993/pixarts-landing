@@ -16,7 +16,7 @@ const SHOWCASE_PROJECTS = [
     image: '/portfolio/quickfy APP1.webp',
     category: 'webapp',
     resultValue: '500+',
-    resultLabel: 'utenti attivi',
+    resultLabelKey: 'resultActiveUsers',
   },
   {
     id: 'fl1',
@@ -24,7 +24,7 @@ const SHOWCASE_PROJECTS = [
     image: '/portfolio/FL1 1.webp',
     category: 'business-website',
     resultValue: '+220%',
-    resultLabel: 'lead generati',
+    resultLabelKey: 'resultLeads',
   },
   {
     id: 'singleflo',
@@ -32,7 +32,7 @@ const SHOWCASE_PROJECTS = [
     image: '/portfolio/singleflo-1.webp',
     category: 'landing-page',
     resultValue: '98/100',
-    resultLabel: 'Performance',
+    resultLabelKey: 'resultPerformance',
   },
 ] as const
 
@@ -91,7 +91,7 @@ export function PortfolioShowcase() {
                     <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent-orange to-accent-amber">
                       {SHOWCASE_PROJECTS[0].resultValue}
                     </span>
-                    <p className="text-xs text-text-muted">{SHOWCASE_PROJECTS[0].resultLabel}</p>
+                    <p className="text-xs text-text-muted">{t(SHOWCASE_PROJECTS[0].resultLabelKey)}</p>
                   </div>
                 </div>
               </div>
@@ -138,7 +138,7 @@ export function PortfolioShowcase() {
                     <span className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent-orange to-accent-amber">
                       {project.resultValue}
                     </span>
-                    <span className="text-xs text-text-muted">{project.resultLabel}</span>
+                    <span className="text-xs text-text-muted">{t(project.resultLabelKey)}</span>
                   </div>
                 </div>
 

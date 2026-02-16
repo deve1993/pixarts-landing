@@ -13,6 +13,7 @@ export function Footer() {
   const t = useTranslations('footer')
   const tPricing = useTranslations('pricing')
   const tNav = useTranslations('nav')
+  const tBooking = useTranslations('booking')
   const currentYear = new Date().getFullYear()
 
   return (
@@ -34,7 +35,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-lg bg-bg-elevated border border-border flex items-center justify-center text-text-muted hover:text-accent-orange hover:border-accent-orange transition-all duration-200"
-                  aria-label={`${social.name} (apre in una nuova finestra)`}
+                  aria-label={`${social.name} (${t('opensNewWindow')})`}
                 >
                   {social.name === 'LinkedIn' ? (
                     <Linkedin size={18} aria-hidden="true" />
@@ -46,7 +47,7 @@ export function Footer() {
               <a
                 href="mailto:info@pixarts.eu"
                 className="w-10 h-10 rounded-lg bg-bg-elevated border border-border flex items-center justify-center text-text-muted hover:text-accent-orange hover:border-accent-orange transition-all duration-200"
-                aria-label="Invia email a info@pixarts.eu"
+                aria-label={t('emailAriaLabel')}
               >
                 <Mail size={18} aria-hidden="true" />
               </a>
@@ -105,7 +106,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/prenota" className="text-text-secondary hover:text-text-primary transition-colors duration-200 text-sm">
-                  Prenota una chiamata
+                  {tBooking('title')}
                 </Link>
               </li>
             </ul>
