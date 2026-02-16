@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react'
 import { useTranslations } from 'next-intl'
+import { GlobeCanvas } from '@/components/GlobeCanvas'
 import { Section } from '@/components/ui/section'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -70,6 +71,9 @@ export function CTAFinal() {
       >
         {/* Header */}
         <motion.div variants={staggerItem} className="text-center mb-12">
+          <div className="w-52 h-52 md:w-[250px] md:h-[250px] mx-auto mb-10">
+            <GlobeCanvas />
+          </div>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-text-primary mb-4">
             {t('title')}
           </h2>

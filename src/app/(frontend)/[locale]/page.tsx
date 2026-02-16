@@ -5,11 +5,12 @@ import { Footer } from '@/components/Footer'
 import { MiniCTA } from '@/components/sections/MiniCTA'
 
 // Above-fold components - loaded immediately
-import { Hero, TrustBadges, SocialProof } from '@/components/sections'
+import { Hero, TrustBadges } from '@/components/sections'
 
 // Below-fold components - lazy loaded for better initial performance
 const Problems = dynamic(() => import('@/components/sections/Problems').then(m => m.Problems))
 const Solution = dynamic(() => import('@/components/sections/Solution').then(m => m.Solution))
+const SocialProof = dynamic(() => import('@/components/sections/SocialProof').then(m => m.SocialProof))
 const PortfolioShowcase = dynamic(() => import('@/components/portfolio-v2').then(m => m.PortfolioShowcase))
 const Testimonials = dynamic(() => import('@/components/sections/Testimonials').then(m => m.Testimonials))
 
@@ -23,6 +24,7 @@ export default async function Home({ params }: Props) {
   // Enable static rendering
   setRequestLocale(locale)
 
+  const tMid = await getTranslations({ locale, namespace: 'homeMidCta' })
   const t = await getTranslations({ locale, namespace: 'homeCta' })
 
   return (
@@ -31,9 +33,17 @@ export default async function Home({ params }: Props) {
       <main id="main-content">
         <Hero />
         <TrustBadges />
-        <SocialProof />
         <Problems />
         <Solution />
+        <SocialProof />
+        <MiniCTA
+          title={tMid('title')}
+          subtitle={tMid('subtitle')}
+          primaryLabel={tMid('primaryLabel')}
+          primaryHref="/contatti"
+          secondaryLabel={tMid('secondaryLabel')}
+          secondaryHref="/servizi"
+        />
         <PortfolioShowcase />
         <Testimonials />
         <MiniCTA

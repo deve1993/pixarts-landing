@@ -61,24 +61,24 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               <li>
-                <a href="#pricing" className="text-text-secondary hover:text-text-primary transition-colors duration-200 text-sm">
+                <Link href="/servizi" className="text-text-secondary hover:text-text-primary transition-colors duration-200 text-sm">
                   {tPricing('plan1.name')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#pricing" className="text-text-secondary hover:text-text-primary transition-colors duration-200 text-sm">
+                <Link href="/servizi" className="text-text-secondary hover:text-text-primary transition-colors duration-200 text-sm">
                   {tPricing('plan2.name')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#pricing" className="text-text-secondary hover:text-text-primary transition-colors duration-200 text-sm">
+                <Link href="/servizi" className="text-text-secondary hover:text-text-primary transition-colors duration-200 text-sm">
                   {tPricing('plan3.name')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#pricing" className="text-text-secondary hover:text-text-primary transition-colors duration-200 text-sm">
+                <Link href="/servizi" className="text-text-secondary hover:text-text-primary transition-colors duration-200 text-sm">
                   {tPricing('maintenance')}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -90,19 +90,19 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               <li>
-                <a href="#portfolio" className="text-text-secondary hover:text-text-primary transition-colors duration-200 text-sm">
+                <Link href="/portfolio" className="text-text-secondary hover:text-text-primary transition-colors duration-200 text-sm">
                   {tNav('portfolio')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#processo" className="text-text-secondary hover:text-text-primary transition-colors duration-200 text-sm">
-                  {tNav('process')}
-                </a>
+                <Link href="/servizi" className="text-text-secondary hover:text-text-primary transition-colors duration-200 text-sm">
+                  {tNav('services')}
+                </Link>
               </li>
               <li>
-                <a href="#faq" className="text-text-secondary hover:text-text-primary transition-colors duration-200 text-sm">
-                  {tNav('faq')}
-                </a>
+                <Link href="/contatti" className="text-text-secondary hover:text-text-primary transition-colors duration-200 text-sm">
+                  {tNav('contact')}
+                </Link>
               </li>
               <li>
                 <Link href="/prenota" className="text-text-secondary hover:text-text-primary transition-colors duration-200 text-sm">

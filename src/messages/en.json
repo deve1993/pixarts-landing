@@ -25,7 +25,7 @@
     "subtitle2": "10 days",
     "subtitle3": "Modern design, SEO included, satisfaction guarantee at",
     "ctaPrimary": "Get a free quote",
-    "ctaSecondary": "View portfolio",
+    "ctaSecondary": "Explore services",
     "scroll": "Scroll"
   },
   "stats": {
@@ -2105,6 +2105,12 @@
     "heroTitle": "Let's talk about your",
     "heroHighlight": "project",
     "heroSubtitle": "Fill out the form or book a free call. We'll respond within 24 business hours."
+  },
+  "homeMidCta": {
+    "title": "Do these problems sound familiar?",
+    "subtitle": "Let's talk about it — the first consultation is free and no-strings-attached.",
+    "primaryLabel": "Get a free quote",
+    "secondaryLabel": "Explore services"
   },
   "homeCta": {
     "title": "Turn your idea into reality",

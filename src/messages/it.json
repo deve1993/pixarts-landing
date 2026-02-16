@@ -25,7 +25,7 @@
     "subtitle2": "10 giorni",
     "subtitle3": "Design moderno, SEO incluso, garanzia soddisfazione al",
     "ctaPrimary": "Richiedi preventivo gratuito",
-    "ctaSecondary": "Vedi il portfolio",
+    "ctaSecondary": "Scopri i servizi",
     "scroll": "Scorri"
   },
   "stats": {
@@ -2105,6 +2105,12 @@
     "heroTitle": "Parliamo del tuo",
     "heroHighlight": "progetto",
     "heroSubtitle": "Compila il form o prenota una call gratuita. Ti rispondiamo entro 24 ore lavorative."
+  },
+  "homeMidCta": {
+    "title": "Ti rivedi in questi problemi?",
+    "subtitle": "Parlane con noi — la prima consulenza è gratuita e senza impegno.",
+    "primaryLabel": "Richiedi preventivo gratuito",
+    "secondaryLabel": "Scopri i servizi"
   },
   "homeCta": {
     "title": "Trasforma la tua idea in realtà",

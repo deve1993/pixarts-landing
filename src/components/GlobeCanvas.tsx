@@ -50,7 +50,7 @@ export function GlobeCanvas({ className = '' }: GlobeCanvasProps) {
       // iOS: meno samples ma comunque visibile, mobile: 12k, desktop: 24k
       const samples = iOS ? 8000 : (isMobile ? 12000 : 24000)
       // iOS: faster rotation to feel responsive despite lower frame rate
-      const rotationSpeed = iOS ? 0.008 : 0.003
+      const rotationSpeed = iOS ? 0.005 : 0.0015
 
       globe = createGlobe(canvasRef.current, {
         devicePixelRatio: dpr,

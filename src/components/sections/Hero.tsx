@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 import { AnimatedCounter } from '@/components/AnimatedCounter'
 import { HeroLogo } from '@/components/HeroLogo'
 import { useAnalytics } from '@/lib/hooks/useAnalytics'
-import { scrollToElement } from '@/lib/utils'
+import { Link } from '@/i18n/routing'
 
 // Animation variants
 const containerVariants = {
@@ -125,34 +125,40 @@ export function Hero() {
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-32"
           >
-            <Button
-              size="lg"
-              className="group text-base px-8 py-6 shadow-xl shadow-accent-orange/20"
+            <Link
+              href="/contatti"
               onClick={() => {
                 trackEvent('cta_click', {
                   cta_name: 'hero_primary',
                   cta_location: 'hero',
                 })
-                scrollToElement('contatti')
               }}
             >
-              <span>{heroData.ctaPrimary}</span>
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              size="lg"
-              variant="secondary"
-              className="text-base px-8 py-6"
+              <Button
+                size="lg"
+                className="group text-base px-8 py-6 shadow-xl shadow-accent-orange/20"
+              >
+                <span>{heroData.ctaPrimary}</span>
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+            <Link
+              href="/servizi"
               onClick={() => {
                 trackEvent('cta_click', {
                   cta_name: 'hero_secondary',
                   cta_location: 'hero',
                 })
-                scrollToElement('portfolio')
               }}
             >
-              {heroData.ctaSecondary}
-            </Button>
+              <Button
+                size="lg"
+                variant="secondary"
+                className="text-base px-8 py-6"
+              >
+                {heroData.ctaSecondary}
+              </Button>
+            </Link>
           </motion.div>
 
           {/* Stats Cards with Floating Animation */}

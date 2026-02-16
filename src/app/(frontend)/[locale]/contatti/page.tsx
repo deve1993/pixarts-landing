@@ -56,6 +56,7 @@ export default async function ContattiPage({ params }: Props) {
           title={t('heroTitle')}
           highlight={t('heroHighlight')}
           subtitle={t('heroSubtitle')}
+          className="!pb-0 -mb-8 md:-mb-12"
         />
         <CTAFinal />
         <FAQ />

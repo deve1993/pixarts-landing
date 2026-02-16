@@ -25,7 +25,7 @@
     "subtitle2": "10 dní",
     "subtitle3": "Moderní design, SEO v ceně, záruka spokojenosti",
     "ctaPrimary": "Získat bezplatnou nabídku",
-    "ctaSecondary": "Zobrazit portfolio",
+    "ctaSecondary": "Prozkoumat služby",
     "scroll": "Posunout"
   },
   "stats": {
@@ -2105,6 +2105,12 @@
     "heroTitle": "Pojďme se bavit o vašem",
     "heroHighlight": "projektu",
     "heroSubtitle": "Vyplňte formulář nebo si zarezervujte bezplatný hovor. Odpovíme do 24 pracovních hodin."
+  },
+  "homeMidCta": {
+    "title": "Poznáváte tyto problémy?",
+    "subtitle": "Promluvme si o tom — první konzultace je zdarma a nezávazná.",
+    "primaryLabel": "Získejte bezplatnou nabídku",
+    "secondaryLabel": "Prozkoumat služby"
   },
   "homeCta": {
     "title": "Proměňte svůj nápad ve skutečnost",
