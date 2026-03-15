@@ -12,7 +12,6 @@ import {
   Rocket,
   TrendingUp,
   Search,
-  Headphones,
   Smartphone,
   Lock,
   RotateCcw,

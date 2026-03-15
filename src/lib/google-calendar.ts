@@ -18,7 +18,7 @@ import {
   startOfDay,
   endOfDay,
 } from 'date-fns'
-import { toZonedTime } from 'date-fns-tz'
+
 import { BOOKING_CONFIG } from './booking-config'
 import type {
   TimeSlot,

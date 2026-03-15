@@ -107,7 +107,7 @@ export function useBookingFlow(): UseBookingFlowReturn {
         setIsSubmitting(false)
       }
     },
-    [selectedSlot]
+    [selectedSlot, locale]
   )
 
   const reset = useCallback(() => {
