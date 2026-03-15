@@ -6,8 +6,7 @@ import { Logo } from './Logo'
 import { SOCIAL_LINKS } from '@/lib/constants'
 import { Linkedin, Instagram, Mail } from 'lucide-react'
 
-const FOOTER_SERVICE_KEYS = ['landing', 'website', 'ecommerce', 'booking', 'maintenance'] as const
-const FOOTER_RESOURCE_KEYS = ['portfolio', 'process', 'faq', 'blog'] as const
+
 
 export function Footer() {
   const t = useTranslations('footer')

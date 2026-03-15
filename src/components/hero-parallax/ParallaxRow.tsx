@@ -13,7 +13,7 @@ interface ParallaxRowProps {
 export function ParallaxRow({
   projects,
   translateX,
-  direction,
+  direction: _direction,
 }: ParallaxRowProps) {
   return (
     <div className="relative w-full overflow-hidden">

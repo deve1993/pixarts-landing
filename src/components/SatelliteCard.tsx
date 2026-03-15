@@ -43,7 +43,7 @@ const metricVariants = {
 export function SatelliteCard({
   projectKey,
   projectName,
-  position,
+  position: _position,
   className,
 }: SatelliteCardProps) {
   const [isExpanded, setIsExpanded] = useState(false)
@@ -81,8 +81,8 @@ export function SatelliteCard({
         opacity: { duration: 0.4 },
         scale: { duration: 0.4 },
       }}
-      role="article"
-      aria-expanded={isExpanded}
+      role="region"
+      aria-label={projectName}
       tabIndex={0}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
