@@ -9,14 +9,6 @@ const PROCESS_ICONS = [MessageSquare, Palette, Code, Rocket]
 const PROCESS_KEYS = ['step1', 'step2', 'step3', 'step4'] as const
 
 // Animation variants
-const timelineLineVariants = {
-  hidden: { scaleY: 0 },
-  visible: {
-    scaleY: 1,
-    transition: { duration: 1.5, ease: 'easeOut' }
-  }
-}
-
 const stepContainerVariants = {
   hidden: {},
   visible: {

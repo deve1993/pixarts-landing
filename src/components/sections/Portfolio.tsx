@@ -1,11 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ExternalLink, ArrowRight } from 'lucide-react'
+import { ExternalLink } from 'lucide-react'
 import { Section, SectionHeader } from '@/components/ui/section'
 import { Button } from '@/components/ui/button'
 import { PORTFOLIO_PROJECTS } from '@/lib/constants'
-import { fadeInUp, slideInLeft, slideInRight } from '@/lib/motion-variants'
+import { slideInLeft, slideInRight } from '@/lib/motion-variants'
 
 export function Portfolio() {
   return (

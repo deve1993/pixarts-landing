@@ -95,7 +95,7 @@ export function Capabilities() {
         variants={staggerContainer}
         className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
       >
-        {CAPABILITY_KEYS.map((key, index) => {
+        {CAPABILITY_KEYS.map((key) => {
           const staticData = CAPABILITY_STATIC_DATA[key]
           const Icon = staticData.icon
           return (
