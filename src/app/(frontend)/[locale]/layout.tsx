@@ -14,6 +14,7 @@ import {
   GoogleTagManagerNoscript,
   HotjarScript,
   MetaPixel,
+  GoogleAds,
 } from "@/components/analytics"
 
 const inter = Inter({
@@ -174,6 +175,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       <head>
         <StructuredData locale={locale} />
         <GoogleTagManager />
+        <GoogleAds />
       </head>
       <body className="font-body bg-bg-primary text-text-primary antialiased">
         <GoogleTagManagerNoscript />

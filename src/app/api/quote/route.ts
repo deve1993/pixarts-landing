@@ -62,7 +62,6 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { _hp: _honeypot, _ts: _timestamp, ...cleanData } = result.data
     const quoteId = crypto.randomUUID()
     const data = {
