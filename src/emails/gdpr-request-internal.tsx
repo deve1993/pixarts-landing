@@ -31,7 +31,7 @@ export function GdprRequestInternalEmail({
   fullName = 'Mario Rossi',
   email = 'mario.rossi@email.com',
   phone = '+39 333 1234567',
-  requestType = 'access',
+  requestType: _requestType = 'access',
   requestTypeLabel = 'Diritto di Accesso',
   requestTypeArticle = 'Art. 15 GDPR',
   details = 'Vorrei ricevere una copia di tutti i miei dati personali.',

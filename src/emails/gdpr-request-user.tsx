@@ -23,7 +23,7 @@ interface GdprRequestUserEmailProps {
 export function GdprRequestUserEmail({
   requestId = 'GDPR-123456789-ABC',
   fullName = 'Mario Rossi',
-  requestType = 'access',
+  requestType: _requestType = 'access',
   requestTypeLabel = 'Diritto di Accesso',
   submittedAt = new Date().toLocaleDateString('it-IT'),
   deadlineDate = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toLocaleDateString('it-IT'),
