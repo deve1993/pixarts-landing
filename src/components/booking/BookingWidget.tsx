@@ -6,7 +6,7 @@ import { ArrowLeft, ArrowRight, Loader2, AlertCircle } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { addMonths, format, startOfMonth } from 'date-fns'
 import { Button } from '@/components/ui/button'
-import { BookingSteps, type BookingStep } from './BookingSteps'
+import { BookingSteps } from './BookingSteps'
 import { BookingSummary } from './BookingSummary'
 import { CalendarMonth } from './CalendarMonth'
 import { TimeSlotGrid } from './TimeSlotGrid'
@@ -41,7 +41,6 @@ export function BookingWidget() {
     selectSlot,
     submitBooking,
     goBack,
-    reset,
   } = useBookingFlow()
 
   const { availability, slots, isLoadingAvailability, isLoadingSlots } = useAvailability(
