@@ -1,7 +1,6 @@
 'use client'
 
 import { useRef, useState, useEffect, useCallback } from 'react'
-import { motion } from 'framer-motion'
 import { Star, Quote, BadgeCheck } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { Section, SectionHeader } from '@/components/ui/section'
@@ -365,15 +364,7 @@ export function Testimonials() {
         </Marquee>
       </div>
 
-      {/* Footer hint */}
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="text-center text-text-muted text-xs mt-6"
-      >
-        {t('hoverHint')}
-      </motion.p>
+
     </Section>
   )
 }

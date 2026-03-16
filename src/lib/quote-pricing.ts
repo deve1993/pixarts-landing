@@ -2,9 +2,9 @@ import { QuoteFormValues } from './validations/quote'
 
 // Base prices
 const BASE_PRICES = {
-  landing: { min: 800, max: 1500 },
-  website: { min: 1500, max: 3000 },
-  ecommerce: { min: 3000, max: 6000 },
+  landing: { min: 1200, max: 1500 },
+  website: { min: 2500, max: 3500 },
+  ecommerce: { min: 4500, max: 6000 },
   webapp: { min: 5000, max: 15000 },
 }
 

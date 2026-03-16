@@ -2,10 +2,10 @@
 
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
-import { Clock, Lock, Headphones, Award } from 'lucide-react'
+import { Clock, Lock, Headphones, Award, Shield } from 'lucide-react'
 
-const BADGE_ICONS = [Clock, Lock, Headphones, Award]
-const BADGE_KEYS = ['delivery', 'secure', 'support', 'projects'] as const
+const BADGE_ICONS = [Shield, Clock, Lock, Headphones, Award]
+const BADGE_KEYS = ['moneyBack', 'delivery', 'secure', 'support', 'projects'] as const
 
 export function TrustBadges() {
   const t = useTranslations('trustBadges')
