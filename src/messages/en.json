@@ -8,12 +8,14 @@
     "process": "Process",
     "faq": "FAQ",
     "book": "Book a Call",
-    "logoAria": "Pixarts - Back to home",
+    "logoAria": "Pixarts - Professional Web Design Agency",
     "mainNav": "Main navigation",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "mobileMenuDialog": "Navigation menu",
-    "mobileNav": "Mobile menu"
+    "mobileNav": "Mobile menu",
+    "callUs": "Call us",
+    "whatsappAria": "Contact us on WhatsApp"
   },
   "hero": {
     "badge": "projects successfully completed",
@@ -26,7 +28,32 @@
     "subtitle3": "Modern design, SEO included, satisfaction guarantee at",
     "ctaPrimary": "Get a free quote",
     "ctaSecondary": "Explore services",
-    "scroll": "Scroll"
+    "scroll": "Scroll",
+    "priceFrom": "Professional websites from €1,200",
+    "priceDelivery": "Guaranteed delivery"
+  },
+  "urgencyBanner": {
+    "text": "Only 3 spots available this month",
+    "cta": "Request your quote now"
+  },
+  "miniFaq": {
+    "title": "Have a question?",
+    "q1": {
+      "question": "How much does a website cost?",
+      "answer": "Our prices start from €1,200 for a professional landing page. The cost varies depending on the features required. Get a free, detailed quote within 24 hours."
+    },
+    "q2": {
+      "question": "How long does it take to have the site ready?",
+      "answer": "We deliver in 7-14 days from project confirmation. Guaranteed in writing: for every day of delay, we apply a 10% discount."
+    },
+    "q3": {
+      "question": "Do I need to handle the technical side?",
+      "answer": "Absolutely not. We handle everything: hosting, domain, SSL, maintenance. You focus on your business, we handle the technology."
+    }
+  },
+  "stickyCtaButton": {
+    "label": "Get a Free Quote",
+    "whatsappLabel": "Message us on WhatsApp"
   },
   "stats": {
     "projects": "Projects completed",
@@ -1865,7 +1892,10 @@
     },
     "resultActiveUsers": "active users",
     "resultLeads": "leads generated",
-    "resultPerformance": "Performance"
+    "resultPerformance": "Performance",
+    "altQuickfyApp": "Quickfy App - Analytics dashboard built by Pixarts with 500+ active users",
+    "altFL1": "FL1 - Business website with AI built by Pixarts achieving +220% leads generated",
+    "altSingleFlo": "SingleFlo - Landing page built by Pixarts with 98/100 Lighthouse performance score"
   },
   "portfolioCta": {
     "badge": "Completed Projects",
@@ -2107,9 +2137,9 @@
     "heroSubtitle": "Fill out the form or book a free call. We'll respond within 24 business hours."
   },
   "homeMidCta": {
-    "title": "Do these problems sound familiar?",
-    "subtitle": "Let's talk about it — the first consultation is free and no-strings-attached.",
-    "primaryLabel": "Get a free quote",
+    "title": "Your business deserves these results too",
+    "subtitle": "Calculate your quote in 2 minutes — free, no strings attached.",
+    "primaryLabel": "Calculate my quote",
     "secondaryLabel": "Explore services"
   },
   "homeCta": {

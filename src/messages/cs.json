@@ -8,12 +8,14 @@
     "process": "Proces",
     "faq": "FAQ",
     "book": "Rezervovat",
-    "logoAria": "Pixarts - Zpět na úvodní stránku",
+    "logoAria": "Pixarts - Profesionální agentura webového designu",
     "mainNav": "Hlavní navigace",
     "openMenu": "Otevřít menu",
     "closeMenu": "Zavřít menu",
     "mobileMenuDialog": "Navigační menu",
-    "mobileNav": "Mobilní menu"
+    "mobileNav": "Mobilní menu",
+    "callUs": "Zavolejte nám",
+    "whatsappAria": "Kontaktujte nás na WhatsApp"
   },
   "hero": {
     "badge": "úspěšně dokončených projektů",
@@ -26,7 +28,32 @@
     "subtitle3": "Moderní design, SEO v ceně, záruka spokojenosti",
     "ctaPrimary": "Získat bezplatnou nabídku",
     "ctaSecondary": "Prozkoumat služby",
-    "scroll": "Posunout"
+    "scroll": "Posunout",
+    "priceFrom": "Profesionální weby od €1 200",
+    "priceDelivery": "Dodání garantováno"
+  },
+  "urgencyBanner": {
+    "text": "Pouze 3 místa k dispozici tento měsíc",
+    "cta": "Požádat o nabídku nyní"
+  },
+  "miniFaq": {
+    "title": "Máte otázku?",
+    "q1": {
+      "question": "Kolik stojí webové stránky?",
+      "answer": "Naše ceny začínají od €1 200 za profesionální landing page. Cena se liší podle požadovaných funkcí. Získejte bezplatnou a podrobnou nabídku do 24 hodin."
+    },
+    "q2": {
+      "question": "Jak dlouho trvá příprava webu?",
+      "answer": "Dodáváme za 7-14 dní od potvrzení projektu. Písemná záruka: za každý den zpoždění poskytujeme 10% slevu."
+    },
+    "q3": {
+      "question": "Musím se starat o technickou stránku?",
+      "answer": "Vůbec ne. Vše zajistíme my: hosting, doménu, SSL, údržbu. Vy se staráte jen o svůj byznys, o techniku se staráme my."
+    }
+  },
+  "stickyCtaButton": {
+    "label": "Získat bezplatnou nabídku",
+    "whatsappLabel": "Napište nám na WhatsApp"
   },
   "stats": {
     "projects": "Dokončených projektů",
@@ -1865,7 +1892,10 @@
     },
     "resultActiveUsers": "aktivních uživatelů",
     "resultLeads": "generovaných kontaktů",
-    "resultPerformance": "Performance"
+    "resultPerformance": "Performance",
+    "altQuickfyApp": "Quickfy App - Analytická platforma vytvořená Pixarts s 500+ aktivními uživateli",
+    "altFL1": "FL1 - Firemní web s AI vytvořený Pixarts s +220% vygenerovaných leadů",
+    "altSingleFlo": "SingleFlo - Landing page vytvořená Pixarts s výkonem 98/100 dle Lighthouse"
   },
   "portfolioCta": {
     "badge": "Dokončené projekty",
@@ -2107,9 +2137,9 @@
     "heroSubtitle": "Vyplňte formulář nebo si zarezervujte bezplatný hovor. Odpovíme do 24 pracovních hodin."
   },
   "homeMidCta": {
-    "title": "Poznáváte tyto problémy?",
-    "subtitle": "Promluvme si o tom — první konzultace je zdarma a nezávazná.",
-    "primaryLabel": "Získejte bezplatnou nabídku",
+    "title": "Vaše firma si tyto výsledky zaslouží také",
+    "subtitle": "Spočítejte si cenu za 2 minuty — zdarma, bez závazků.",
+    "primaryLabel": "Spočítat nabídku",
     "secondaryLabel": "Prozkoumat služby"
   },
   "homeCta": {

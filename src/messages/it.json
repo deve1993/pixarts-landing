@@ -8,12 +8,14 @@
     "process": "Processo",
     "faq": "FAQ",
     "book": "Prenota",
-    "logoAria": "Pixarts - Torna alla home",
+    "logoAria": "Pixarts - Agenzia Web Design Italia",
     "mainNav": "Navigazione principale",
     "openMenu": "Apri menu",
     "closeMenu": "Chiudi menu",
     "mobileMenuDialog": "Menu di navigazione",
-    "mobileNav": "Menu mobile"
+    "mobileNav": "Menu mobile",
+    "callUs": "Chiamaci",
+    "whatsappAria": "Contattaci su WhatsApp"
   },
   "hero": {
     "badge": "progetti completati con successo",
@@ -26,7 +28,32 @@
     "subtitle3": "Design moderno, SEO incluso, garanzia soddisfazione al",
     "ctaPrimary": "Richiedi preventivo gratuito",
     "ctaSecondary": "Scopri i servizi",
-    "scroll": "Scorri"
+    "scroll": "Scorri",
+    "priceFrom": "Siti web professionali da €1.200",
+    "priceDelivery": "Consegna garantita"
+  },
+  "urgencyBanner": {
+    "text": "Solo 3 posti disponibili questo mese",
+    "cta": "Richiedi il tuo preventivo ora"
+  },
+  "miniFaq": {
+    "title": "Hai qualche domanda?",
+    "q1": {
+      "question": "Quanto costa un sito web?",
+      "answer": "I nostri prezzi partono da €1.200 per una landing page professionale. Il costo varia in base alle funzionalità richieste. Ricevi un preventivo gratuito e dettagliato entro 24 ore."
+    },
+    "q2": {
+      "question": "Quanto tempo serve per avere il sito pronto?",
+      "answer": "Consegniamo in 7-14 giorni dalla conferma del progetto. Garantito per iscritto: per ogni giorno di ritardo applichiamo uno sconto del 10%."
+    },
+    "q3": {
+      "question": "Devo occuparmi io della parte tecnica?",
+      "answer": "Assolutamente no. Gestiamo tutto noi: hosting, dominio, SSL, manutenzione. Tu pensi solo al tuo business, noi pensiamo alla tecnologia."
+    }
+  },
+  "stickyCtaButton": {
+    "label": "Richiedi Preventivo Gratuito",
+    "whatsappLabel": "Scrivici su WhatsApp"
   },
   "stats": {
     "projects": "Progetti completati",
@@ -780,7 +807,7 @@
     "description": "Siti web professionali in 10 giorni che portano clienti. Design moderno, SEO incluso, garanzia soddisfazione.",
     "services": "Servizi",
     "resources": "Risorse",
-    "legal": "Legal",
+    "legal": "Legale",
     "contact": "Contatti",
     "comingSoon": "Prossimamente",
     "copyright": "Tutti i diritti riservati.",
@@ -1865,7 +1892,10 @@
     },
     "resultActiveUsers": "utenti attivi",
     "resultLeads": "lead generati",
-    "resultPerformance": "Performance"
+    "resultPerformance": "Performance",
+    "altQuickfyApp": "Quickfy App - Dashboard analytics sviluppata da Pixarts con 500+ utenti attivi",
+    "altFL1": "FL1 - Sito aziendale con AI realizzato da Pixarts con +220% lead generati",
+    "altSingleFlo": "SingleFlo - Landing page realizzata da Pixarts con 98/100 performance Lighthouse"
   },
   "portfolioCta": {
     "badge": "Progetti Realizzati",
@@ -2107,9 +2137,9 @@
     "heroSubtitle": "Compila il form o prenota una call gratuita. Ti rispondiamo entro 24 ore lavorative."
   },
   "homeMidCta": {
-    "title": "Ti rivedi in questi problemi?",
-    "subtitle": "Parlane con noi — la prima consulenza è gratuita e senza impegno.",
-    "primaryLabel": "Richiedi preventivo gratuito",
+    "title": "Anche il tuo business merita questi risultati",
+    "subtitle": "Calcola subito il preventivo del tuo sito — gratuito, in 2 minuti, senza impegno.",
+    "primaryLabel": "Calcola il preventivo",
     "secondaryLabel": "Scopri i servizi"
   },
   "homeCta": {
