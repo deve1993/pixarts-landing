@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { MessageCircle, ArrowRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/routing'
 
 const WHATSAPP_URL = 'https://wa.me/420775113732'
 const SCROLL_THRESHOLD = 300
@@ -58,7 +59,7 @@ export function StickyCtaButton() {
             className="hidden md:block fixed bottom-0 left-0 right-0 z-40"
           >
             <div className="max-w-7xl mx-auto px-6 pb-5 flex justify-end">
-              <a
+              <Link
                 href="/preventivo"
                 className="
                   inline-flex items-center gap-3
@@ -73,7 +74,7 @@ export function StickyCtaButton() {
               >
                 {t('label')}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-              </a>
+              </Link>
             </div>
           </motion.div>
         </>
