@@ -10,6 +10,7 @@ import { Logo } from './Logo'
 import { Button } from './ui/button'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { cn, scrollToElement } from '@/lib/utils'
+import { useAnalytics } from '@/lib/hooks/useAnalytics'
 
 const NAV_ITEMS_KEYS = [
   { key: 'home', href: '/', isPage: true },
@@ -22,6 +23,7 @@ export function Header() {
   const t = useTranslations('nav')
   const pathname = usePathname()
   const router = useRouter()
+  const { trackConversion } = useAnalytics()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
@@ -166,6 +168,7 @@ export function Header() {
                 rel="noopener noreferrer"
                 aria-label={t('whatsappAria')}
                 className="text-text-secondary hover:text-accent-orange transition-colors duration-200"
+                onClick={() => trackConversion('contact_click', { method: 'whatsapp', location: 'header_desktop' })}
               >
                 <MessageCircle className="w-4 h-4" aria-hidden="true" />
               </a>
@@ -173,6 +176,7 @@ export function Header() {
                 href="tel:+420775113732"
                 aria-label={t('callUs')}
                 className="text-sm font-medium text-text-secondary hover:text-accent-orange transition-colors duration-200"
+                onClick={() => trackConversion('contact_click', { method: 'phone', location: 'header_desktop' })}
               >
                 +420 775 113 732
               </a>
@@ -296,7 +300,7 @@ export function Header() {
                   rel="noopener noreferrer"
                   aria-label={t('whatsappAria')}
                   className="text-text-secondary hover:text-accent-orange transition-colors"
-                  onClick={closeMobileMenu}
+                  onClick={() => { trackConversion('contact_click', { method: 'whatsapp', location: 'header_mobile' }); closeMobileMenu() }}
                 >
                   <MessageCircle className="w-5 h-5" aria-hidden="true" />
                 </a>
@@ -304,7 +308,7 @@ export function Header() {
                   href="tel:+420775113732"
                   aria-label={t('callUs')}
                   className="text-sm font-medium text-text-secondary hover:text-accent-orange transition-colors"
-                  onClick={closeMobileMenu}
+                  onClick={() => { trackConversion('contact_click', { method: 'phone', location: 'header_mobile' }); closeMobileMenu() }}
                 >
                   +420 775 113 732
                 </a>

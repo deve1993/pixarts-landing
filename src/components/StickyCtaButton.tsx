@@ -5,12 +5,14 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { MessageCircle, ArrowRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/routing'
+import { useAnalytics } from '@/lib/hooks/useAnalytics'
 
 const WHATSAPP_URL = 'https://wa.me/420775113732'
 const SCROLL_THRESHOLD = 300
 
 export function StickyCtaButton() {
   const t = useTranslations('stickyCtaButton')
+  const { trackConversion } = useAnalytics()
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
@@ -46,6 +48,7 @@ export function StickyCtaButton() {
                 hover:scale-110 active:scale-95
                 transition-transform duration-200
               "
+              onClick={() => trackConversion('contact_click', { method: 'whatsapp', location: 'sticky_cta_mobile' })}
             >
               <MessageCircle className="w-6 h-6" aria-hidden="true" />
             </a>

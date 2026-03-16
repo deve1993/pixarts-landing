@@ -5,6 +5,7 @@ import { Link } from '@/i18n/routing'
 import { Logo } from './Logo'
 import { SOCIAL_LINKS } from '@/lib/constants'
 import { Linkedin, Instagram, Mail } from 'lucide-react'
+import { useAnalytics } from '@/lib/hooks/useAnalytics'
 
 
 
@@ -13,6 +14,7 @@ export function Footer() {
   const tPricing = useTranslations('pricing')
   const tNav = useTranslations('nav')
   const tBooking = useTranslations('booking')
+  const { trackConversion } = useAnalytics()
   const currentYear = new Date().getFullYear()
 
   return (
@@ -47,6 +49,7 @@ export function Footer() {
                 href="mailto:info@pixarts.eu"
                 className="w-10 h-10 rounded-lg bg-bg-elevated border border-border flex items-center justify-center text-text-muted hover:text-accent-orange hover:border-accent-orange transition-all duration-200"
                 aria-label={t('emailAriaLabel')}
+                onClick={() => trackConversion('contact_click', { method: 'email', location: 'footer' })}
               >
                 <Mail size={18} aria-hidden="true" />
               </a>

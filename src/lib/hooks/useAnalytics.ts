@@ -10,6 +10,7 @@ type ConversionType =
   | 'booking_complete'
   | 'cta_click'
   | 'portfolio_view'
+  | 'contact_click'
 
 interface ConversionPayloadMap {
   contact_form_submit: {
@@ -29,6 +30,10 @@ interface ConversionPayloadMap {
   portfolio_view: {
     project_name: string
     project_category?: string
+  }
+  contact_click: {
+    method: 'whatsapp' | 'phone' | 'email'
+    location?: string
   }
 }
 
@@ -87,6 +92,22 @@ export function useAnalytics() {
             event: 'view_item',
             ...data,
           })
+          break
+        }
+
+        case 'contact_click': {
+          const { method, location } = data as ConversionPayloadMap['contact_click']
+          pushToDataLayer({
+            event: `click_${method}`,
+            event_category: 'contact',
+            event_label: `${method}_click`,
+            contact_method: method,
+            contact_location: location ?? 'unknown',
+            value: method === 'whatsapp' ? 50 : method === 'phone' ? 30 : 10,
+          })
+          if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
+            window.fbq('trackCustom', 'ContactClick', { method, location })
+          }
           break
         }
 
