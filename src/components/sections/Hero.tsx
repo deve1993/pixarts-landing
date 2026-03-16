@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Zap, Shield, Clock } from 'lucide-react'
+import { ArrowRight, Zap, Shield, Clock, CheckCircle2 } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
 import { AnimatedCounter } from '@/components/AnimatedCounter'
@@ -83,6 +83,7 @@ export function Hero() {
           {/* Main Headline */}
           <motion.h1
             variants={itemVariants}
+            aria-label="Siti web che portano clienti"
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold mb-8 leading-[1.1] tracking-tight"
           >
             <span className="block mb-2">
@@ -120,13 +121,27 @@ export function Hero() {
             <span className="text-accent-orange font-semibold">100%</span>.
           </motion.p>
 
-          {/* CTAs */}
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mb-10 text-sm text-text-muted"
+          >
+            <span className="flex items-center gap-1.5">
+              <CheckCircle2 className="w-4 h-4 text-accent-orange shrink-0" aria-hidden="true" />
+              {t('priceFrom')}
+            </span>
+            <span className="hidden sm:block w-px h-4 bg-border/50" aria-hidden="true" />
+            <span className="flex items-center gap-1.5">
+              <CheckCircle2 className="w-4 h-4 text-accent-orange shrink-0" aria-hidden="true" />
+              {t('priceDelivery')}
+            </span>
+          </motion.div>
+
           <motion.div
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-32"
           >
             <Link
-              href="/contatti"
+              href="/preventivo"
               onClick={() => {
                 trackEvent('cta_click', {
                   cta_name: 'hero_primary',

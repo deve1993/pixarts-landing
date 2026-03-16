@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, MessageCircle } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { usePathname } from 'next/navigation'
 import { useRouter, Link } from '@/i18n/routing'
@@ -159,6 +159,24 @@ export function Header() {
 
           {/* Desktop CTA + Language Switcher */}
           <div className="hidden md:flex items-center gap-4">
+            <div className="flex items-center gap-2">
+              <a
+                href="https://wa.me/420775113732"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={t('whatsappAria')}
+                className="text-text-secondary hover:text-accent-orange transition-colors duration-200"
+              >
+                <MessageCircle className="w-4 h-4" aria-hidden="true" />
+              </a>
+              <a
+                href="tel:+420775113732"
+                aria-label={t('callUs')}
+                className="text-sm font-medium text-text-secondary hover:text-accent-orange transition-colors duration-200"
+              >
+                +420 775 113 732
+              </a>
+            </div>
             <LanguageSwitcher />
             <Link href="/prenota">
               <Button size="sm">
@@ -264,6 +282,32 @@ export function Header() {
                     {t('book')}
                   </Button>
                 </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.35 }}
+                className="flex items-center gap-3 mt-2"
+              >
+                <a
+                  href="https://wa.me/420775113732"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t('whatsappAria')}
+                  className="text-text-secondary hover:text-accent-orange transition-colors"
+                  onClick={closeMobileMenu}
+                >
+                  <MessageCircle className="w-5 h-5" aria-hidden="true" />
+                </a>
+                <a
+                  href="tel:+420775113732"
+                  aria-label={t('callUs')}
+                  className="text-sm font-medium text-text-secondary hover:text-accent-orange transition-colors"
+                  onClick={closeMobileMenu}
+                >
+                  +420 775 113 732
+                </a>
               </motion.div>
             </motion.nav>
           </motion.div>
