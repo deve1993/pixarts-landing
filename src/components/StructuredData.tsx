@@ -246,6 +246,10 @@ export function StructuredData({ locale = 'it' }: StructuredDataProps) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.faqSchema) }}
+      />
     </>
   )
 }

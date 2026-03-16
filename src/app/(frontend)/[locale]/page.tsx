@@ -3,12 +3,15 @@ import dynamic from 'next/dynamic'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { MiniCTA } from '@/components/sections/MiniCTA'
+import { UrgencyBanner } from '@/components/UrgencyBanner'
+import { StickyCtaButton } from '@/components/StickyCtaButton'
 
 // Above-fold components - loaded immediately
 import { Hero, TrustBadges } from '@/components/sections'
 
 // Below-fold components - lazy loaded for better initial performance
 const Problems = dynamic(() => import('@/components/sections/Problems').then(m => m.Problems))
+const MiniFAQ = dynamic(() => import('@/components/sections/MiniFAQ').then(m => m.MiniFAQ))
 const Solution = dynamic(() => import('@/components/sections/Solution').then(m => m.Solution))
 const SocialProof = dynamic(() => import('@/components/sections/SocialProof').then(m => m.SocialProof))
 const PortfolioShowcase = dynamic(() => import('@/components/portfolio-v2').then(m => m.PortfolioShowcase))
@@ -30,17 +33,20 @@ export default async function Home({ params }: Props) {
   return (
     <>
       <Header />
+      <StickyCtaButton />
       <main id="main-content">
         <Hero />
         <TrustBadges />
+        <UrgencyBanner />
         <Problems />
+        <MiniFAQ />
         <Solution />
         <SocialProof />
         <MiniCTA
           title={tMid('title')}
           subtitle={tMid('subtitle')}
           primaryLabel={tMid('primaryLabel')}
-          primaryHref="/contatti"
+          primaryHref="/preventivo"
           secondaryLabel={tMid('secondaryLabel')}
           secondaryHref="/servizi"
         />

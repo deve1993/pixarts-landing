@@ -17,6 +17,7 @@ const SHOWCASE_PROJECTS = [
     category: 'webapp',
     resultValue: '500+',
     resultLabelKey: 'resultActiveUsers',
+    altKey: 'altQuickfyApp',
   },
   {
     id: 'fl1',
@@ -25,6 +26,7 @@ const SHOWCASE_PROJECTS = [
     category: 'business-website',
     resultValue: '+220%',
     resultLabelKey: 'resultLeads',
+    altKey: 'altFL1',
   },
   {
     id: 'singleflo',
@@ -33,6 +35,7 @@ const SHOWCASE_PROJECTS = [
     category: 'landing-page',
     resultValue: '98/100',
     resultLabelKey: 'resultPerformance',
+    altKey: 'altSingleFlo',
   },
 ] as const
 
@@ -61,7 +64,7 @@ export function PortfolioShowcase() {
             <div className="relative aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden border border-border/50 bg-bg-elevated/50">
               <Image
                 src={SHOWCASE_PROJECTS[0].image}
-                alt={SHOWCASE_PROJECTS[0].name}
+                alt={t(SHOWCASE_PROJECTS[0].altKey)}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 90vw"
@@ -117,7 +120,7 @@ export function PortfolioShowcase() {
               <div className="relative aspect-[16/10] rounded-xl overflow-hidden border border-border/50 bg-bg-elevated/50">
                 <Image
                   src={project.image}
-                  alt={project.name}
+                  alt={t(project.altKey)}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 50vw"
