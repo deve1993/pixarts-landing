@@ -11,39 +11,39 @@ const BASE_PRICES = {
 // Page multipliers
 const PAGE_MULTIPLIERS = {
   '1-3': 1,
-  '4-7': 1.3,
-  '8-15': 1.6,
-  '15+': 2,
+  '4-7': 1.1,
+  '8-15': 1.25,
+  '15+': 1.5,
 }
 
-// Design modifiers
-const DESIGN_MODIFIERS = {
-  template: 1,
-  custom: 1.3,
-  existing: 0.8,
+// Design addons (flat, not multiplier)
+const DESIGN_ADDONS = {
+  template: 0,
+  custom: 300,
+  existing: -200,
 }
 
 // Feature addons (added to both min and max)
 const FEATURE_ADDONS = {
   contact_form: 0, // included
-  booking: 500,
-  blog: 400,
-  multilang: 300, // per additional language (simplified)
-  auth: 800,
-  payments: 1000,
-  seo: 500,
-  analytics: 300,
+  booking: 400,
+  blog: 300,
+  multilang: 300,
+  auth: 600,
+  payments: 800,
+  seo: 0,       // included
+  analytics: 0, // included
 }
 
 // Timeline modifier
 const TIMELINE_MODIFIERS = {
   standard: 1,
-  urgent: 1.3,
-  flexible: 0.95,
+  urgent: 1.15,
+  flexible: 0.9,
 }
 
-// CMS addon
-const CMS_ADDON = { yes: 400, no: 0 }
+// CMS addon (included in all plans)
+const CMS_ADDON = { yes: 0, no: 0 }
 
 export function calculateQuotePrice(data: Partial<QuoteFormValues>) {
   if (!data.projectType) return { min: 0, max: 0, timeline: '', leadScore: 'low' as const }
@@ -59,8 +59,8 @@ export function calculateQuotePrice(data: Partial<QuoteFormValues>) {
 
   // Design
   if (data.design) {
-    min *= DESIGN_MODIFIERS[data.design]
-    max *= DESIGN_MODIFIERS[data.design]
+    min += DESIGN_ADDONS[data.design]
+    max += DESIGN_ADDONS[data.design]
   }
 
   // Features
