@@ -96,11 +96,9 @@ export function Header() {
     setIsMobileMenuOpen(false)
 
     if (isHomePage) {
-      // On homepage, just scroll to the element
       scrollToElement(id)
     } else {
-      // On other pages, navigate to homepage with hash
-      router.push(`/${href}`)
+      window.location.href = `/${href}`
     }
   }, [isHomePage, router])
 
