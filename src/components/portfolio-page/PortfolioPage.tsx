@@ -417,7 +417,7 @@ export function PortfolioPage() {
             {t('ctaSectionDescription')}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/#contatti">
+            <Link href="/contatti">
               <Button size="lg" className="group">
                 {t('ctaSectionButton')}
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />

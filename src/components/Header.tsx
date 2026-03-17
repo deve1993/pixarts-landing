@@ -100,7 +100,7 @@ export function Header() {
     } else {
       window.location.href = `/${href}`
     }
-  }, [isHomePage, router])
+  }, [isHomePage])
 
   const closeMobileMenu = useCallback(() => {
     setIsMobileMenuOpen(false)

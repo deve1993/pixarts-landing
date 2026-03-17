@@ -1,18 +1,21 @@
 'use client'
 
+import type { ComponentProps } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Link } from '@/i18n/routing'
 import { cn } from '@/lib/utils'
 
+type AppHref = ComponentProps<typeof Link>['href']
+
 interface MiniCTAProps {
   title: string
   subtitle?: string
   primaryLabel: string
-  primaryHref: string
+  primaryHref: AppHref
   secondaryLabel?: string
-  secondaryHref?: string
+  secondaryHref?: AppHref
   className?: string
 }
 
