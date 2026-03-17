@@ -1,35 +1,136 @@
 # Pixarts
 
-> Pixarts creates professional websites in 10 days. Modern design, SEO included, satisfaction guarantee. Italian service with English and Czech support.
+> Pixarts creates professional websites in 7-14 business days. Modern design, SEO included, triple guarantee. European agency (FL1 s.r.o., Czech Republic) serving Italy and Czech Republic.
 
-## Services
-- [Landing Page](/en#pricing): One-page websites optimized for conversion, from €1,200
-- [Business Website](/en#pricing): Multi-page sites with CMS, from €2,500
-- [E-commerce / Booking](/en#pricing): Online shops and booking systems, from €4,000
-- [Portfolio](/en/portfolio): Examples of completed projects
+## About Us
 
-## Main Pages
-- [Home](https://pixarts.eu/en): Service overview, pricing, portfolio, FAQ
-- [Portfolio](https://pixarts.eu/en/portfolio): Completed projects (FlowMatics, Quickfy)
-- [Book a Call](https://pixarts.eu/en/prenota): Free consultation booking system
-- [Privacy Policy](https://pixarts.eu/en/privacy-policy): GDPR privacy notice
-- [Cookie Policy](https://pixarts.eu/en/cookie-policy): Cookie management
-- [GDPR Request](https://pixarts.eu/en/gdpr-request): Exercise GDPR rights
+Pixarts is a web agency founded in 2024 by FL1 s.r.o., a European company based in Czech Republic. We specialize in creating professional websites with guaranteed delivery in 7-14 business days. We serve clients in Italy and Czech Republic with support in Italian, English, and Czech.
 
-## Features
-- Guaranteed delivery in 10 business days
-- Responsive mobile-first design
-- Technical SEO included in every project
-- Stack: Next.js 15, React 19, Tailwind CSS, TypeScript
-- Hosting on European infrastructure
-- Multilingual support: Italian, English, Czech
-
-## Contact
+- Legal entity: FL1 s.r.o. (Czech Republic)
+- Founded: 2024
+- Markets: Italy, Czech Republic
 - Email: info@pixarts.eu
 - Website: https://pixarts.eu/en
-- Book a free call: https://pixarts.eu/en/prenota
+
+## Services and Pricing
+
+### Landing Page
+- Price: €1,200 - €1,500
+- Delivery: 7 business days
+- Ideal for: Freelancers, professionals, marketing campaigns
+- Includes: Custom 1-page design, basic SEO and meta tags, integrated contact form, 1-year hosting included, mobile responsive, 1 revision round, training and documentation
+- [Request quote](https://pixarts.eu/en/preventivo)
+
+### Business Website
+- Price: €2,500 - €3,500
+- Delivery: 10 business days
+- Ideal for: SMEs, professional firms, agencies
+- Includes: Premium multi-page design, advanced SEO and analytics, CMS for autonomous management, 1-year hosting included, optional blog, 2 revision rounds, complete training + 30 days support
+- [Request quote](https://pixarts.eu/en/preventivo)
+
+### E-commerce / Booking
+- Price: €4,500 - €6,000
+- Delivery: 14 business days
+- Ideal for: Online stores, restaurants, hotels, B&Bs
+- Includes: Premium e-commerce design, secure payment integration (Stripe), order/booking management, advanced e-commerce SEO, 2 revision rounds, advanced training + 30 days support
+- [Request quote](https://pixarts.eu/en/preventivo)
+
+### Monthly Maintenance
+- Base: €150/month (security updates, backups, monitoring)
+- Standard: €250/month (+ 2h/month edits, analytics report)
+- Premium: €400/month (+ 4h/month edits, phone support, SEO report)
+
+## Our 4-Step Process
+
+1. **Brief** (30 minutes): Call or meeting to understand objectives, target audience, and competitors. We gather everything needed to start.
+2. **Design** (2-3 days): High-fidelity mockups based on your brand. Client approval before development begins.
+3. **Development** (4-7 days): Coding, testing, performance and SEO optimization. Continuous status updates.
+4. **Launch** (1 day): Deploy, complete training, and credential handover. You are online and independent.
+
+Total time: 7-14 business days from project confirmation.
+
+## Triple Guarantee
+
+- **Time Guarantee**: Delivery on schedule or 10% discount for every day of delay. Written commitment in contract.
+- **Satisfaction Guarantee**: Full 100% refund within 7 days of launch if not satisfied. No questions asked.
+- **Support Guarantee**: 2 revision rounds included + 30 days free post-launch support.
+
+## Tech Stack
+
+- Framework: Next.js 15 with App Router and React Server Components
+- Frontend: React 19, TypeScript (strict mode), Tailwind CSS
+- CMS: Payload CMS 3.0 (multi-tenant, cms.pixarts.eu)
+- Deployment: Coolify on European infrastructure (Docker multi-stage)
+- Available integrations: Google Analytics 4, Meta Pixel, HubSpot CRM, Stripe, Mailchimp/Brevo, OpenAI/Claude chatbot, WhatsApp Business API, Zapier/Make
+
+## Case Studies
+
+### FL1 Srl — Business Website + AI Integration
+- Results: +220% leads generated, 45 second chat response time, 98% client satisfaction
+- Solutions: Corporate Next.js site, GPT-4 chatbot for 24/7 lead qualification, bidirectional HubSpot CRM integration
+- Technologies: React, Next.js, Node.js, PostgreSQL, OpenAI API
+
+### FlowMatics — B2B Marketing Automation Landing Page
+- Results: +180% contact requests, +40% Google visibility, Top 3 target keyword rankings
+- Solutions: Landing page with micro-animations, optimized conversion funnel, SEO + CRO strategy
+- Technologies: Next.js, Framer Motion, Vercel
+
+### Quickfy — SaaS Marketing Website
+- Results: 3-5 qualified leads/week, 8.5% conversion rate, -37% bounce rate
+- Solutions: Interactive product demo embedded in homepage, optimized pricing page, automated lead nurturing
+- Technologies: Next.js, TypeScript, Tailwind CSS
+
+### Quickfy App — Enterprise SaaS Platform
+- Results: 500+ active users, 15 hours saved/week, 99.9% uptime
+- Solutions: Real-time analytics dashboard, MCP server for AI automations, intelligent marketing chatbot
+- Technologies: React, Node.js, PostgreSQL, Redis, AWS, Docker, OpenAI
+
+### Falegnameria Benetti — Artisan Portfolio
+- Results: +300% quote requests, Top 5 local Google rankings, delivered in 10 days
+- Solutions: Professional photo portfolio, optimized contact form, local SEO
+
+## Available Add-ons
+
+- AI Chatbot (OpenAI/Claude): €400-600 setup + €50-100/month
+- Advanced CRM (HubSpot/Pipedrive): €300-500 setup
+- Zapier/Make Automations (3-5 workflows): €200-400 setup
+- WhatsApp Business API: €300-400 setup + €30-50/month
+- Multilingual: €300-500/additional language
+- Ongoing SEO: €200-400/month
+- Blog & Content System: €400-600 setup
+
+## Frequently Asked Questions
+
+**How long does it really take?**
+7-14 business days from confirmation. Landing page: 7 days, business website: 10 days, e-commerce: 14 days. Written guarantee: 10% discount per day of delay.
+
+**What if I don't like the result?**
+2 revision rounds included. Full 100% refund within 7 days of launch. Zero risk.
+
+**Can I update the site myself?**
+Yes. Intuitive CMS included with complete training and step-by-step documentation.
+
+**Does the price include hosting and domain?**
+Yes, first year included. From year 2: hosting €150-300/year, domain €15-30/year.
+
+**Will the site be visible on Google?**
+Yes. SEO included: sitemap, meta tags, optimized speed, mobile-first structure.
+
+**Do you offer maintenance after launch?**
+Yes. First 30 days free support. Then plans from €150-400/month.
+
+## Main Pages
+
+- [Home](https://pixarts.eu/en): Service overview, pricing, portfolio, FAQ
+- [Services](https://pixarts.eu/en/servizi): Service details, process, pricing, guarantees
+- [Portfolio](https://pixarts.eu/en/portfolio): Completed projects with results
+- [About Us](https://pixarts.eu/en/chi-siamo): Story, values, team, tech stack
+- [Book a Call](https://pixarts.eu/en/prenota): Free 30-minute consultation
+- [Request Quote](https://pixarts.eu/en/preventivo): Free quote within 24 hours
+- [Contact](https://pixarts.eu/en/contatti): Contact form and information
 
 ## Available Languages
+
 - Italiano (default): https://pixarts.eu
 - English: https://pixarts.eu/en
 - Čeština: https://pixarts.eu/cs

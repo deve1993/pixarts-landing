@@ -1,35 +1,136 @@
 # Pixarts
 
-> Pixarts vytváří profesionální webové stránky za 10 dní. Moderní design, SEO v ceně, záruka spokojenosti. Italská služba s podporou v angličtině a češtině.
+> Pixarts vytváří profesionální webové stránky za 7-14 pracovních dní. Moderní design, SEO v ceně, trojitá záruka. Evropská agentura (FL1 s.r.o., Česká republika) obsluhující Itálii a Českou republiku.
 
-## Služby
-- [Landing Page](/cs#pricing): Jednostránkové weby optimalizované pro konverzi, od 1 200 €
-- [Firemní web](/cs#pricing): Vícestránkové weby s CMS, od 2 500 €
-- [E-shop / Rezervace](/cs#pricing): Online obchody a rezervační systémy, od 4 000 €
-- [Portfolio](/cs/portfolio): Příklady dokončených projektů
+## O nás
 
-## Hlavní stránky
-- [Domů](https://pixarts.eu/cs): Přehled služeb, ceník, portfolio, FAQ
-- [Portfolio](https://pixarts.eu/cs/portfolio): Dokončené projekty (FlowMatics, Quickfy)
-- [Rezervovat hovor](https://pixarts.eu/cs/prenota): Systém rezervace bezplatné konzultace
-- [Zásady ochrany osobních údajů](https://pixarts.eu/cs/privacy-policy): Informace o ochraně osobních údajů dle GDPR
-- [Zásady používání cookies](https://pixarts.eu/cs/cookie-policy): Správa cookies
-- [Žádost GDPR](https://pixarts.eu/cs/gdpr-request): Uplatnění práv dle GDPR
+Pixarts je webová agentura založená v roce 2024 společností FL1 s.r.o., evropskou firmou se sídlem v České republice. Specializujeme se na tvorbu profesionálních webových stránek s garantovaným dodáním za 7-14 pracovních dní. Obsluhujeme klienty v Itálii a České republice s podporou v italštině, angličtině a češtině.
 
-## Funkce
-- Garantované dodání za 10 pracovních dní
-- Responzivní mobile-first design
-- Technické SEO v ceně u každého projektu
-- Stack: Next.js 15, React 19, Tailwind CSS, TypeScript
-- Hosting na evropské infrastruktuře
-- Vícejazyčná podpora: italština, angličtina, čeština
-
-## Kontakt
+- Právní subjekt: FL1 s.r.o. (Česká republika)
+- Rok založení: 2024
+- Trhy: Itálie, Česká republika
 - Email: info@pixarts.eu
 - Web: https://pixarts.eu/cs
-- Rezervovat bezplatný hovor: https://pixarts.eu/cs/prenota
 
-## Dostupné jazyky
+## Služby a Ceny
+
+### Landing Page
+- Cena: 1 200 € - 1 500 €
+- Dodání: 7 pracovních dní
+- Ideální pro: Freelancery, profesionály, marketingové kampaně
+- Zahrnuje: Vlastní jednostránkový design, základní SEO a meta tagy, integrovaný kontaktní formulář, hosting první rok v ceně, mobilní responzivita, 1 kolo revizí, školení a dokumentace
+- [Požádat o nabídku](https://pixarts.eu/cs/preventivo)
+
+### Firemní web
+- Cena: 2 500 € - 3 500 €
+- Dodání: 10 pracovních dní
+- Ideální pro: SME, profesní firmy, agentury
+- Zahrnuje: Prémiový vícestránkový design, pokročilé SEO a analytika, CMS pro autonomní správu, hosting první rok v ceně, volitelný blog, 2 kola revizí, kompletní školení + 30 dní podpory
+- [Požádat o nabídku](https://pixarts.eu/cs/preventivo)
+
+### E-shop / Rezervace
+- Cena: 4 500 € - 6 000 €
+- Dodání: 14 pracovních dní
+- Ideální pro: Online obchody, restaurace, hotely, penziony
+- Zahrnuje: Prémiový e-shop design, bezpečná integrace plateb (Stripe), správa objednávek/rezervací, pokročilé e-shop SEO, 2 kola revizí, pokročilé školení + 30 dní podpory
+- [Požádat o nabídku](https://pixarts.eu/cs/preventivo)
+
+### Měsíční údržba
+- Základní: 150 €/měsíc (bezpečnostní aktualizace, zálohy, monitoring)
+- Standard: 250 €/měsíc (+ 2h/měsíc úpravy, analytický report)
+- Premium: 400 €/měsíc (+ 4h/měsíc úpravy, telefonická podpora, SEO report)
+
+## Náš 4-krokový Proces
+
+1. **Brief** (30 minut): Hovor nebo schůzka pro pochopení cílů, cílové skupiny a konkurence. Shromáždíme vše potřebné pro start.
+2. **Design** (2-3 dny): Vytváříme návrhy s vysokou věrností na základě vaší značky. Schválení klientem před zahájením vývoje.
+3. **Vývoj** (4-7 dní): Kódování, testování, optimalizace výkonu a SEO. Průběžné aktualizace o stavu projektu.
+4. **Spuštění** (1 den): Nasazení, kompletní školení a předání přihlašovacích údajů. Jste online a samostatní.
+
+Celková doba: 7-14 pracovních dní od potvrzení projektu.
+
+## Trojitá Záruka
+
+- **Záruka termínu**: Dodání v dohodnutém termínu nebo 10% sleva za každý den zpoždění. Písemný závazek ve smlouvě.
+- **Záruka spokojenosti**: Plná 100% refundace do 7 dní od spuštění, pokud nejste spokojeni. Bez otázek.
+- **Záruka podpory**: 2 kola revizí v ceně + 30 dní bezplatné podpory po spuštění.
+
+## Technologický Stack
+
+- Framework: Next.js 15 s App Routerem a React Server Components
+- Frontend: React 19, TypeScript (strict mode), Tailwind CSS
+- CMS: Payload CMS 3.0 (multi-tenant, cms.pixarts.eu)
+- Nasazení: Coolify na evropské infrastruktuře (Docker multi-stage)
+- Dostupné integrace: Google Analytics 4, Meta Pixel, HubSpot CRM, Stripe, Mailchimp/Brevo, OpenAI/Claude chatbot, WhatsApp Business API, Zapier/Make
+
+## Případové Studie
+
+### FL1 Srl — Firemní web + AI integrace
+- Výsledky: +220% vygenerovaných leadů, 45 sekund doba odpovědi chatu, 98% spokojenost klientů
+- Řešení: Firemní Next.js web, GPT-4 chatbot pro kvalifikaci leadů 24/7, obousměrná integrace HubSpot CRM
+- Technologie: React, Next.js, Node.js, PostgreSQL, OpenAI API
+
+### FlowMatics — B2B Marketing Automation Landing Page
+- Výsledky: +180% kontaktních požadavků, +40% viditelnost na Google, Top 3 cílové klíčové výrazy
+- Řešení: Landing page s micro-animacemi, optimalizovaný konverzní trychtýř, SEO + CRO strategie
+- Technologie: Next.js, Framer Motion, Vercel
+
+### Quickfy — SaaS Marketing Web
+- Výsledky: 3-5 kvalifikovaných leadů/týden, 8,5% míra konverze, -37% míra okamžitého opuštění
+- Řešení: Interaktivní demo produktu na homepage, optimalizovaná cenová stránka, automatizovaný lead nurturing
+- Technologie: Next.js, TypeScript, Tailwind CSS
+
+### Quickfy App — Enterprise SaaS platforma
+- Výsledky: 500+ aktivních uživatelů, 15 hodin ušetřených/týden, 99,9% dostupnost
+- Řešení: Dashboard analytiky v reálném čase, MCP server pro AI automatizace, inteligentní marketingový chatbot
+- Technologie: React, Node.js, PostgreSQL, Redis, AWS, Docker, OpenAI
+
+### Falegnameria Benetti — Řemeslné portfolio
+- Výsledky: +300% poptávek, Top 5 lokální Google, dodáno za 10 dní
+- Řešení: Profesionální fotografické portfolio, optimalizovaný kontaktní formulář, lokální SEO
+
+## Dostupné Doplňky
+
+- AI Chatbot (OpenAI/Claude): 400-600 € setup + 50-100 €/měsíc
+- Pokročilý CRM (HubSpot/Pipedrive): 300-500 € setup
+- Automatizace Zapier/Make (3-5 workflow): 200-400 € setup
+- WhatsApp Business API: 300-400 € setup + 30-50 €/měsíc
+- Vícejazyčnost: 300-500 €/další jazyk
+- Průběžné SEO: 200-400 €/měsíc
+- Blog & Content systém: 400-600 € setup
+
+## Nejčastější Dotazy
+
+**Jak dlouho to skutečně trvá?**
+7-14 pracovních dní od potvrzení. Landing page: 7 dní, firemní web: 10 dní, e-shop: 14 dní. Písemná záruka: 10% sleva za každý den zpoždění.
+
+**Co se stane, když se mi výsledek nelíbí?**
+2 kola revizí v ceně. Plná 100% refundace do 7 dní od spuštění. Nulové riziko.
+
+**Mohu si web sám aktualizovat?**
+Ano. Intuitivní CMS v ceně s kompletním školením a dokumentací krok za krokem.
+
+**Je v ceně hosting a doména?**
+Ano, první rok v ceně. Od druhého roku: hosting 150-300 €/rok, doména 15-30 €/rok.
+
+**Bude web viditelný na Google?**
+Ano. SEO v ceně: sitemap, meta tagy, optimalizovaná rychlost, mobile-first struktura.
+
+**Nabízíte údržbu po spuštění?**
+Ano. Prvních 30 dní bezplatná podpora. Poté plány od 150-400 €/měsíc.
+
+## Hlavní Stránky
+
+- [Domů](https://pixarts.eu/cs): Přehled služeb, ceník, portfolio, FAQ
+- [Služby](https://pixarts.eu/cs/servizi): Detaily služeb, proces, ceny, záruky
+- [Portfolio](https://pixarts.eu/cs/portfolio): Dokončené projekty s výsledky
+- [O nás](https://pixarts.eu/cs/chi-siamo): Příběh, hodnoty, tým, technologický stack
+- [Rezervovat hovor](https://pixarts.eu/cs/prenota): Bezplatná 30minutová konzultace
+- [Požádat o nabídku](https://pixarts.eu/cs/preventivo): Bezplatná nabídka do 24 hodin
+- [Kontakt](https://pixarts.eu/cs/contatti): Kontaktní formulář a informace
+
+## Dostupné Jazyky
+
 - Italiano (výchozí): https://pixarts.eu
 - English: https://pixarts.eu/en
 - Čeština: https://pixarts.eu/cs

@@ -1,35 +1,136 @@
 # Pixarts
 
-> Pixarts crea siti web professionali in 10 giorni. Design moderno, SEO incluso, garanzia soddisfazione. Servizio italiano con supporto in inglese e ceco.
+> Pixarts crea siti web professionali in 7-14 giorni lavorativi. Design moderno, SEO incluso, garanzia tripla. Agenzia europea (FL1 s.r.o., Repubblica Ceca) che serve Italia e Repubblica Ceca.
 
-## Servizi
-- [Landing Page](/it#pricing): Siti web one-page ottimizzati per conversione, da €1.200
-- [Sito Aziendale](/it#pricing): Siti multi-pagina con CMS, da €2.500
-- [E-commerce / Booking](/it#pricing): Shop online e sistemi di prenotazione, da €4.000
-- [Portfolio](/it/portfolio): Esempi di lavori completati
+## Chi siamo
 
-## Pagine principali
-- [Home](https://pixarts.eu): Panoramica servizi, pricing, portfolio, FAQ
-- [Portfolio](https://pixarts.eu/portfolio): Progetti completati (FlowMatics, Quickfy)
-- [Prenota una call](https://pixarts.eu/prenota): Sistema di prenotazione consulenza gratuita
-- [Privacy Policy](https://pixarts.eu/privacy-policy): Informativa privacy GDPR
-- [Cookie Policy](https://pixarts.eu/cookie-policy): Gestione cookie
-- [Richiesta GDPR](https://pixarts.eu/gdpr-request): Esercizio diritti GDPR
+Pixarts è un'agenzia web fondata nel 2024 da FL1 s.r.o., società europea con sede in Repubblica Ceca. Specializziamo nella creazione di siti web professionali con consegna garantita in 7-14 giorni lavorativi. Serviamo clienti in Italia e Repubblica Ceca con supporto in italiano, inglese e ceco.
 
-## Caratteristiche
-- Consegna garantita in 10 giorni lavorativi
-- Design responsive mobile-first
-- SEO tecnico incluso in ogni progetto
-- Stack: Next.js 15, React 19, Tailwind CSS, TypeScript
-- Hosting su infrastruttura europea
-- Supporto multilingua: Italiano, English, Cestina
-
-## Contatti
+- Entità legale: FL1 s.r.o. (Repubblica Ceca)
+- Anno di fondazione: 2024
+- Mercati: Italia, Repubblica Ceca
 - Email: info@pixarts.eu
 - Sito: https://pixarts.eu
-- Prenota call gratuita: https://pixarts.eu/prenota
 
-## Lingue disponibili
+## Servizi e Prezzi
+
+### Landing Page
+- Prezzo: €1.200 - €1.500
+- Consegna: 7 giorni lavorativi
+- Ideale per: Freelancer, professionisti, campagne marketing
+- Include: Design custom 1 pagina, SEO base e meta tags, form contatto integrato, hosting primo anno incluso, responsive mobile, 1 round revisioni, training e documentazione
+- [Richiedi preventivo](https://pixarts.eu/preventivo)
+
+### Sito Aziendale
+- Prezzo: €2.500 - €3.500
+- Consegna: 10 giorni lavorativi
+- Ideale per: PMI, studi professionali, agenzie
+- Include: Design premium multi-pagina, SEO avanzato e analytics, CMS per gestione autonoma, hosting primo anno incluso, blog integrato opzionale, 2 round revisioni, training completo + 30 giorni supporto
+- [Richiedi preventivo](https://pixarts.eu/preventivo)
+
+### E-commerce / Booking
+- Prezzo: €4.500 - €6.000
+- Consegna: 14 giorni lavorativi
+- Ideale per: Negozi online, ristoranti, hotel, B&B
+- Include: Design premium e-commerce, pagamenti sicuri integrati (Stripe), gestione ordini/prenotazioni, SEO avanzato e-commerce, 2 round revisioni, training avanzato + 30 giorni supporto
+- [Richiedi preventivo](https://pixarts.eu/preventivo)
+
+### Manutenzione Mensile
+- Base: €150/mese (aggiornamenti sicurezza, backup, monitoring)
+- Standard: €250/mese (+ modifiche 2h/mese, report analytics)
+- Premium: €400/mese (+ modifiche 4h/mese, supporto telefonico, report SEO)
+
+## Processo di Lavoro (4 Step)
+
+1. **Brief** (30 minuti): Chiamata o meeting per capire obiettivi, target e competitor. Raccogliamo tutto il necessario per partire.
+2. **Design** (2-3 giorni): Creiamo mockup alta fedeltà basati sul tuo brand. Approvazione prima di iniziare lo sviluppo.
+3. **Sviluppo** (4-7 giorni): Codifica, test, ottimizzazione performance e SEO. Aggiornamenti continui sullo stato dei lavori.
+4. **Lancio** (1 giorno): Deploy, training completo e consegna credenziali. Sei online e autonomo.
+
+Tempo totale: 7-14 giorni lavorativi dalla conferma del progetto.
+
+## Garanzia Tripla
+
+- **Garanzia Tempi**: Consegna nei tempi concordati o sconto 10% per ogni giorno di ritardo. Impegno scritto in contratto.
+- **Garanzia Soddisfazione**: Rimborso completo 100% entro 7 giorni dal lancio se non soddisfatto. Nessuna domanda.
+- **Garanzia Assistenza**: 2 round di revisioni incluse + 30 giorni supporto post-lancio gratuito.
+
+## Stack Tecnologico
+
+- Framework: Next.js 15 con App Router e React Server Components
+- Frontend: React 19, TypeScript (strict mode), Tailwind CSS
+- CMS: Payload CMS 3.0 (multi-tenant, cms.pixarts.eu)
+- Deployment: Coolify su infrastruttura europea (Docker multi-stage)
+- Integrazioni disponibili: Google Analytics 4, Meta Pixel, HubSpot CRM, Stripe, Mailchimp/Brevo, OpenAI/Claude chatbot, WhatsApp Business API, Zapier/Make
+
+## Case Study
+
+### FL1 Srl — Sito Aziendale + AI Integration
+- Risultati: +220% lead generati, 45 secondi tempo risposta chat, 98% soddisfazione clienti
+- Soluzioni: Sito corporate Next.js, chatbot GPT-4 per qualificazione lead 24/7, integrazione bidirezionale HubSpot CRM
+- Tecnologie: React, Next.js, Node.js, PostgreSQL, OpenAI API
+
+### FlowMatics — Landing Page B2B Marketing Automation
+- Risultati: +180% richieste contatto, +40% visibilità Google, Top 3 keyword target
+- Soluzioni: Landing page con micro-animazioni, funnel conversione ottimizzato, strategia SEO + CRO
+- Tecnologie: Next.js, Framer Motion, Vercel
+
+### Quickfy — SaaS Marketing Website
+- Risultati: 3-5 lead qualificati/settimana, 8.5% tasso conversione, -37% bounce rate
+- Soluzioni: Demo prodotto interattiva in homepage, pricing page ottimizzata, lead nurturing automatizzato
+- Tecnologie: Next.js, TypeScript, Tailwind CSS
+
+### Quickfy App — Piattaforma SaaS Enterprise
+- Risultati: 500+ utenti attivi, 15 ore risparmiate/settimana, 99.9% uptime
+- Soluzioni: Dashboard analytics real-time, server MCP per automazioni AI, chatbot marketing intelligente
+- Tecnologie: React, Node.js, PostgreSQL, Redis, AWS, Docker, OpenAI
+
+### Falegnameria Benetti — Portfolio Artigianale
+- Risultati: +300% richieste preventivo, Top 5 Google locale, consegnato in 10 giorni
+- Soluzioni: Portfolio fotografico professionale, form contatto ottimizzato, SEO locale
+
+## Add-on Disponibili
+
+- Chatbot AI (OpenAI/Claude): €400-600 setup + €50-100/mese
+- CRM Avanzato (HubSpot/Pipedrive): €300-500 setup
+- Automazioni Zapier/Make (3-5 workflow): €200-400 setup
+- WhatsApp Business API: €300-400 setup + €30-50/mese
+- Multi-lingua: €300-500/lingua aggiuntiva
+- SEO Continuativo: €200-400/mese
+- Blog & Content System: €400-600 setup
+
+## Domande Frequenti
+
+**Quanto tempo ci vuole davvero?**
+7-14 giorni lavorativi dalla conferma. Landing page: 7 giorni, sito aziendale: 10 giorni, e-commerce: 14 giorni. Garanzia scritta: 10% sconto per ogni giorno di ritardo.
+
+**Cosa succede se non mi piace il risultato?**
+2 round di revisioni incluse nel prezzo. Rimborso completo 100% entro 7 giorni dal lancio. Zero rischi.
+
+**Posso aggiornare il sito da solo?**
+Sì. CMS intuitivo incluso con training completo e documentazione step-by-step.
+
+**Il prezzo include hosting e dominio?**
+Sì, primo anno incluso. Dal secondo anno: hosting €150-300/anno, dominio €15-30/anno.
+
+**Il sito sarà visibile su Google?**
+Sì. SEO incluso: sitemap, meta tags, velocità ottimizzata, struttura mobile-first.
+
+**Offrite manutenzione dopo il lancio?**
+Sì. Primi 30 giorni assistenza gratuita. Poi piani da €150-400/mese.
+
+## Pagine Principali
+
+- [Home](https://pixarts.eu): Panoramica servizi, pricing, portfolio, FAQ
+- [Servizi](https://pixarts.eu/servizi): Dettaglio servizi, processo, prezzi, garanzie
+- [Portfolio](https://pixarts.eu/portfolio): Progetti completati con risultati
+- [Chi Siamo](https://pixarts.eu/chi-siamo): Storia, valori, team, stack tecnologico
+- [Prenota Call](https://pixarts.eu/prenota): Consulenza gratuita 30 minuti
+- [Richiedi Preventivo](https://pixarts.eu/preventivo): Preventivo gratuito in 24h
+- [Contatti](https://pixarts.eu/contatti): Modulo contatto e informazioni
+
+## Lingue Disponibili
+
 - Italiano (default): https://pixarts.eu
 - English: https://pixarts.eu/en
-- Cestina: https://pixarts.eu/cs
+- Čeština: https://pixarts.eu/cs
