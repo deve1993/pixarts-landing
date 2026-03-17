@@ -74,11 +74,29 @@
     "challenge": "Výzva",
     "solutions": "Řešení",
     "projects": {
+      "fl1": {
+        "type": "Firemní web s AI integrací",
+        "challenge": "Integrace AI chatbota pro automatickou kvalifikaci leadů 24/7",
+        "solution1": "GPT-4 chatbot s personalizovanými odpověďmi",
+        "solution2": "Obousměrná integrace HubSpot CRM",
+        "result1": {
+          "value": "+220%",
+          "label": "generovaných leadů"
+        },
+        "result2": {
+          "value": "45s",
+          "label": "doba odpovědi chatu"
+        },
+        "result3": {
+          "value": "98%",
+          "label": "spokojenost klientů"
+        }
+      },
       "flowmatics": {
-        "type": "B2B Marketingová Automatizace",
+        "type": "B2B platforma marketingové automatizace",
         "challenge": "Složitá platforma k jednoduché komunikaci",
-        "solution1": "Čistý a profesionální design",
-        "solution2": "Optimalizovaný konverzní trychtýř",
+        "solution1": "Čistý design s optimalizovaným konverzním trychtýřem",
+        "solution2": "SEO + CRO strategie s A/B testováním",
         "result1": {
           "value": "+180%",
           "label": "žádostí o kontakt"
@@ -89,17 +107,17 @@
         },
         "result3": {
           "value": "Top 3",
-          "label": "strategická klíčová slova"
+          "label": "cílová klíčová slova"
         }
       },
-      "quickfy": {
-        "type": "SaaS Analytická Platforma",
-        "challenge": "Složitý dashboard pro prezentaci B2B cílové skupině",
-        "solution1": "Moderní design s interaktivními animacemi",
-        "solution2": "Interaktivní demo na homepage",
+      "quickfy-web": {
+        "type": "SaaS marketingový web",
+        "challenge": "Konvertovat B2B návštěvníky interaktivním demo produktu",
+        "solution1": "Interaktivní demo přímo na homepage",
+        "solution2": "Optimalizovaná cenová stránka s automatickým lead nurturingem",
         "result1": {
           "value": "3-5",
-          "label": "kvalifikovaných leadů/týden"
+          "label": "kvalif. leadů/týden"
         },
         "result2": {
           "value": "8.5%",
@@ -110,40 +128,58 @@
           "label": "bounce rate"
         }
       },
-      "benetti": {
-        "type": "Řemeslné Portfolio",
-        "challenge": "Ukázat řemeslnou kvalitu a získat kvalifikované kontakty",
-        "solution1": "Profesionální fotografické portfolio",
-        "solution2": "Optimalizovaný kontaktní formulář pro nabídky",
+      "biemme": {
+        "type": "Web stavební společnosti",
+        "challenge": "Předchozí web neodrážel 30 let historie a solidnost firmy",
+        "solution1": "Firemní design vínové barvy s immersivním portfoliem projektů",
+        "solution2": "Pokročilé lokální SEO + optimalizovaný Google Business",
         "result1": {
-          "value": "+300%",
+          "value": "+150%",
+          "label": "lokální viditelnost"
+        },
+        "result2": {
+          "value": "+80%",
           "label": "žádostí o nabídku"
         },
-        "result2": {
-          "value": "Top 5",
-          "label": "lokální Google"
-        },
         "result3": {
-          "value": "10 dní",
-          "label": "dodání projektu"
+          "value": "200+",
+          "label": "postavených bytů"
         }
       },
-      "fl1": {
-        "type": "Firemní Web + AI",
-        "challenge": "Integrace AI chatbota pro automatizovanou zákaznickou podporu",
-        "solution1": "Chatbot s integrací OpenAI",
-        "solution2": "HubSpot CRM pro správu leadů",
+      "ichnusa": {
+        "type": "Trojjazyčný web restaurace",
+        "challenge": "Sardská restaurace v Praze: rezervace a viditelnost ve 3 jazycích",
+        "solution1": "Trojjazyčný web IT/EN/CS s online rezervací DISH.co",
+        "solution2": "Pražské lokální SEO se schema markup Restaurant",
         "result1": {
-          "value": "+220%",
-          "label": "generovaných leadů"
+          "value": "4.7/5",
+          "label": "Google recenze"
         },
         "result2": {
-          "value": "45s",
-          "label": "doba odpovědi"
+          "value": "+150%",
+          "label": "lokální viditelnost"
         },
         "result3": {
-          "value": "98%",
-          "label": "spokojenost"
+          "value": "95/100",
+          "label": "Performance Score"
+        }
+      },
+      "quickfy-app": {
+        "type": "Enterprise SaaS platforma",
+        "challenge": "Vybudovat analytický dashboard s AI a multi-kanálovou automatizací",
+        "solution1": "Dashboard v reálném čase s MCP serverem a OpenAI",
+        "solution2": "Inteligentní marketingový chatbot a automatické workflow",
+        "result1": {
+          "value": "500+",
+          "label": "aktivních uživatelů"
+        },
+        "result2": {
+          "value": "15h",
+          "label": "ušetřeno/týden"
+        },
+        "result3": {
+          "value": "99.9%",
+          "label": "garantovaná dostupnost"
         }
       }
     }
@@ -2147,5 +2183,57 @@
     "subtitle": "Zjistěte, co pro vás můžeme udělat, nebo nás kontaktujte přímo.",
     "primaryLabel": "Prozkoumat služby",
     "secondaryLabel": "Kontaktujte nás"
+  },
+  "chiSiamo": {
+    "metaTitle": "O nás - Pixarts | Profesionální webdesign",
+    "metaDescription": "Zjistěte více o Pixarts: webová agentura, která vytváří profesionální weby za 10 dní. FL1 s.r.o., založena v roce 2024, obsluhuje Itálii a Českou republiku.",
+    "heroTitle": "O nás:",
+    "heroHighlight": "Pixarts",
+    "heroSubtitle": "Vytváříme profesionální webové stránky, které přinášejí zákazníky. Za 10 dní. Se zárukou.",
+    "missionTitle": "Naše mise",
+    "missionText": "Zpřístupnit profesionální webové stránky každému podnikateli. Žádné čekání měsíce, žádné skryté náklady, žádné riziko. Jen výsledky.",
+    "storyTitle": "Náš příběh",
+    "storyText": "Pixarts vznikl v roce 2024 z jednoduchého pozorování: příliš mnoho malých firem každý den ztrácí zákazníky, protože jejich web nefunguje. Příliš pomalý, příliš starý, příliš generický. Rozhodli jsme se to změnit. S moderním tech stackem (Next.js 15, React 19, TypeScript) a osvědčeným procesem ve 4 krocích dodáváme profesionální weby za 7-14 pracovních dní. S písemnou zárukou.",
+    "whyTitle": "Proč si vybrat nás",
+    "why1Title": "Skutečná rychlost",
+    "why1Text": "7-14 dní od potvrzení do spuštění. Není to marketingový slib: je to písemný závazek s 10% penále za každý den zpoždění.",
+    "why2Title": "Moderní stack",
+    "why2Text": "Používáme Next.js 15, React 19 a Tailwind CSS — stejnou technologii jako firmy Fortune 500.",
+    "why3Title": "Úplná záruka",
+    "why3Text": "100% refundace do 7 dní, pokud nejste spokojeni. Žádné otázky, žádné podmínky.",
+    "why4Title": "Evropský partner",
+    "why4Text": "Jsme FL1 s.r.o., evropská společnost se sídlem v České republice. Evropská infrastruktura, GDPR, podpora v italštině, angličtině a češtině.",
+    "valuesTitle": "Naše hodnoty",
+    "value1Title": "Transparentnost",
+    "value1Text": "Jasné ceny, garantované termíny, žádná překvapení na faktuře.",
+    "value2Title": "Kvalita",
+    "value2Text": "Každý web je testován na 100+ zařízeních před dodáním.",
+    "value3Title": "Rychlost",
+    "value3Text": "Čas jsou peníze. Proto jsme vybudovali proces, který eliminuje čekání.",
+    "statsTitle": "V číslech",
+    "stat1Value": "12+",
+    "stat1Label": "Dokončených projektů",
+    "stat2Value": "95%",
+    "stat2Label": "Spokojených klientů",
+    "stat3Value": "10",
+    "stat3Label": "Průměrný počet dní dodání",
+    "stat4Value": "3",
+    "stat4Label": "Podporovaných jazyků",
+    "techTitle": "Náš technologický stack",
+    "techText": "Používáme nejlepší dostupné technologie pro rychlé, bezpečné a škálovatelné weby.",
+    "ctaTitle": "Připraveni spolupracovat?",
+    "ctaSubtitle": "Rezervujte si bezplatný 30minutový hovor. Žádný závazek, jen rozhovor.",
+    "ctaPrimary": "Rezervovat bezplatný hovor",
+    "ctaSecondary": "Zobrazit portfolio"
+  },
+  "blog": {
+    "metaTitle": "Blog Pixarts - Průvodci webdesignem a vývojem",
+    "metaDescription": "Články, průvodci a zdroje o webdesignu, vývoji, SEO a digitálním marketingu. Praktický obsah pro podnikatele a profesionály.",
+    "heroTitle": "Blog",
+    "heroHighlight": "Pixarts",
+    "heroSubtitle": "Praktické průvodce webdesignem, SEO a online obchodním růstem.",
+    "readMore": "Číst článek",
+    "readingTime": "min čtení",
+    "publishedBy": "Napsáno"
   }
 }

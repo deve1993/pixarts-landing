@@ -74,11 +74,29 @@
     "challenge": "The challenge",
     "solutions": "Solutions",
     "projects": {
+      "fl1": {
+        "type": "Business Website + AI Integration",
+        "challenge": "Integrate AI chatbot for automatic lead qualification 24/7",
+        "solution1": "GPT-4 chatbot with personalised responses",
+        "solution2": "Bidirectional HubSpot CRM integration",
+        "result1": {
+          "value": "+220%",
+          "label": "leads generated"
+        },
+        "result2": {
+          "value": "45sec",
+          "label": "chat response time"
+        },
+        "result3": {
+          "value": "98%",
+          "label": "client satisfaction"
+        }
+      },
       "flowmatics": {
-        "type": "B2B Marketing Automation",
+        "type": "B2B Marketing Automation Platform",
         "challenge": "Complex platform to communicate simply",
-        "solution1": "Clean and professional design",
-        "solution2": "Optimized conversion funnel",
+        "solution1": "Clean design with optimized conversion funnel",
+        "solution2": "SEO + CRO strategy with A/B testing",
         "result1": {
           "value": "+180%",
           "label": "contact requests"
@@ -89,14 +107,14 @@
         },
         "result3": {
           "value": "Top 3",
-          "label": "strategic keywords"
+          "label": "target keywords"
         }
       },
-      "quickfy": {
-        "type": "SaaS Analytics Platform",
-        "challenge": "Complex dashboard to present to B2B target",
-        "solution1": "Modern design with interactive animations",
-        "solution2": "Interactive demo on homepage",
+      "quickfy-web": {
+        "type": "SaaS Marketing Website",
+        "challenge": "Convert B2B visitors with interactive product demo",
+        "solution1": "Interactive demo embedded directly on homepage",
+        "solution2": "Optimised pricing page with automated lead nurturing",
         "result1": {
           "value": "3-5",
           "label": "qualified leads/week"
@@ -110,40 +128,58 @@
           "label": "bounce rate"
         }
       },
-      "benetti": {
-        "type": "Artisan Portfolio",
-        "challenge": "Show artisan quality and generate qualified contacts",
-        "solution1": "Professional photo portfolio",
-        "solution2": "Optimized contact form for quotes",
+      "biemme": {
+        "type": "Construction Company Website",
+        "challenge": "Previous site didn't reflect 30 years of history and solidity",
+        "solution1": "Burgundy corporate design with immersive project portfolio",
+        "solution2": "Advanced local SEO + optimised Google Business",
         "result1": {
-          "value": "+300%",
+          "value": "+150%",
+          "label": "local visibility"
+        },
+        "result2": {
+          "value": "+80%",
           "label": "quote requests"
         },
-        "result2": {
-          "value": "Top 5",
-          "label": "local Google"
-        },
         "result3": {
-          "value": "10 days",
-          "label": "project delivery"
+          "value": "200+",
+          "label": "apartments built"
         }
       },
-      "fl1": {
-        "type": "Corporate Website + AI",
-        "challenge": "Integrate AI chatbot for automated customer support",
-        "solution1": "OpenAI-powered chatbot",
-        "solution2": "HubSpot CRM for lead management",
+      "ichnusa": {
+        "type": "Trilingual Restaurant Website",
+        "challenge": "Sardinian restaurant in Prague: bookings and visibility in 3 languages",
+        "solution1": "Trilingual IT/EN/CS site with DISH.co online booking",
+        "solution2": "Prague local SEO with Restaurant schema markup",
         "result1": {
-          "value": "+220%",
-          "label": "leads generated"
+          "value": "4.7/5",
+          "label": "Google Reviews"
         },
         "result2": {
-          "value": "45sec",
-          "label": "response time"
+          "value": "+150%",
+          "label": "local visibility"
         },
         "result3": {
-          "value": "98%",
-          "label": "satisfaction"
+          "value": "95/100",
+          "label": "Performance Score"
+        }
+      },
+      "quickfy-app": {
+        "type": "Enterprise SaaS Platform",
+        "challenge": "Build analytics dashboard with AI and multi-channel automations",
+        "solution1": "Real-time dashboard with MCP server and OpenAI",
+        "solution2": "Intelligent marketing chatbot and automated workflows",
+        "result1": {
+          "value": "500+",
+          "label": "active users"
+        },
+        "result2": {
+          "value": "15h",
+          "label": "saved/week"
+        },
+        "result3": {
+          "value": "99.9%",
+          "label": "guaranteed uptime"
         }
       }
     }
@@ -2147,5 +2183,57 @@
     "subtitle": "Discover what we can do for you or get in touch directly.",
     "primaryLabel": "Explore services",
     "secondaryLabel": "Contact us"
+  },
+  "chiSiamo": {
+    "metaTitle": "About Us - Pixarts | Professional Web Design Agency",
+    "metaDescription": "Learn about Pixarts: the web agency that creates professional websites in 10 days. FL1 s.r.o., founded in 2024, serving Italy and Czech Republic with modern design and triple guarantee.",
+    "heroTitle": "About",
+    "heroHighlight": "Pixarts",
+    "heroSubtitle": "We create professional websites that bring clients. In 10 days. With a guarantee.",
+    "missionTitle": "Our mission",
+    "missionText": "Make professional websites accessible to every entrepreneur. No months of waiting, no hidden costs, no risk. Just results.",
+    "storyTitle": "Our story",
+    "storyText": "Pixarts was born in 2024 from a simple observation: too many small businesses lose customers every day because their website doesn't work. Too slow, too old, too generic. We decided to change this. With a modern tech stack (Next.js 15, React 19, TypeScript) and a proven 4-step process, we deliver professional websites in 7-14 business days. With a written guarantee.",
+    "whyTitle": "Why choose us",
+    "why1Title": "Real speed",
+    "why1Text": "7-14 days from confirmation to launch. Not a marketing promise: a written commitment with a 10% penalty per day of delay.",
+    "why2Title": "Modern stack",
+    "why2Text": "We use Next.js 15, React 19, and Tailwind CSS — the same technology as Fortune 500 companies. Your clients feel it in speed and experience.",
+    "why3Title": "Total guarantee",
+    "why3Text": "100% refund within 7 days if not satisfied. No questions, no strings attached. The risk is entirely ours.",
+    "why4Title": "European partner",
+    "why4Text": "We are FL1 s.r.o., a European company based in Czech Republic. European infrastructure, GDPR-compliant, support in Italian, English, and Czech.",
+    "valuesTitle": "Our values",
+    "value1Title": "Transparency",
+    "value1Text": "Clear pricing, guaranteed timelines, no invoice surprises.",
+    "value2Title": "Quality",
+    "value2Text": "Every site is tested on 100+ devices before delivery.",
+    "value3Title": "Speed",
+    "value3Text": "Time is money. That's why we built a process that eliminates waiting.",
+    "statsTitle": "In numbers",
+    "stat1Value": "12+",
+    "stat1Label": "Projects completed",
+    "stat2Value": "95%",
+    "stat2Label": "Satisfied clients",
+    "stat3Value": "10",
+    "stat3Label": "Average delivery days",
+    "stat4Value": "3",
+    "stat4Label": "Languages supported",
+    "techTitle": "Our tech stack",
+    "techText": "We use the best available technologies to build fast, secure, and scalable websites.",
+    "ctaTitle": "Ready to work with us?",
+    "ctaSubtitle": "Book a free 30-minute call. No commitment, just a conversation.",
+    "ctaPrimary": "Book free call",
+    "ctaSecondary": "View portfolio"
+  },
+  "blog": {
+    "metaTitle": "Pixarts Blog - Web Design and Development Guides",
+    "metaDescription": "Articles, guides, and resources on web design, development, SEO, and digital marketing. Practical content for entrepreneurs and professionals.",
+    "heroTitle": "Blog",
+    "heroHighlight": "Pixarts",
+    "heroSubtitle": "Practical guides on web design, SEO, and online business growth.",
+    "readMore": "Read article",
+    "readingTime": "min read",
+    "publishedBy": "Written by"
   }
 }

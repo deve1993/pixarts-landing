@@ -74,11 +74,29 @@
     "challenge": "La sfida",
     "solutions": "Soluzioni",
     "projects": {
+      "fl1": {
+        "type": "Sito Aziendale con AI Integration",
+        "challenge": "Integrare chatbot AI per qualificazione lead automatica 24/7",
+        "solution1": "Chatbot GPT-4 con risposte personalizzate",
+        "solution2": "Integrazione bidirezionale HubSpot CRM",
+        "result1": {
+          "value": "+220%",
+          "label": "lead generati"
+        },
+        "result2": {
+          "value": "45sec",
+          "label": "tempo risposta chat"
+        },
+        "result3": {
+          "value": "98%",
+          "label": "soddisfazione clienti"
+        }
+      },
       "flowmatics": {
-        "type": "Automazione Marketing B2B",
+        "type": "Piattaforma Automazione Marketing B2B",
         "challenge": "Piattaforma complessa da comunicare in modo semplice",
-        "solution1": "Design pulito e professionale",
-        "solution2": "Funnel di conversione ottimizzato",
+        "solution1": "Design pulito con funnel di conversione ottimizzato",
+        "solution2": "Strategia SEO + CRO con A/B testing",
         "result1": {
           "value": "+180%",
           "label": "richieste contatto"
@@ -89,17 +107,17 @@
         },
         "result3": {
           "value": "Top 3",
-          "label": "keyword strategiche"
+          "label": "keyword target"
         }
       },
-      "quickfy": {
-        "type": "SaaS Analytics Platform",
-        "challenge": "Dashboard complessa da presentare al target B2B",
-        "solution1": "Design moderno con animazioni interattive",
-        "solution2": "Demo interattiva in homepage",
+      "quickfy-web": {
+        "type": "SaaS Marketing Website",
+        "challenge": "Convertire visitatori B2B con demo prodotto interattiva",
+        "solution1": "Demo interattiva integrata direttamente in homepage",
+        "solution2": "Pricing page ottimizzata con lead nurturing automatico",
         "result1": {
           "value": "3-5",
-          "label": "lead qualificati/settimana"
+          "label": "lead qualificati/sett"
         },
         "result2": {
           "value": "8.5%",
@@ -110,40 +128,58 @@
           "label": "bounce rate"
         }
       },
-      "benetti": {
-        "type": "Portfolio Artigianale",
-        "challenge": "Mostrare la qualità artigianale e generare contatti qualificati",
-        "solution1": "Portfolio fotografico professionale",
-        "solution2": "Form contatto ottimizzato per preventivi",
+      "biemme": {
+        "type": "Sito Aziendale Impresa Edile",
+        "challenge": "Sito precedente non rifletteva 30 anni di storia e solidità",
+        "solution1": "Design corporate bordeaux con portfolio immersivo",
+        "solution2": "Local SEO avanzato + Google Business ottimizzato",
         "result1": {
-          "value": "+300%",
+          "value": "+150%",
+          "label": "visibilità locale"
+        },
+        "result2": {
+          "value": "+80%",
           "label": "richieste preventivo"
         },
-        "result2": {
-          "value": "Top 5",
-          "label": "Google locale"
-        },
         "result3": {
-          "value": "10gg",
-          "label": "consegna progetto"
+          "value": "200+",
+          "label": "appartamenti costruiti"
         }
       },
-      "fl1": {
-        "type": "Sito Aziendale + AI",
-        "challenge": "Integrare chatbot AI per supporto clienti automatizzato",
-        "solution1": "Chatbot con OpenAI integrato",
-        "solution2": "CRM HubSpot per gestione lead",
+      "ichnusa": {
+        "type": "Sito Ristorante Trilingue",
+        "challenge": "Ristorante sardo a Praga: prenotazioni e visibilità in 3 lingue",
+        "solution1": "Sito trilingue IT/EN/CS con prenotazione DISH.co",
+        "solution2": "SEO locale Praga con schema markup Restaurant",
         "result1": {
-          "value": "+220%",
-          "label": "lead generati"
+          "value": "4.7/5",
+          "label": "Google Reviews"
         },
         "result2": {
-          "value": "45sec",
-          "label": "tempo risposta"
+          "value": "+150%",
+          "label": "visibilità locale"
         },
         "result3": {
-          "value": "98%",
-          "label": "soddisfazione"
+          "value": "95/100",
+          "label": "Performance Score"
+        }
+      },
+      "quickfy-app": {
+        "type": "Piattaforma SaaS Enterprise",
+        "challenge": "Costruire dashboard analytics con AI e automazioni multi-canale",
+        "solution1": "Dashboard real-time con server MCP e OpenAI integrato",
+        "solution2": "Chatbot marketing intelligente e workflow automatici",
+        "result1": {
+          "value": "500+",
+          "label": "utenti attivi"
+        },
+        "result2": {
+          "value": "15h",
+          "label": "risparmiate/settimana"
+        },
+        "result3": {
+          "value": "99.9%",
+          "label": "uptime garantito"
         }
       }
     }
@@ -2147,5 +2183,57 @@
     "subtitle": "Scopri cosa possiamo fare per te oppure contattaci direttamente.",
     "primaryLabel": "Scopri i servizi",
     "secondaryLabel": "Contattaci"
+  },
+  "chiSiamo": {
+    "metaTitle": "Chi Siamo - Pixarts | Agenzia Web Design Italia",
+    "metaDescription": "Scopri Pixarts: l'agenzia web che crea siti professionali in 10 giorni. FL1 s.r.o., fondata nel 2024, serve Italia e Repubblica Ceca con design moderno e garanzia tripla.",
+    "heroTitle": "Chi siamo:",
+    "heroHighlight": "Pixarts",
+    "heroSubtitle": "Creiamo siti web professionali che portano clienti. In 10 giorni. Con garanzia.",
+    "missionTitle": "La nostra missione",
+    "missionText": "Rendere accessibile un sito web professionale a ogni imprenditore italiano. Nessuna attesa di mesi, nessun costo nascosto, nessun rischio. Solo risultati.",
+    "storyTitle": "La nostra storia",
+    "storyText": "Pixarts nasce nel 2024 da una semplice osservazione: troppe piccole imprese italiane perdono clienti ogni giorno perché il loro sito web non funziona. Troppo lento, troppo vecchio, troppo generico. Abbiamo deciso di cambiare questo. Con uno stack tecnologico moderno (Next.js 15, React 19, TypeScript) e un processo collaudato in 4 step, consegniamo siti web professionali in 7-14 giorni lavorativi. Con garanzia scritta.",
+    "whyTitle": "Perché sceglierci",
+    "why1Title": "Velocità reale",
+    "why1Text": "7-14 giorni dalla conferma al lancio. Non è una promessa di marketing: è un impegno scritto con penale del 10% per ogni giorno di ritardo.",
+    "why2Title": "Stack moderno",
+    "why2Text": "Usiamo Next.js 15, React 19 e Tailwind CSS — la stessa tecnologia di aziende Fortune 500. I tuoi clienti lo sentono nella velocità e nell'esperienza.",
+    "why3Title": "Garanzia totale",
+    "why3Text": "Rimborso 100% entro 7 giorni se non sei soddisfatto. Nessuna domanda, nessun vincolo. Il rischio è completamente nostro.",
+    "why4Title": "Partner europeo",
+    "why4Text": "Siamo FL1 s.r.o., azienda europea con sede in Repubblica Ceca. Hosting su infrastruttura europea, GDPR-compliant, supporto in italiano e inglese.",
+    "valuesTitle": "I nostri valori",
+    "value1Title": "Trasparenza",
+    "value1Text": "Prezzi chiari, tempistiche garantite, nessuna sorpresa in fattura.",
+    "value2Title": "Qualità",
+    "value2Text": "Ogni sito viene testato su 100+ dispositivi prima della consegna.",
+    "value3Title": "Velocità",
+    "value3Text": "Il tempo è denaro. Per questo abbiamo costruito un processo che elimina le attese.",
+    "statsTitle": "In numeri",
+    "stat1Value": "12+",
+    "stat1Label": "Progetti completati",
+    "stat2Value": "95%",
+    "stat2Label": "Clienti soddisfatti",
+    "stat3Value": "10",
+    "stat3Label": "Giorni medi di consegna",
+    "stat4Value": "3",
+    "stat4Label": "Lingue supportate",
+    "techTitle": "Il nostro stack tecnologico",
+    "techText": "Usiamo le migliori tecnologie disponibili per costruire siti veloci, sicuri e scalabili.",
+    "ctaTitle": "Pronto a lavorare con noi?",
+    "ctaSubtitle": "Prenota una call gratuita di 30 minuti. Nessun impegno, solo una conversazione.",
+    "ctaPrimary": "Prenota call gratuita",
+    "ctaSecondary": "Vedi il portfolio"
+  },
+  "blog": {
+    "metaTitle": "Blog Pixarts - Guide Web Design e Sviluppo",
+    "metaDescription": "Articoli, guide e risorse su web design, sviluppo, SEO e marketing digitale. Contenuti pratici per imprenditori e professionisti.",
+    "heroTitle": "Blog",
+    "heroHighlight": "Pixarts",
+    "heroSubtitle": "Guide pratiche su web design, SEO e crescita del business online.",
+    "readMore": "Leggi l'articolo",
+    "readingTime": "min di lettura",
+    "publishedBy": "Scritto da"
   }
 }
