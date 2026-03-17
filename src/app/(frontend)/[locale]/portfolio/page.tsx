@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { PortfolioPage } from '@/components/portfolio-page'
+import { PortfolioStructuredData } from '@/components/PortfolioStructuredData'
 
 // ============================================================================
 // PORTFOLIO PAGE - Projects Showcase
@@ -52,6 +53,7 @@ export default async function Portfolio({ params }: Props) {
     <>
       <Header />
       <main id="main-content">
+        <PortfolioStructuredData locale={locale} />
         <PortfolioPage />
       </main>
       <Footer />
