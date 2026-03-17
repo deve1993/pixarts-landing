@@ -167,7 +167,7 @@ export default function NotFound() {
             </Link>
           </Button>
           <Button variant="secondary" asChild>
-            <Link href="/#portfolio">
+            <Link href="/portfolio">
               <Search className="w-5 h-5 mr-2" />
               {t('explore')}
             </Link>
