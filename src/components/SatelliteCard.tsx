@@ -8,9 +8,10 @@ import { cn } from '@/lib/utils'
 import { useMediaQuery } from '@/lib/hooks/useMediaQuery'
 
 interface SatelliteCardProps {
-  projectKey: 'flowmatics' | 'quickfy' | 'benetti' | 'fl1'
+  projectKey: 'fl1' | 'flowmatics' | 'quickfy-web' | 'quickfy-app' | 'biemme' | 'ichnusa'
   projectName: string
-  position: 'top-left' | 'top-right' | 'bottom-right' | 'bottom-center'
+  position: 'top-left' | 'top-right' | 'bottom-right' | 'bottom-center' | 'middle-left' | 'middle-right'
+  onExpandChange?: (expanded: boolean) => void
   className?: string
 }
 
@@ -44,24 +45,28 @@ export function SatelliteCard({
   projectKey,
   projectName,
   position: _position,
+  onExpandChange,
   className,
 }: SatelliteCardProps) {
   const [isExpanded, setIsExpanded] = useState(false)
   const isMobile = useMediaQuery('(max-width: 1023px)')
   const t = useTranslations('socialProof')
 
+  const setExpanded = (value: boolean) => {
+    setIsExpanded(value)
+    onExpandChange?.(value)
+  }
+
   const handleInteraction = () => {
-    if (isMobile) {
-      setIsExpanded(!isExpanded)
-    }
+    if (isMobile) setExpanded(!isExpanded)
   }
 
   const handleMouseEnter = () => {
-    if (!isMobile) setIsExpanded(true)
+    if (!isMobile) setExpanded(true)
   }
 
   const handleMouseLeave = () => {
-    if (!isMobile) setIsExpanded(false)
+    if (!isMobile) setExpanded(false)
   }
 
   return (
@@ -87,7 +92,7 @@ export function SatelliteCard({
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault()
-          setIsExpanded(!isExpanded)
+          setExpanded(!isExpanded)
         }
       }}
       className={cn(

@@ -3,13 +3,13 @@
 import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
 import { useTranslations } from 'next-intl'
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState, useRef, useCallback } from 'react'
 import { Section, SectionHeader } from '@/components/ui/section'
 import { SatelliteCard } from '@/components/SatelliteCard'
 import { fadeInUp, staggerContainer, staggerItem, scaleIn } from '@/lib/motion-variants'
 
-const PROJECT_KEYS = ['flowmatics', 'quickfy', 'benetti', 'fl1'] as const
-const PROJECT_NAMES = ['FlowMatics', 'Quickfy', 'Falegnameria Benetti', 'FL1'] as const
+const PROJECT_KEYS = ['fl1', 'flowmatics', 'biemme', 'ichnusa', 'quickfy-web', 'quickfy-app'] as const
+const PROJECT_NAMES = ['FL1', 'FlowMatics', 'Biemme 2', 'Ichnusa Bistro', 'Quickfy', 'Quickfy App'] as const
 
 // Dynamic import del globo con ssr: false per evitare problemi con canvas
 const GlobeCanvas = dynamic(
@@ -53,8 +53,15 @@ function useInView(options?: IntersectionObserverInit) {
 
 export function SocialProof() {
   const t = useTranslations('socialProof')
-  // Lazy load Globe only when section comes into view
   const { ref: globeContainerRef, isInView: shouldLoadGlobe } = useInView()
+  const [expandedKey, setExpandedKey] = useState<string | null>(null)
+
+  const makeExpandHandler = useCallback(
+    (key: string) => (expanded: boolean) => setExpandedKey(expanded ? key : null),
+    []
+  )
+
+  const wrapperZ = (key: string) => expandedKey === key ? 'z-30' : 'z-10'
 
   return (
     <Section id="social-proof" className="py-16 md:py-24">
@@ -79,20 +86,41 @@ export function SocialProof() {
         variants={scaleIn}
         className="relative flex justify-center items-center min-h-[450px] md:min-h-[620px] lg:min-h-[750px]"
       >
-        {/* Satellite Card 1: Top-Left (Desktop only) - FlowMatics */}
-        <div className="hidden lg:block absolute top-[20%] left-[8%] xl:left-[12%] 2xl:left-[18%] z-10">
+        {/* Satellite Card 1: Top-Left (Desktop only) - FL1 */}
+        <div className={`hidden lg:block absolute top-[20%] left-[8%] xl:left-[12%] 2xl:left-[18%] ${wrapperZ('fl1')}`}>
+          <SatelliteCard projectKey="fl1" projectName="FL1" position="top-left" onExpandChange={makeExpandHandler('fl1')} />
+        </div>
+
+        {/* Satellite Card 2: Top-Right (Desktop only) - FlowMatics */}
+        <div className={`hidden lg:block absolute top-[20%] right-[8%] xl:right-[12%] 2xl:right-[18%] ${wrapperZ('flowmatics')}`}>
+          <SatelliteCard projectKey="flowmatics" projectName="FlowMatics" position="top-right" onExpandChange={makeExpandHandler('flowmatics')} />
+        </div>
+
+        {/* Satellite Card 3: Middle-Left (Desktop only) - Biemme */}
+        <div className={`hidden lg:block absolute top-1/2 -translate-y-1/2 left-[2%] xl:left-[5%] 2xl:left-[10%] ${wrapperZ('biemme')}`}>
+          <SatelliteCard projectKey="biemme" projectName="Biemme 2" position="middle-left" onExpandChange={makeExpandHandler('biemme')} />
+        </div>
+
+        {/* Satellite Card 4: Middle-Right (Desktop only) - Ichnusa */}
+        <div className={`hidden lg:block absolute top-1/2 -translate-y-1/2 right-[2%] xl:right-[5%] 2xl:right-[10%] ${wrapperZ('ichnusa')}`}>
+          <SatelliteCard projectKey="ichnusa" projectName="Ichnusa Bistro" position="middle-right" onExpandChange={makeExpandHandler('ichnusa')} />
+        </div>
+
+        {/* Satellite Card 5: Bottom-Left (Desktop only) - Quickfy */}
+        <div className={`hidden lg:block absolute bottom-[5%] left-[5%] xl:left-[10%] 2xl:left-[15%] ${wrapperZ('quickfy-web')}`}>
+          <SatelliteCard projectKey="quickfy-web" projectName="Quickfy" position="bottom-center" onExpandChange={makeExpandHandler('quickfy-web')} />
+        </div>
+
+        {/* Satellite Card 6: Bottom-Right (Desktop only) - Quickfy App */}
+        <div className={`hidden lg:block absolute bottom-[5%] right-[5%] xl:right-[10%] 2xl:right-[15%] ${wrapperZ('quickfy-app')}`}>
+          <SatelliteCard projectKey="quickfy-app" projectName="Quickfy App" position="bottom-center" onExpandChange={makeExpandHandler('quickfy-app')} />
+        </div>
+
+        {/* Satellite Card 2: Top-Right (Desktop only) - FlowMatics */}
+        <div className="hidden lg:block absolute top-[20%] right-[8%] xl:right-[12%] 2xl:right-[18%] z-10">
           <SatelliteCard
             projectKey="flowmatics"
             projectName="FlowMatics"
-            position="top-left"
-          />
-        </div>
-
-        {/* Satellite Card 2: Top-Right (Desktop only) - Quickfy */}
-        <div className="hidden lg:block absolute top-[20%] right-[8%] xl:right-[12%] 2xl:right-[18%] z-10">
-          <SatelliteCard
-            projectKey="quickfy"
-            projectName="Quickfy"
             position="top-right"
           />
         </div>
@@ -112,20 +140,38 @@ export function SocialProof() {
           </div>
         </div>
 
-        {/* Satellite Card 3: Bottom-Left (Desktop only) - FL1 */}
+        {/* Satellite Card 3: Middle-Left (Desktop only) - Biemme */}
+        <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 left-[2%] xl:left-[5%] 2xl:left-[10%] z-10">
+          <SatelliteCard
+            projectKey="biemme"
+            projectName="Biemme 2"
+            position="middle-left"
+          />
+        </div>
+
+        {/* Satellite Card 4: Middle-Right (Desktop only) - Ichnusa */}
+        <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 right-[2%] xl:right-[5%] 2xl:right-[10%] z-10">
+          <SatelliteCard
+            projectKey="ichnusa"
+            projectName="Ichnusa Bistro"
+            position="middle-right"
+          />
+        </div>
+
+        {/* Satellite Card 5: Bottom-Left (Desktop only) - Quickfy */}
         <div className="hidden lg:block absolute bottom-[5%] left-[5%] xl:left-[10%] 2xl:left-[15%] z-10">
           <SatelliteCard
-            projectKey="fl1"
-            projectName="FL1"
+            projectKey="quickfy-web"
+            projectName="Quickfy"
             position="bottom-center"
           />
         </div>
 
-        {/* Satellite Card 4: Bottom-Right (Desktop only) - Falegnameria Benetti */}
+        {/* Satellite Card 6: Bottom-Right (Desktop only) - Quickfy App */}
         <div className="hidden lg:block absolute bottom-[5%] right-[5%] xl:right-[10%] 2xl:right-[15%] z-10">
           <SatelliteCard
-            projectKey="benetti"
-            projectName="Falegnameria Benetti"
+            projectKey="quickfy-app"
+            projectName="Quickfy App"
             position="bottom-center"
           />
         </div>
