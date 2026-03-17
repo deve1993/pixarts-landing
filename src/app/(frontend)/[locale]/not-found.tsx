@@ -188,13 +188,13 @@ export default function NotFound() {
               {t('popularPages.portfolio')}
             </Link>
             <Link
-              href="/#pricing"
+              href="/preventivo"
               className="px-4 py-2 rounded-lg bg-bg-surface/50 border border-border/50 text-text-secondary hover:text-text-primary hover:border-accent-orange/50 transition-all duration-300"
             >
               {t('popularPages.pricing')}
             </Link>
             <Link
-              href="/#contact"
+              href="/contatti"
               className="px-4 py-2 rounded-lg bg-bg-surface/50 border border-border/50 text-text-secondary hover:text-text-primary hover:border-accent-orange/50 transition-all duration-300"
             >
               {t('popularPages.contact')}
