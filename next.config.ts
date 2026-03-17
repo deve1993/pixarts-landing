@@ -34,6 +34,21 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
 
+  async redirects() {
+    return [
+      { source: '/en/servizi', destination: '/en/services', permanent: true },
+      { source: '/en/contatti', destination: '/en/contact', permanent: true },
+      { source: '/en/prenota', destination: '/en/book', permanent: true },
+      { source: '/en/preventivo', destination: '/en/quote', permanent: true },
+      { source: '/en/chi-siamo', destination: '/en/about', permanent: true },
+      { source: '/cs/servizi', destination: '/cs/sluzby', permanent: true },
+      { source: '/cs/contatti', destination: '/cs/kontakt', permanent: true },
+      { source: '/cs/prenota', destination: '/cs/rezervovat', permanent: true },
+      { source: '/cs/preventivo', destination: '/cs/nabidka', permanent: true },
+      { source: '/cs/chi-siamo', destination: '/cs/o-nas', permanent: true },
+    ]
+  },
+
   async headers() {
     return [
       {
