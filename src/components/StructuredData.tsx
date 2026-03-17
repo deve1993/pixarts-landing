@@ -22,11 +22,22 @@ const localeContent = {
       { question: 'Offrite manutenzione dopo il lancio?', answer: 'Sì, primi 30 giorni assistenza gratuita inclusa. Poi pacchetti manutenzione da €200-400/mese.' },
     ],
     services: [
-      { name: 'Landing Page', idealFor: 'Freelancer, professionisti, campagne marketing', features: ['Design custom 1 pagina', 'SEO base e meta tags', 'Form contatto integrato'], price: '1200' },
-      { name: 'Sito Aziendale', idealFor: 'PMI, studi professionali, agenzie', features: ['Design premium multi-pagina', 'SEO avanzato e analytics', 'CMS per gestione autonoma'], price: '2500' },
-      { name: 'E-commerce / Booking', idealFor: 'Negozi online, ristoranti, hotel, B&B', features: ['Design premium e-commerce', 'Pagamenti sicuri integrati', 'Gestione ordini/prenotazioni'], price: '4500' },
+      { name: 'Landing Page', idealFor: 'Freelancer, professionisti, campagne marketing', features: ['Design custom 1 pagina', 'SEO base e meta tags', 'Form contatto integrato'], minPrice: '1200', maxPrice: '1500' },
+      { name: 'Sito Aziendale', idealFor: 'PMI, studi professionali, agenzie', features: ['Design premium multi-pagina', 'SEO avanzato e analytics', 'CMS per gestione autonoma'], minPrice: '2500', maxPrice: '3500' },
+      { name: 'E-commerce / Booking', idealFor: 'Negozi online, ristoranti, hotel, B&B', features: ['Design premium e-commerce', 'Pagamenti sicuri integrati', 'Gestione ordini/prenotazioni'], minPrice: '4500', maxPrice: '6000' },
     ],
     areaServed: [{ name: 'Italy' }, { name: 'Czech Republic' }],
+    howTo: {
+      name: 'Come creare un sito web professionale',
+      description: 'Il processo Pixarts in 4 step per consegnare il tuo sito web in 7-14 giorni lavorativi.',
+      totalTime: 'P14D',
+      steps: [
+        { name: 'Brief', duration: 'PT30M', text: 'Chiamata o meeting per capire obiettivi, target e competitor. Raccogliamo tutto il necessario per partire.' },
+        { name: 'Design', duration: 'P3D', text: 'Creiamo mockup alta fedeltà basati sul tuo brand. Approvazione prima di iniziare lo sviluppo.' },
+        { name: 'Sviluppo', duration: 'P7D', text: 'Codifica, test, ottimizzazione performance e SEO. Aggiornamenti continui sullo stato dei lavori.' },
+        { name: 'Lancio', duration: 'P1D', text: 'Deploy, training completo e consegna credenziali. Sei online e autonomo.' },
+      ],
+    },
   },
   en: {
     description: 'Professional websites in 10 days. Modern design, SEO included, satisfaction guarantee.',
@@ -34,9 +45,9 @@ const localeContent = {
     inLanguage: 'en-US',
     breadcrumbs: [
       { name: 'Home', item: 'https://pixarts.eu/en' },
-      { name: 'Services', item: 'https://pixarts.eu/en/servizi' },
+      { name: 'Services', item: 'https://pixarts.eu/en/services' },
       { name: 'Portfolio', item: 'https://pixarts.eu/en/portfolio' },
-      { name: 'Contact', item: 'https://pixarts.eu/en/contatti' },
+      { name: 'Contact', item: 'https://pixarts.eu/en/contact' },
     ],
     faqs: [
       { question: 'How long does it really take?', answer: '7-14 business days depending on complexity. Landing page 7 days, business website 10 days, e-commerce 14 days. With written guarantee: 10% discount for each day of delay.' },
@@ -47,11 +58,22 @@ const localeContent = {
       { question: 'Do you offer maintenance after launch?', answer: 'Yes, first 30 days of free support included. Then maintenance packages from €200-400/month.' },
     ],
     services: [
-      { name: 'Landing Page', idealFor: 'Freelancers, professionals, marketing campaigns', features: ['Custom 1-page design', 'Basic SEO and meta tags', 'Integrated contact form'], price: '1200' },
-      { name: 'Business Website', idealFor: 'SMEs, professional firms, agencies', features: ['Premium multi-page design', 'Advanced SEO and analytics', 'CMS for autonomous management'], price: '2500' },
-      { name: 'E-commerce / Booking', idealFor: 'Online stores, restaurants, hotels, B&Bs', features: ['Premium e-commerce design', 'Secure payment integration', 'Order/booking management'], price: '4500' },
+      { name: 'Landing Page', idealFor: 'Freelancers, professionals, marketing campaigns', features: ['Custom 1-page design', 'Basic SEO and meta tags', 'Integrated contact form'], minPrice: '1200', maxPrice: '1500' },
+      { name: 'Business Website', idealFor: 'SMEs, professional firms, agencies', features: ['Premium multi-page design', 'Advanced SEO and analytics', 'CMS for autonomous management'], minPrice: '2500', maxPrice: '3500' },
+      { name: 'E-commerce / Booking', idealFor: 'Online stores, restaurants, hotels, B&Bs', features: ['Premium e-commerce design', 'Secure payment integration', 'Order/booking management'], minPrice: '4500', maxPrice: '6000' },
     ],
     areaServed: [{ name: 'Italy' }, { name: 'Czech Republic' }],
+    howTo: {
+      name: 'How to create a professional website',
+      description: 'The Pixarts 4-step process to deliver your website in 7-14 business days.',
+      totalTime: 'P14D',
+      steps: [
+        { name: 'Brief', duration: 'PT30M', text: 'Call or meeting to understand objectives, target audience, and competitors. We gather everything needed to start.' },
+        { name: 'Design', duration: 'P3D', text: 'We create high-fidelity mockups based on your brand. Approval before starting development.' },
+        { name: 'Development', duration: 'P7D', text: 'Coding, testing, performance and SEO optimization. Continuous updates on project status.' },
+        { name: 'Launch', duration: 'P1D', text: 'Deploy, complete training, and credential handover. You are online and independent.' },
+      ],
+    },
   },
   cs: {
     description: 'Profesionální webové stránky za 10 dní. Moderní design, SEO v ceně, záruka spokojenosti.',
@@ -59,9 +81,9 @@ const localeContent = {
     inLanguage: 'cs-CZ',
     breadcrumbs: [
       { name: 'Domů', item: 'https://pixarts.eu/cs' },
-      { name: 'Služby', item: 'https://pixarts.eu/cs/servizi' },
+      { name: 'Služby', item: 'https://pixarts.eu/cs/sluzby' },
       { name: 'Portfolio', item: 'https://pixarts.eu/cs/portfolio' },
-      { name: 'Kontakt', item: 'https://pixarts.eu/cs/contatti' },
+      { name: 'Kontakt', item: 'https://pixarts.eu/cs/kontakt' },
     ],
     faqs: [
       { question: 'Jak dlouho to skutečně trvá?', answer: '7-14 pracovních dní podle složitosti. Landing page 7 dní, firemní web 10 dní, e-shop 14 dní. S písemnou zárukou: 10% sleva za každý den zpoždění.' },
@@ -72,13 +94,24 @@ const localeContent = {
       { question: 'Nabízíte údržbu po spuštění?', answer: 'Ano, prvních 30 dní bezplatné podpory v ceně. Poté balíčky údržby od €200-400/měsíc.' },
     ],
     services: [
-      { name: 'Landing Page', idealFor: 'Freelanceři, profesionálové, marketingové kampaně', features: ['Vlastní jednostránkový design', 'Základní SEO a meta tagy', 'Integrovaný kontaktní formulář'], price: '1200' },
-      { name: 'Firemní web', idealFor: 'SME, profesní firmy, agentury', features: ['Prémiový vícestránkový design', 'Pokročilé SEO a analytika', 'CMS pro autonomní správu'], price: '2500' },
-      { name: 'E-shop / Rezervace', idealFor: 'Online obchody, restaurace, hotely, penziony', features: ['Prémiový e-shop design', 'Bezpečná integrace plateb', 'Správa objednávek/rezervací'], price: '4500' },
+      { name: 'Landing Page', idealFor: 'Freelanceři, profesionálové, marketingové kampaně', features: ['Vlastní jednostránkový design', 'Základní SEO a meta tagy', 'Integrovaný kontaktní formulář'], minPrice: '1200', maxPrice: '1500' },
+      { name: 'Firemní web', idealFor: 'SME, profesní firmy, agentury', features: ['Prémiový vícestránkový design', 'Pokročilé SEO a analytika', 'CMS pro autonomní správu'], minPrice: '2500', maxPrice: '3500' },
+      { name: 'E-shop / Rezervace', idealFor: 'Online obchody, restaurace, hotely, penziony', features: ['Prémiový e-shop design', 'Bezpečná integrace plateb', 'Správa objednávek/rezervací'], minPrice: '4500', maxPrice: '6000' },
     ],
     areaServed: [{ name: 'Italy' }, { name: 'Czech Republic' }],
+    howTo: {
+      name: 'Jak vytvořit profesionální webové stránky',
+      description: 'Pixarts proces ve 4 krocích pro dodání vašeho webu za 7-14 pracovních dní.',
+      totalTime: 'P14D',
+      steps: [
+        { name: 'Brief', duration: 'PT30M', text: 'Hovor nebo schůzka pro pochopení cílů, cílové skupiny a konkurence. Shromáždíme vše potřebné pro start.' },
+        { name: 'Design', duration: 'P3D', text: 'Vytváříme návrhy s vysokou věrností na základě vaší značky. Schválení před zahájením vývoje.' },
+        { name: 'Vývoj', duration: 'P7D', text: 'Kódování, testování, optimalizace výkonu a SEO. Průběžné aktualizace o stavu projektu.' },
+        { name: 'Spuštění', duration: 'P1D', text: 'Nasazení, kompletní školení a předání přihlašovacích údajů. Jste online a samostatní.' },
+      ],
+    },
   },
-} as const
+}
 
 function getLocaleUrl(locale: string): string {
   if (locale === 'it') return 'https://pixarts.eu'
@@ -95,16 +128,19 @@ function buildSchemas(locale: string) {
     '@type': 'Organization',
     name: 'Pixarts',
     url: 'https://pixarts.eu',
-    logo: 'https://pixarts.eu/logo.png',
+    logo: 'https://pixarts.eu/logo-white.png',
     description: content.description,
     foundingDate: '2024',
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'CZ',
+      addressLocality: 'Praha',
     },
+    telephone: '+420775113732',
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer service',
+      telephone: '+420775113732',
       email: 'info@pixarts.eu',
       availableLanguage: ['Italian', 'English', 'Czech'],
     },
@@ -117,10 +153,12 @@ function buildSchemas(locale: string) {
     name: 'Pixarts',
     image: 'https://pixarts.eu/og-image.png',
     url: siteUrl,
+    telephone: '+420775113732',
     email: 'info@pixarts.eu',
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'CZ',
+      addressLocality: 'Praha',
     },
     priceRange: '€€',
     openingHoursSpecification: {
@@ -144,15 +182,18 @@ function buildSchemas(locale: string) {
     provider: {
       '@type': 'Organization',
       name: 'Pixarts',
+      url: 'https://pixarts.eu',
     },
     areaServed: content.areaServed.map((area) => ({
       '@type': 'Country',
       name: area.name,
     })),
     offers: {
-      '@type': 'Offer',
-      price: plan.price,
+      '@type': 'AggregateOffer',
+      lowPrice: plan.minPrice,
+      highPrice: plan.maxPrice,
       priceCurrency: 'EUR',
+      offerCount: 1,
       priceValidUntil: new Date(
         new Date().setFullYear(new Date().getFullYear() + 1)
       )
@@ -188,7 +229,7 @@ function buildSchemas(locale: string) {
       name: 'Pixarts',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://pixarts.eu/logo.png',
+        url: 'https://pixarts.eu/logo-white.png',
       },
     },
   }
@@ -204,6 +245,27 @@ function buildSchemas(locale: string) {
     })),
   }
 
+  const howToSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: content.howTo.name,
+    description: content.howTo.description,
+    totalTime: content.howTo.totalTime,
+    estimatedCost: {
+      '@type': 'MonetaryAmount',
+      currency: 'EUR',
+      minValue: '1200',
+      maxValue: '6000',
+    },
+    step: content.howTo.steps.map((step, index) => ({
+      '@type': 'HowToStep',
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+      timeRequired: step.duration,
+    })),
+  }
+
   return {
     organizationSchema,
     localBusinessSchema,
@@ -211,6 +273,7 @@ function buildSchemas(locale: string) {
     breadcrumbSchema,
     faqSchema,
     serviceSchemas,
+    howToSchema,
   }
 }
 
@@ -249,6 +312,10 @@ export function StructuredData({ locale = 'it' }: StructuredDataProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.howToSchema) }}
       />
     </>
   )
