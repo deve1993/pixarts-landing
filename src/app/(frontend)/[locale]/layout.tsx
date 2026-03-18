@@ -9,6 +9,7 @@ import { BackgroundWrapper } from "@/components/BackgroundWrapper"
 import { StructuredData } from "@/components/StructuredData"
 import { SkipToContent } from "@/components/SkipToContent"
 import { CookieConsent } from "@/components/CookieConsent"
+import { SmoothScroll } from "@/components/SmoothScroll"
 import {
   GoogleTagManager,
   GoogleTagManagerNoscript,
@@ -180,12 +181,14 @@ export default async function LocaleLayout({ children, params }: Props) {
       <body className="font-body bg-bg-primary text-text-primary antialiased">
         <GoogleTagManagerNoscript />
         <NextIntlClientProvider messages={messages}>
-          <SkipToContent />
-          <BackgroundWrapper />
-          {children}
-          <MetaPixel />
-          <HotjarScript />
-          <CookieConsent />
+          <SmoothScroll>
+            <SkipToContent />
+            <BackgroundWrapper />
+            {children}
+            <MetaPixel />
+            <HotjarScript />
+            <CookieConsent />
+          </SmoothScroll>
         </NextIntlClientProvider>
       </body>
     </html>
